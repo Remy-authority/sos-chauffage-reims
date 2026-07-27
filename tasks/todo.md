@@ -77,7 +77,9 @@
       retiré → 🎉 SITE EN LIGNE le 28/07/2026, robots/sitemap/canonical publics tous verts
 - [x] Autoblog lot 1 (011-023, 4eaed83) : AUDITÉ CEO, 13/13 conformes, réservoir plein pour
       la publication auto (prochaine : mercredi 05:00 UTC). Retitrage sujet 14 sans âge : validé
-- [ ] Autoblog lot 2 (sujets 24-36) : ordre de mission remis à Rémy
+- [x] Autoblog lot 2 (024-036, f125472) : AUDITÉ CEO 13/13 conformes (les mentions
+      canalisation/électricien sont les désambiguïsations et renvois de périmètre demandés)
+- [ ] Autoblog lot 3 (sujets 37-49, octobre) : ordre de mission remis à Rémy
 - [ ] Rémy : GSC cliquer VALIDER (TXT visible publiquement, prêt) puis soumettre le sitemap
 - [ ] Ensuite : Bing Webmaster Tools (session guidée)
 - [ ] Cosmétique, à glisser dans une future passe Builder : commentaire obsolète au-dessus de
