@@ -96,6 +96,15 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   Twilio de Rémy ; aucun identifiant Twilio trouvé sur la machine). Attention : un numéro
   français sur Twilio exige un dossier réglementaire approuvé (justificatif d'adresse et
   d'identité) avant l'achat.
+- 27/07/2026 : **validation visuelle Rémy du site → merge sur `main` fait** (commit 88edd49).
+  La prod Vercel sert le site Reims complet, toujours noindex.
+- 27/07/2026 : **nouvelle cadence éditoriale décidée par Rémy** : 10 articles publiés le jour
+  même, puis **3 articles/semaine pendant 6 mois** (≈78 publications). La GitHub Action héritée
+  de Metz fait déjà exactement 3/semaine (cron lun/mer/ven 05:00 UTC, FIFO sur les préfixes de
+  content/drafts/) : rien à développer, il faut ALIMENTER le réservoir de drafts. Le calendrier
+  éditorial 24 sujets/12 mois est SUPERSEDÉ : le SEO doit produire un calendrier étendu
+  (~80 sujets ordonnés, saisonnalité recalée sur un démarrage fin juillet, zéro cannibalisation),
+  l'Autoblog rédige par lots de 13 (≈1 mois de publications), audit CEO entre chaque lot.
 
 ## 4. HISTORIQUE DES SESSIONS
 

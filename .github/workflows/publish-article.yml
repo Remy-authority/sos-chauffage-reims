@@ -44,7 +44,10 @@ jobs:
         run: |
           git config user.name "autoblog-bot"
           git config user.email "autoblog-bot@users.noreply.github.com"
-          git add content/conseils content/drafts public/conseils
+          git add content/conseils content/drafts
+          # public/conseils n'existe que si un article a déjà embarqué des assets :
+          # un `git add` sur un chemin absent fait échouer tout le job (vu le 27/07/2026).
+          if [ -d public/conseils ]; then git add public/conseils; fi
           git commit -m "content(autoblog): publication de ${{ steps.pub.outputs.slug }}"
           git push origin main
 

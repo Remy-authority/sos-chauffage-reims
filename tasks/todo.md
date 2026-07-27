@@ -58,8 +58,21 @@
       mot hors périmètre ; l'unique « canalisation » est la désambiguïsation exigée par le
       plan SEO). Point noté : champ `author` du frontmatter dormant (non consommé par le
       template), sans effet de rendu, à brancher plus tard si utile
-- [ ] VALIDATION RÉMY sur la preview → merge `main`
-- [ ] Ensuite : achat domaine + 09 Twilio (clés attendues) + email/identité → mise en ligne Étape 6
+- [x] VALIDATION RÉMY sur la preview (27/07) → merge `main` fait (88edd49), prod noindex OK
+- [ ] Ensuite : 09 Twilio (clés attendues) + email/identité → mise en ligne Étape 6
+      (domaine acheté, validation registrar en cours)
+
+## Session du 27/07/2026 (CEO — publication jour J + montée en cadence éditoriale)
+
+- [x] Merge builder → main après validation Rémy, prod vérifiée (pages Reims servies, noindex)
+- [x] Mécanique de publication auditée : Action lun/mer/ven 05:00 UTC déjà en place (= la
+      cadence 3/semaine demandée), publication FIFO par préfixe, collision de slug détectée
+- [ ] 9 publications du jour déclenchées en séquence (workflow_dispatch ×9) : EN COURS
+- [ ] Message Autoblog : draft 010 (10e article du jour) → publication → total 10 aujourd'hui
+- [ ] Message SEO : calendrier étendu ~80 sujets / 26 semaines (saisonnalité recalée fin
+      juillet, zéro cannibalisation entre articles et avec les pages services)
+- [ ] Autoblog : rédaction par lots de 13, audit CEO entre chaque lot, réservoir toujours
+      ≥ 2 semaines d'avance (6 drafts minimum)
 
 ## Directive du CEO-portefeuille reçue le 27/07/2026 (barre « niveau Dijon » + fingerprint)
 
