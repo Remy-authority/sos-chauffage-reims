@@ -67,7 +67,8 @@
 - [x] Merge builder → main après validation Rémy, prod vérifiée (pages Reims servies, noindex)
 - [x] Mécanique de publication auditée : Action lun/mer/ven 05:00 UTC déjà en place (= la
       cadence 3/semaine demandée), publication FIFO par préfixe, collision de slug détectée
-- [ ] 9 publications du jour déclenchées en séquence (workflow_dispatch ×9) : EN COURS
+- [x] 9 publications du jour : 9/9 runs OK après fix du workflow, content/drafts vide,
+      9 articles dans content/conseils sur main, prod redéployée
 - [ ] Message Autoblog : draft 010 (10e article du jour) → publication → total 10 aujourd'hui
 - [ ] Message SEO : calendrier étendu ~80 sujets / 26 semaines (saisonnalité recalée fin
       juillet, zéro cannibalisation entre articles et avec les pages services)
