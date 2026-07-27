@@ -82,8 +82,15 @@
 - [x] Autoblog lot 3 (037-049, efe084b) : AUDITÉ CEO 13/13 conformes. Contrôles ciblés :
       zéro code constructeur inventé (040), renvoi électrique correct (046), chevauchement
       042/043 vs article 006 publié mesuré à 2,4 % et 1,3 % (négligeable)
-- [ ] Autoblog lot 4 (sujets 50-62, novembre) : ordre de mission remis à Rémy, attention
-      renforcée sujet 52 (fuite de gaz : sécurité avant acquisition)
+- [x] Autoblog lot 4 (050-062, 1b0c75e) : AUDITÉ CEO 13/13 conformes, lecture intégrale des
+      articles sécurité par le CEO : 052 exemplaire (ordre des réflexes exact, services
+      relégués après sécurisation), 060 distinction eau/air impeccable avec renvoi au
+      protocole, 053 sans obligation affirmée, « débouchage » du 056 limité aux condensats.
+      Micro-retouche demandée avec le lot 5 : lien interne direct 060 → article 052
+- [ ] Autoblog lot 5 (sujets 63-75, décembre) : ordre de mission remis à Rémy
+- [x] Bing Webmaster Tools (29/07) : 11 sites importés depuis GSC par Rémy, sitemaps soumis
+      pour tous les sites (statut processing). Onglet « AI Performance » repéré = métrique GEO
+      à surveiller. Idée portefeuille notée : IndexNow dans l'Action de publication
 - [x] GSC VALIDÉE le 29/07 (après correction du jeton : la fenêtre GSC tronquait l'affichage,
       leçon consignée). Propriété visible dans la liste. Favicon absent de la liste GSC =
       simple délai de crawl (Angers/Metz : même config, icône affichée ; Dijon récent : globe
