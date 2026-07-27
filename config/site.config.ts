@@ -44,10 +44,13 @@ export const siteConfig = {
   department: '51',
 
   /* ── Contact ── */
-  // DEMO – numéro de la plage réservée à la fiction (aucun abonné réel derrière).
-  // Rémy fournira le 09 dédié du site avant la mise en ligne.
-  phone: '+33939514200',
-  phoneDisplay: '09 39 51 42 00',
+  // DEMO – numéro pris dans la plage 09 39 98 00 00 à 09 39 98 99 99, que l'ARCEP
+  // réserve à la fiction : aucun abonné réel ne peut se la voir attribuer, donc
+  // aucun risque d'appeler un tiers. Le 09 définitif viendra de la ligne Twilio du
+  // site : au moment de la bascule, SEULES ces deux lignes changent, tout le site
+  // (liens tel:, schema JSON-LD, llms.txt, mentions légales) les lit d'ici.
+  phone: '+33939985100',
+  phoneDisplay: '09 39 98 51 00',
   phoneIsDemo: true,
   // DEMO – domaine pas encore acheté.
   email: 'contact@sos-chauffage-reims.fr',
@@ -147,8 +150,11 @@ export const siteConfig = {
 
   /* ── SEO global ── */
   seo: {
-    // NB : basculer sur le domaine final quand Rémy l'a acheté. Preview = URL Vercel.
-    canonicalBase: 'https://sos-chauffage-reims.vercel.app',
+    // Domaine final. Convention du portefeuille : le `www` est la version canonique,
+    // l'apex `sos-chauffage-reims.fr` redirige dessus en 308 (réglé côté Vercel).
+    // Toutes les URL absolues du site (canonical, OG, sitemap, JSON-LD, llms.txt)
+    // sont construites à partir d'ici.
+    canonicalBase: 'https://www.sos-chauffage-reims.fr',
     defaultOgImage: '/og.jpg',
     locale: 'fr_FR',
     lang: 'fr',

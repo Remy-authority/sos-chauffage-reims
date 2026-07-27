@@ -1,7 +1,7 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-27 (création du dossier, session CEO-portefeuille).
+> Dernière mise à jour : 2026-07-28 (Builder, passe de config avant bascule : domaine canonique + numéro de fiction ARCEP).
 
 ---
 
@@ -85,9 +85,14 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - [x] CEO (28/07) Étape 6 partie infra : zone DNS OVH posée (schéma Dijon : A @ → 76.76.21.21,
       CNAME www → cname.vercel-dns.com., emails préservés), domaines ajoutés au projet Vercel
       (www canonique, apex en 308). En attente : activation AFNIC (le domaine ne résout pas encore).
-- [ ] Builder (dernière passe avant bascule) : `seo.canonicalBase` → `https://www.sos-chauffage-reims.fr`
-      + numéro provisoire à déplacer dans la vraie plage fiction ARCEP (09 39 98 XX XX) : le
-      09 39 51 42 00 actuel est HORS plage fiction, potentiellement attribuable à un tiers
+- [x] Builder (28/07, dernière passe avant bascule) : `seo.canonicalBase` →
+      `https://www.sos-chauffage-reims.fr` (www canonique, apex en 308) + numéro provisoire
+      déplacé dans la vraie plage fiction ARCEP : `09 39 98 51 00` / `+33939985100`
+      (`phoneIsDemo: true` conservé). L'ancien 09 39 51 42 00 était HORS plage fiction,
+      donc attribuable un jour à un vrai abonné. Vérifié sur le RENDU des 39 pages servies
+      par le build de production : 0 occurrence de l'ancien numéro et de l'URL Vercel,
+      607 occurrences du nouveau, JSON-LD `telephone` + canonical + OG + sitemap + llms.txt
+      + mentions légales tous alignés
 - [ ] CEO : quand AFNIC actif + Builder passé → retirer `SEO_NOINDEX` de Vercel Production,
       redéployer, vérifier robots.txt public = Allow → LE SITE EST EN LIGNE ⏰ (large avance
       sur l'échéance fin septembre)
@@ -195,6 +200,24 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   app/page.tsx. Premier essai corrigé : il alignait trois fonds sombres à la suite.
   Vérifications : tsc propre, build vert (37 pages), 22 captures desktop et mobile
   re-tirées, contrôle des 29 pages rendues toujours au vert.
+- **28/07/2026 (Builder, passe de config avant bascule)** : deux valeurs changées dans
+  `config/site.config.ts`, et rien d'autre (aucun contenu, aucun design, `robots.ts` intact).
+  1) `seo.canonicalBase` passe de l'URL Vercel au domaine final `https://www.sos-chauffage-reims.fr` :
+  convention du portefeuille, le `www` est canonique et l'apex redirige en 308 côté Vercel.
+  Toutes les URL absolues en découlent (canonical, OG, sitemap, JSON-LD, llms.txt) : vérifié
+  page par page. 2) Le numéro provisoire `09 39 51 42 00` était en dehors de la plage que
+  l'ARCEP réserve à la fiction, donc susceptible d'être attribué un jour à un vrai abonné qui
+  aurait reçu nos appels : remplacé par `09 39 98 51 00` / `+33939985100`, dans la plage
+  09 39 98 00 00 à 09 39 98 99 99, `phoneIsDemo: true` conservé. Le numéro n'existe qu'à cet
+  endroit du dépôt (tous les liens `tel:`, le schema JSON-LD, le llms.txt et les mentions
+  légales le lisent depuis la config) : le 09 Twilio définitif restera bien un changement de
+  deux lignes. Vérifications : `tsc` propre, `npm run build` vert (47 routes), puis contrôle
+  sur le RENDU du build de production servi en local, pas seulement sur le code (leçon du
+  rayon 30 km) : 39 pages crawlées depuis le sitemap, 0 occurrence de l'ancien numéro sous
+  ses trois formes et 0 occurrence de l'URL Vercel, 607 occurrences du nouveau numéro, 0 tiret
+  cadratin. Point signalé sans le corriger (hors périmètre) : le commentaire au-dessus de
+  `email` dit encore « domaine pas encore acheté », alors que le domaine est commandé et la
+  redirection `contact@` posée.
 - **28/07/2026 (SEO)** : `docs/CALENDRIER-EDITORIAL.md` v2, suite au changement d'échelle décidé
   par Rémy (3 articles/semaine pendant 6 mois via la GitHub Action FIFO existante, ≈78
   publications au lieu de 24/an). Les sujets 1-9 de la v1 déjà publiés et le sujet 10 (pression
