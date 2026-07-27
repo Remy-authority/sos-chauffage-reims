@@ -2,7 +2,7 @@
  * lib/seo.ts, Metadata API helpers + JSON-LD builders (Lot 6 SEO infra).
  *
  * Règles NOU-33 :
- *  - Schema LocalBusiness → sous-type **Plumber**, avec `areaServed`.
+ *  - Schema LocalBusiness → sous-type **HVACBusiness**, avec `areaServed`.
  *  - **PAS d'`address`** par défaut (siteConfig.legal.showAddress=false) tant que
  *    Rémy n'a pas tranché l'adresse.
  *  - **Aucun `AggregateRating` / `Review`** (pas d'avis réels).
@@ -75,11 +75,11 @@ const ORG_ID = `${BASE}/#business`
 /**
  * LocalBusiness du site (global, posé dans le layout).
  *
- * Choix du type (cf. docs/SEO-GEO-PLAN.md §3.5) : schema.org ne propose pas de
- * sous-type « débouchage / assainissement ». `Plumber` reste le plus proche parmi
- * les `HomeAndConstructionBusiness`, on le conserve mais on lève l'ambiguïté pour
- * les moteurs génératifs avec `additionalType` (concept Wikidata « débouchage de
- * canalisation ») et un `hasOfferCatalog` listant les prestations réelles.
+ * Choix du type (cf. docs/SEO-GEO-PLAN.md §3.5) : schema.org propose un sous-type
+ * exact pour ce métier, **`HVACBusiness`** (chauffage, ventilation, climatisation),
+ * qui remplace le `Plumber` hérité du site débouchage. On lève encore l'ambiguïté
+ * pour les moteurs génératifs avec `additionalType` (concept Wikidata « chauffage
+ * central ») et un `hasOfferCatalog` listant les prestations réelles.
  *
  * ⛔ Sans `address` par défaut, sans `aggregateRating`, sans `review`.
  */
@@ -90,11 +90,11 @@ export function localBusinessJsonLd() {
   ]
   const node: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'Plumber',
+    '@type': 'HVACBusiness',
     '@id': ORG_ID,
-    additionalType: 'https://www.wikidata.org/wiki/Q5304993',
+    additionalType: 'https://www.wikidata.org/wiki/Q1064570',
     name: siteConfig.businessName,
-    description: `${siteConfig.trade} à ${siteConfig.city} et dans l'agglomération : débouchage de WC, évier, douche, colonne d'immeuble et regard, curage haute pression et inspection caméra.`,
+    description: `${siteConfig.trade} à ${siteConfig.city} et dans l'agglomération : chaudière à gaz ou au fioul en panne, pompe à chaleur, radiateur froid, fuite sur le circuit de chauffage, ballon d'eau chaude et entretien annuel.`,
     url: BASE,
     telephone: siteConfig.phone,
     email: siteConfig.email,

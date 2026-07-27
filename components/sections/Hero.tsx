@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Camera, Euro, MapPin, Phone, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Euro, Flame, MapPin, Phone, ShieldCheck, Thermometer } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { GradientBlob } from '@/components/ui/GradientBlob'
 import { LiveDot } from '@/components/ui/LiveDot'
@@ -12,9 +12,30 @@ import { siteConfig } from '@/config/site.config'
 
 const badges = [
   { icon: Euro, label: 'Prix annoncé avant' },
-  { icon: ShieldCheck, label: 'Sans casse' },
-  { icon: Camera, label: 'Inspection caméra' },
+  { icon: Flame, label: 'Gaz, fioul, pompe à chaleur' },
+  { icon: ShieldCheck, label: 'Diagnostic avant réparation' },
   { icon: MapPin, label: `${siteConfig.serviceArea.radiusKm} km autour de ${siteConfig.city}` },
+]
+
+/**
+ * Colonne de droite du hero : un triage court plutôt qu'un bloc de chiffres.
+ * C'est la première chose que le visiteur en panne cherche à savoir, et c'est
+ * aussi ce qui distingue la composition de ce site de celle des autres sites du
+ * portefeuille (où cette colonne porte un argument de prix).
+ */
+const triage = [
+  {
+    symptom: 'Plus rien ne chauffe',
+    lead: "L'appareil ou sa régulation",
+  },
+  {
+    symptom: 'Un seul radiateur froid',
+    lead: 'Le circuit, pas la chaudière',
+  },
+  {
+    symptom: "Plus d'eau chaude seule",
+    lead: 'Le ballon ou la partie sanitaire',
+  },
 ]
 
 export function Hero() {
@@ -31,7 +52,7 @@ export function Hero() {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(var(--c-ink-800)/0.75),transparent_62%),radial-gradient(ellipse_at_bottom_right,rgb(var(--c-accent-500)/0.16),transparent_55%),linear-gradient(180deg,rgb(var(--c-ink-950))_0%,rgb(var(--c-ink-900))_52%,rgb(var(--c-ink-950))_100%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(var(--c-ink-800)/0.75),transparent_62%),radial-gradient(ellipse_at_bottom_right,rgb(var(--c-accent-500)/0.18),transparent_55%),linear-gradient(180deg,rgb(var(--c-ink-950))_0%,rgb(var(--c-ink-900))_52%,rgb(var(--c-ink-950))_100%)]"
       />
 
       {/* Photo d'ambiance, très en retrait. Fondue par le bas sur mobile (le texte
@@ -68,11 +89,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
             className="mt-7 text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] text-sand-50"
           >
-            Canalisation
+            Chaudière à l&apos;arrêt
             <br />
-            bouchée à {siteConfig.city},
+            à {siteConfig.city},
             <br />
-            <span className="text-gradient-accent">réglée sans casse.</span>
+            <span className="text-gradient-accent">on remonte à la cause.</span>
           </motion.h1>
 
           <motion.p
@@ -81,9 +102,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
             className="mt-7 max-w-xl text-lg leading-relaxed text-sand-200 md:text-xl"
           >
-            Évier qui refoule, WC bouché, colonne d&apos;immeuble saturée, regard qui déborde.
-            Nous débouchons au furet ou à l&apos;hydrocureur, nous passons la caméra quand la cause
-            reste incertaine, et nous annonçons le prix avant de commencer.
+            Chaudière à gaz ou au fioul en sécurité, pompe à chaleur qui ne suit plus, radiateurs
+            froids, plus d&apos;eau chaude. Nous lisons le défaut avant de changer une pièce, et nous
+            annonçons le prix avant de commencer.
           </motion.p>
 
           <motion.div
@@ -97,7 +118,7 @@ export function Hero() {
               {siteConfig.phoneDisplay}
             </Button>
             <Button href="/contact#formulaire" variant="ghost" size="lg">
-              Décrire mon problème
+              Décrire ma panne
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.div>
@@ -131,42 +152,46 @@ export function Hero() {
 
             <div className="relative overflow-hidden rounded-hero border border-brand-400/25 bg-gradient-to-br from-ink-800/70 to-ink-950/85 p-8 backdrop-blur-xl">
               <span className="inline-flex rounded-full border border-brand-400/40 bg-brand-500/10 px-3 py-1 text-xs uppercase tracking-wider text-brand-300">
-                Comment on travaille
+                Ce que dit votre symptôme
               </span>
 
               <p className="mt-7 font-display text-2xl font-medium leading-snug text-sand-50">
-                Le prix est annoncé avant qu&apos;on ouvre la mallette.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-sand-300">
-                Vous décrivez le symptôme, nous annonçons la prestation et son tarif. Si ce qu&apos;on
-                trouve sur place change la donne, vous le savez avant, pas après.
+                Trois pannes qui se ressemblent, trois origines différentes.
               </p>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-ink-900/70 p-4">
-                  <p className="font-display text-3xl font-medium text-accent-400">24h/24</p>
-                  <p className="mt-1 text-xs text-sand-400">Ligne urgence</p>
-                </div>
-                <div className="rounded-2xl bg-ink-900/70 p-4">
-                  <p className="font-display text-3xl font-medium text-accent-400">
-                    {siteConfig.serviceArea.radiusKm} km
-                  </p>
-                  <p className="mt-1 text-xs text-sand-400">Autour de {siteConfig.city}</p>
-                </div>
-              </div>
+              <ul className="mt-7 space-y-3">
+                {triage.map((t, i) => (
+                  <li
+                    key={t.symptom}
+                    className="flex items-start gap-4 rounded-2xl bg-ink-900/70 p-4"
+                  >
+                    <span className="mt-0.5 font-display text-sm font-medium text-accent-400">
+                      0{i + 1}
+                    </span>
+                    <span>
+                      <span className="block text-sm font-medium text-sand-50">{t.symptom}</span>
+                      <span className="mt-0.5 block text-xs text-sand-400">{t.lead}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
               <p className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-sand-400">
                 <ShieldCheck size={14} className="mt-0.5 shrink-0 text-brand-300" />
-                Furet électrique, hydrocureur haute pression et caméra d&apos;inspection dans le camion.
+                Le code d&apos;erreur affiché sur votre appareil oriente déjà le diagnostic. Notez-le
+                avant d&apos;appeler.
               </p>
             </div>
 
-            {/* Signature du métier : un filet qui descend dans un tube. */}
+            {/* Signature du métier : la chaleur qui monte le long d'un élément de
+                radiateur, l'équivalent chauffage du filet qui s'écoulait sur le
+                site débouchage. Décoratif, donc aria-hidden et sans clic. */}
             <div
               aria-hidden="true"
-              className="absolute -right-5 -top-7 h-24 w-11 overflow-hidden rounded-full border border-brand-400/30 bg-ink-950/70 backdrop-blur"
+              className="absolute -right-5 -top-7 flex h-24 w-11 items-end justify-center overflow-hidden rounded-full border border-brand-400/30 bg-ink-950/70 backdrop-blur"
             >
-              <span className="absolute left-1/2 top-0 h-8 w-1.5 -translate-x-1/2 animate-flow-down rounded-full bg-gradient-to-b from-transparent via-accent-400 to-transparent" />
+              <span className="absolute bottom-0 h-8 w-1.5 animate-heat-rise rounded-full bg-gradient-to-t from-transparent via-accent-400 to-transparent" />
+              <Thermometer size={14} className="relative mb-2 text-brand-300" />
             </div>
           </div>
         </motion.div>

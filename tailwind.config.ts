@@ -46,8 +46,11 @@ const config: Config = {
         hero: '2.5rem',
       },
       boxShadow: {
-        card: '0 1px 2px rgb(7 26 30 / 0.05), 0 8px 24px -8px rgb(7 26 30 / 0.12)',
-        'card-hover': '0 4px 12px rgb(7 26 30 / 0.08), 0 24px 48px -12px rgb(7 26 30 / 0.2)',
+        /* Teinte d'ombre lue dans la palette (elle était figée en dur sur le site
+           d'origine, ce qui laissait une ombre froide sur une charte chaude). */
+        card: '0 1px 2px rgb(var(--c-ink-950) / 0.05), 0 8px 24px -8px rgb(var(--c-ink-950) / 0.14)',
+        'card-hover':
+          '0 4px 12px rgb(var(--c-ink-950) / 0.09), 0 24px 48px -12px rgb(var(--c-ink-950) / 0.22)',
         glow: '0 0 40px -10px rgb(var(--c-accent-500) / 0.55)',
         'glow-brand': '0 0 44px -12px rgb(var(--c-brand-400) / 0.5)',
       },
@@ -61,18 +64,20 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-12px)' },
         },
-        /* Filet lumineux qui « descend » dans un tube : signature visuelle du métier. */
-        'flow-down': {
-          '0%': { transform: 'translateY(-120%)', opacity: '0' },
+        /* Filet lumineux qui « monte » le long d'un élément de radiateur : signature
+           visuelle du métier chauffage (la chaleur qui s'élève). Sens inverse du
+           filet qui s'écoulait sur le site débouchage dont ce template est issu. */
+        'heat-rise': {
+          '0%': { transform: 'translateY(120%)', opacity: '0' },
           '18%': { opacity: '1' },
           '82%': { opacity: '1' },
-          '100%': { transform: 'translateY(340%)', opacity: '0' },
+          '100%': { transform: 'translateY(-340%)', opacity: '0' },
         },
       },
       animation: {
         shimmer: 'shimmer 8s linear infinite',
         float: 'float 6s ease-in-out infinite',
-        'flow-down': 'flow-down 3.6s ease-in-out infinite',
+        'heat-rise': 'heat-rise 4.2s ease-in-out infinite',
       },
     },
   },

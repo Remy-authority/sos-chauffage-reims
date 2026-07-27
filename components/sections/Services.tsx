@@ -24,12 +24,12 @@ export function Services({ services }: { services: Service[] }) {
           eyebrow="Nos prestations"
           title={
             <>
-              Chaque bouchon a
+              Chaque appareil
               <br />
-              <span className="text-gradient-accent">sa bonne méthode</span>
+              <span className="text-gradient-accent">tombe en panne à sa façon</span>
             </>
           }
-          subtitle="Du siphon de salle de bain à la colonne d'immeuble, la technique change. On choisit celle qui règle le problème sans abîmer votre réseau."
+          subtitle="Le gaz se met en sécurité, le fioul cale sur son brûleur, la pompe à chaleur souffre dehors, le circuit s'encrasse en silence. Quatre logiques différentes, quatre diagnostics différents."
           variant="dark"
         />
 

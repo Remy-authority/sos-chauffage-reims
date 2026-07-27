@@ -1,20 +1,20 @@
 import {
   BadgeCheck,
-  Building2,
-  Camera,
+  CalendarCheck,
   Clock,
+  Droplets,
   Euro,
+  Fan,
+  Flame,
+  Fuel,
   Gauge,
+  Heater,
   Phone,
   Search,
   ShieldCheck,
-  ShowerHead,
-  Shovel,
   Star,
-  Toilet,
+  Thermometer,
   TriangleAlert,
-  UtensilsCrossed,
-  Waves,
   Wrench,
   type LucideIcon,
 } from 'lucide-react'
@@ -25,15 +25,15 @@ import {
  * de métier en changeant cette table, pas les fichiers de contenu.
  */
 const ICONS: Record<string, LucideIcon> = {
-  // Services
+  // Prestations chauffage
   alert: TriangleAlert,
-  wc: Toilet,
-  shower: ShowerHead,
-  pressure: Gauge,
-  camera: Camera,
-  buried: Shovel,
-  grease: UtensilsCrossed,
-  building: Building2,
+  flame: Flame,
+  fuel: Fuel,
+  heatpump: Fan,
+  radiator: Heater,
+  leak: Droplets,
+  tank: Thermometer,
+  maintenance: CalendarCheck,
   // Étapes et arguments
   phone: Phone,
   search: Search,
@@ -46,7 +46,7 @@ const ICONS: Record<string, LucideIcon> = {
 }
 
 export function resolveIcon(icon: string): LucideIcon {
-  return ICONS[icon] ?? Waves
+  return ICONS[icon] ?? Gauge
 }
 
 export function ServiceIcon({

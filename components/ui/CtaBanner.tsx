@@ -34,7 +34,7 @@ export function CtaBanner({
             <h2 className="mt-7 text-[clamp(2rem,5vw,3.75rem)] leading-[1.06] text-sand-50">
               {title ?? (
                 <>
-                  Ça déborde chez vous ?
+                  Plus de chauffage chez vous ?
                   <br />
                   <span className="text-gradient-accent">Appelez, on décroche.</span>
                 </>
@@ -43,7 +43,7 @@ export function CtaBanner({
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-sand-300">
               {subtitle ??
-                "Décrivez le symptôme en deux phrases. Nous vous disons quelle prestation s'impose, ce qu'elle coûte et sous quel délai nous pouvons passer."}
+                "Le type d'appareil et le code affiché suffisent à démarrer. Nous vous disons ce qui est en cause, ce que ça coûte et sous quel délai nous pouvons passer."}
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

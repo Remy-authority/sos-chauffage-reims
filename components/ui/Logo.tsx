@@ -1,10 +1,14 @@
 import { siteConfig } from '@/config/site.config'
 
 /**
- * Identité visuelle du site : un pictogramme de siphon (le coude en U sous chaque
- * évier) traversé par un filet de vermillon qui figure l'écoulement retrouvé.
- * Le bloc-marque teal reste lisible aussi bien sur le crème clair que sur le
- * pétrole sombre : un seul jeu de couleurs pour tous les fonds.
+ * Identité visuelle du site : un radiateur stylisé (quatre éléments verticaux
+ * reliés par leur nourrice basse) surmonté d'une flamme braise. Deux signes,
+ * deux lectures : l'appareil qu'on dépanne, et la chaleur qu'il produit.
+ *
+ * Le bloc-marque bleu flamme reste lisible sur le crème craie comme sur le brun
+ * fumé : un seul jeu de couleurs pour tous les fonds. La silhouette tient à
+ * 16 px, ce qui en fait aussi un favicon utilisable tel quel (voir app/icon.svg,
+ * qui reprend le même tracé en couleurs figées).
  *
  * Le pictogramme est en SVG, le nom en HTML : la typographie Fraunces du site
  * s'applique donc réellement au mot-symbole (pas de police système figée).
@@ -13,24 +17,22 @@ export function LogoMark({ className = 'h-11 w-11' }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-hidden="true" focusable="false">
       <rect width="48" height="48" rx="14" className="fill-brand-600" />
-      {/* Siphon : descente, coude en U, remontée. */}
+      {/* Flamme : la chaleur produite. Silhouette à léchée intérieure, et non une
+          simple ogive : une ogive se lit comme une goutte d'eau, contresens
+          complet sur un site de chauffage (vérifié au rendu avant de figer). */}
       <path
-        d="M14 12 V25 a10 10 0 0 0 20 0 V16"
-        fill="none"
-        strokeWidth="5"
-        strokeLinecap="round"
-        className="stroke-sand-50"
+        d="M24 6.2c1.6 4.2 5.7 5.9 5.7 10.1a5.7 5.7 0 0 1-11.4 0c0-2.1 1-3.3 2.1-4.3.3 1.7 1.2 2.4 2.1 2.5-.7-2.7-.7-5.6 1.5-8.3z"
+        className="fill-accent-400"
       />
-      {/* Filet d'écoulement qui entre dans le siphon. */}
-      <path
-        d="M14 11 V18"
-        fill="none"
-        strokeWidth="5"
-        strokeLinecap="round"
-        className="stroke-accent-400"
-      />
-      {/* Sortie côté évacuation. */}
-      <circle cx="34" cy="16" r="2.6" className="fill-accent-400" />
+      {/* Radiateur : quatre éléments verticaux. */}
+      <g className="fill-sand-50">
+        <rect x="11.5" y="22" width="4.2" height="14" rx="2.1" />
+        <rect x="18.9" y="22" width="4.2" height="14" rx="2.1" />
+        <rect x="26.3" y="22" width="4.2" height="14" rx="2.1" />
+        <rect x="33.7" y="22" width="4.2" height="14" rx="2.1" />
+      </g>
+      {/* Nourrice basse qui relie les éléments. */}
+      <rect x="9.5" y="34.6" width="29" height="3.6" rx="1.8" className="fill-sand-50" />
     </svg>
   )
 }
@@ -53,7 +55,7 @@ export function Logo({
             light ? 'text-sand-50' : 'text-ink-950'
           }`}
         >
-          SOS Débouchage
+          SOS Chauffage
         </span>
         <span
           className={`mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] ${

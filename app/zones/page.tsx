@@ -10,8 +10,8 @@ import { Faq } from '@/components/ui/Faq'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Zones d'intervention, débouchage autour de ${siteConfig.city}`,
-  description: `Communes desservies autour de ${siteConfig.city} pour le débouchage et le curage de canalisations : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
+  title: `Zones d'intervention, dépannage chauffage autour de ${siteConfig.city}`,
+  description: `Communes desservies autour de ${siteConfig.city} pour le dépannage de chauffage et de chaudière : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
   path: '/zones',
 })
 
@@ -21,7 +21,7 @@ export default function ZonesHub() {
   const { city, serviceArea, businessName, departmentName, department } = siteConfig
 
   // Réponse courte factuelle « citable » (activité + zone + liste des communes).
-  const citable = `${businessName} intervient à ${city} (${departmentName}, ${department}) et dans ${zones.length} communes de l'agglomération, dans un rayon d'environ ${serviceArea.radiusKm} km : ${names.join(', ')}. Débouchage de canalisations, curage haute pression et inspection caméra, 7j/7.`
+  const citable = `${businessName} intervient à ${city} (${departmentName}, ${department}) et dans ${zones.length} communes de l'agglomération, dans un rayon d'environ ${serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage de chaudière à gaz ou au fioul, de pompe à chaleur, de radiateur et de ballon d'eau chaude, entretien annuel, 7j/7.`
 
   const hubFaq = [
     {
@@ -80,7 +80,7 @@ export default function ZonesHub() {
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-sand-600">{z.context}</p>
                   )}
                   <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-600 transition-all group-hover:gap-3">
-                    Débouchage à {z.name}
+                    Chauffagiste à {z.name}
                     <ArrowRight size={16} />
                   </span>
                 </Link>

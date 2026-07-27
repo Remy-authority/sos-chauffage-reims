@@ -11,8 +11,8 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Conseils canalisations, ${siteConfig.city} et Moselle`,
-  description: `Guides pratiques sur les canalisations bouchées : gestes à faire, causes, entretien préventif, curage et inspection caméra à ${siteConfig.city}.`,
+  title: `Conseils chauffage, ${siteConfig.city} et ${siteConfig.departmentName}`,
+  description: `Guides pratiques sur les pannes de chauffage : chaudière en sécurité, radiateur froid, pompe à chaleur, ballon d'eau chaude, entretien avant l'hiver à ${siteConfig.city}.`,
   path: '/conseils',
 })
 
@@ -38,10 +38,10 @@ export default function ConseilsListing() {
         title={
           <>
             Comprendre
-            <span className="text-gradient-accent"> ses canalisations</span>
+            <span className="text-gradient-accent"> son chauffage</span>
           </>
         }
-        subtitle="Ce qu'il faut faire, ce qu'il ne faut surtout pas faire, et comment éviter que le bouchon revienne."
+        subtitle="Ce que dit un code d'erreur, ce qui se règle soi-même, ce qui ne se touche pas, et comment traverser l'hiver sans tomber en panne."
       />
 
       <section className="bg-gradient-to-b from-sand-50 to-sand-100 py-16 lg:py-24">
@@ -52,8 +52,8 @@ export default function ConseilsListing() {
                 Les premiers articles arrivent bientôt
               </p>
               <p className="mt-4 leading-relaxed text-sand-600">
-                En attendant, une question sur une canalisation qui s&apos;écoule mal&nbsp;? Appelez,
-                on vous répond directement.
+                En attendant, une question sur une chaudière ou un radiateur qui ne suit
+                plus&nbsp;? Appelez, on vous répond directement.
               </p>
               <a
                 href={`tel:${siteConfig.phone}`}

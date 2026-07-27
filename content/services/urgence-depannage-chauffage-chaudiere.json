@@ -1,0 +1,52 @@
+{
+  "slug": "urgence-depannage-chauffage-chaudiere",
+  "order": 1,
+  "icon": "alert",
+  "navTitle": "Urgence chauffage",
+  "h1": "Urgence dépannage chauffage et chaudière à Reims",
+  "metaTitle": "Urgence dépannage chauffage et chaudière à Reims",
+  "metaDescription": "Chauffagiste d'urgence à Reims : chaudière à l'arrêt, plus de chauffage, plus d'eau chaude. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7, tarif annoncé avant.",
+  "intro": "Une urgence chauffage, c'est un logement qui ne monte plus en température et une famille qui ne peut pas attendre. Nous intervenons à Reims et dans les communes voisines sur les appareils à l'arrêt, quelle que soit leur énergie : chaudière à gaz, chaudière au fioul, pompe à chaleur, ballon d'eau chaude. Le premier appel sert à situer la panne et à vous dire quoi faire en attendant notre arrivée.",
+  "bullets": [
+    "Toutes énergies : gaz, fioul, pompe à chaleur",
+    "Ligne ouverte week-ends et jours fériés",
+    "Tarif annoncé avant l'intervention"
+  ],
+  "blocks": [
+    {
+      "heading": "Ce qui relève vraiment de l'urgence",
+      "body": "Toutes les pannes de chauffage ne se valent pas et nous le disons franchement au téléphone. Relève de l'urgence : un logement entier sans chauffage en période de froid, en particulier avec un nourrisson, une personne âgée ou une personne malade ; une chaudière qui coule et menace un plancher ou un plafond ; une odeur suspecte près de l'appareil ; un appareil qui se met en sécurité à répétition dans la même journée. Ne relève pas de l'urgence, et peut donc être planifié à un créneau normal, souvent moins cher : un seul radiateur froid dans un logement qui chauffe par ailleurs, un léger manque de pression sans autre symptôme, un bruit nouveau mais un appareil qui fonctionne, ou l'entretien annuel qu'on a oublié de programmer. Vous décrivez la situation, nous vous disons dans quelle catégorie elle tombe plutôt que de faire passer toute demande en urgence."
+    },
+    {
+      "heading": "Que faire en attendant notre arrivée",
+      "body": "Quelques gestes simples et sans risque améliorent la situation. Si de l'eau s'écoule sous la chaudière ou le long d'un tuyau, coupez le chauffage et posez une bassine et des serviettes pour protéger le sol, puis fermez l'arrivée d'eau de l'appareil si vous savez où elle se trouve et qu'elle est accessible. Notez le code d'erreur affiché sur l'écran : il oriente le diagnostic et la pièce que nous emportons. N'appuyez pas plus d'une fois sur le bouton de réarmement, une sécurité qui se redéclenche protège quelque chose. Fermez les portes des pièces inoccupées pour concentrer la chaleur qu'il reste, et fermez les volets à la nuit tombée, une fenêtre non protégée perd beaucoup. En revanche, ne touchez à rien sur le circuit de gaz, ne démontez aucun capot d'appareil et n'utilisez jamais un chauffage d'appoint à combustion dans une pièce fermée. Si vous sentez une odeur de gaz, sortez, aérez et prévenez le numéro d'urgence gaz avant de nous appeler."
+    },
+    {
+      "heading": "Comment se passe l'intervention",
+      "body": "Nous arrivons avec le nécessaire de diagnostic : de quoi lire les codes défaut de l'appareil, contrôler la pression du circuit, vérifier les sécurités et analyser la combustion sur un appareil qui brûle un combustible. La première étape est toujours de comprendre pourquoi l'appareil s'est arrêté, car une chaudière moderne s'arrête presque toujours pour une raison précise plutôt que par usure brutale. Quand la cause est un réglage, une purge, une sécurité déclenchée par un défaut passager ou une pression tombée, la remise en service se fait dans la foulée. Quand une pièce est fautive, nous vous disons laquelle, ce qu'elle coûte et si elle est disponible, avant de la remplacer. Si l'appareil ne peut pas repartir le jour même, nous vous le disons clairement plutôt que de laisser espérer, et nous voyons ensemble comment tenir en attendant."
+    }
+  ],
+  "relatedServices": [
+    "depannage-chaudiere-gaz",
+    "fuite-chaudiere-circuit-chauffage"
+  ],
+  "faq": [
+    {
+      "q": "Ma chaudière s'est arrêtée un dimanche, intervenez-vous quand même ?",
+      "a": "Oui. Une panne de chauffage se déclare surtout le soir et le week-end, au moment où le logement redemande de la puissance après une journée à température réduite. Notre ligne est ouverte les week-ends et les jours fériés pour les urgences à Reims et dans les communes de l'agglomération. Appelez en ayant sous les yeux le code d'erreur affiché et la marque de l'appareil : cela permet de préparer l'intervention plutôt que de découvrir la situation sur place."
+    },
+    {
+      "q": "Combien de fois puis-je appuyer sur le bouton de réarmement de ma chaudière ?",
+      "a": "Une fois, pas davantage. Le réarmement efface une sécurité qui s'est déclenchée. Si l'appareil repart et fonctionne normalement, c'était probablement un défaut passager. S'il se remet en sécurité, la cause est toujours là et insister ne la fera pas disparaître : à chaque tentative, l'appareil rejoue la séquence qui a posé problème. Notez le code affiché et appelez plutôt que de réarmer en boucle."
+    },
+    {
+      "q": "Puis-je utiliser un chauffage d'appoint en attendant votre passage ?",
+      "a": "Un convecteur ou un radiateur électrique d'appoint, oui, dans une pièce que vous occupez, en évitant de tout brancher sur la même multiprise. Un appareil d'appoint à combustion, pétrole ou gaz butane, ne doit jamais fonctionner dans une pièce fermée ni pendant la nuit dans une chambre : il consomme l'oxygène de la pièce et produit des gaz de combustion. Si vous n'avez pas d'autre solution, ventilez en permanence et ne l'utilisez que dans une pièce de vie où vous êtes présent et éveillé."
+    },
+    {
+      "q": "Intervenez-vous aussi quand il n'y a plus d'eau chaude mais que le chauffage marche ?",
+      "a": "Oui, et c'est fréquent. Sur une chaudière mixte, la production d'eau chaude peut être en défaut alors que le circuit de chauffage fonctionne encore, souvent à cause d'un échangeur entartré ou d'une vanne de basculement bloquée. Si votre eau chaude vient d'un ballon indépendant, la panne est ailleurs et se traite comme telle. Dans les deux cas, précisez au téléphone si vous avez perdu l'eau chaude, le chauffage, ou les deux : c'est l'information qui oriente le plus le diagnostic."
+    }
+  ],
+  "image": "/services/urgence-depannage-chauffage-chaudiere.jpg"
+}

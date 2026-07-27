@@ -5,8 +5,8 @@ import type { ComponentProps, ReactNode } from 'react'
  * Bouton unique du site. Boutons pleinement arrondis, micro-échelle au survol et
  * halo coloré : la signature d'action reprise de la référence PROTEC-DARD.
  *
- * Règle de couleur du site : `accent` (vermillon) est réservé à l'ACTION urgente
- * (appel, devis). `brand` (teal) porte les actions secondaires et la structure.
+ * Règle de couleur du site : `accent` (braise) est réservé à l'ACTION urgente
+ * (appel, devis). `brand` (bleu flamme) porte les actions secondaires et la structure.
  */
 type Variant = 'accent' | 'brand' | 'ghost' | 'outline'
 type Size = 'sm' | 'md' | 'lg'

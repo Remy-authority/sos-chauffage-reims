@@ -1,0 +1,52 @@
+{
+  "slug": "radiateur-froid-desembouage-purge",
+  "order": 5,
+  "icon": "radiator",
+  "navTitle": "Radiateur froid",
+  "h1": "Radiateur froid, purge et désembouage à Reims",
+  "metaTitle": "Radiateur froid, purge et désembouage à Reims",
+  "metaDescription": "Radiateur froid à Reims : diagnostic air, boue ou vanne bloquée, purge et désembouage du circuit de chauffage. Intervention sur l'agglomération, tarif annoncé avant.",
+  "intro": "Un radiateur froid alors que la chaudière fonctionne n'est presque jamais un problème de chaudière : c'est un problème de circuit. Trois causes couvrent la quasi-totalité des cas, et elles se distinguent à la main, en touchant simplement le radiateur à plusieurs endroits. Nous intervenons à Reims et dans les communes voisines pour poser ce diagnostic, purger, débloquer une vanne ou désembouer le circuit quand la boue a pris le dessus.",
+  "bullets": [
+    "Diagnostic air, boue ou vanne bloquée",
+    "Purge et rééquilibrage du circuit",
+    "Désembouage du circuit de chauffage"
+  ],
+  "blocks": [
+    {
+      "heading": "Trois symptômes, trois causes différentes",
+      "body": "Posez la main sur le radiateur en haut, au milieu et en bas, puis comparez. Froid en haut et chaud en bas : de l'air s'est accumulé dans la partie haute et empêche l'eau chaude d'y circuler. C'est le cas le plus fréquent en début de saison, et c'est celui qui se corrige par une purge. Chaud en haut et froid en bas : ce n'est plus de l'air mais un dépôt, la boue accumulée au fil des années s'est tassée dans la partie basse et l'eau la contourne. Une purge n'y changera rien, c'est le circuit qu'il faut traiter. Radiateur entièrement froid alors que les autres chauffent : l'eau n'y arrive pas du tout, la vanne thermostatique est probablement bloquée en position fermée, un pointeau grippé après l'été, ou le circuit est déséquilibré au point que ce radiateur est le dernier servi. Enfin, si tous les radiateurs sont froids, la cause n'est plus dans le circuit mais du côté de l'appareil ou de la régulation, et le diagnostic se déplace."
+    },
+    {
+      "heading": "La purge, ce que vous pouvez faire vous-même",
+      "body": "Purger un radiateur est un geste accessible et il n'y a pas de raison de vous en priver. La méthode est simple : couper le chauffage et laisser l'installation refroidir, commencer par le radiateur le plus proche de la chaudière puis remonter vers le plus éloigné, ou du bas de la maison vers le haut, ouvrir doucement le purgeur avec une clé ou un tournevis, un récipient sous la sortie, laisser l'air s'échapper jusqu'à ce qu'un filet d'eau régulier apparaisse, refermer. Le point important vient après : purger fait baisser la pression du circuit, il faut donc regarder le manomètre de la chaudière et remettre l'installation au niveau prévu par la notice avant de relancer. Deux limites à connaître. Si vous devez purger les mêmes radiateurs toutes les quelques semaines, ce n'est plus de l'entretien : de l'air entre quelque part, ou le circuit produit du gaz par corrosion interne. Et si le radiateur reste froid après une purge correcte, la cause est ailleurs, insister ne fera que vider le circuit."
+    },
+    {
+      "heading": "Le désembouage du circuit de chauffage",
+      "body": "Avec les années, l'eau d'un circuit de chauffage se charge en boues : des oxydes de fer issus de la corrosion interne des radiateurs et des tuyaux, mêlés à des dépôts calcaires. Cette boue se dépose là où l'eau ralentit, c'est à dire au bas des radiateurs et dans les points bas du réseau, et elle réduit progressivement la surface d'échange. Les signes sont reconnaissables : radiateurs chauds en haut et froids en bas, eau très sombre lors d'une purge, circuit qui met longtemps à monter en température, bruits de circulation, et une consommation qui augmente à confort égal. Le désembouage consiste à nettoyer ce circuit, en le rinçant avec le matériel adapté et un produit approprié, puis à le protéger pour ralentir la reprise du phénomène. Précision utile, notamment pour les moteurs de recherche : ce désembouage concerne exclusivement le circuit de chauffage, radiateurs et tuyauterie de chauffage. Il n'a rien à voir avec les canalisations d'évacuation d'eaux usées, qui relèvent d'un autre métier que le nôtre. Sur une installation très chargée, nous vous disons honnêtement ce qu'un désembouage peut récupérer et ce qu'il ne récupérera pas."
+    }
+  ],
+  "relatedServices": [
+    "fuite-chaudiere-circuit-chauffage",
+    "entretien-chaudiere-annuel"
+  ],
+  "faq": [
+    {
+      "q": "Mon radiateur est froid en haut et chaud en bas, que faut-il faire ?",
+      "a": "C'est le symptôme de l'air accumulé dans la partie haute du radiateur. La purge le règle : chauffage coupé et installation refroidie, ouvrez doucement le purgeur avec un récipient dessous, laissez l'air sortir jusqu'à obtenir un filet d'eau régulier, refermez. Vérifiez ensuite la pression au manomètre de la chaudière, car purger la fait baisser, et rétablissez le niveau prévu par la notice de l'appareil avant de relancer le chauffage."
+    },
+    {
+      "q": "Mon radiateur est chaud en haut et froid en bas, est-ce le même problème ?",
+      "a": "Non, et c'est important de ne pas confondre. Un radiateur chaud en haut mais froid en bas contient de la boue tassée dans sa partie basse, pas de l'air. Purger ne changera rien puisque le purgeur se trouve en haut, là où l'eau circule encore. Ce symptôme signale que le circuit s'est chargé au fil des années et appelle un désembouage, éventuellement précédé d'un nettoyage du radiateur concerné."
+    },
+    {
+      "q": "Un seul radiateur reste totalement froid, pourquoi ?",
+      "a": "Quand tous les autres chauffent, l'eau chaude n'atteint pas celui-là. La cause la plus courante est une vanne thermostatique bloquée : le pointeau situé sous la tête reste enfoncé après l'été et la vanne ne se rouvre pas, un défaut classique à la remise en route de la saison. Vient ensuite le déséquilibrage du circuit, où le radiateur le plus éloigné ou le plus mal alimenté est servi en dernier et jamais suffisamment. Les deux se traitent, mais pas de la même manière."
+    },
+    {
+      "q": "À quoi sert un désembouage et quand faut-il l'envisager ?",
+      "a": "Le désembouage nettoie l'intérieur du circuit de chauffage, radiateurs et tuyauterie, des boues d'oxydes et des dépôts qui s'y accumulent avec les années et qui réduisent l'échange de chaleur. Il devient pertinent quand plusieurs radiateurs sont froids en partie basse, quand l'eau de purge sort très noire, quand le circuit met longtemps à chauffer ou quand la consommation augmente à confort égal. Il s'agit bien du circuit de chauffage, pas des canalisations d'évacuation d'eaux usées, qui n'entrent pas dans notre domaine."
+    }
+  ],
+  "image": "/services/radiateur-froid-desembouage-purge.jpg"
+}

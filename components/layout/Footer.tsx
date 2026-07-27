@@ -19,8 +19,9 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo tone="light" />
             <p className="mt-6 max-w-md leading-relaxed text-sand-300">
-              Débouchage, dégorgement et curage de canalisations à {siteConfig.city} et dans les
-              communes de l&apos;agglomération. Un métier, un outillage dédié, un prix annoncé avant
+              Dépannage et entretien de chauffage à {siteConfig.city} et dans les communes de
+              l&apos;agglomération. Chaudière à gaz ou au fioul, pompe à chaleur, radiateurs, ballon
+              d&apos;eau chaude. Un métier, un diagnostic avant réparation, un prix annoncé avant
               l&apos;intervention.
             </p>
             <LiveDot className="mt-8">Ligne urgence ouverte {siteConfig.availability}</LiveDot>

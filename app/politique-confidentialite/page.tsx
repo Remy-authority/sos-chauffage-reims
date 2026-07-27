@@ -45,7 +45,11 @@ export default function PolitiqueConfidentialite() {
       </section>
       <section>
         <h2>Vos droits</h2>
-        <p>{c.droits}</p>
+        {/* L'adresse de contact vient de la config, pas de legal.json : une seule
+            source pour l'email et le téléphone du site. */}
+        <p>
+          {c.droitsPrefix} {siteConfig.email}. {c.droitsSuffix}
+        </p>
       </section>
       <section>
         <h2>Cookies</h2>

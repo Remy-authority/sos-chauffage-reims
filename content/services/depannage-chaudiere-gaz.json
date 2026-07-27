@@ -1,0 +1,52 @@
+{
+  "slug": "depannage-chaudiere-gaz",
+  "order": 2,
+  "icon": "flame",
+  "navTitle": "Chaudière à gaz",
+  "h1": "Dépannage de chaudière à gaz à Reims",
+  "metaTitle": "Dépannage de chaudière à gaz à Reims",
+  "metaDescription": "Chaudière gaz en panne à Reims : mise en sécurité, perte de pression, code défaut, allumage qui échoue. Diagnostic sur place et tarif annoncé avant intervention.",
+  "intro": "Une chaudière à gaz s'arrête rarement sans prévenir : elle affiche un code, elle se met en sécurité, ou elle perd sa pression avant de caler. Ces trois signaux couvrent l'essentiel des pannes que nous voyons sur l'agglomération rémoise. Nous intervenons sur les chaudières murales et au sol, à condensation comme plus anciennes, pour rétablir le chauffage et l'eau chaude en traitant la cause du défaut.",
+  "bullets": [
+    "Lecture du code défaut et des sécurités",
+    "Contrôle de pression et d'évacuation",
+    "Chaudières murales et au sol"
+  ],
+  "blocks": [
+    {
+      "heading": "Pourquoi une chaudière à gaz se met en sécurité",
+      "body": "La mise en sécurité n'est pas la panne, c'est la réaction de l'appareil à un défaut. Comprendre laquelle a été déclenchée fait gagner beaucoup de temps. La sécurité de pression se déclenche quand l'eau du circuit est descendue trop bas, en général parce que le circuit perd de l'eau quelque part ou parce qu'un vase d'expansion fatigué n'absorbe plus les variations. La sécurité de surchauffe se déclenche quand l'eau ne circule plus assez, souvent à cause d'un circulateur bloqué, d'un circuit encrassé ou de radiateurs tous fermés en même temps. La sécurité liée à l'évacuation des fumées arrête l'appareil quand la ventouse ou le conduit ne dégagent plus correctement, ce qui arrive après un nid, un obstacle ou un dévoiement mal étanche. Enfin, un défaut d'allumage se manifeste quand l'appareil tente d'allumer et n'y parvient pas, à cause d'une électrode encrassée ou d'un défaut d'alimentation. Chacune appelle une réponse différente, et aucune ne se règle en réarmant plusieurs fois."
+    },
+    {
+      "heading": "La pression, le symptôme le plus courant",
+      "body": "Le manomètre de la chaudière indique la pression du circuit de chauffage, pas celle de votre eau sanitaire. Une aiguille qui descend lentement au fil des semaines signale que le circuit perd de l'eau, par une purge mal refermée, un raccord de radiateur qui suinte, un joint fatigué ou une fuite invisible dans un plancher chauffant. Une aiguille qui monte fortement dès que la chaudière chauffe, puis retombe très bas à froid, oriente plutôt vers un vase d'expansion qui a perdu sa précharge : dans ce cas, remettre de l'eau ne règle rien et fait travailler la soupape de sécurité. Nous contrôlons la pression à chaud et à froid, ce qui permet de distinguer les deux situations au lieu de simplement recharger le circuit et de vous laisser recommencer le mois suivant. La note du plan de maintenance à retenir : une chaudière qu'il faut recharger régulièrement n'est pas normale, c'est un symptôme."
+    },
+    {
+      "heading": "Réglages, pièces et remise en service",
+      "body": "Quand le défaut vient d'un réglage, d'une purge à faire, d'une sonde encrassée ou d'une sécurité déclenchée par un événement passager, la remise en service se fait dans la foulée et nous vérifions ensuite la montée en température sur plusieurs cycles avant de partir. Quand une pièce est fautive, les plus fréquentes sont le circulateur, la sonde de température, l'électrode d'allumage ou d'ionisation, la vanne à trois voies et la carte électronique. Nous vous disons laquelle est en cause, comment nous l'avons établi, ce que la pièce coûte et si elle est encore disponible pour votre modèle. Sur un appareil ancien dont les pièces ne se trouvent plus, nous vous le disons franchement plutôt que de lancer une commande qui n'aboutira pas, et nous en discutons dans la logique réparer ou remplacer, hors urgence si possible."
+    }
+  ],
+  "relatedServices": [
+    "urgence-depannage-chauffage-chaudiere",
+    "entretien-chaudiere-annuel"
+  ],
+  "faq": [
+    {
+      "q": "Ma chaudière gaz affiche un code d'erreur, que faut-il en faire ?",
+      "a": "Notez-le et communiquez-le au téléphone, sans le confondre avec la température affichée. Ce code est propre à chaque marque et désigne une famille de défauts : pression, allumage, évacuation des fumées, surchauffe, sonde. Il ne dit pas quelle pièce est morte, mais il indique par où commencer et permet d'emporter la bonne pièce. C'est l'information la plus utile que vous puissiez nous donner avant l'intervention."
+    },
+    {
+      "q": "Pourquoi ma chaudière perd-elle de la pression alors que je n'ai pas de fuite visible ?",
+      "a": "Une fuite de circuit de chauffage est rarement visible, parce qu'une grande partie des tuyaux passe dans les cloisons, sous une chape ou derrière un habillage. L'eau qui s'échappe goutte à goutte s'évapore souvent avant de laisser une trace au sol. Deux autres causes ne sont pas des fuites du tout : une soupape de sécurité qui lâche de l'eau à l'égout à chaque montée en température, et un vase d'expansion dégonflé qui fait travailler cette soupape. Le contrôle de la pression à froid puis à chaud permet de trancher entre ces situations."
+    },
+    {
+      "q": "Faut-il remettre de l'eau soi-même dans la chaudière ?",
+      "a": "Ponctuellement, oui, c'est un geste prévu par les fabricants et décrit dans la notice de l'appareil. Mais si vous devez le refaire régulièrement, ce n'est plus un entretien, c'est le pansement d'un problème qui continue : le circuit perd de l'eau ou la soupape en évacue. Recharger en boucle a un coût caché, puisque chaque appoint réintroduit de l'eau neuve, donc de l'oxygène et du calcaire, ce qui accélère l'encrassement et la corrosion du circuit."
+    },
+    {
+      "q": "Intervenez-vous sur toutes les marques de chaudières à gaz ?",
+      "a": "Nous intervenons sur les chaudières murales et au sol des marques courantes en France, à condensation comme sur les générations précédentes. La vraie limite n'est pas la marque, c'est la disponibilité des pièces détachées d'un modèle : certains appareils très anciens ou de marques disparues ne sont plus approvisionnés. Nous vérifions ce point avant de vous engager dans une réparation, et nous le disons avant de commencer plutôt qu'après."
+    }
+  ],
+  "image": "/services/depannage-chaudiere-gaz.jpg"
+}

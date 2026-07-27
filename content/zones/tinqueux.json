@@ -1,0 +1,43 @@
+{
+  "slug": "tinqueux",
+  "name": "Tinqueux",
+  "postalCode": "51430",
+  "context": "Commune de l'ouest rémois, la plus peuplée des communes limitrophes, qui mêle lotissements pavillonnaires et petits collectifs.",
+  "metaTitle": "Dépannage chauffage et chaudière à Tinqueux (51)",
+  "metaDescription": "Chauffagiste à Tinqueux : chaudière en panne, radiateur froid, plus d'eau chaude. Gaz, fioul et pompe à chaleur. Ligne ouverte 7j/7, tarif annoncé avant.",
+  "h1": "Dépannage chauffage et chaudière à Tinqueux",
+  "intro": "Nous intervenons à Tinqueux (51430) sur les pannes de chauffage et d'eau chaude, quelle que soit l'énergie de l'appareil. Accolée à Reims par l'ouest, Tinqueux est la plus peuplée des communes limitrophes et la plus variée en matière de logement : des maisons de lotissement des décennies passées côtoient de petits collectifs et des constructions plus récentes. Cette diversité se retrouve dans les appareils que nous y trouvons, et donc dans les pannes.",
+  "blocks": [
+    {
+      "heading": "Une commune, plusieurs générations de chaudières",
+      "body": "Tinqueux a grandi par vagues, et chaque vague a laissé sa génération d'appareils. Dans les maisons de lotissement les plus anciennes, nous rencontrons encore des chaudières murales à gaz de conception classique, robustes mais dont les pièces commencent à manquer, avec les défauts qui vont avec : électrode d'allumage encrassée, circulateur qui peine à redémarrer après l'été, vase d'expansion qui a perdu sa précharge et fait chuter la pression à chaque cycle. Dans les logements collectifs, la question est souvent celle du chauffage individuel au gaz installé lot par lot, où un appareil placé dans un placard technique reçoit rarement l'attention qu'il mérite. Dans les constructions récentes, ce sont les chaudières à condensation et les pompes à chaleur qui dominent, avec des pannes d'un autre ordre, plutôt liées à la régulation, aux sondes et aux consignes qu'à l'usure mécanique. Nous vous demandons donc systématiquement l'âge approximatif et la marque de l'appareil avant de venir."
+    },
+    {
+      "heading": "Le réflexe utile avant d'appeler",
+      "body": "Deux minutes d'observation depuis chez vous nous font gagner beaucoup de temps. Regardez d'abord si le problème touche tout le logement ou un seul point : plus de chauffage nulle part oriente vers l'appareil ou la régulation, un seul radiateur froid oriente vers le circuit et souvent vers une simple vanne bloquée après l'été. Notez ensuite le code d'erreur affiché sur l'écran de la chaudière, en le distinguant de la température de consigne. Jetez un oeil au manomètre : une pression tombée très bas explique à elle seule beaucoup d'arrêts. Enfin, précisez si vous avez perdu le chauffage, l'eau chaude, ou les deux, car sur une chaudière mixte cette information sépare déjà deux familles de pannes. Avec ces éléments, nous arrivons avec la bonne pièce plus souvent qu'avec la seule adresse."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas de panne complète de chauffage à Tinqueux par temps froid, coupez l'appareil si vous constatez un écoulement d'eau, protégez le sol, fermez les pièces inoccupées pour garder la chaleur restante, et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Tinqueux, nous couvrons aussi Reims et ses quartiers ouest, Bezannes, Saint-Brice-Courcelles et, plus loin sur la vallée de la Vesle, Muizon."
+    }
+  ],
+  "neighbours": [
+    "Reims",
+    "Bezannes",
+    "Saint-Brice-Courcelles"
+  ],
+  "faq": [
+    {
+      "q": "Intervenez-vous à Tinqueux dans un appartement en chauffage individuel au gaz ?",
+      "a": "Oui. Dans un logement collectif équipé d'une chaudière individuelle, l'appareil et son circuit de radiateurs relèvent du logement, donc de son occupant ou de son propriétaire, et nous intervenons comme dans une maison. La limite se situe au niveau des parties communes : conduit collectif d'évacuation, colonne de gaz, chaufferie commune. Si le diagnostic pointe de ce côté, nous vous le disons et c'est au syndic de prendre le relais."
+    },
+    {
+      "q": "Ma chaudière ne repart pas après l'été, est-ce forcément une panne ?",
+      "a": "Pas nécessairement, et c'est très courant à Tinqueux comme ailleurs à la remise en route de la saison. Après plusieurs mois d'arrêt, la pression a souvent baissé, de l'air s'est accumulé dans les radiateurs et les vannes thermostatiques peuvent rester grippées en position fermée. Une chaudière qui refuse de démarrer dans ces conditions se remet souvent en service sans remplacement de pièce. C'est précisément pour cela que l'entretien se fait mieux à la fin de l'été qu'en décembre."
+    },
+    {
+      "q": "Combien de temps avant votre arrivée à Tinqueux ?",
+      "a": "Tinqueux est directement accolée à Reims, donc à quelques minutes de route : le délai dépend du planning en cours, pas de la distance. Nous vous annonçons un créneau réaliste au moment de l'appel plutôt qu'une promesse générique. Si votre situation relève vraiment de l'urgence, logement entier sans chauffage par grand froid, personne fragile au domicile ou écoulement d'eau, dites-le dès les premières phrases."
+    }
+  ]
+}

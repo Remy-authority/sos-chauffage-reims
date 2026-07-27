@@ -9,7 +9,7 @@ import type { Zone } from '@/lib/content'
 /**
  * Zone d'intervention : panneau sombre listant les communes desservies (chacune
  * cliquable vers sa page dédiée, c'est un point de maillage important), et colonne
- * de droite avec les quartiers de Metz et le rappel d'appel.
+ * de droite avec les quartiers de la ville de base et le rappel d'appel.
  */
 export function ServiceArea({ zones }: { zones: Zone[] }) {
   const { city, serviceArea, departmentName, department } = siteConfig

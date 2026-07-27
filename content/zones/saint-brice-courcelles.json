@@ -1,0 +1,43 @@
+{
+  "slug": "saint-brice-courcelles",
+  "name": "Saint-Brice-Courcelles",
+  "postalCode": "51370",
+  "context": "Commune résidentielle du nord-ouest de Reims, traversée par la Vesle et le canal, avec une part de logement collectif notable.",
+  "metaTitle": "Dépannage chauffage et chaudière à Saint-Brice-Courcelles (51)",
+  "metaDescription": "Chauffagiste à Saint-Brice-Courcelles : chaudière en sécurité, radiateurs froids, plus d'eau chaude. Maison et appartement. Ligne ouverte 7j/7.",
+  "h1": "Dépannage chauffage et chaudière à Saint-Brice-Courcelles",
+  "intro": "Nous intervenons à Saint-Brice-Courcelles (51370) pour le dépannage des chaudières, des pompes à chaleur et des ballons d'eau chaude. Commune du nord-ouest de Reims, traversée par la Vesle et le canal, Saint-Brice-Courcelles associe des rues pavillonnaires calmes et une part de logement collectif plus importante que dans les communes voisines de taille comparable. Maison ou appartement, la panne ne se traite pas de la même façon.",
+  "blocks": [
+    {
+      "heading": "En maison ou en appartement, deux périmètres",
+      "body": "La différence n'est pas cosmétique, elle détermine qui doit faire quoi. Dans une maison individuelle, tout est chez vous : l'appareil, son évacuation, le circuit de radiateurs, le ballon. Le diagnostic peut aller d'un bout à l'autre de l'installation sans autre autorisation que la vôtre. Dans un appartement équipé d'une chaudière individuelle, votre périmètre s'arrête à votre logement : l'appareil, ses raccordements et vos émetteurs. Au delà commencent les parties communes, conduit collectif d'évacuation, colonne d'alimentation, ventilation générale, qui relèvent du syndic. Cette frontière compte parce que certains symptômes la traversent : une chaudière qui se met en sécurité sur défaut d'évacuation peut parfaitement être en bon état, le problème venant du conduit commun. Dans un immeuble chauffé par une chaufferie collective, votre logement n'a pas de générateur du tout, et un radiateur froid relève alors de l'équilibrage de la colonne ou d'un robinet de votre logement. Nous vous disons de quel côté de la frontière se trouve votre panne, ce qui vous évite de payer pour un problème qui n'est pas le vôtre."
+    },
+    {
+      "heading": "L'humidité de fond de vallée",
+      "body": "Saint-Brice-Courcelles s'étire le long de la Vesle et du canal, en fond de vallée, ce qui donne des sous-sols et des rez-de-chaussée plus humides que sur les plateaux voisins. Cette humidité ambiante a des effets concrets sur une installation de chauffage. Elle accélère la corrosion externe des appareils et des raccords installés dans un sous-sol ou une buanderie, si bien qu'un suintement met plus longtemps à être identifié comme tel au milieu de traces d'humidité générales. Elle rend le diagnostic d'une trace au mur plus délicat, puisqu'une auréole près d'un radiateur peut aussi bien venir d'un raccord qui goutte que d'une remontée du mur ou d'une condensation. L'indice le plus fiable dans ces cas reste la pression de la chaudière : si elle ne bouge pas alors que la trace s'étend, le chauffage n'est probablement pas en cause. Enfin, un air ambiant humide favorise le givrage des unités extérieures de pompes à chaleur, donc des cycles de dégivrage plus fréquents en hiver."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas de panne de chauffage à Saint-Brice-Courcelles, notez le code affiché, coupez l'appareil si de l'eau s'écoule et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Saint-Brice-Courcelles, nous couvrons aussi Reims et ses quartiers nord-ouest, Tinqueux, Bétheny et Muizon."
+    }
+  ],
+  "neighbours": [
+    "Reims",
+    "Tinqueux",
+    "Bétheny"
+  ],
+  "faq": [
+    {
+      "q": "Dans un immeuble, qui prend en charge la panne de chauffage ?",
+      "a": "Cela dépend de l'installation. Avec une chaudière individuelle dans le logement, l'appareil et vos radiateurs relèvent de l'occupant ou du propriétaire selon la nature de l'opération, et nous intervenons directement. Avec un chauffage collectif, le générateur se trouve en partie commune et relève du syndic : un radiateur froid dans votre logement peut alors venir de votre robinet, donc de chez vous, ou de l'équilibrage de la colonne, donc des parties communes. Le diagnostic sert précisément à situer la frontière."
+    },
+    {
+      "q": "Une trace d'humidité sous mon radiateur vient-elle forcément d'une fuite ?",
+      "a": "Non, et dans un secteur de fond de vallée la question mérite d'être posée. Une auréole peut venir d'un raccord ou d'un purgeur qui suinte, mais aussi d'une condensation sur un mur froid ou d'une remontée d'humidité qui suit le tracé du tuyau sans rapport avec le chauffage. Le repère le plus fiable est la pression au manomètre de la chaudière : si elle reste stable pendant que la trace grandit, le circuit ne perd pas d'eau et la cause est ailleurs."
+    },
+    {
+      "q": "Ma chaudière d'appartement se met en sécurité, est-ce forcément elle qui est en cause ?",
+      "a": "Pas toujours. Une chaudière individuelle raccordée à un conduit collectif d'évacuation peut se mettre en sécurité alors qu'elle fonctionne parfaitement, parce que le conduit commun ne dégage plus correctement. Un indice utile : si plusieurs logements de la même colonne rencontrent le même défaut à la même période, la cause est presque certainement en partie commune. Nous vous fournissons dans ce cas un constat écrit à transmettre au syndic."
+    }
+  ]
+}

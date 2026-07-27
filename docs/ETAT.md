@@ -62,10 +62,11 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - [ ] Rémy : valider le domaine (reco : sos-chauffage-reims.fr), l'acheter, fournir le 09 dédié + email + nom commercial
 - [x] CEO (27/07) : repo GitHub `Remy-authority/sos-chauffage-reims` (public, `main` poussé) + projet Vercel `sos-chauffage-reims` relié au repo + `SEO_NOINDEX=1` posé en Production AVANT le premier déploiement + Framework Preset vérifié via l'API : « nextjs » ✓ (leçon Dijon) + GitHub Action `publish-article.yml` active
 - [x] SEO : carte mots-clés chauffage/chaudière Reims + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` ALIGNÉ SUR LA SAISON (sujets chauffage d'octobre à février en priorité, entretien/été ensuite ; codes postaux via geo.api.gouv.fr) — fait le 27/07/2026, AUDITÉ ET VALIDÉ par le CEO le 27/07 (contre-vérification indépendante des 12 communes sur geo.api.gouv.fr : codes postaux, populations et distances tous exacts)
-- [ ] Builder : `config/site.config.ts` (identité, palette chauffage, persona DEMO, numéro fiction ARCEP en attendant le 09) + `content/legal.json`
-- [ ] Builder : `content/services/*.json` et `content/zones/*.json` (communes agglo Reims) selon le plan SEO
-- [ ] Builder sur Opus : identité visuelle Reims (ADN PROTEC-DARD, rendu distinct de Metz ET Dijon)
-- [ ] Builder : logo, favicon, portrait persona, images (1 UNIQUE par commune, décors champenois, aucun texte/logo/visage flou)
+- [x] Builder (27/07) : `config/site.config.ts` (identité Reims, palette « chaleur maîtrisée », persona DEMO, numéro de fiction `phoneIsDemo: true`, rayon 30 km déclaré UNE SEULE FOIS via `SERVICE_RADIUS_KM`) + `content/legal.json` (téléphone et email retirés du JSON, désormais lus depuis la config)
+- [x] Builder (27/07) : `content/services/*.json` (8) et `content/zones/*.json` (12) réécrits intégralement selon `docs/SEO-GEO-PLAN.md`, codes postaux revérifiés sur geo.api.gouv.fr le jour même
+- [x] Builder sur Opus (27/07) : identité visuelle Reims (ADN PROTEC-DARD conservé, palette et logo propres, section « du symptôme à la cause » spécifique au site, animation `heat-rise`)
+- [x] Builder (27/07) : logo, favicon + `icon-192/512.png`, portrait persona, OG, 32 visuels générés dont **12 images de commune uniques** (aucun pool partagé), aucun texte/logo/visage flou
+- [x] Builder (27/07) : SEO technique, schema `HVACBusiness` à la place de `Plumber`, `FAQPage` sur toutes les FAQ, `llms.txt` régénéré dynamiquement (8 services + 12 zones)
 - [ ] Autoblog : drafts T1 orientés saison de chauffe (préfixes 001-…)
 - [ ] Contrôle visuel CEO (côte à côte avec Metz et Dijon : assez distinct ?) → validation Rémy → mise en ligne (Étape 6) ⏰ avant fin septembre
 - [ ] Post-mise en ligne : GSC (propriété + sitemap) + Bing Webmaster Tools (nouvelle étape standard)
@@ -116,3 +117,20 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   Message Builder préparé et remis à Rémy. Écart signalé par le SEO (page PAC à la place d'une
   page « remplacement chaudière », remplacement traité en blog + FAQ entretien) : approuvé par le
   CEO, cohérent avec le positionnement dépannage.
+- **27/07/2026 (Builder, Opus)** : identité et contenu Reims livrés sur la branche
+  `builder/design-contenu-reims`. Palette « chaleur maîtrisée » (ink brun fumé, sand craie,
+  brand bleu de flamme de gaz, accent braise) : base chaude là où Metz est un noir bleu pétrole
+  et Dijon un noir prune, donc un écart visible avant même les couleurs d'accent. Logo refait
+  (radiateur + flamme) et décliné en favicon. 8 pages services et 12 pages communes écrites
+  d'après le plan SEO, sans en dévier. Nouvelle section « du symptôme à la cause » (8 paires
+  symptôme/piste renvoyant vers la bonne prestation) : c'est la variation de structure qui
+  éloigne le plus le site d'un clone recoloré de Metz. Décision Rémy du 30 km appliquée depuis
+  une constante unique de la config, donc cohérente partout (texte, compteur animé, llms.txt,
+  footer) : 7 occurrences vérifiées dans le rendu, aucune trace de 15 ou 20 km.
+  Vérifications : `tsc` propre, `npm run build` vert (37 pages), 22 captures Playwright
+  desktop et mobile, contrôle automatisé des 29 pages rendues (zéro tiret cadratin, zéro
+  occurrence de « plombier » ou de vocabulaire canalisation hérité, zéro URL Metz).
+  Deux défauts corrigés en cours de route : la première flamme du logo se lisait comme une
+  goutte d'eau (contresens sur un site de chauffage), et deux classes d'opacité Tailwind
+  invalides héritées du template (`bg-brand-500/12`, `bg-brand-500/6`) étaient silencieusement
+  mortes. Reste au CEO : contrôle visuel côte à côte avec Metz et Dijon.

@@ -10,7 +10,7 @@ import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Contact et demande d’intervention',
-  description: `Contactez ${siteConfig.businessName} pour un débouchage de canalisation à ${siteConfig.city} et dans l'agglomération. Ligne ouverte 7j/7, prix annoncé avant intervention.`,
+  description: `Contactez ${siteConfig.businessName} pour un dépannage de chauffage ou de chaudière à ${siteConfig.city} et dans l'agglomération. Ligne ouverte 7j/7, prix annoncé avant intervention.`,
   path: '/contact',
 })
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
         title={
           <>
             Dites-nous ce qui
-            <span className="text-gradient-accent"> ne s&apos;écoule plus</span>
+            <span className="text-gradient-accent"> ne chauffe plus</span>
           </>
         }
         subtitle="Par téléphone pour une urgence, par le formulaire si ça peut attendre quelques heures."
@@ -45,9 +45,9 @@ export default function ContactPage() {
             <AnimatedSection>
               <h2 className="text-3xl">Nous joindre</h2>
               <p className="mt-4 leading-relaxed text-sand-600">
-                Une canalisation qui refoule ne se décrit pas bien par écrit. Si l&apos;eau monte,
-                appelez : c&apos;est plus rapide et nous pouvons vous guider tout de suite sur les
-                gestes à faire en attendant.
+                Un logement qui ne chauffe plus en plein hiver ne se décrit pas bien par écrit.
+                Appelez : c&apos;est plus rapide, et nous pouvons vous guider tout de suite sur les
+                gestes sûrs à faire en attendant notre arrivée.
               </p>
             </AnimatedSection>
 

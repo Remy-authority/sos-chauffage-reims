@@ -23,7 +23,7 @@ const fraunces = Fraunces({
 })
 
 const homeTitle = `${siteConfig.trade} à ${siteConfig.city}, intervention rapide`
-const homeDesc = `Débouchage et curage de canalisations à ${siteConfig.city} et dans l'agglomération. WC, évier, douche, colonne d'immeuble, regard. Prix annoncé avant intervention.`
+const homeDesc = `Dépannage de chauffage et de chaudière à ${siteConfig.city} et dans l'agglomération. Chaudière gaz ou fioul, pompe à chaleur, radiateur froid, ballon d'eau chaude. Prix annoncé avant intervention.`
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.seo.canonicalBase),

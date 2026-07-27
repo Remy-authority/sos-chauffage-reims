@@ -31,7 +31,7 @@ export function WhyUs() {
             >
               <span
                 aria-hidden="true"
-                className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-500/6 blur-2xl transition-opacity duration-500 group-hover:bg-accent-500/10"
+                className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-brand-500/[0.06] blur-2xl transition-opacity duration-500 group-hover:bg-accent-500/10"
               />
               <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-950 text-brand-300">
                 <ServiceIcon icon={item.icon} className="h-6 w-6" />

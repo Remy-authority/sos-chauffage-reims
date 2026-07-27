@@ -5,14 +5,14 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {
   ArrowLeft,
   ArrowRight,
-  Building2,
+  CalendarCheck,
   CircleAlert,
   Droplets,
-  Shovel,
-  ShowerHead,
-  Toilet,
-  TriangleAlert,
-  UtensilsCrossed,
+  Fan,
+  Flame,
+  Fuel,
+  Heater,
+  Thermometer,
   type LucideIcon,
 } from 'lucide-react'
 import { EASE } from '@/lib/motion'
@@ -30,15 +30,15 @@ interface Fields {
   message: string
 }
 
-/** Les huit situations qui couvrent la quasi-totalité des appels débouchage. */
+/** Les huit situations qui couvrent la quasi-totalité des appels chauffage. */
 const TYPES: { id: string; label: string; Icon: LucideIcon }[] = [
-  { id: 'WC ou toilettes bouchés', label: 'WC, toilettes', Icon: Toilet },
-  { id: 'Évier ou lavabo bouché', label: 'Évier, lavabo', Icon: Droplets },
-  { id: 'Douche ou baignoire bouchée', label: 'Douche, baignoire', Icon: ShowerHead },
-  { id: 'Odeurs ou refoulement', label: 'Odeurs, refoulement', Icon: TriangleAlert },
-  { id: 'Canalisation enterrée ou regard', label: 'Regard, enterré', Icon: Shovel },
-  { id: "Colonne d'immeuble ou copropriété", label: "Colonne d'immeuble", Icon: Building2 },
-  { id: 'Bac à graisse (professionnel)', label: 'Bac à graisse', Icon: UtensilsCrossed },
+  { id: 'Chaudière à gaz en panne', label: 'Chaudière gaz', Icon: Flame },
+  { id: 'Chaudière au fioul en panne', label: 'Chaudière fioul', Icon: Fuel },
+  { id: 'Pompe à chaleur en défaut', label: 'Pompe à chaleur', Icon: Fan },
+  { id: 'Radiateur froid ou circuit à purger', label: 'Radiateur froid', Icon: Heater },
+  { id: 'Fuite sur la chaudière ou le circuit', label: 'Fuite', Icon: Droplets },
+  { id: "Plus d'eau chaude, ballon ou cumulus", label: "Plus d'eau chaude", Icon: Thermometer },
+  { id: 'Entretien annuel à programmer', label: 'Entretien annuel', Icon: CalendarCheck },
   { id: 'Autre', label: 'Autre situation', Icon: CircleAlert },
 ]
 
@@ -133,7 +133,9 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-sand-50 md:text-3xl">Qu&apos;est-ce qui est bouché ?</h2>
+              <h2 className="mt-6 text-2xl text-sand-50 md:text-3xl">
+                Qu&apos;est-ce qui ne chauffe plus ?
+              </h2>
               <p className="mt-2 text-sm text-sand-400">
                 Choisissez la situation la plus proche de la vôtre.
               </p>
@@ -206,7 +208,7 @@ export function LeadForm() {
                     name="ville"
                     type="text"
                     autoComplete="postal-code"
-                    placeholder="Metz, Montigny-lès-Metz, 57000…"
+                    placeholder="Reims, Tinqueux, Cormontreuil, 51100…"
                     value={fields.ville}
                     onChange={(e) => set('ville', e.target.value)}
                     className={inputClass}
@@ -337,7 +339,7 @@ export function LeadForm() {
                     id="message"
                     name="message"
                     rows={3}
-                    placeholder="Depuis quand, quels appareils sont touchés, maison ou appartement…"
+                    placeholder="Marque et âge de l'appareil, code d'erreur affiché, depuis quand, maison ou appartement…"
                     value={fields.message}
                     onChange={(e) => set('message', e.target.value)}
                     className={`${inputClass} resize-none`}

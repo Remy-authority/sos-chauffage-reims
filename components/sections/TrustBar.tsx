@@ -1,4 +1,4 @@
-import { Camera, Euro, MapPin, Timer } from 'lucide-react'
+import { Euro, Flame, MapPin, Timer } from 'lucide-react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { siteConfig } from '@/config/site.config'
 
@@ -18,9 +18,9 @@ const items = [
     description: "Le tarif est donné avant l'intervention",
   },
   {
-    icon: Camera,
-    label: 'Caméra si besoin',
-    description: 'On identifie la cause, pas seulement le bouchon',
+    icon: Flame,
+    label: 'Toutes énergies',
+    description: 'Gaz, fioul, pompe à chaleur, ballon',
   },
   {
     icon: MapPin,

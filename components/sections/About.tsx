@@ -25,7 +25,7 @@ export function About() {
               eyebrow={about.eyebrow}
               title={
                 <>
-                  Le débouchage,
+                  Le chauffage,
                   <br />
                   <span className="text-gradient-ink italic">notre seul métier</span>
                 </>

@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site.config'
 
 /**
  * Déroulé d'intervention en 4 étapes, sur fond sombre. Les cartes sont reliées par
- * un filet dégradé qui matérialise l'écoulement d'une étape à la suivante.
+ * un filet dégradé qui matérialise la progression d'une étape à la suivante.
  */
 export function Process() {
   const steps = siteConfig.process
@@ -28,7 +28,7 @@ export function Process() {
           title={
             <>
               De votre appel
-              <span className="text-gradient-accent"> à l&apos;écoulement retrouvé</span>
+              <span className="text-gradient-accent"> à la chaleur revenue</span>
             </>
           }
           subtitle="Quatre étapes, sans zone d'ombre. Vous savez à chaque moment ce que nous faisons et pourquoi."
@@ -48,7 +48,7 @@ export function Process() {
               <div className="group relative h-full overflow-hidden rounded-card border border-ink-700/55 bg-gradient-to-br from-ink-800/45 to-ink-950/65 p-8 transition-all duration-500 hover:-translate-y-1 hover:border-brand-400/45">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-5xl font-medium text-brand-400/30">{step.step}</span>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500/12 text-brand-300 ring-1 ring-brand-400/25 transition-transform duration-500 group-hover:scale-110">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500/[0.12] text-brand-300 ring-1 ring-brand-400/25 transition-transform duration-500 group-hover:scale-110">
                     <ServiceIcon icon={step.icon} className="h-5 w-5" strokeWidth={2} />
                   </span>
                 </div>

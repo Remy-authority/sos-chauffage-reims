@@ -1,0 +1,43 @@
+{
+  "slug": "cormontreuil",
+  "name": "Cormontreuil",
+  "postalCode": "51350",
+  "context": "Commune limitrophe au sud de Reims, très pavillonnaire, adossée à un pôle commercial important de l'agglomération.",
+  "metaTitle": "Dépannage chauffage et chaudière à Cormontreuil (51)",
+  "metaDescription": "Chauffagiste à Cormontreuil : panne de chaudière, radiateur froid, ballon d'eau chaude hors service. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7.",
+  "h1": "Dépannage chauffage et chaudière à Cormontreuil",
+  "intro": "Nous intervenons à Cormontreuil (51350) pour le dépannage des chaudières, des pompes à chaleur et des ballons d'eau chaude. Commune du sud de Reims, limitrophe directe, Cormontreuil est très majoritairement pavillonnaire : des maisons individuelles avec garage ou sous-sol, où la chaufferie est souvent reléguée dans un local non chauffé. Ce détail d'implantation a plus de conséquences qu'il n'y paraît sur les pannes que nous y traitons.",
+  "blocks": [
+    {
+      "heading": "Quand l'appareil vit dans un local froid",
+      "body": "Beaucoup de maisons de Cormontreuil abritent leur chaudière ou leur ballon dans un garage, une buanderie ou un sous-sol qui n'est pas chauffé. Cette configuration confortable pour l'habitant a trois conséquences concrètes. La première est thermique : un appareil et ses tuyaux qui traversent un local froid perdent de la chaleur avant même qu'elle n'arrive aux radiateurs, et lors d'un épisode de gel prolongé, un tronçon mal calorifugé peut geler. La deuxième est acoustique et pratique : une panne qui commence par un bruit nouveau ou un léger suintement passe inaperçue plus longtemps dans un local où l'on ne va qu'une fois par semaine, si bien que le défaut est découvert au stade de l'arrêt complet plutôt qu'au stade du symptôme. La troisième concerne le ballon d'eau chaude : un ballon installé dans un garage froid met plus de temps à chauffer et perd davantage en veille. Notre premier réflexe sur une intervention à Cormontreuil est donc d'aller voir le local, pas seulement l'appareil."
+    },
+    {
+      "heading": "Ce que raconte l'eau du circuit",
+      "body": "Dans une maison individuelle chauffée depuis plusieurs décennies par le même réseau de radiateurs, l'état de l'eau du circuit est un indicateur très parlant. Une eau qui sort claire lors d'une purge signale un circuit en bon état. Une eau noire, chargée, qui tache le récipient, indique que la corrosion interne a produit des boues d'oxydes qui se déposent au bas des radiateurs et dans les points bas du réseau. Le symptôme visible est un radiateur chaud en haut et franchement froid en bas, une montée en température qui traîne, des bruits de circulation, et une consommation qui grimpe à confort constant. C'est le moment d'envisager un désembouage du circuit de chauffage, c'est à dire un nettoyage des radiateurs et de la tuyauterie de chauffage, à ne pas confondre avec quoi que ce soit qui touche aux évacuations d'eaux usées. Nous vous disons franchement ce qu'un désembouage peut récupérer sur votre installation et ce qu'il ne récupérera pas."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas d'arrêt complet du chauffage à Cormontreuil, coupez l'appareil si de l'eau s'écoule, relevez le code affiché et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Cormontreuil, nous intervenons aussi à Reims et dans ses quartiers sud, à Taissy, à Bezannes et à Puisieulx."
+    }
+  ],
+  "neighbours": [
+    "Reims",
+    "Taissy",
+    "Bezannes"
+  ],
+  "faq": [
+    {
+      "q": "Ma chaudière est dans un garage non chauffé, est-ce un problème en cas de gel ?",
+      "a": "L'appareil lui-même dispose en général d'une protection antigel qui le fait démarrer brièvement quand la température descend trop bas, à condition qu'il reste alimenté en électricité et en combustible. Le vrai point de vigilance est ailleurs : les tuyaux qui traversent le local froid et, sur une installation avec ballon, la ligne d'eau. Un calorifugeage correct de ces tronçons et le fait de ne jamais couper l'alimentation de la chaudière pendant une absence hivernale règlent l'essentiel du risque."
+    },
+    {
+      "q": "L'eau qui sort de mes radiateurs quand je purge est très noire, est-ce grave ?",
+      "a": "Ce n'est pas une urgence, mais c'est un signal net. Cette couleur vient des oxydes de fer produits par la corrosion interne du circuit, qui forment des boues et se déposent là où l'eau ralentit, principalement au bas des radiateurs. Ces dépôts réduisent la surface d'échange, ce qui fait tourner la chaudière plus longtemps pour un résultat moindre. Le traitement s'appelle un désembouage et concerne exclusivement le circuit de chauffage, radiateurs et tuyauterie."
+    },
+    {
+      "q": "Faut-il purger avant ou après avoir remis de la pression dans la chaudière ?",
+      "a": "Purgez d'abord, remettez de la pression ensuite. La purge chasse l'air des radiateurs et fait mécaniquement descendre la pression du circuit : si vous rechargez avant, vous devrez recommencer. Procédez chauffage coupé et installation refroidie, en commençant par le radiateur le plus proche de la chaudière, puis contrôlez le manomètre et rétablissez le niveau prévu par la notice de l'appareil avant de relancer."
+    }
+  ]
+}

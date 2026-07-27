@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 /**
- * Pastille « ligne ouverte » : point vermillon qui pulse dans une puce arrondie.
+ * Pastille « ligne ouverte » : point braise qui pulse dans une puce arrondie.
  * Sert de marqueur de disponibilité dans le hero, le footer et les bandeaux CTA.
  */
 export function LiveDot({ children, className = '' }: { children: ReactNode; className?: string }) {

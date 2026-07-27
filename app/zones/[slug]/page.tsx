@@ -46,21 +46,28 @@ function getHeroSrc(slug: string): string {
   return existsOnDisk ? dedicated : HERO_FALLBACK
 }
 
+/**
+ * Visuels de corps de page. ⚠️ À ne pas confondre avec l'image de tête : ce sont
+ * des illustrations TECHNIQUES (un geste, un outil), volontairement neutres et
+ * sans aucun repère géographique. Elles n'ont donc pas à être uniques par commune,
+ * contrairement à l'image de tête, qui doit montrer la ville concernée et reste
+ * câblée sur le slug (règle permanente Rémy du 27/07/2026).
+ */
 const BODY_POOL = [
   {
-    src: '/zones/zone-regard.jpg',
-    alt: 'Regard de visite ouvert dans une allée, flexible de curage engagé',
-    caption: "Le regard de visite, premier point d'accès au réseau enterré.",
+    src: '/zones/geste-manometre.jpg',
+    alt: 'Lecture du manomètre de pression sur une chaudière murale',
+    caption: 'La pression du circuit, lue à froid puis à chaud, écarte déjà des hypothèses.',
   },
   {
-    src: '/zones/zone-siphon.jpg',
-    alt: 'Siphon de lavabo démonté au-dessus d’un seau',
-    caption: 'Sur un bouchon proche, le démontage du siphon suffit souvent.',
+    src: '/zones/geste-purge.jpg',
+    alt: "Purge d'un radiateur, clé sur le purgeur et récipient posé dessous",
+    caption: "Froid en haut, chaud en bas : c'est de l'air, et la purge suffit.",
   },
   {
-    src: '/zones/zone-camera.jpg',
-    alt: "Écran d'inspection caméra montrant l'intérieur d'une canalisation",
-    caption: "La caméra tranche entre bouchon d'usage et défaut de canalisation.",
+    src: '/zones/geste-unite-exterieure.jpg',
+    alt: "Contrôle de l'échangeur d'une unité extérieure de pompe à chaleur",
+    caption: "Sur une pompe à chaleur, le diagnostic commence souvent dehors.",
   },
 ]
 
@@ -80,10 +87,10 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
   const mainServices = getServices()
     .filter((s) =>
       [
-        'urgence-debouchage-canalisation',
-        'debouchage-wc-toilettes-bouchees',
-        'debouchage-evier-lavabo-douche',
-        'debouchage-canalisation-enterree-regard',
+        'urgence-depannage-chauffage-chaudiere',
+        'depannage-chaudiere-gaz',
+        'radiateur-froid-desembouage-purge',
+        'ballon-eau-chaude-cumulus',
       ].includes(s.slug),
     )
     .slice(0, 4)
@@ -184,7 +191,9 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
 
           {zone.neighbours.length > 0 && (
             <AnimatedSection className="mt-14">
-              <h2 className="text-2xl">Communes limitrophes desservies</h2>
+              {/* « à proximité » et non « limitrophes » : certaines communes de la
+                  liste sont voisines sans partager une limite communale. */}
+              <h2 className="text-2xl">Autres communes desservies à proximité</h2>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {zone.neighbours.map((n) => {
                   const match = zones.find((z) => z.name === n)
@@ -214,8 +223,8 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       <Faq items={zone.faq} eyebrow={zone.name} />
 
       <CtaBanner
-        title={`Canalisation bouchée à ${zone.name} ?`}
-        subtitle={`Nous intervenons à ${zone.name} et dans les communes voisines. Appelez, nous vous donnons le tarif et un créneau réaliste.`}
+        title={`Plus de chauffage à ${zone.name} ?`}
+        subtitle={`Nous intervenons à ${zone.name} et dans les communes voisines. Donnez-nous le type d'appareil et le code affiché, nous vous annonçons le tarif et un créneau réaliste.`}
       />
     </>
   )

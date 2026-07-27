@@ -1,0 +1,43 @@
+{
+  "slug": "bezannes",
+  "name": "Bezannes",
+  "postalCode": "51430",
+  "context": "Commune du sud-ouest rémois, transformée par l'arrivée de la gare TGV Champagne-Ardenne et par un quartier d'affaires de construction récente.",
+  "metaTitle": "Dépannage chauffage et chaudière à Bezannes (51)",
+  "metaDescription": "Chauffagiste à Bezannes : pompe à chaleur en défaut, chaudière à condensation, régulation déréglée, plus d'eau chaude. Intervention 7j/7, tarif annoncé avant.",
+  "h1": "Dépannage chauffage et chaudière à Bezannes",
+  "intro": "Nous intervenons à Bezannes (51430) sur les installations de chauffage et de production d'eau chaude. Bezannes est un cas à part dans l'agglomération : l'arrivée de la gare TGV Champagne-Ardenne et le développement du quartier d'affaires qui l'entoure ont fait sortir de terre un parc de logements et de bureaux très récent, à côté du village d'origine. Les appareils y sont donc jeunes, et les pannes n'ont presque rien à voir avec celles d'un parc ancien.",
+  "blocks": [
+    {
+      "heading": "Des appareils récents, d'autres pannes",
+      "body": "Sur une installation de moins de dix ans, l'usure mécanique n'est presque jamais la cause. Ce que nous trouvons à Bezannes relève plutôt de la mise au point et de l'électronique. La régulation arrive en tête : des consignes modifiées sans le vouloir, un programme horaire hérité de l'occupant précédent, une sonde extérieure mal placée ou mal prise en compte, une loi d'eau inadaptée qui fait chauffer l'appareil trop haut ou trop bas. Viennent ensuite les défauts de mise en service jamais corrigés : circuit incomplètement purgé à la livraison, équilibrage des émetteurs jamais fait, plancher chauffant dont les boucles ne sont pas réglées, si bien que certaines pièces surchauffent pendant que d'autres restent tièdes. Enfin, sur les pompes à chaleur, très présentes dans les constructions récentes, une part importante des appels concerne des cycles de dégivrage pris pour des pannes, une unité extérieure installée trop près d'un mur ou d'une haie qui recycle son propre air froid, ou un écoulement de condensats qui s'est bouché."
+    },
+    {
+      "heading": "Le neuf n'est pas synonyme de réglé",
+      "body": "Un appareil récent sous garantie n'est pas un appareil forcément bien paramétré. Beaucoup de logements livrés en série reçoivent un réglage standard, valable pour un cas moyen mais pas pour votre exposition, votre surface et vos habitudes. Cela se traduit par des symptômes qui ressemblent à des pannes sans en être : une pompe à chaleur qui démarre et s'arrête sans arrêt parce que sa consigne est trop réactive, des pièces qui n'atteignent jamais la température demandée alors que le générateur fonctionne, ou une facture nettement supérieure à celle des voisins à surface équivalente. Notre travail dans ces cas consiste d'abord à lire l'installation telle qu'elle a été paramétrée, puis à la remettre en cohérence avec votre logement. C'est souvent plus efficace, et beaucoup moins coûteux, que de remplacer un organe qui fonctionne parfaitement. Nous vous disons également, sans détour, quand une anomalie relève encore de la garantie ou de l'installateur d'origine plutôt que d'une intervention payante."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "Si votre installation s'arrête à Bezannes, relevez le code affiché sur la commande, notez si le défaut concerne le chauffage, l'eau chaude ou les deux, et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Bezannes, nous intervenons aussi à Reims, à Tinqueux et à Cormontreuil."
+    }
+  ],
+  "neighbours": [
+    "Reims",
+    "Tinqueux",
+    "Cormontreuil"
+  ],
+  "faq": [
+    {
+      "q": "Mon logement est récent, pourquoi ai-je déjà un problème de chauffage ?",
+      "a": "Parce que la plupart des difficultés sur une installation récente ne viennent pas de l'usure mais du réglage. Un programme horaire inadapté, une loi d'eau standard qui ne correspond pas à votre logement, un circuit mal équilibré à la livraison ou un plancher chauffant dont les boucles n'ont jamais été ajustées produisent des symptômes qui ressemblent à une panne. Ces situations se corrigent au niveau de la régulation et de l'équilibrage, sans remplacer de matériel."
+    },
+    {
+      "q": "Ma pompe à chaleur démarre et s'arrête sans arrêt, est-ce normal ?",
+      "a": "Des cycles très courts et répétés ne sont pas un bon fonctionnement. Ils viennent en général d'une consigne trop réactive, d'un circuit d'eau au débit insuffisant parce que trop d'émetteurs sont fermés, ou d'un appareil surdimensionné pour le besoin réel du logement. Cela use la machine et dégrade son rendement. Le réglage de la régulation et l'ouverture d'un volume tampon suffisant règlent la plupart de ces cas, sans intervention sur la machine elle-même."
+    },
+    {
+      "q": "Mon installation est sous garantie, dois-je vous appeler ou l'installateur ?",
+      "a": "Si le défaut porte sur un organe couvert et que l'installateur d'origine est joignable dans un délai acceptable, passez d'abord par lui : c'est plus simple et cela ne vous coûte rien. Appelez-nous quand la garantie ne couvre pas le sujet, typiquement un problème de réglage ou d'équilibrage, quand l'installateur n'est plus joignable, ou quand la situation est urgente et ne peut pas attendre. Nous vous le dirons franchement si nous estimons que votre demande relève de la garantie."
+    }
+  ]
+}
