@@ -73,7 +73,15 @@
 - [x] Calendrier v2 SEO livré et audité : 78 sujets (11→88), 11 contrôles verts, validé
 - [x] GO de mise en ligne donné par Rémy (28/07) : DNS OVH posé (schéma Dijon), domaines
       ajoutés au projet Vercel (www canonique + apex 308), en attente activation AFNIC
-- [ ] Builder : canonicalBase + numéro placeholder plage fiction → puis CEO retire SEO_NOINDEX
+- [x] Builder : canonicalBase + numéro fiction ARCEP (322b8d7), contre-vérifié CEO → SEO_NOINDEX
+      retiré → 🎉 SITE EN LIGNE le 28/07/2026, robots/sitemap/canonical publics tous verts
+- [x] Autoblog lot 1 (011-023, 4eaed83) : AUDITÉ CEO, 13/13 conformes, réservoir plein pour
+      la publication auto (prochaine : mercredi 05:00 UTC). Retitrage sujet 14 sans âge : validé
+- [ ] Autoblog lot 2 (sujets 24-36) : ordre de mission remis à Rémy
+- [ ] Rémy : GSC cliquer VALIDER (TXT visible publiquement, prêt) puis soumettre le sitemap
+- [ ] Ensuite : Bing Webmaster Tools (session guidée)
+- [ ] Cosmétique, à glisser dans une future passe Builder : commentaire obsolète au-dessus de
+      `email` dans site.config.ts (« domaine pas encore acheté »)
 - [ ] Autoblog : rédaction par lots de 13, audit CEO entre chaque lot, réservoir toujours
       ≥ 2 semaines d'avance (6 drafts minimum)
 
