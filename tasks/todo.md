@@ -90,7 +90,12 @@
 - [x] Autoblog lot 5 (063-075 + retouche 060, 65813bb) : AUDITÉ CEO 13/13 conformes,
       retouche 060 vérifiée (2 liens directs vers l'article 052), 072 sans délai ni majoration,
       chevauchements 065/066 : 1,6 %, 070/019 : 0 %, 069/050 : 2,1 % (négligeables)
-- [ ] Autoblog lot 6 (sujets 76-88, janvier, DERNIER lot du calendrier v2) : ordre remis à Rémy
+- [x] Autoblog lot 6 (076-088, 8031982) : AUDITÉ CEO 13/13 conformes, 12 paires à risque
+      mesurées, pire chevauchement 2,9 %. CALENDRIER V2 TERMINÉ : 88 articles produits au
+      total (10 publiés + 78 en réservoir jusqu'à fin janvier 2027)
+- [ ] Sentinelle posée : vérifier le PREMIER run planifié du cron (mercredi 29/07 ~05:00 UTC),
+      un cron neuf doit être vu tourner une fois. Si absent mercredi midi : vérifier l'onglet
+      Actions (les crons de repos neufs démarrent parfois avec du retard)
 - [ ] À planifier vers novembre 2026 : calendrier v3 par le SEO (sortie d'hiver mars-avril,
       hors fenêtre de la v2, signalé par le SEO dès la livraison v2)
 - [x] Bing Webmaster Tools (29/07) : 11 sites importés depuis GSC par Rémy, sitemaps soumis
