@@ -107,6 +107,14 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 
 ## 3. DÉCISIONS RÉMY
 
+- 28/07/2026 : **AJOUT DE LA CLIMATISATION aux prestations** (9e page service). Amende
+  l'exclusion du plan SEO initial. Circuit : addendum SEO (frontière PAC/clim à tracer,
+  amendements sections 0 et 1.5) → audit CEO → Builder. Bénéfice : comble le creux d'été.
+- 28/07/2026 : **passe de direction artistique sur les photos** demandée par Rémy : décors
+  jugés trop pauvres/sombres sur une partie des visuels (galerie accueil notamment). Cap :
+  réaliste mais habité et entretenu. Mission Builder Opus en cours (planche contact +
+  régénération de la pile « à refaire »).
+
 - 25/07/2026 : top 5 vague 2 validé.
 - 27/07/2026 : ordre inversé, Reims (chauffage) passe n°5 AVANT Clermont (n°6) pour l'impératif
   saisonnier. Objectif global réaffirmé : ~10 sites, plusieurs métiers, toujours de l'urgence.

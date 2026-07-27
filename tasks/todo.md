@@ -150,3 +150,12 @@ Constats CEO sur Reims vis-à-vis de cette barre :
 - Validation + achat du domaine `sos-chauffage-reims.fr` (dispo AFNIC le 27/07, pas acheté)
 - Numéro 09 dédié, email de contact, nom commercial / identité artisan
 - Comptes-rendus SEO / Builder / Autoblog à coller au CEO pour supervision
+
+## Session du 28/07/2026 (CEO — extension clim + passe photos)
+
+- [x] Décision Rémy : ajout prestation CLIMATISATION → message SEO (addendum, frontière
+      PAC/clim) et décision consignée. Les 88 articles existants ne sont pas retouchés.
+- [x] Décision Rémy : passe DA photos (décors trop pauvres) → message Builder Opus
+      (planche contact 3 piles, priorité galerie accueil)
+- [ ] Audit CEO de l'addendum SEO clim → ordre de mission Builder (9e page)
+- [ ] Audit CEO de la passe photos (avant/après, unicité, poids)
