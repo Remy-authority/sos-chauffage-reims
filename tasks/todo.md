@@ -87,7 +87,12 @@
       relégués après sécurisation), 060 distinction eau/air impeccable avec renvoi au
       protocole, 053 sans obligation affirmée, « débouchage » du 056 limité aux condensats.
       Micro-retouche demandée avec le lot 5 : lien interne direct 060 → article 052
-- [ ] Autoblog lot 5 (sujets 63-75, décembre) : ordre de mission remis à Rémy
+- [x] Autoblog lot 5 (063-075 + retouche 060, 65813bb) : AUDITÉ CEO 13/13 conformes,
+      retouche 060 vérifiée (2 liens directs vers l'article 052), 072 sans délai ni majoration,
+      chevauchements 065/066 : 1,6 %, 070/019 : 0 %, 069/050 : 2,1 % (négligeables)
+- [ ] Autoblog lot 6 (sujets 76-88, janvier, DERNIER lot du calendrier v2) : ordre remis à Rémy
+- [ ] À planifier vers novembre 2026 : calendrier v3 par le SEO (sortie d'hiver mars-avril,
+      hors fenêtre de la v2, signalé par le SEO dès la livraison v2)
 - [x] Bing Webmaster Tools (29/07) : 11 sites importés depuis GSC par Rémy, sitemaps soumis
       pour tous les sites (statut processing). Onglet « AI Performance » repéré = métrique GEO
       à surveiller. Idée portefeuille notée : IndexNow dans l'Action de publication
