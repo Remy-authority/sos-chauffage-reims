@@ -250,3 +250,18 @@ posée), achat automatique du 09 Twilio (watcher portefeuille), calendrier v3 (S
   minimum sur `fuite-chaudiere-circuit-chauffage`). Périmètre respecté : uniquement
   `docs/CALENDRIER-EDITORIAL.md` et `docs/ETAT.md` touchés. En attente d'audit CEO avant
   lancement de la rédaction des lots par l'Autoblog.
+- **28/07/2026 (Builder)** : rattrapage des **couvertures d'articles**, les 88 articles (10 publiés
+  + 78 drafts) partaient sans visuel. 88 images générées, une par sujet, différenciées par objet
+  technique, cadrage, lieu et lumière/saison ; déposées dans `public/conseils/<slug>.jpg`
+  (convention Metz) et déclarées par une ligne `cover:` dans chaque frontmatter, sans aucune autre
+  modification du contenu (diff : 88 fichiers, +1 ligne chacun). Poids total **10 Mo** pour 88
+  visuels (1200 px de large, JPEG progressif qualité 80), sous le budget de 15 Mo.
+  Point de vigilance traité : le script `publish-next-draft.mjs` retire le préfixe numérique du
+  draft au moment de la publication, donc les **images de draft sont nommées sur le slug FINAL**
+  (sans préfixe) et les `cover:` pointent dessus ; vérifié par une simulation de publication sur
+  copie du repo, l'article de mercredi part avec sa couverture. Effet de bord positif : le dossier
+  `public/conseils` existe désormais, le garde-fou `if [ -d ]` du workflow n'est plus le seul
+  rempart. Contrôles : `npm run build` vert (47 pages), planche contact des 88 visuels (6 reprises
+  pour doublon visuel ou texte incrusté), listing `/conseils` et 3 articles en desktop et mobile
+  (aucune image cassée, aucune erreur console), `og:image` et le JSON-LD `Article` reprennent bien
+  le cover.
