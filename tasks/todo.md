@@ -84,7 +84,12 @@
       042/043 vs article 006 publié mesuré à 2,4 % et 1,3 % (négligeable)
 - [ ] Autoblog lot 4 (sujets 50-62, novembre) : ordre de mission remis à Rémy, attention
       renforcée sujet 52 (fuite de gaz : sécurité avant acquisition)
-- [ ] Rémy : GSC cliquer VALIDER (TXT visible publiquement, prêt) puis soumettre le sitemap
+- [x] GSC VALIDÉE le 29/07 (après correction du jeton : la fenêtre GSC tronquait l'affichage,
+      leçon consignée). Propriété visible dans la liste. Favicon absent de la liste GSC =
+      simple délai de crawl (Angers/Metz : même config, icône affichée ; Dijon récent : globe
+      aussi). Sitemap à soumettre par Rémy si pas déjà fait.
+- [ ] Micro-amélioration future Builder (non urgent, tout le portefeuille) : servir /favicon.ico
+      (404 partout actuellement), + commentaire email obsolète dans site.config.ts
 - [ ] Ensuite : Bing Webmaster Tools (session guidée)
 - [ ] Cosmétique, à glisser dans une future passe Builder : commentaire obsolète au-dessus de
       `email` dans site.config.ts (« domaine pas encore acheté »)
