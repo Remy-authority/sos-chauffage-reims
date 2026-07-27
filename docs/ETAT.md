@@ -75,6 +75,13 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - 25/07/2026 : top 5 vague 2 validé.
 - 27/07/2026 : ordre inversé, Reims (chauffage) passe n°5 AVANT Clermont (n°6) pour l'impératif
   saisonnier. Objectif global réaffirmé : ~10 sites, plusieurs métiers, toujours de l'urgence.
+- 27/07/2026 : **rayon d'intervention 30 km** (et non les 15 km proposés par le SEO). Les 12
+  communes du plan restent valables (toutes sous 13 km), le rayon élargit la zone annoncée.
+- 27/07/2026 : **domaine validé : sos-chauffage-reims.fr** (reste à acheter).
+- 27/07/2026 : le numéro 09 sera pris sur **Twilio**, tâche CEO (en attente des accès API
+  Twilio de Rémy ; aucun identifiant Twilio trouvé sur la machine). Attention : un numéro
+  français sur Twilio exige un dossier réglementaire approuvé (justificatif d'adresse et
+  d'identité) avant l'achat.
 
 ## 4. HISTORIQUE DES SESSIONS
 

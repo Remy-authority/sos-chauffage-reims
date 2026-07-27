@@ -27,12 +27,20 @@
 - [ ] SUITE : compte-rendu Builder → contrôle visuel CEO (côte à côte Metz ET Dijon, 1 image
       unique par commune, zéro tiret cadratin) → passe corrective éventuelle → Autoblog
 
-## Décisions en attente de Rémy (à trancher, non bloquant pour lancer le Builder)
+## Décisions tranchées par Rémy le 27/07/2026
 
-- Rayon d'intervention : le SEO propose 15 km (Metz est à 30). Le Builder posera 15 en DEMO.
+- [x] Rayon d'intervention : 30 KM (correctif envoyé au Builder, qui avait reçu 15 en DEMO)
+- [x] Domaine validé : sos-chauffage-reims.fr (achat à faire)
+- [x] Numéro 09 : à prendre sur Twilio, tâche CEO
+
+## En attente de Rémy
+
+- Accès API Twilio (Account SID + Auth Token, ou clé API) pour que le CEO cherche et achète
+  le 09. Prérequis Twilio pour un numéro FR : dossier réglementaire (adresse + identité) approuvé.
+- Achat du domaine sos-chauffage-reims.fr (ou feu vert explicite pour un achat via Vercel par le CEO)
+- Email de contact + nom commercial / identité artisan
 - Périodicité réglementaire de l'entretien chaudière : aucun chiffre publié tant que la source
   n'est pas confirmée (le site renverra à « la réglementation en vigueur »).
-- Achat du domaine sos-chauffage-reims.fr + numéro 09 dédié + email + nom commercial.
 
 ## En attente de Rémy
 
