@@ -1,7 +1,7 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
-> Dernière mise à jour : 2026-07-28 (Builder, passe de config avant bascule : domaine canonique + numéro de fiction ARCEP).
+> Dernière mise à jour : 2026-07-28 (CEO : MISE EN LIGNE du site).
 
 ---
 
@@ -93,9 +93,13 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
       par le build de production : 0 occurrence de l'ancien numéro et de l'URL Vercel,
       607 occurrences du nouveau, JSON-LD `telephone` + canonical + OG + sitemap + llms.txt
       + mentions légales tous alignés
-- [ ] CEO : quand AFNIC actif + Builder passé → retirer `SEO_NOINDEX` de Vercel Production,
-      redéployer, vérifier robots.txt public = Allow → LE SITE EST EN LIGNE ⏰ (large avance
-      sur l'échéance fin septembre)
+- [x] 🎉 **SITE EN LIGNE le 28/07/2026** (2 mois d'avance sur l'échéance fin septembre).
+      Séquence CEO : AFNIC actif vérifié → passe Builder vérifiée (numéro fiction + canonique
+      www) → `SEO_NOINDEX` retiré de Vercel Production → redéploiement → CONTRÔLÉ EN PUBLIC :
+      robots.txt = Allow (+ crawlers IA explicitement autorisés), sitemap.xml en 200,
+      canonical = https://www.sos-chauffage-reims.fr, meta robots = index,follow,
+      apex en 308 vers www. TXT google-site-verification visible publiquement (validation
+      GSC prête côté Rémy).
 - [ ] Post-mise en ligne : GSC (propriété + sitemap + TXT de validation via OVH) + Bing
       Webmaster Tools (session guidée avec Rémy)
 - [ ] Au premier achat du 09 par le watcher portefeuille : Builder injecte le numéro
