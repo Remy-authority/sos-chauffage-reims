@@ -68,7 +68,12 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - [x] Builder (27/07) : logo, favicon + `icon-192/512.png`, portrait persona, OG, 32 visuels générés dont **12 images de commune uniques** (aucun pool partagé), aucun texte/logo/visage flou
 - [x] Builder (27/07) : SEO technique, schema `HVACBusiness` à la place de `Plumber`, `FAQPage` sur toutes les FAQ, `llms.txt` régénéré dynamiquement (8 services + 12 zones)
 - [ ] Autoblog : drafts T1 orientés saison de chauffe (préfixes 001-…)
-- [ ] Contrôle visuel CEO (côte à côte avec Metz et Dijon : assez distinct ?) → validation Rémy → mise en ligne (Étape 6) ⏰ avant fin septembre
+- [x] Contrôle visuel CEO du 27/07 : POSITIF sous réserve d'une passe corrective à 3 points
+      (backdrop menu mobile, restructuration fingerprint tailwind, permutation des sections
+      d'accueil, les 2 derniers exigés par la directive du CEO-portefeuille « barre Dijon »).
+      12 communes différenciées confirmées, côte à côte Metz/Dijon/Reims distinct, compteur
+      30 km vérifié au DOM (l'alerte « 28 km » de l'agent était une capture mi-animation)
+- [ ] Passe corrective Builder (3 points) → re-contrôle CEO → validation Rémy → mise en ligne (Étape 6) ⏰ avant fin septembre
 - [ ] Post-mise en ligne : GSC (propriété + sitemap) + Bing Webmaster Tools (nouvelle étape standard)
 
 ## 3. DÉCISIONS RÉMY

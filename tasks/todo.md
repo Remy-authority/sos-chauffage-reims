@@ -24,8 +24,44 @@
 - [x] Contre-vérification indépendante des 12 communes sur geo.api.gouv.fr : tout exact
 - [x] Vérification couverture blog : 24 sujets, chaque service couvert par au moins 2 articles
 - [x] Message Builder préparé et remis à Rémy
-- [ ] SUITE : compte-rendu Builder → contrôle visuel CEO (côte à côte Metz ET Dijon, 1 image
-      unique par commune, zéro tiret cadratin) → passe corrective éventuelle → Autoblog
+- [x] SUITE : compte-rendu Builder reçu le 27/07 → contrôle CEO en cours
+
+## Session du 27/07/2026 (CEO — contrôle du travail Builder)
+
+- [x] Contrôles statiques indépendants : 8 services + 12 zones = plan SEO exact, codes postaux
+      conformes, 12 images communes uniques par hash (+ 3 visuels « gestes » assumés), poids
+      public/ 5,2 Mo, SERVICE_RADIUS_KM=30 déclaré une fois, legal.json sans tél/email en dur
+      (bloc hébergeur Vercel légitime), HVACBusiness effectif, zéro tiret cadratin dans le
+      contenu (les seules occurrences « débouchage »/« 15 km » sont des commentaires de code)
+- [x] Vérification tsc + npm run build : verts (37 pages)
+- [x] Animation heat-rise : réellement inversée par rapport au flow-down de Metz (pas un
+      renommage), durée différente ; ombres désormais lues depuis la palette
+- [x] Palettes côte à côte : Metz pétrole / Dijon prune / Reims brun chaud, distinctes
+- [x] Contrôle visuel par agent navigateur (47 captures) + revue CEO des captures clés :
+      12 communes réellement différenciées (images ET textes), zéro section vide, zéro image
+      cassée, zéro erreur console, header intérieur lisible, côte à côte Metz/Dijon/Reims
+      convaincant (3 identités distinctes, 3 concepts de carte hero différents)
+- [x] Fausse alerte « compteur 28 km » de l'agent : re-testé par le CEO avec attente complète
+      (script Playwright), valeurs finales correctes 24h/24, 7j/7, 30 km, 8 prestations.
+      C'était une capture à ~90 % de l'animation (leçon Metz confirmée une 2e fois)
+- [x] Verdict CEO : POSITIF sous réserve d'une passe corrective à 3 points
+- [ ] Passe corrective Builder : (1) backdrop du menu mobile, (2) restructuration fingerprint
+      du tailwind.config (noms de tokens, ordre, variables CSS), (3) permutation réelle de
+      l'ordre des sections d'accueil
+- [ ] Autoblog : drafts T1 (9 articles octobre-décembre, préfixes 001-009) sur la branche builder
+- [ ] Re-contrôle CEO après passe corrective → validation Rémy → merge main
+
+## Directive du CEO-portefeuille reçue le 27/07/2026 (barre « niveau Dijon » + fingerprint)
+
+Constats CEO sur Reims vis-à-vis de cette barre :
+- [x] Palette métier propre : OUI ; composant signature : OUI (« du symptôme à la cause ») ;
+      animations propres : OUI (heat-rise réellement inversée) ; textes/photos nouveaux : OUI
+      (sous réserve du contrôle visuel en cours)
+- [ ] ÉCART 1 : structure du tailwind.config quasi identique à Metz (mêmes noms de tokens
+      ink/sand/brand/accent, même ordre, mêmes variables --c-*) : fingerprint partagé intact.
+      À corriger par le Builder avant exposition.
+- [ ] ÉCART 2 : ordre des sections d'accueil NON permuté (séquence de Metz + une insertion
+      Symptoms). À permuter réellement par le Builder.
 
 ## Décisions tranchées par Rémy le 27/07/2026
 
