@@ -81,8 +81,20 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
       48 classes d'opacité toutes vivantes), sections réellement permutées (alternance des
       fonds saine, une seule paire sombre assumée), tsc + build verts. Barre « niveau Dijon »
       du CEO-portefeuille : ATTEINTE sur les 6 critères
-- [ ] VALIDATION RÉMY sur la preview → merge `main` → mise en ligne (Étape 6) ⏰ avant fin septembre
-- [ ] Post-mise en ligne : GSC (propriété + sitemap) + Bing Webmaster Tools (nouvelle étape standard)
+- [x] VALIDATION RÉMY (27/07 preview, 28/07 GO de mise en ligne). Merge fait, 10 articles publiés.
+- [x] CEO (28/07) Étape 6 partie infra : zone DNS OVH posée (schéma Dijon : A @ → 76.76.21.21,
+      CNAME www → cname.vercel-dns.com., emails préservés), domaines ajoutés au projet Vercel
+      (www canonique, apex en 308). En attente : activation AFNIC (le domaine ne résout pas encore).
+- [ ] Builder (dernière passe avant bascule) : `seo.canonicalBase` → `https://www.sos-chauffage-reims.fr`
+      + numéro provisoire à déplacer dans la vraie plage fiction ARCEP (09 39 98 XX XX) : le
+      09 39 51 42 00 actuel est HORS plage fiction, potentiellement attribuable à un tiers
+- [ ] CEO : quand AFNIC actif + Builder passé → retirer `SEO_NOINDEX` de Vercel Production,
+      redéployer, vérifier robots.txt public = Allow → LE SITE EST EN LIGNE ⏰ (large avance
+      sur l'échéance fin septembre)
+- [ ] Post-mise en ligne : GSC (propriété + sitemap + TXT de validation via OVH) + Bing
+      Webmaster Tools (session guidée avec Rémy)
+- [ ] Au premier achat du 09 par le watcher portefeuille : Builder injecte le numéro
+      (site.config, une ligne) + vérif voice_url + cockpit
 
 ## 3. DÉCISIONS RÉMY
 

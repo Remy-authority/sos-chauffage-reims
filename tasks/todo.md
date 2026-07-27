@@ -69,9 +69,11 @@
       cadence 3/semaine demandée), publication FIFO par préfixe, collision de slug détectée
 - [x] 9 publications du jour : 9/9 runs OK après fix du workflow, content/drafts vide,
       9 articles dans content/conseils sur main, prod redéployée
-- [ ] Message Autoblog : draft 010 (10e article du jour) → publication → total 10 aujourd'hui
-- [ ] Message SEO : calendrier étendu ~80 sujets / 26 semaines (saisonnalité recalée fin
-      juillet, zéro cannibalisation entre articles et avec les pages services)
+- [x] Draft 010 livré, audité, publié : 10 articles en ligne au total
+- [x] Calendrier v2 SEO livré et audité : 78 sujets (11→88), 11 contrôles verts, validé
+- [x] GO de mise en ligne donné par Rémy (28/07) : DNS OVH posé (schéma Dijon), domaines
+      ajoutés au projet Vercel (www canonique + apex 308), en attente activation AFNIC
+- [ ] Builder : canonicalBase + numéro placeholder plage fiction → puis CEO retire SEO_NOINDEX
 - [ ] Autoblog : rédaction par lots de 13, audit CEO entre chaque lot, réservoir toujours
       ≥ 2 semaines d'avance (6 drafts minimum)
 
