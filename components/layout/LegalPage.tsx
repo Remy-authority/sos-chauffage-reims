@@ -18,9 +18,9 @@ export function LegalPage({
   return (
     <>
       <PageHeader eyebrow="Informations légales" title={title} subtitle={subtitle} />
-      <section className="bg-sand-50 py-16 lg:py-24">
+      <section className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <div className="prose-content space-y-10">{children}</div>
+          <div className="texte-page space-y-10">{children}</div>
         </div>
       </section>
     </>

@@ -72,12 +72,12 @@ export function Symptoms({ services }: { services: Service[] }) {
   return (
     <section
       id="symptomes"
-      className="relative overflow-hidden bg-sand-100 py-24 lg:py-32"
+      className="relative overflow-hidden bg-craie-100 py-24 lg:py-32"
       aria-labelledby="symptomes-title"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgb(var(--c-accent-500)/0.06),transparent_55%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgb(var(--teinte-braise-500)/0.06),transparent_55%)]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
@@ -88,7 +88,7 @@ export function Symptoms({ services }: { services: Service[] }) {
             <>
               Vous décrivez ce que vous voyez,
               <br />
-              <span className="text-gradient-ink italic">on vous dit d&apos;où ça vient</span>
+              <span className="titre-fonte italic">on vous dit d&apos;où ça vient</span>
             </>
           }
           subtitle="Huit symptômes qui reviennent en boucle pendant la saison de chauffe, et la piste la plus probable derrière chacun. De quoi savoir quoi nous dire au téléphone."
@@ -99,19 +99,19 @@ export function Symptoms({ services }: { services: Service[] }) {
             <AnimatedSection key={row.symptom} delay={(idx % 2) * 0.08} as="li">
               <Link
                 href={`/services/${row.slug}`}
-                className="group flex h-full gap-5 rounded-card border border-sand-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent-400/45 hover:shadow-card-hover"
+                className="group flex h-full gap-5 rounded-bloc border border-craie-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-braise-400/45 hover:shadow-pose-forte"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent-500/10 text-accent-600 transition-colors group-hover:bg-accent-500/15">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-braise-500/10 text-braise-600 transition-colors group-hover:bg-braise-500/15">
                   <ServiceIcon icon={row.service!.icon} className="h-5 w-5" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-display text-lg font-medium leading-snug text-ink-950">
+                  <span className="block font-display text-lg font-medium leading-snug text-fonte-950">
                     {row.symptom}
                   </span>
-                  <span className="mt-2 block text-sm leading-relaxed text-sand-600">
+                  <span className="mt-2 block text-sm leading-relaxed text-craie-600">
                     {row.cause}
                   </span>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-600 transition-all group-hover:gap-2.5">
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 transition-all group-hover:gap-2.5">
                     {row.service!.navTitle}
                     <ArrowUpRight size={15} />
                   </span>

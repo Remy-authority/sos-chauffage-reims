@@ -50,12 +50,12 @@ function ProgressBar({ step }: { step: Step }) {
           <span
             key={s}
             className={`h-1 flex-1 rounded-full transition-all duration-500 ${
-              s < step ? 'bg-accent-500/60' : s === step ? 'bg-accent-500' : 'bg-white/15'
+              s < step ? 'bg-braise-500/60' : s === step ? 'bg-braise-500' : 'bg-white/15'
             }`}
           />
         ))}
       </div>
-      <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-sand-400">
+      <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-craie-400">
         Étape {step} sur 3
       </span>
     </div>
@@ -63,8 +63,8 @@ function ProgressBar({ step }: { step: Step }) {
 }
 
 const inputClass =
-  'w-full rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3.5 text-sand-50 placeholder:text-sand-500 transition-colors focus:border-accent-400 focus:outline-none focus:ring-2 focus:ring-accent-500/25'
-const labelClass = 'mb-1.5 block text-sm font-medium text-sand-200'
+  'w-full rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3.5 text-craie-50 placeholder:text-craie-500 transition-colors focus:border-braise-400 focus:outline-none focus:ring-2 focus:ring-braise-500/25'
+const labelClass = 'mb-1.5 block text-sm font-medium text-craie-200'
 
 const stepVariants = {
   enter: { opacity: 0, x: 24 },
@@ -106,13 +106,13 @@ export function LeadForm() {
 
   return (
     <div
-      className="noise-overlay relative overflow-hidden rounded-panel border border-brand-400/20 bg-gradient-to-br from-ink-900 to-ink-950 p-6 md:p-9"
+      className="grain relative overflow-hidden rounded-panneau border border-flamme-400/20 bg-gradient-to-br from-fonte-900 to-fonte-950 p-6 md:p-9"
       role="region"
       aria-label="Formulaire de demande"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(var(--c-brand-500)/0.2),transparent_58%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(var(--teinte-flamme-500)/0.2),transparent_58%)]"
       />
 
       <div className="relative">
@@ -133,10 +133,10 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-sand-50 md:text-3xl">
+              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">
                 Qu&apos;est-ce qui ne chauffe plus ?
               </h2>
-              <p className="mt-2 text-sm text-sand-400">
+              <p className="mt-2 text-sm text-craie-400">
                 Choisissez la situation la plus proche de la vôtre.
               </p>
 
@@ -151,12 +151,12 @@ export function LeadForm() {
                       aria-pressed={selected}
                       className={`flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-xs font-medium leading-tight transition-all duration-200 ${
                         selected
-                          ? 'border-accent-400 bg-accent-500/20 text-sand-50'
-                          : 'border-white/10 bg-white/[0.04] text-sand-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-sand-50'
+                          ? 'border-braise-400 bg-braise-500/20 text-craie-50'
+                          : 'border-white/10 bg-white/[0.04] text-craie-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-craie-50'
                       }`}
                     >
                       <Icon
-                        className={`h-6 w-6 ${selected ? 'text-accent-400' : 'text-brand-300'}`}
+                        className={`h-6 w-6 ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
                         strokeWidth={1.9}
                         aria-hidden="true"
                       />
@@ -173,8 +173,8 @@ export function LeadForm() {
                   disabled={!fields.probleme}
                   className={`inline-flex min-h-[48px] items-center gap-2 rounded-full px-7 text-sm font-semibold transition-all ${
                     fields.probleme
-                      ? 'bg-accent-500 text-white hover:bg-accent-400'
-                      : 'cursor-not-allowed bg-white/10 text-sand-500'
+                      ? 'bg-braise-500 text-white hover:bg-braise-400'
+                      : 'cursor-not-allowed bg-white/10 text-craie-500'
                   }`}
                 >
                   Continuer
@@ -193,8 +193,8 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-sand-50 md:text-3xl">Où, et à quel point c&apos;est pressé ?</h2>
-              <p className="mt-2 text-sm text-sand-400">
+              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Où, et à quel point c&apos;est pressé ?</h2>
+              <p className="mt-2 text-sm text-craie-400">
                 Cela nous permet de vous situer dans notre planning.
               </p>
 
@@ -226,8 +226,8 @@ export function LeadForm() {
                         aria-pressed={fields.urgence === value}
                         className={`min-h-[44px] rounded-full border px-5 text-sm font-semibold transition-all ${
                           fields.urgence === value
-                            ? 'border-accent-400 bg-accent-500 text-white'
-                            : 'border-white/20 text-sand-300 hover:border-white/40 hover:text-sand-50'
+                            ? 'border-braise-400 bg-braise-500 text-white'
+                            : 'border-white/20 text-craie-300 hover:border-white/40 hover:text-craie-50'
                         }`}
                       >
                         {value}
@@ -241,7 +241,7 @@ export function LeadForm() {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-sand-400 transition-colors hover:text-sand-50"
+                  className="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-craie-400 transition-colors hover:text-craie-50"
                 >
                   <ArrowLeft size={16} strokeWidth={2.5} />
                   Retour
@@ -252,8 +252,8 @@ export function LeadForm() {
                   disabled={!fields.ville || !fields.urgence}
                   className={`inline-flex min-h-[48px] items-center gap-2 rounded-full px-7 text-sm font-semibold transition-all ${
                     fields.ville && fields.urgence
-                      ? 'bg-accent-500 text-white hover:bg-accent-400'
-                      : 'cursor-not-allowed bg-white/10 text-sand-500'
+                      ? 'bg-braise-500 text-white hover:bg-braise-400'
+                      : 'cursor-not-allowed bg-white/10 text-craie-500'
                   }`}
                 >
                   Continuer
@@ -272,8 +272,8 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-sand-50 md:text-3xl">Comment vous joindre ?</h2>
-              <p className="mt-2 text-sm text-sand-400">
+              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Comment vous joindre ?</h2>
+              <p className="mt-2 text-sm text-craie-400">
                 Nous vous rappelons dès que possible. Pour une urgence, l&apos;appel reste le plus
                 rapide.
               </p>
@@ -282,7 +282,7 @@ export function LeadForm() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="nom" className={labelClass}>
-                      Nom <span className="text-accent-400">*</span>
+                      Nom <span className="text-braise-400">*</span>
                     </label>
                     <input
                       id="nom"
@@ -298,7 +298,7 @@ export function LeadForm() {
                   </div>
                   <div>
                     <label htmlFor="telephone" className={labelClass}>
-                      Téléphone <span className="text-accent-400">*</span>
+                      Téléphone <span className="text-braise-400">*</span>
                     </label>
                     <input
                       id="telephone"
@@ -317,7 +317,7 @@ export function LeadForm() {
 
                 <div>
                   <label htmlFor="email" className={labelClass}>
-                    Email <span className="text-xs font-normal text-sand-500">(optionnel)</span>
+                    Email <span className="text-xs font-normal text-craie-500">(optionnel)</span>
                   </label>
                   <input
                     id="email"
@@ -333,7 +333,7 @@ export function LeadForm() {
 
                 <div>
                   <label htmlFor="message" className={labelClass}>
-                    Précisions <span className="text-xs font-normal text-sand-500">(optionnel)</span>
+                    Précisions <span className="text-xs font-normal text-craie-500">(optionnel)</span>
                   </label>
                   <textarea
                     id="message"
@@ -347,12 +347,12 @@ export function LeadForm() {
                 </div>
               </div>
 
-              <p className="mt-4 text-xs leading-relaxed text-sand-500">
+              <p className="mt-4 text-xs leading-relaxed text-craie-500">
                 En envoyant ce formulaire, vous acceptez d&apos;être recontacté au sujet de votre
                 demande. Vos données ne sont pas revendues, voir notre{' '}
                 <a
                   href="/politique-confidentialite"
-                  className="underline transition-colors hover:text-sand-300"
+                  className="underline transition-colors hover:text-craie-300"
                 >
                   politique de confidentialité
                 </a>
@@ -360,7 +360,7 @@ export function LeadForm() {
               </p>
 
               {status === 'error' && (
-                <p role="alert" className="mt-4 text-sm font-medium text-accent-300">
+                <p role="alert" className="mt-4 text-sm font-medium text-braise-300">
                   L&apos;envoi a échoué. Appelez-nous directement au {siteConfig.phoneDisplay}.
                 </p>
               )}
@@ -369,7 +369,7 @@ export function LeadForm() {
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="inline-flex min-h-[44px] items-center justify-center gap-1.5 text-sm text-sand-400 transition-colors hover:text-sand-50 sm:justify-start"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-1.5 text-sm text-craie-400 transition-colors hover:text-craie-50 sm:justify-start"
                 >
                   <ArrowLeft size={16} strokeWidth={2.5} />
                   Retour
@@ -380,8 +380,8 @@ export function LeadForm() {
                   disabled={!fields.nom || !fields.telephone || status === 'sending'}
                   className={`inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full px-8 font-semibold transition-all sm:w-auto ${
                     !fields.nom || !fields.telephone || status === 'sending'
-                      ? 'cursor-not-allowed bg-white/10 text-sand-500'
-                      : 'bg-accent-500 text-white hover:bg-accent-400 hover:shadow-glow'
+                      ? 'cursor-not-allowed bg-white/10 text-craie-500'
+                      : 'bg-braise-500 text-white hover:bg-braise-400 hover:shadow-halo-braise'
                   }`}
                 >
                   {status === 'sending' ? 'Envoi en cours…' : 'Envoyer ma demande'}

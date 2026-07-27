@@ -17,10 +17,10 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
         return (
           <div
             key={item.q}
-            className={`overflow-hidden rounded-card border transition-all duration-300 ${
+            className={`overflow-hidden rounded-bloc border transition-all duration-300 ${
               isOpen
-                ? 'border-accent-300 bg-white shadow-card'
-                : 'border-sand-200 bg-white/70 hover:border-sand-300'
+                ? 'border-braise-300 bg-white shadow-pose'
+                : 'border-craie-200 bg-white/70 hover:border-craie-300'
             }`}
           >
             <h3>
@@ -32,14 +32,14 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               >
                 <span
                   className={`font-display text-lg font-medium leading-snug transition-colors lg:text-xl ${
-                    isOpen ? 'text-ink-950' : 'text-ink-900'
+                    isOpen ? 'text-fonte-950' : 'text-fonte-900'
                   }`}
                 >
                   {item.q}
                 </span>
                 <span
                   className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                    isOpen ? 'rotate-180 bg-accent-500 text-white' : 'bg-brand-600/10 text-brand-700'
+                    isOpen ? 'rotate-180 bg-braise-500 text-white' : 'bg-flamme-600/10 text-flamme-700'
                   }`}
                   aria-hidden="true"
                 >
@@ -56,7 +56,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: EASE }}
                 >
-                  <p className="px-6 pb-6 leading-relaxed text-sand-600 lg:px-8 lg:pb-8">{item.a}</p>
+                  <p className="px-6 pb-6 leading-relaxed text-craie-600 lg:px-8 lg:pb-8">{item.a}</p>
                 </motion.div>
               )}
             </AnimatePresence>

@@ -1,29 +1,37 @@
 /**
- * lib/theme.ts, traduit `siteConfig.palette` (hex) en CSS variables (canaux RGB)
- * pour injection sur <html>. C'est le seul pont entre la config et Tailwind :
- * changer la palette d'un site N+1 revient à éditer `site.config.ts`.
+ * lib/theme.ts, pont unique entre `siteConfig.palette` (hex) et Tailwind.
  *
- * Nommage des variables : `--c-<famille>-<niveau>` (ex. `--c-brand-600`), valeur
- * « r g b » pour rester compatible avec les modificateurs d'opacité Tailwind
- * (bg-brand-600/10, text-accent-500/80…).
+ * La palette est convertie en variables CSS posées en style inline sur <html>,
+ * que tailwind.config.ts relit. Conséquence : re-thémer entièrement le site revient
+ * à éditer le bloc `palette` de la config, et rien d'autre.
+ *
+ * Nommage : `--teinte-<famille>-<niveau>` (ex. `--teinte-braise-500`), valeur
+ * exprimée en canaux « r g b » pour rester compatible avec les modificateurs
+ * d'opacité de Tailwind (bg-flamme-600/10, text-braise-500/80…).
  */
 import type { CSSProperties } from 'react'
 import { siteConfig } from '@/config/site.config'
 
+const VAR_PREFIX = '--teinte'
+
+/** `#1B76BC` → `27 118 188`. Accepte la forme courte à 3 caractères. */
 export function hexToRgbChannels(hex: string): string {
-  const h = hex.replace('#', '')
-  const full = h.length === 3 ? h.split('').map((ch) => ch + ch).join('') : h
-  const n = parseInt(full, 16)
-  return `${(n >> 16) & 255} ${(n >> 8) & 255} ${n & 255}`
+  const raw = hex.replace('#', '')
+  const full = raw.length === 3 ? raw.replace(/./g, (ch) => ch + ch) : raw
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16))
+  return `${r} ${g} ${b}`
 }
 
-/** Style inline à poser sur <html>, pilote tous les tokens Tailwind. */
+/** Aplatit la palette en paires [nom de variable, canaux RGB]. */
+function paletteEntries(): [string, string][] {
+  return Object.entries(siteConfig.palette).flatMap(([family, levels]) =>
+    Object.entries(levels as Record<string, string>).map(
+      ([level, hex]) => [`${VAR_PREFIX}-${family}-${level}`, hexToRgbChannels(hex)] as [string, string],
+    ),
+  )
+}
+
+/** Style inline à poser sur <html> : pilote tous les tokens de couleur du site. */
 export function themeCssVars(): CSSProperties {
-  const vars: Record<string, string> = {}
-  for (const [family, levels] of Object.entries(siteConfig.palette)) {
-    for (const [level, hex] of Object.entries(levels as Record<string, string>)) {
-      vars[`--c-${family}-${level}`] = hexToRgbChannels(hex)
-    }
-  }
-  return vars as CSSProperties
+  return Object.fromEntries(paletteEntries()) as CSSProperties
 }

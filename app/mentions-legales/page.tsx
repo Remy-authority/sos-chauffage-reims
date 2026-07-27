@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
 
 function V({ children }: { children?: string }) {
   const val = (children || '').trim()
-  return val ? <>{val}</> : <em className="not-italic text-accent-600">À compléter</em>
+  return val ? <>{val}</> : <em className="not-italic text-braise-600">À compléter</em>
 }
 
 export default function MentionsLegales() {

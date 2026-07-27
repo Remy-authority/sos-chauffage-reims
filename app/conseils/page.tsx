@@ -38,26 +38,26 @@ export default function ConseilsListing() {
         title={
           <>
             Comprendre
-            <span className="text-gradient-accent"> son chauffage</span>
+            <span className="titre-braise"> son chauffage</span>
           </>
         }
         subtitle="Ce que dit un code d'erreur, ce qui se règle soi-même, ce qui ne se touche pas, et comment traverser l'hiver sans tomber en panne."
       />
 
-      <section className="bg-gradient-to-b from-sand-50 to-sand-100 py-16 lg:py-24">
+      <section className="bg-gradient-to-b from-craie-50 to-craie-100 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           {articles.length === 0 ? (
-            <AnimatedSection className="mx-auto max-w-xl rounded-card border border-sand-200 bg-white p-10 text-center">
-              <p className="font-display text-2xl font-medium text-ink-950">
+            <AnimatedSection className="mx-auto max-w-xl rounded-bloc border border-craie-200 bg-white p-10 text-center">
+              <p className="font-display text-2xl font-medium text-fonte-950">
                 Les premiers articles arrivent bientôt
               </p>
-              <p className="mt-4 leading-relaxed text-sand-600">
+              <p className="mt-4 leading-relaxed text-craie-600">
                 En attendant, une question sur une chaudière ou un radiateur qui ne suit
                 plus&nbsp;? Appelez, on vous répond directement.
               </p>
               <a
                 href={`tel:${siteConfig.phone}`}
-                className="mt-6 inline-flex items-center gap-2 font-medium text-accent-600 transition-colors hover:text-accent-500"
+                className="mt-6 inline-flex items-center gap-2 font-medium text-braise-600 transition-colors hover:text-braise-500"
               >
                 {siteConfig.phoneDisplay}
                 <ArrowRight size={16} />
@@ -69,10 +69,10 @@ export default function ConseilsListing() {
                 <AnimatedSection key={a.slug} delay={(idx % 3) * 0.07} as="li">
                   <Link
                     href={`/conseils/${a.slug}`}
-                    className="group flex h-full flex-col overflow-hidden rounded-card border border-sand-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+                    className="group flex h-full flex-col overflow-hidden rounded-bloc border border-craie-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-pose-forte"
                   >
                     {a.cover && (
-                      <div className="relative aspect-[16/9] w-full overflow-hidden bg-sand-100">
+                      <div className="relative aspect-[16/9] w-full overflow-hidden bg-craie-100">
                         <Image
                           src={a.cover}
                           alt=""
@@ -83,20 +83,20 @@ export default function ConseilsListing() {
                       </div>
                     )}
                     <div className="flex flex-1 flex-col p-7">
-                      <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-sand-500">
+                      <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-craie-500">
                         <time dateTime={a.date}>{formatDateFr(a.date)}</time>
                         <span className="inline-flex items-center gap-1">
                           <Clock size={13} />
                           {readingTimeMinutes(a.content)} min
                         </span>
                       </div>
-                      <h2 className="mt-3 font-display text-xl font-medium leading-snug text-ink-950 transition-colors group-hover:text-brand-700">
+                      <h2 className="mt-3 font-display text-xl font-medium leading-snug text-fonte-950 transition-colors group-hover:text-flamme-700">
                         {a.title}
                       </h2>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-sand-600">
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-craie-600">
                         {a.description}
                       </p>
-                      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-600 transition-all group-hover:gap-3">
+                      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-braise-600 transition-all group-hover:gap-3">
                         Lire l&apos;article
                         <ArrowRight size={16} />
                       </span>

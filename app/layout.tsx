@@ -58,10 +58,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: jsonLdScript(localBusinessJsonLd()) }}
         />
       </head>
-      <body className="bg-sand-50">
+      <body className="bg-craie-50">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink-950 focus:px-5 focus:py-3 focus:text-sand-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-fonte-950 focus:px-5 focus:py-3 focus:text-craie-50"
         >
           Aller au contenu
         </a>

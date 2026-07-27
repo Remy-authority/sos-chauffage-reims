@@ -28,21 +28,38 @@ export default function HomePage() {
 
   return (
     <>
+      {/*
+        Ordre des sections, propre à ce site et volontairement différent de celui
+        des autres sites du portefeuille. La séquence suit l'ordre des questions
+        que se pose quelqu'un dont le chauffage vient de s'arrêter, et non l'ordre
+        d'une plaquette de présentation :
+          1. vous traitez mon cas → Gallery, la preuve visuelle du métier, tout de suite
+          2. qu'est-ce que j'ai   → Symptoms, avant même la grille des prestations
+          3. quelle prestation    → Services
+          4. vous venez chez moi  → ServiceArea
+          5. ça se passe comment  → Process, refermé par sa bande de chiffres
+          6. vous êtes qui        → About, une fois rassuré sur l'essentiel
+          7. pourquoi vous        → WhyUs, juste avant le formulaire
+        Le « qui sommes-nous » passe donc en aval : sur une urgence, il ne vient
+        qu'après « pouvez-vous m'aider, et quand ».
+        Rythme des fonds : l'alternance clair/sombre est tenue jusqu'au formulaire,
+        avec une seule paire sombre assumée, Process et Stats, la bande de chiffres
+        étant faite pour refermer le bloc sombre du déroulé. La queue de page
+        (formulaire, FAQ) reste claire par nature, et le bandeau CTA rebascule
+        sur le sombre pour préparer l'entrée dans le pied de page.
+      */}
       <Hero />
       <TrustBar />
-      <About />
-      <Services services={services} />
-      {/* Table de triage symptôme → cause : section propre à ce site, placée juste
-          après la grille des prestations pour rattraper le visiteur qui ne sait pas
-          quelle prestation lui correspond. */}
+      {siteConfig.features.gallery && <Gallery />}
       <Symptoms services={services} />
+      <Services services={services} />
+      <ServiceArea zones={zones} />
       <Process />
       <Stats />
+      <About />
       <WhyUs />
-      {siteConfig.features.gallery && <Gallery />}
-      <ServiceArea zones={zones} />
 
-      <section id="devis" className="bg-sand-100 py-24 lg:py-32" aria-labelledby="devis-title">
+      <section id="devis" className="bg-craie-100 py-24 lg:py-32" aria-labelledby="devis-title">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <SectionHeader
             id="devis-title"
@@ -50,7 +67,7 @@ export default function HomePage() {
             title={
               <>
                 Trois questions,
-                <span className="text-gradient-ink italic"> et on vous rappelle</span>
+                <span className="titre-fonte italic"> et on vous rappelle</span>
               </>
             }
             subtitle="Le type d'appareil, le code d'erreur affiché et ce que vous avez perdu, le chauffage, l'eau chaude ou les deux : avec ça, notre estimation au téléphone est déjà juste."

@@ -1,19 +1,44 @@
 import type { Config } from 'tailwindcss'
 
 /**
- * tailwind.config.ts, design tokens branchés sur les CSS variables émises par
+ * tailwind.config.ts, tokens de design branchés sur les variables CSS émises par
  * lib/theme.ts depuis `siteConfig.palette`. Aucune couleur en dur ici : changer
- * les 4 échelles dans site.config.ts re-thème tout le site (clé du template N+1).
+ * les quatre échelles dans site.config.ts re-thème tout le site.
+ *
+ * Lexique du site (métier chauffage, volontairement pas un vocabulaire de template
+ * générique) : `braise` pour l'action et l'urgence, `flamme` pour la structure,
+ * `craie` pour les neutres clairs, `fonte` pour les fonds sombres.
  *
  * Système de design transposé de la référence PROTEC-DARD :
  *  - deux familles de police, Inter (UI, corps) et Fraunces (display, titres)
- *  - rayons généreux (cartes 24px, panneaux 32px, blocs héros 40px, boutons ronds)
- *  - ombres douces à deux couches, halos animés, textures de bruit et de grille
+ *  - rayons généreux (bloc 24px, panneau 32px, cadre 40px, boutons ronds)
+ *  - ombres douces à deux couches, halos animés, textures de grain et de trame
  */
-const c = (v: string) => `rgb(var(${v}) / <alpha-value>)`
+const token = (name: string) => `rgb(var(--teinte-${name}) / <alpha-value>)`
 
-const scale = (family: string, levels: number[]) =>
-  Object.fromEntries(levels.map((l) => [l, c(`--c-${family}-${l}`)]))
+const echelle = (famille: string, niveaux: number[]) =>
+  Object.fromEntries(niveaux.map((n) => [n, token(`${famille}-${n}`)]))
+
+/* ── Mouvements (durées et courbes alignées sur lib/motion.ts) ─────────────── */
+const keyframes = {
+  /* Filet lumineux qui MONTE le long d'un élément de radiateur : signature du
+     métier chauffage, la chaleur qui s'élève. */
+  'montee-chaleur': {
+    '0%': { transform: 'translateY(120%)', opacity: '0' },
+    '18%': { opacity: '1' },
+    '82%': { opacity: '1' },
+    '100%': { transform: 'translateY(-340%)', opacity: '0' },
+  },
+  miroitement: {
+    '0%': { backgroundPosition: '0% 50%' },
+    '50%': { backgroundPosition: '100% 50%' },
+    '100%': { backgroundPosition: '0% 50%' },
+  },
+  flottement: {
+    '0%, 100%': { transform: 'translateY(0)' },
+    '50%': { transform: 'translateY(-12px)' },
+  },
+}
 
 const config: Config = {
   content: [
@@ -24,60 +49,45 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        ink: scale('ink', [600, 700, 800, 900, 950]),
-        sand: scale('sand', [50, 100, 200, 300, 400, 500, 600, 700]),
-        brand: {
-          ...scale('brand', [300, 400, 500, 600, 700]),
-          DEFAULT: c('--c-brand-600'),
-        },
-        accent: {
-          ...scale('accent', [300, 400, 500, 600]),
-          DEFAULT: c('--c-accent-500'),
-        },
-      },
       fontFamily: {
         sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         display: ['var(--font-fraunces)', 'ui-serif', 'Georgia', 'serif'],
       },
-      borderRadius: {
-        card: '1.5rem',
-        panel: '2rem',
-        hero: '2.5rem',
-      },
-      boxShadow: {
-        /* Teinte d'ombre lue dans la palette (elle était figée en dur sur le site
-           d'origine, ce qui laissait une ombre froide sur une charte chaude). */
-        card: '0 1px 2px rgb(var(--c-ink-950) / 0.05), 0 8px 24px -8px rgb(var(--c-ink-950) / 0.14)',
-        'card-hover':
-          '0 4px 12px rgb(var(--c-ink-950) / 0.09), 0 24px 48px -12px rgb(var(--c-ink-950) / 0.22)',
-        glow: '0 0 40px -10px rgb(var(--c-accent-500) / 0.55)',
-        'glow-brand': '0 0 44px -12px rgb(var(--c-brand-400) / 0.5)',
-      },
-      keyframes: {
-        shimmer: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        /* Filet lumineux qui « monte » le long d'un élément de radiateur : signature
-           visuelle du métier chauffage (la chaleur qui s'élève). Sens inverse du
-           filet qui s'écoulait sur le site débouchage dont ce template est issu. */
-        'heat-rise': {
-          '0%': { transform: 'translateY(120%)', opacity: '0' },
-          '18%': { opacity: '1' },
-          '82%': { opacity: '1' },
-          '100%': { transform: 'translateY(-340%)', opacity: '0' },
-        },
-      },
+
+      keyframes,
       animation: {
-        shimmer: 'shimmer 8s linear infinite',
-        float: 'float 6s ease-in-out infinite',
-        'heat-rise': 'heat-rise 4.2s ease-in-out infinite',
+        'montee-chaleur': 'montee-chaleur 4.2s ease-in-out infinite',
+        miroitement: 'miroitement 8s linear infinite',
+        flottement: 'flottement 6s ease-in-out infinite',
+      },
+
+      colors: {
+        braise: {
+          ...echelle('braise', [300, 400, 500, 600]),
+          DEFAULT: token('braise-500'),
+        },
+        flamme: {
+          ...echelle('flamme', [300, 400, 500, 600, 700]),
+          DEFAULT: token('flamme-600'),
+        },
+        craie: echelle('craie', [50, 100, 200, 300, 400, 500, 600, 700]),
+        fonte: echelle('fonte', [600, 700, 800, 900, 950]),
+      },
+
+      boxShadow: {
+        /* Teinte d'ombre lue dans la palette : une charte chaude ne doit pas
+           porter une ombre froide figée en dur. */
+        pose: '0 1px 2px rgb(var(--teinte-fonte-950) / 0.05), 0 8px 24px -8px rgb(var(--teinte-fonte-950) / 0.14)',
+        'pose-forte':
+          '0 4px 12px rgb(var(--teinte-fonte-950) / 0.09), 0 24px 48px -12px rgb(var(--teinte-fonte-950) / 0.22)',
+        'halo-braise': '0 0 40px -10px rgb(var(--teinte-braise-500) / 0.55)',
+        'halo-flamme': '0 0 44px -12px rgb(var(--teinte-flamme-400) / 0.5)',
+      },
+
+      borderRadius: {
+        bloc: '1.5rem',
+        panneau: '2rem',
+        cadre: '2.5rem',
       },
     },
   },

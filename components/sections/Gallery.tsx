@@ -52,12 +52,12 @@ const items = [
 export function Gallery() {
   return (
     <section
-      className="noise-overlay relative overflow-hidden bg-ink-950 py-24 lg:py-32"
+      className="grain relative overflow-hidden bg-fonte-950 py-24 lg:py-32"
       aria-labelledby="gallery-title"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgb(var(--c-brand-600)/0.25),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgb(var(--teinte-flamme-600)/0.25),transparent_60%)]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
@@ -67,7 +67,7 @@ export function Gallery() {
           title={
             <>
               Les situations
-              <span className="text-gradient-accent"> que nous traitons</span>
+              <span className="titre-braise"> que nous traitons</span>
             </>
           }
           subtitle={`Six cas de figure qui reviennent tout l'hiver sur l'agglomération de ${siteConfig.city}, et ce qu'on regarde en premier.`}
@@ -79,9 +79,9 @@ export function Gallery() {
             <AnimatedSection
               key={item.src}
               delay={(idx % 3) * 0.08}
-              className="group relative overflow-hidden rounded-card border border-ink-700/50"
+              className="group relative overflow-hidden rounded-bloc border border-fonte-700/50"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink-900">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-fonte-900">
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -91,12 +91,12 @@ export function Gallery() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/45 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-fonte-950 via-fonte-950/45 to-transparent"
                 />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <p className="font-display text-xl font-medium text-sand-50">{item.title}</p>
-                <p className="mt-1.5 text-sm leading-relaxed text-sand-300">{item.caption}</p>
+                <p className="font-display text-xl font-medium text-craie-50">{item.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-craie-300">{item.caption}</p>
               </div>
             </AnimatedSection>
           ))}

@@ -58,29 +58,39 @@ export const siteConfig = {
   /**
    * Palette « chaleur maîtrisée », propre à ce site.
    *
-   *  - `ink`    : brun fumé profond, la fonte d'un radiateur et le noir d'un âtre.
-   *               Volontairement CHAUD, là où Metz est un noir bleu pétrole et
-   *               Dijon un noir prune : c'est le premier écart visible entre les
-   *               trois sites, avant même les couleurs d'accent.
-   *  - `sand`   : crème craie, écho à la craie de Champagne sur laquelle Reims
-   *               est bâtie (caves, sous-sol, façades).
-   *  - `brand`  : bleu de flamme de gaz. Porte la structure, les icônes, les liens.
+   * Le lexique des familles est celui du MÉTIER, pas un vocabulaire de template
+   * réutilisé d'un site à l'autre (ce qui rendrait deux sites du portefeuille
+   * rapprochables automatiquement par leurs seuls noms de tokens) :
+   *
+   *  - `braise` : URGENCE et action uniquement (CTA, eyebrow, point vivant).
+   *               C'est la « chaleur » : ce que le client vient chercher.
+   *  - `flamme` : bleu de flamme de gaz. Porte la structure, les icônes, les liens.
    *               C'est la « maîtrise » : le réglage juste, la flamme bleue et
    *               stable d'une chaudière qui fonctionne bien.
-   *  - `accent` : braise. URGENCE et action uniquement (CTA, eyebrow, point vivant).
-   *               C'est la « chaleur » : ce que le client vient chercher.
+   *  - `craie`  : crème, écho à la craie de Champagne sur laquelle Reims est
+   *               bâtie (caves, sous-sol, façades). Sections claires.
+   *  - `fonte`  : brun fumé profond, la fonte d'un radiateur et le noir d'un âtre.
+   *               Volontairement CHAUD, là où les autres sites du portefeuille ont
+   *               des noirs froids : c'est le premier écart visible, avant même
+   *               les couleurs d'accent.
    *
-   * Règle de composition : `brand` porte la structure, `accent` ne sert qu'à l'action.
+   * Règle de composition : `flamme` porte la structure, `braise` ne sert qu'à l'action.
    */
   palette: {
-    ink: {
-      600: '#57433A',
-      700: '#42322B',
-      800: '#30241F',
-      900: '#211815',
-      950: '#150F0D',
+    braise: {
+      300: '#F9B478',
+      400: '#E8791A',
+      500: '#BF5405',
+      600: '#8F3D06',
     },
-    sand: {
+    flamme: {
+      300: '#7CC0EC',
+      400: '#3E97D8',
+      500: '#1B76BC',
+      600: '#125A93',
+      700: '#0D4470',
+    },
+    craie: {
       50: '#FAF8F5',
       100: '#F3EFE9',
       200: '#E7E0D6',
@@ -90,18 +100,12 @@ export const siteConfig = {
       600: '#655B54',
       700: '#45403C',
     },
-    brand: {
-      300: '#7CC0EC',
-      400: '#3E97D8',
-      500: '#1B76BC',
-      600: '#125A93',
-      700: '#0D4470',
-    },
-    accent: {
-      300: '#F9B478',
-      400: '#E8791A',
-      500: '#BF5405',
-      600: '#8F3D06',
+    fonte: {
+      600: '#57433A',
+      700: '#42322B',
+      800: '#30241F',
+      900: '#211815',
+      950: '#150F0D',
     },
   },
 

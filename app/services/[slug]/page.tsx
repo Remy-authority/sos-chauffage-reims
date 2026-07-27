@@ -58,21 +58,21 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       />
 
       {/* En-tête sombre de la prestation */}
-      <section className="noise-overlay relative overflow-hidden bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950 py-16 lg:py-20">
-        <div aria-hidden="true" className="bg-grid absolute inset-0" />
+      <section className="grain relative overflow-hidden bg-gradient-to-b from-fonte-950 via-fonte-900 to-fonte-950 py-16 lg:py-20">
+        <div aria-hidden="true" className="trame absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
           <div className="lg:col-span-7">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-500/15 text-brand-300 ring-1 ring-brand-400/25">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-flamme-500/15 text-flamme-300 ring-1 ring-flamme-400/25">
               <ServiceIcon icon={service.icon} className="h-6 w-6" />
             </span>
-            <h1 className="mt-6 text-4xl leading-[1.1] text-sand-50 md:text-5xl">{service.h1}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200">{service.intro}</p>
+            <h1 className="mt-6 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{service.h1}</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-craie-200">{service.intro}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href={`tel:${siteConfig.phone}`} variant="accent" size="lg">
+              <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
                 {siteConfig.phoneDisplay}
               </Button>
-              <Button href="/contact#formulaire" variant="ghost" size="lg">
+              <Button href="/contact#formulaire" variant="voile" size="lg">
                 Décrire ma situation
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Button>
@@ -81,7 +81,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
           {service.image && (
             <div className="lg:col-span-5">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-panel border border-brand-400/20 shadow-card">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-panneau border border-flamme-400/20 shadow-pose">
                 <Image
                   src={service.image}
                   alt={service.h1}
@@ -96,11 +96,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      <article className="bg-sand-50 py-16 lg:py-24">
+      <article className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <ServiceQuickFacts bullets={service.bullets} />
 
-          <div className="prose-content mt-12 space-y-10">
+          <div className="texte-page mt-12 space-y-10">
             {service.blocks.map((b, i) => (
               <ServiceBlock key={b.heading} block={b} eager={i === firstImageIndex} />
             ))}
@@ -114,12 +114,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                   <li key={r.slug}>
                     <Link
                       href={`/services/${r.slug}`}
-                      className="group flex items-center gap-3 rounded-card border border-sand-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:shadow-card"
+                      className="group flex items-center gap-3 rounded-bloc border border-craie-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
                     >
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-600/10 text-brand-600">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                         <ServiceIcon icon={r.icon} className="h-5 w-5" />
                       </span>
-                      <span className="font-medium text-ink-900 group-hover:text-brand-700">
+                      <span className="font-medium text-fonte-900 group-hover:text-flamme-700">
                         {r.navTitle}
                       </span>
                     </Link>
@@ -136,7 +136,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <li key={z.slug}>
                   <Link
                     href={`/zones/${z.slug}`}
-                    className="inline-flex rounded-full border border-sand-300 bg-white px-4 py-2 text-sm text-sand-700 transition-colors hover:border-brand-500 hover:text-brand-700"
+                    className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
                   >
                     {z.name}
                   </Link>
@@ -145,7 +145,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <li>
                 <Link
                   href="/zones"
-                  className="inline-flex rounded-full border border-brand-600 bg-brand-600/5 px-4 py-2 text-sm font-medium text-brand-700 transition-colors hover:bg-brand-600/10"
+                  className="inline-flex rounded-full border border-flamme-600 bg-flamme-600/5 px-4 py-2 text-sm font-medium text-flamme-700 transition-colors hover:bg-flamme-600/10"
                 >
                   Toutes les communes
                 </Link>
@@ -154,14 +154,14 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </AnimatedSection>
 
           {articles.length > 0 && (
-            <AnimatedSection className="mt-14 rounded-card border border-sand-200 bg-white p-8">
+            <AnimatedSection className="mt-14 rounded-bloc border border-craie-200 bg-white p-8">
               <h2 className="text-2xl">À lire aussi</h2>
               <ul className="mt-4 space-y-2">
                 {articles.map((a) => (
                   <li key={a.slug}>
                     <Link
                       href={`/conseils/${a.slug}`}
-                      className="font-medium text-brand-600 underline underline-offset-2 hover:text-brand-500"
+                      className="font-medium text-flamme-600 underline underline-offset-2 hover:text-flamme-500"
                     >
                       {a.title}
                     </Link>

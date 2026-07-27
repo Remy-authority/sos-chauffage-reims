@@ -139,3 +139,18 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   goutte d'eau (contresens sur un site de chauffage), et deux classes d'opacité Tailwind
   invalides héritées du template (`bg-brand-500/12`, `bg-brand-500/6`) étaient silencieusement
   mortes. Reste au CEO : contrôle visuel côte à côte avec Metz et Dijon.
+- **27/07/2026 (Builder, correctifs post-contrôle CEO)** : les trois corrections demandées,
+  et rien d'autre. 1) Menu mobile : voile plein viewport ajouté, posé en z-[45] pour passer
+  au-dessus de la barre d'appel collante (z-40) tout en restant sous l'en-tête (z-50), avec
+  blocage du défilement de la page. Le voile est un vrai bouton de fermeture, donc sans
+  aria-hidden, sinon la règle globale du projet l'aurait rendu inerte ; clics du panneau
+  vérifiés intacts. 2) Empreinte Tailwind cassée : lexique de tokens propre au métier
+  (braise, flamme, craie, fonte à la place de accent, brand, sand, ink), variables CSS
+  passées de `--c-*` à `--teinte-*`, rayons, ombres et animations renommés, ordre des blocs
+  de tailwind.config.ts et structure de globals.css revus, variantes de Button et de
+  GradientBlob renommées. Renommage fait par script ancré sur les préfixes d'utilitaires,
+  puis contrôle des 68 classes à opacité contre le CSS généré : zéro classe morte.
+  3) Ordre des sections d'accueil réellement permuté, avec la logique documentée dans
+  app/page.tsx. Premier essai corrigé : il alignait trois fonds sombres à la suite.
+  Vérifications : tsc propre, build vert (37 pages), 22 captures desktop et mobile
+  re-tirées, contrôle des 29 pages rendues toujours au vert.

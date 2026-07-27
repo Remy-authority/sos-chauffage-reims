@@ -9,21 +9,21 @@ import { motion } from 'framer-motion'
  */
 type Props = {
   className?: string
-  color?: 'brand' | 'accent' | 'deep' | 'mixed'
+  color?: 'flamme' | 'braise' | 'profond' | 'mixte'
   size?: number
   duration?: number
   intensity?: 'subtle' | 'normal' | 'strong'
 }
 
 const gradients: Record<NonNullable<Props['color']>, string> = {
-  brand:
-    'radial-gradient(circle at 30% 30%, rgb(var(--c-brand-400) / 0.5), rgb(var(--c-brand-600) / 0.2) 40%, transparent 70%)',
-  accent:
-    'radial-gradient(circle at 30% 30%, rgb(var(--c-accent-400) / 0.45), rgb(var(--c-accent-600) / 0.18) 40%, transparent 70%)',
-  deep:
-    'radial-gradient(circle at 30% 30%, rgb(var(--c-ink-600) / 0.55), rgb(var(--c-ink-900) / 0.15) 40%, transparent 70%)',
-  mixed:
-    'radial-gradient(circle at 30% 30%, rgb(var(--c-brand-300) / 0.38), rgb(var(--c-accent-500) / 0.18) 45%, transparent 72%)',
+  flamme:
+    'radial-gradient(circle at 30% 30%, rgb(var(--teinte-flamme-400) / 0.5), rgb(var(--teinte-flamme-600) / 0.2) 40%, transparent 70%)',
+  braise:
+    'radial-gradient(circle at 30% 30%, rgb(var(--teinte-braise-400) / 0.45), rgb(var(--teinte-braise-600) / 0.18) 40%, transparent 70%)',
+  profond:
+    'radial-gradient(circle at 30% 30%, rgb(var(--teinte-fonte-600) / 0.55), rgb(var(--teinte-fonte-900) / 0.15) 40%, transparent 70%)',
+  mixte:
+    'radial-gradient(circle at 30% 30%, rgb(var(--teinte-flamme-300) / 0.38), rgb(var(--teinte-braise-500) / 0.18) 45%, transparent 72%)',
 }
 
 const ranges = {
@@ -34,7 +34,7 @@ const ranges = {
 
 export function GradientBlob({
   className = '',
-  color = 'brand',
+  color = 'flamme',
   size = 560,
   duration = 18,
   intensity = 'normal',

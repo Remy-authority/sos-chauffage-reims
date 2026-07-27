@@ -39,6 +39,17 @@ export function Header({ services }: { services: NavService[] }) {
     setMobileServicesOpen(false)
   }, [pathname])
 
+  // Menu mobile ouvert : la page ne défile plus derrière le voile. On restaure
+  // toujours la valeur d'origine au démontage, pour ne pas laisser le body bloqué.
+  useEffect(() => {
+    if (!mobileOpen) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [mobileOpen])
+
   const links = [
     { href: '/zones', label: "Zones d'intervention" },
     { href: '/conseils', label: 'Conseils' },
@@ -55,165 +66,189 @@ export function Header({ services }: { services: NavService[] }) {
   const solid = scrolled || mobileOpen || hasLightTop
 
   const linkTone = solid
-    ? 'text-ink-900 hover:text-brand-600'
-    : 'text-sand-100 hover:text-accent-300'
+    ? 'text-fonte-900 hover:text-flamme-600'
+    : 'text-craie-100 hover:text-braise-300'
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid
-          ? 'bg-sand-50/90 shadow-[0_1px_0_rgb(7_26_30/0.07)] backdrop-blur-xl'
-          : 'bg-ink-950/35 backdrop-blur-md'
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3.5 lg:px-10">
-        <Link href="/" aria-label={`${siteConfig.businessName}, accueil`} className="transition-opacity hover:opacity-80">
-          <Logo tone={solid ? 'dark' : 'light'} />
-        </Link>
-
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigation principale">
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <button
-              type="button"
-              aria-expanded={servicesOpen}
-              onClick={() => setServicesOpen((v) => !v)}
-              className={`group relative flex items-center gap-1.5 py-2 text-sm font-medium transition-colors ${linkTone}`}
-            >
-              Prestations
-              <ChevronDown
-                size={15}
-                className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
-              />
-              <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-accent-500 transition-all duration-300 group-hover:w-[calc(100%-1.4rem)]" />
-            </button>
-
-            <AnimatePresence>
-              {servicesOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.22, ease: EASE }}
-                  className="absolute left-1/2 top-full w-[22rem] -translate-x-1/2 pt-3"
-                >
-                  <div className="overflow-hidden rounded-panel border border-sand-200 bg-sand-50/95 p-2 shadow-card-hover backdrop-blur-xl">
-                    {services.map((s) => (
-                      <Link
-                        key={s.slug}
-                        href={`/services/${s.slug}`}
-                        className="flex items-center justify-between gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-ink-900 transition-colors hover:bg-brand-600/10 hover:text-brand-700"
-                      >
-                        {s.navTitle}
-                        <span className="text-accent-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                          →
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {links.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`group relative py-2 text-sm font-medium transition-colors ${linkTone}`}
-            >
-              {item.label}
-              <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-accent-500 transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden lg:flex">
-          <Button href={`tel:${siteConfig.phone}`} variant="accent" size="sm">
-            <Phone size={16} strokeWidth={2.5} />
-            {siteConfig.phoneDisplay}
-          </Button>
-        </div>
-
-        <button
-          type="button"
-          aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-ink-900 text-sand-50 lg:hidden"
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-
+    <>
+      {/* Voile plein écran du menu mobile. Posé SOUS l'en-tête (z-45 contre z-50)
+          pour que la barre et le panneau restent nets, et au-dessus de tout le
+          reste, barre d'appel collante comprise (z-40), pour assombrir vraiment
+          toute la page. C'est un vrai <button> de fermeture,
+          donc surtout PAS aria-hidden : la règle globale du projet coupe les
+          clics des calques décoratifs aria-hidden, elle rendrait ce voile inerte
+          (cf. tasks/lessons.md, calques qui volent ou perdent le clic). */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+          <motion.button
+            type="button"
+            aria-label="Fermer le menu"
+            onClick={() => setMobileOpen(false)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.22, ease: EASE }}
-            className="max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-sand-200 bg-sand-50 shadow-card-hover lg:hidden"
-          >
-            <nav className="flex flex-col gap-1 px-6 py-6" aria-label="Navigation mobile">
+            className="fixed inset-0 z-[45] w-full cursor-default bg-fonte-950/60 backdrop-blur-sm lg:hidden"
+          />
+        )}
+      </AnimatePresence>
+
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          solid
+            ? 'bg-craie-50/90 shadow-[0_1px_0_rgb(var(--teinte-fonte-950)/0.08)] backdrop-blur-xl'
+            : 'bg-fonte-950/35 backdrop-blur-md'
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3.5 lg:px-10">
+          <Link href="/" aria-label={`${siteConfig.businessName}, accueil`} className="transition-opacity hover:opacity-80">
+            <Logo tone={solid ? 'dark' : 'light'} />
+          </Link>
+
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Navigation principale">
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
               <button
                 type="button"
-                aria-expanded={mobileServicesOpen}
-                onClick={() => setMobileServicesOpen((v) => !v)}
-                className="flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-ink-900 transition-colors hover:bg-brand-600/10"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((v) => !v)}
+                className={`group relative flex items-center gap-1.5 py-2 text-sm font-medium transition-colors ${linkTone}`}
               >
                 Prestations
                 <ChevronDown
-                  size={18}
-                  className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                  size={15}
+                  className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
                 />
+                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-braise-500 transition-all duration-300 group-hover:w-[calc(100%-1.4rem)]" />
               </button>
 
-              <AnimatePresence initial={false}>
-                {mobileServicesOpen && (
+              <AnimatePresence>
+                {servicesOpen && (
                   <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.28, ease: EASE }}
-                    className="overflow-hidden"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.22, ease: EASE }}
+                    className="absolute left-1/2 top-full w-[22rem] -translate-x-1/2 pt-3"
                   >
-                    <div className="ml-3 border-l border-sand-200 pl-3">
+                    <div className="overflow-hidden rounded-panneau border border-craie-200 bg-craie-50/95 p-2 shadow-pose-forte backdrop-blur-xl">
                       {services.map((s) => (
                         <Link
                           key={s.slug}
                           href={`/services/${s.slug}`}
-                          className="block rounded-xl px-4 py-2.5 text-sm text-sand-700 transition-colors hover:bg-brand-600/10 hover:text-brand-700"
+                          className="flex items-center justify-between gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10 hover:text-flamme-700"
                         >
                           {s.navTitle}
+                          <span className="text-braise-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                            →
+                          </span>
                         </Link>
                       ))}
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
+            </div>
 
-              {links.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-2xl px-4 py-3 text-base font-medium text-ink-900 transition-colors hover:bg-brand-600/10"
+            {links.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`group relative py-2 text-sm font-medium transition-colors ${linkTone}`}
+              >
+                {item.label}
+                <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-braise-500 transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden lg:flex">
+            <Button href={`tel:${siteConfig.phone}`} variant="braise" size="sm">
+              <Phone size={16} strokeWidth={2.5} />
+              {siteConfig.phoneDisplay}
+            </Button>
+          </div>
+
+          <button
+            type="button"
+            aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-fonte-900 text-craie-50 lg:hidden"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22, ease: EASE }}
+              className="max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-craie-200 bg-craie-50 shadow-pose-forte lg:hidden"
+            >
+              <nav className="flex flex-col gap-1 px-6 py-6" aria-label="Navigation mobile">
+                <button
+                  type="button"
+                  aria-expanded={mobileServicesOpen}
+                  onClick={() => setMobileServicesOpen((v) => !v)}
+                  className="flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
                 >
-                  {item.label}
-                </Link>
-              ))}
+                  Prestations
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
 
-              <Button href={`tel:${siteConfig.phone}`} variant="accent" size="md" className="mt-4">
-                <Phone size={18} strokeWidth={2.5} />
-                {siteConfig.phoneDisplay}
-              </Button>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+                <AnimatePresence initial={false}>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.28, ease: EASE }}
+                      className="overflow-hidden"
+                    >
+                      <div className="ml-3 border-l border-craie-200 pl-3">
+                        {services.map((s) => (
+                          <Link
+                            key={s.slug}
+                            href={`/services/${s.slug}`}
+                            className="block rounded-xl px-4 py-2.5 text-sm text-craie-700 transition-colors hover:bg-flamme-600/10 hover:text-flamme-700"
+                          >
+                            {s.navTitle}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {links.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-2xl px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+                <Button href={`tel:${siteConfig.phone}`} variant="braise" size="md" className="mt-4">
+                  <Phone size={18} strokeWidth={2.5} />
+                  {siteConfig.phoneDisplay}
+                </Button>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   )
 }
