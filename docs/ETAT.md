@@ -26,7 +26,7 @@ fenêtre est là. Saisonnalité assumée : pic octobre-février, creux été (do
 du gros volume hivernal).
 
 **Domaine pressenti : `sos-chauffage-reims.fr`** (vérifié DISPONIBLE à l'AFNIC le 27/07/2026,
-PAS ENCORE ACHETÉ ; 8 candidats libres dont chauffagiste-reims.fr, voir conversation
+ACHETÉ le 27/07/2026 (validation registrar en cours) ; 8 candidats libres dont chauffagiste-reims.fr, voir conversation
 CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 
 ---
@@ -91,7 +91,7 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   saisonnier. Objectif global réaffirmé : ~10 sites, plusieurs métiers, toujours de l'urgence.
 - 27/07/2026 : **rayon d'intervention 30 km** (et non les 15 km proposés par le SEO). Les 12
   communes du plan restent valables (toutes sous 13 km), le rayon élargit la zone annoncée.
-- 27/07/2026 : **domaine validé : sos-chauffage-reims.fr** (reste à acheter).
+- 27/07/2026 : **domaine validé : sos-chauffage-reims.fr**, ACHETÉ par Rémy le 27/07 (en attente de validation registrar/AFNIC). DNS à ne pas toucher avant l'Étape 6.
 - 27/07/2026 : le numéro 09 sera pris sur **Twilio**, tâche CEO (en attente des accès API
   Twilio de Rémy ; aucun identifiant Twilio trouvé sur la machine). Attention : un numéro
   français sur Twilio exige un dossier réglementaire approuvé (justificatif d'adresse et
