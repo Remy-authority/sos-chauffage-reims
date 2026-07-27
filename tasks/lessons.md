@@ -1,4 +1,4 @@
-# tasks/lessons.md — SOS Débouchage Metz
+# tasks/lessons.md — SOS Chauffage Reims (leçons héritées du portefeuille, dont Metz)
 
 > Format : [date] | ce qui a mal tourné | règle pour l'éviter.
 > Relire ce fichier à chaque démarrage de session.
