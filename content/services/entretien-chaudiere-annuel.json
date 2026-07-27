@@ -1,0 +1,52 @@
+{
+  "slug": "entretien-chaudiere-annuel",
+  "order": 8,
+  "icon": "maintenance",
+  "navTitle": "Entretien de chaudière",
+  "h1": "Entretien annuel de chaudière à Reims",
+  "metaTitle": "Entretien annuel de chaudière à Reims",
+  "metaDescription": "Entretien de chaudière à Reims : nettoyage, contrôle des sécurités, réglage de la combustion et attestation d'entretien. Gaz, fioul et pompe à chaleur, tarif annoncé avant.",
+  "intro": "L'entretien d'une chaudière n'est pas une formalité administrative : c'est la visite qui permet de repérer, hors saison et au calme, ce qui aurait provoqué une panne en plein hiver. Elle donne lieu à une attestation d'entretien, le document que votre assureur peut réclamer après un sinistre. L'entretien des appareils de chauffage est encadré par la réglementation en vigueur, et nous vous indiquons ce qu'elle prévoit pour votre installation au moment de la prise de rendez-vous.",
+  "bullets": [
+    "Nettoyage, sécurités, réglage de combustion",
+    "Attestation d'entretien remise après la visite",
+    "Gaz, fioul et pompe à chaleur"
+  ],
+  "blocks": [
+    {
+      "heading": "Ce que couvre la visite",
+      "body": "L'entretien se déroule dans un ordre qui a du sens et ne se limite pas à un coup de chiffon sur l'appareil. Nous commençons par le nettoyage des organes qui s'encrassent en fonctionnant : corps de chauffe, brûleur, échangeur, filtres, et sur un appareil au fioul le gicleur et les électrodes. Vient ensuite le contrôle des sécurités, qui est le coeur de la visite : pression et vase d'expansion, soupape de sécurité, sondes de température, dispositifs d'arrêt, et vérification que l'évacuation des fumées se fait correctement. Nous mesurons alors la combustion à l'analyseur, ce qui donne des chiffres objectifs sur la qualité de la combustion et les émissions, et nous ajustons le réglage si nécessaire. Sur un appareil raccordé à un circuit, nous regardons aussi l'état de l'eau du chauffage, un bon indicateur de l'encrassement à venir. La visite se termine par un essai de fonctionnement complet, et par la remise de l'attestation d'entretien. Nous vous signalons aussi ce qui n'est pas encore un défaut mais qui le deviendra, pour que vous puissiez décider quand le traiter."
+    },
+    {
+      "heading": "Pourquoi le faire avant l'hiver plutôt qu'en pleine saison",
+      "body": "Le meilleur moment pour entretenir un appareil de chauffage se situe avant la remise en route de la saison, à la fin de l'été ou au début de l'automne. Trois raisons concrètes. D'abord, un défaut détecté hors saison se traite tranquillement, avec le temps de commander une pièce, alors que le même défaut découvert en janvier vous laisse dans le froid pendant l'attente. Ensuite, une chaudière qui n'a pas tourné depuis des mois cumule les petits problèmes de redémarrage, vannes thermostatiques grippées, air accumulé, pression descendue, et l'entretien les règle avant qu'ils ne deviennent la panne du premier coup de froid. Enfin, une raison pratique : les premières semaines vraiment froides concentrent les demandes de dépannage, ce qui rend les créneaux plus rares partout. Un rendez-vous pris en septembre se cale sans difficulté, un rendez-vous en novembre beaucoup moins. Nous vous suggérons ce calage saisonnier plutôt que d'attendre l'anniversaire administratif de la visite précédente."
+    },
+    {
+      "heading": "Réparer ou remplacer, la question posée au bon moment",
+      "body": "L'entretien est le moment idéal pour poser une question qui n'a rien à faire au milieu d'une urgence : votre appareil mérite-t-il encore d'être réparé. Nous la tranchons sur des critères vérifiables, pas sur l'âge seul. Le premier est le coût de la réparation envisagée comparé à celui d'un appareil neuf de même catégorie. Le deuxième est la disponibilité des pièces détachées de votre modèle, un point décisif et souvent ignoré : une chaudière ancienne mais bien approvisionnée se répare sans hésiter, une chaudière dont la carte électronique ne se trouve plus est condamnée quelle que soit sa robustesse mécanique. Le troisième est la répétition des pannes sur les dernières saisons, qui compte autant que leur gravité. Le quatrième est l'état du corps de chauffe et de l'échangeur, que la visite permet précisément d'observer. Nous vous donnons notre lecture de ces quatre points, et vous décidez. Nous ne vendons pas d'installation neuve depuis ce site, ce qui nous laisse libres de vous dire de garder votre appareil quand c'est la bonne réponse."
+    }
+  ],
+  "relatedServices": [
+    "depannage-chaudiere-gaz",
+    "radiateur-froid-desembouage-purge"
+  ],
+  "faq": [
+    {
+      "q": "L'entretien de la chaudière est-il obligatoire ?",
+      "a": "L'entretien des appareils de chauffage est encadré par la réglementation en vigueur, et l'obligation ne dépend pas seulement du type d'appareil mais aussi de sa puissance. Concrètement, l'attestation d'entretien remise à l'issue de la visite est le document que votre assureur peut réclamer après un sinistre lié à l'appareil : sans elle, la prise en charge peut être discutée. Nous vous indiquons ce que la réglementation prévoit précisément pour votre installation au moment de la prise de rendez-vous, plutôt que d'annoncer une règle générale qui ne correspondrait pas à votre cas."
+    },
+    {
+      "q": "Qui paie l'entretien de la chaudière, le locataire ou le propriétaire ?",
+      "a": "En location, l'entretien courant de l'appareil de chauffage est à la charge du locataire, tandis que le remplacement de l'appareil et les réparations liées à sa vétusté restent à la charge du propriétaire. La frontière se joue donc sur la nature de l'opération : une visite d'entretien annuelle relève du locataire, un corps de chauffe percé par l'âge relève du bailleur. Beaucoup de baux prévoient explicitement le point, et certains propriétaires souscrivent eux-mêmes un contrat : vérifiez d'abord ce que dit le vôtre."
+    },
+    {
+      "q": "Que contient l'attestation d'entretien remise après la visite ?",
+      "a": "Elle identifie l'appareil et l'intervenant, atteste que la visite a bien eu lieu, et rend compte de ce qui a été contrôlé : nettoyage, vérification des organes de sécurité, contrôle de l'évacuation des fumées, mesures de combustion et d'émissions. Elle mentionne également les recommandations et les points d'attention relevés. Conservez-la : c'est ce document que vous présentez à votre assureur, à un futur acquéreur ou à votre bailleur, et non la facture de l'intervention."
+    },
+    {
+      "q": "L'entretien concerne-t-il aussi les pompes à chaleur ?",
+      "a": "Oui, avec un contenu différent. Une pompe à chaleur n'a pas de combustion à régler ni de fumées à évacuer : la visite porte sur le nettoyage des échangeurs, notamment de l'unité extérieure, l'état du ventilateur, l'écoulement des condensats, les réglages de régulation, et le circuit d'eau côté air-eau. Les opérations touchant au circuit de fluide frigorifique relèvent en revanche d'une attestation de capacité spécifique. Comme pour les appareils à combustion, l'entretien des pompes à chaleur est encadré par la réglementation en vigueur selon leur puissance."
+    }
+  ],
+  "image": "/services/entretien-chaudiere-annuel.jpg"
+}

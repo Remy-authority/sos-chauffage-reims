@@ -1,0 +1,52 @@
+{
+  "slug": "depannage-pompe-a-chaleur",
+  "order": 4,
+  "icon": "heatpump",
+  "navTitle": "Pompe à chaleur",
+  "h1": "Dépannage de pompe à chaleur à Reims",
+  "metaTitle": "Dépannage de pompe à chaleur à Reims",
+  "metaDescription": "Pompe à chaleur en panne à Reims : plus de chauffage, unité extérieure givrée, bruit anormal, code défaut. Diagnostic PAC air-eau et air-air, tarif annoncé avant.",
+  "intro": "Une pompe à chaleur qui chauffe moins n'est pas forcément une pompe à chaleur en panne. C'est la particularité de cet appareil : ses performances varient avec la température extérieure, il s'arrête régulièrement pour dégivrer, et beaucoup d'appels concernent un fonctionnement normal mal interprété. Nous intervenons sur les pompes à chaleur air-eau et air-air installées à Reims et dans l'agglomération, sous l'angle du dépannage d'un appareil existant.",
+  "bullets": [
+    "PAC air-eau et air-air",
+    "Unité extérieure, dégivrage, régulation",
+    "Diagnostic distinct d'une panne de chaudière"
+  ],
+  "blocks": [
+    {
+      "heading": "Panne réelle ou fonctionnement normal",
+      "body": "Commençons par ce qui inquiète le plus et n'est pas une panne. Une unité extérieure couverte de givre par temps froid et humide est un phénomène attendu : l'appareil capte la chaleur de l'air, refroidit cet air au passage, et l'humidité se dépose en givre sur l'échangeur. La machine lance alors un cycle de dégivrage pendant lequel elle cesse de chauffer, souffle de l'air froid côté extérieur, produit parfois de la vapeur et un bruit inhabituel, puis reprend. Ce cycle dure quelques minutes et se répète d'autant plus souvent qu'il fait froid et humide, ce qui est fréquent en hiver dans la Marne. En revanche, il y a bien un défaut quand le givre ne disparaît jamais, quand l'unité reste bloquée en dégivrage, quand un bloc de glace se forme au pied de l'appareil parce que les condensats ne s'écoulent plus, ou quand la machine s'arrête et affiche un code sans repartir. La distinction est facile à faire sur place, beaucoup moins au téléphone : décrivez ce que vous voyez plutôt que de conclure."
+    },
+    {
+      "heading": "Ce que nous contrôlons sur une pompe à chaleur",
+      "body": "Le diagnostic d'une pompe à chaleur ne ressemble pas à celui d'une chaudière : il n'y a ni combustion, ni pression de gaz combustible, ni évacuation de fumées. Nous regardons d'abord l'unité extérieure et son environnement, car beaucoup de pertes de performance viennent de là : échangeur encrassé par les feuilles, la poussière ou les peluches de peuplier, ventilateur gêné, appareil installé trop près d'un mur ou d'une haie qui recycle son propre air froid, écoulement des condensats bouché. Nous vérifions ensuite la régulation et les consignes, souvent modifiées sans le vouloir ou mal adaptées à la saison, puis le circuit d'eau côté air-eau : pression, circulateur, filtre, équilibrage des émetteurs. Enfin viennent les organes propres à la machine, sondes, carte, échange thermique. Une pompe à chaleur qui affiche un code défaut donne, comme une chaudière, une famille de causes à explorer."
+    },
+    {
+      "heading": "Le périmètre de notre intervention",
+      "body": "Nous dépannons une pompe à chaleur déjà installée : diagnostic, remise en service, remplacement de pièce, correction de régulation, nettoyage des échangeurs, reprise de l'écoulement des condensats. Nous ne faisons pas d'installation neuve ni de vente d'appareil, ce n'est pas notre métier sur ce site et ce ne serait pas rendre service que de le prétendre. Autre limite à connaître : les interventions sur le circuit frigorifique lui-même, celui qui contient le fluide, relèvent d'une attestation de capacité spécifique et d'un matériel dédié. Quand le diagnostic conduit là, nous vous le disons clairement et nous vous orientons plutôt que de bricoler. Enfin, sur un logement chauffé par pompe à chaleur avec un appoint, il arrive que la sensation de froid vienne du basculement mal réglé entre les deux, pas de la machine : cela se corrige au niveau de la régulation."
+    }
+  ],
+  "relatedServices": [
+    "urgence-depannage-chauffage-chaudiere",
+    "radiateur-froid-desembouage-purge"
+  ],
+  "faq": [
+    {
+      "q": "Mon unité extérieure est couverte de givre, est-ce grave ?",
+      "a": "Pas en soi. Une pompe à chaleur prélève la chaleur de l'air extérieur, refroidit cet air, et l'humidité qu'il contient se dépose en givre sur l'échangeur. L'appareil déclenche alors un cycle de dégivrage, cesse brièvement de chauffer, puis reprend. C'est normal par temps froid et humide. Le signal d'alerte est différent : un givre qui ne part jamais malgré les cycles, un bloc de glace au pied de l'unité, ou un appareil qui reste bloqué en dégivrage sans jamais rechauffer."
+    },
+    {
+      "q": "Ma pompe à chaleur fait plus de bruit qu'avant, faut-il s'inquiéter ?",
+      "a": "Un bruit nouveau mérite d'être écouté, sans dramatiser. Un sifflement bref ou un claquement au démarrage et à la fin d'un cycle de dégivrage font partie du fonctionnement. Un ronflement qui s'amplifie, un frottement régulier ou une vibration nouvelle transmise au mur signalent plutôt un ventilateur gêné, un support qui a bougé ou un élément desserré. Repérez si le bruit apparaît en continu ou seulement à certains moments du cycle : cette information oriente beaucoup le diagnostic."
+    },
+    {
+      "q": "Ma pompe à chaleur chauffe moins quand il fait très froid, est-ce une panne ?",
+      "a": "Non, c'est le principe même de l'appareil. Plus l'air extérieur est froid, moins il contient de chaleur à prélever, donc plus la machine travaille pour un résultat moindre, et plus elle passe de temps en dégivrage. Une pompe à chaleur correctement dimensionnée reste capable de chauffer le logement, éventuellement avec l'aide de son appoint. Si en revanche la température intérieure décroche nettement alors qu'elle tenait les hivers précédents, quelque chose a changé et cela se diagnostique."
+    },
+    {
+      "q": "Intervenez-vous sur le circuit de fluide frigorifique ?",
+      "a": "Non. Les interventions sur le circuit frigorifique, charge, récupération, recherche de fuite de fluide, relèvent d'une attestation de capacité spécifique et d'un outillage dédié. Nous prenons en charge tout le reste : diagnostic complet, régulation, circuit d'eau côté air-eau, unité extérieure, écoulement des condensats, remplacement de pièces hors circuit frigorifique. Quand le diagnostic pointe vers le fluide, nous vous le disons et nous vous orientons vers l'intervenant compétent."
+    }
+  ],
+  "image": "/services/depannage-pompe-a-chaleur.jpg"
+}

@@ -3,38 +3,44 @@
 @tailwind utilities;
 
 /**
- * Fallback des tokens de couleur.
- * Source de vérité : siteConfig.palette (config/site.config.ts), injectée en CSS
- * vars sur <html> par app/layout.tsx via lib/theme.ts. Les valeurs :root ci-dessous
- * ne sont qu'un filet de sécurité (mêmes hex) pour un rendu correct hors injection.
- * Format « r g b » (canaux) pour les modificateurs d'opacité Tailwind.
+ * Repli des tokens de couleur.
+ * Source de vérité : siteConfig.palette (config/site.config.ts), injectée en
+ * variables CSS sur <html> par app/layout.tsx via lib/theme.ts. Les valeurs :root
+ * ci-dessous ne sont qu'un filet de sécurité (mêmes hex) pour un rendu correct
+ * hors injection. Format « r g b » (canaux) pour les modificateurs d'opacité.
+ *
+ * Lexique du site : braise (action), flamme (structure), craie (clair), fonte (sombre).
  */
 :root {
-  --c-ink-600: 29 83 96;
-  --c-ink-700: 22 64 74;
-  --c-ink-800: 16 49 56;
-  --c-ink-900: 11 36 41;
-  --c-ink-950: 7 26 30;
+  /* braise, action et urgence */
+  --teinte-braise-300: 249 180 120;
+  --teinte-braise-400: 232 121 26;
+  --teinte-braise-500: 191 84 5;
+  --teinte-braise-600: 143 61 6;
 
-  --c-sand-50: 251 249 244;
-  --c-sand-100: 245 241 232;
-  --c-sand-200: 233 226 212;
-  --c-sand-300: 215 205 185;
-  --c-sand-400: 179 168 146;
-  --c-sand-500: 138 128 112;
-  --c-sand-600: 100 92 80;
-  --c-sand-700: 70 64 58;
+  /* flamme, structure */
+  --teinte-flamme-300: 124 192 236;
+  --teinte-flamme-400: 62 151 216;
+  --teinte-flamme-500: 27 118 188;
+  --teinte-flamme-600: 18 90 147;
+  --teinte-flamme-700: 13 68 112;
 
-  --c-brand-300: 111 203 206;
-  --c-brand-400: 49 165 172;
-  --c-brand-500: 18 131 140;
-  --c-brand-600: 12 102 110;
-  --c-brand-700: 9 78 86;
+  /* craie, neutres clairs */
+  --teinte-craie-50: 250 248 245;
+  --teinte-craie-100: 243 239 233;
+  --teinte-craie-200: 231 224 214;
+  --teinte-craie-300: 214 202 190;
+  --teinte-craie-400: 178 162 150;
+  --teinte-craie-500: 135 122 112;
+  --teinte-craie-600: 101 91 84;
+  --teinte-craie-700: 69 64 60;
 
-  --c-accent-300: 245 140 122;
-  --c-accent-400: 234 92 70;
-  --c-accent-500: 217 59 40;
-  --c-accent-600: 178 43 27;
+  /* fonte, fonds sombres */
+  --teinte-fonte-600: 87 67 58;
+  --teinte-fonte-700: 66 50 43;
+  --teinte-fonte-800: 48 36 31;
+  --teinte-fonte-900: 33 24 21;
+  --teinte-fonte-950: 21 15 13;
 }
 
 @layer base {
@@ -43,17 +49,17 @@
     -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply bg-sand-50 font-sans text-sand-700 antialiased;
+    @apply bg-craie-50 font-sans text-craie-700 antialiased;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
   /* Les titres passent en Fraunces (display) : graisse 500, interlettrage serré. */
   h1, h2, h3, h4 {
-    @apply font-display font-medium tracking-tight text-ink-950;
+    @apply font-display font-medium tracking-tight text-fonte-950;
   }
   ::selection {
-    @apply bg-accent-300 text-ink-950;
+    @apply bg-braise-300 text-fonte-950;
   }
-  /* Décalage d'ancre sous le header fixe. */
+  /* Décalage d'ancre sous l'en-tête fixe. */
   section[id], article[id] {
     scroll-margin-top: 6rem;
   }
@@ -61,9 +67,10 @@
   a, button {
     touch-action: manipulation;
   }
-  /* Un calque décoratif en position absolue (dégradé, grille, halo, photo
-     d'ambiance) ne doit JAMAIS intercepter un clic. Sans cette règle, la photo
-     de fond du hero volait le clic du bouton de menu mobile. */
+  /* Un calque DÉCORATIF en position absolue (dégradé, trame, halo, photo
+     d'ambiance) ne doit JAMAIS intercepter un clic. Corollaire à connaître :
+     un calque qui doit RESTER cliquable (voile de fermeture du menu mobile)
+     ne porte donc pas aria-hidden, il porte un rôle réel. */
   [aria-hidden='true'].absolute,
   [aria-hidden='true'].fixed {
     pointer-events: none;
@@ -71,87 +78,39 @@
 }
 
 @layer components {
-  .container-site {
-    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
-  }
-  /* Rythme vertical de référence PROTEC-DARD : sections amples, respiration forte. */
-  .section {
-    @apply py-24 lg:py-32;
-  }
-  .section-tight {
-    @apply py-16 lg:py-20;
-  }
-
-  /* ── Fonds de section ─────────────────────────────────────────────── */
-  /* Grille technique masquée en ellipse, posée sur les sections sombres. */
-  .bg-grid {
-    background-image:
-      linear-gradient(rgb(var(--c-brand-300) / 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(var(--c-brand-300) / 0.06) 1px, transparent 1px);
-    background-size: 64px 64px;
-    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
-  }
-  .bg-grid-tight {
-    background-image:
-      linear-gradient(rgb(var(--c-brand-300) / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(var(--c-brand-300) / 0.05) 1px, transparent 1px);
-    background-size: 44px 44px;
-  }
-  /* Filet dégradé horizontal, séparateur discret entre deux blocs sombres. */
-  .rule-glow {
-    @apply h-px w-full;
-    background-image: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--c-brand-400) / 0.45),
-      transparent
-    );
-  }
-  /* Texture de bruit très légère, casse l'aplat des grands fonds sombres. */
-  .noise-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* ── Titres dégradés ──────────────────────────────────────────────── */
-  .text-gradient-accent {
+  /* ── Titres à dégradé animé ───────────────────────────────────────── */
+  .titre-braise {
     background-image: linear-gradient(
       110deg,
-      rgb(var(--c-accent-500)) 0%,
-      rgb(var(--c-accent-300)) 50%,
-      rgb(var(--c-accent-500)) 100%
+      rgb(var(--teinte-braise-500)) 0%,
+      rgb(var(--teinte-braise-300)) 50%,
+      rgb(var(--teinte-braise-500)) 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: shimmer 8s linear infinite;
+    animation: miroitement 8s linear infinite;
   }
-  .text-gradient-brand {
+  .titre-flamme {
     background-image: linear-gradient(
       110deg,
-      rgb(var(--c-brand-400)) 0%,
-      rgb(var(--c-brand-300)) 50%,
-      rgb(var(--c-brand-400)) 100%
+      rgb(var(--teinte-flamme-400)) 0%,
+      rgb(var(--teinte-flamme-300)) 50%,
+      rgb(var(--teinte-flamme-400)) 100%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: shimmer 9s linear infinite;
+    animation: miroitement 9s linear infinite;
   }
-  /* Variante pour fonds clairs : dégradé encre, souvent en italique. */
-  .text-gradient-ink {
+  /* Variante pour fonds clairs, souvent posée en italique. */
+  .titre-fonte {
     background-image: linear-gradient(
       135deg,
-      rgb(var(--c-ink-950)) 0%,
-      rgb(var(--c-brand-700)) 100%
+      rgb(var(--teinte-fonte-950)) 0%,
+      rgb(var(--teinte-flamme-700)) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -163,68 +122,96 @@
     margin-bottom: -0.12em;
   }
 
-  /* ── Champs de formulaire ─────────────────────────────────────────── */
-  .field {
-    @apply w-full rounded-2xl border border-sand-300 bg-white px-4 py-3.5 text-ink-950 placeholder-sand-400 transition-colors;
-    @apply focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/25;
+  /* ── Textures et filets de section ────────────────────────────────── */
+  /* Grain très léger : casse l'aplat des grands fonds sombres. */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .field-label {
-    @apply mb-1.5 block text-sm font-medium text-ink-900;
+  /* Trame technique masquée en ellipse, posée sur les sections sombres. */
+  .trame {
+    background-image:
+      linear-gradient(rgb(var(--teinte-flamme-300) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--teinte-flamme-300) / 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 72%);
+  }
+  .trame-serree {
+    background-image:
+      linear-gradient(rgb(var(--teinte-flamme-300) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--teinte-flamme-300) / 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  /* Filet dégradé horizontal, séparateur discret entre deux blocs sombres. */
+  .filet-chaud {
+    @apply h-px w-full;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--teinte-flamme-400) / 0.45),
+      transparent
+    );
   }
 
-  /* ── Prose (pages services / zones) ───────────────────────────────── */
-  .prose-content {
-    @apply leading-relaxed text-sand-700;
+  /* ── Corps de texte des pages services et communes ────────────────── */
+  .texte-page {
+    @apply leading-relaxed text-craie-700;
   }
-  .prose-content h2 {
+  .texte-page h2 {
     @apply mt-12 text-3xl leading-snug md:text-4xl;
   }
-  .prose-content h3 {
+  .texte-page h3 {
     @apply mt-8 text-xl;
   }
-  .prose-content p {
+  .texte-page p {
     @apply mt-5 text-[1.0625rem] leading-relaxed;
   }
-  .prose-content strong {
-    @apply font-semibold text-ink-950;
+  .texte-page strong {
+    @apply font-semibold text-fonte-950;
   }
-  .prose-content a {
-    @apply font-medium text-brand-600 underline underline-offset-2 hover:text-brand-500;
+  .texte-page a {
+    @apply font-medium text-flamme-600 underline underline-offset-2 hover:text-flamme-500;
   }
 
   /* ── Corps d'article de blog ──────────────────────────────────────── */
-  .article-prose {
-    @apply text-[1.0625rem] leading-[1.75] text-sand-700;
+  .texte-article {
+    @apply text-[1.0625rem] leading-[1.75] text-craie-700;
   }
-  .article-prose h2 {
-    @apply mt-12 border-t border-sand-200 pt-8 text-3xl;
+  .texte-article h2 {
+    @apply mt-12 border-t border-craie-200 pt-8 text-3xl;
   }
-  .article-prose h3 {
+  .texte-article h3 {
     @apply mt-9 text-xl;
   }
-  .article-prose p {
+  .texte-article p {
     @apply mt-5;
   }
-  .article-prose ul,
-  .article-prose ol {
+  .texte-article ul,
+  .texte-article ol {
     @apply mt-5 list-outside space-y-2 pl-6;
   }
-  .article-prose ul { @apply list-disc; }
-  .article-prose ol { @apply list-decimal; }
-  .article-prose li::marker { color: rgb(var(--c-accent-500)); }
-  .article-prose strong { @apply font-semibold text-ink-950; }
-  .article-prose a {
-    @apply font-medium text-brand-600 underline underline-offset-2 hover:text-brand-500;
+  .texte-article ul { @apply list-disc; }
+  .texte-article ol { @apply list-decimal; }
+  .texte-article li::marker { color: rgb(var(--teinte-braise-500)); }
+  .texte-article strong { @apply font-semibold text-fonte-950; }
+  .texte-article a {
+    @apply font-medium text-flamme-600 underline underline-offset-2 hover:text-flamme-500;
   }
-  .article-prose blockquote {
-    @apply mt-6 rounded-r-2xl border-l-4 border-accent-500 bg-sand-100 px-6 py-4 font-display text-lg italic text-ink-900;
+  .texte-article blockquote {
+    @apply mt-6 rounded-r-2xl border-l-4 border-braise-500 bg-craie-100 px-6 py-4 font-display text-lg italic text-fonte-900;
   }
-  .article-prose img {
-    @apply mt-7 w-full rounded-card border border-sand-200 shadow-card;
+  .texte-article img {
+    @apply mt-7 w-full rounded-bloc border border-craie-200 shadow-pose;
   }
   /* Légende = paragraphe en italique seul juste après l'image (`*légende*`). */
-  .article-prose p:has(> em:only-child) {
-    @apply mt-2 text-center text-sm not-italic text-sand-500;
+  .texte-article p:has(> em:only-child) {
+    @apply mt-2 text-center text-sm not-italic text-craie-500;
   }
 }
 

@@ -26,7 +26,7 @@ export function Faq({
   return (
     <section
       id="faq"
-      className="relative bg-gradient-to-b from-sand-50 to-sand-100 py-24 lg:py-32"
+      className="relative bg-gradient-to-b from-craie-50 to-craie-100 py-24 lg:py-32"
       aria-labelledby="faq-title"
     >
       <script
@@ -41,7 +41,7 @@ export function Faq({
             title ?? (
               <>
                 Questions
-                <span className="text-gradient-ink ml-3 italic">fréquentes</span>
+                <span className="titre-fonte ml-3 italic">fréquentes</span>
               </>
             )
           }

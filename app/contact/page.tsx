@@ -10,7 +10,7 @@ import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Contact et demande d’intervention',
-  description: `Contactez ${siteConfig.businessName} pour un débouchage de canalisation à ${siteConfig.city} et dans l'agglomération. Ligne ouverte 7j/7, prix annoncé avant intervention.`,
+  description: `Contactez ${siteConfig.businessName} pour un dépannage de chauffage ou de chaudière à ${siteConfig.city} et dans l'agglomération. Ligne ouverte 7j/7, prix annoncé avant intervention.`,
   path: '/contact',
 })
 
@@ -33,21 +33,21 @@ export default function ContactPage() {
         title={
           <>
             Dites-nous ce qui
-            <span className="text-gradient-accent"> ne s&apos;écoule plus</span>
+            <span className="titre-braise"> ne chauffe plus</span>
           </>
         }
         subtitle="Par téléphone pour une urgence, par le formulaire si ça peut attendre quelques heures."
       />
 
-      <section className="bg-sand-50 py-16 lg:py-24">
+      <section className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:px-10">
           <div className="lg:col-span-5">
             <AnimatedSection>
               <h2 className="text-3xl">Nous joindre</h2>
-              <p className="mt-4 leading-relaxed text-sand-600">
-                Une canalisation qui refoule ne se décrit pas bien par écrit. Si l&apos;eau monte,
-                appelez : c&apos;est plus rapide et nous pouvons vous guider tout de suite sur les
-                gestes à faire en attendant.
+              <p className="mt-4 leading-relaxed text-craie-600">
+                Un logement qui ne chauffe plus en plein hiver ne se décrit pas bien par écrit.
+                Appelez : c&apos;est plus rapide, et nous pouvons vous guider tout de suite sur les
+                gestes sûrs à faire en attendant notre arrivée.
               </p>
             </AnimatedSection>
 
@@ -55,24 +55,24 @@ export default function ContactPage() {
               {infos.map(({ icon: Icon, label, value, href }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-4 rounded-card border border-sand-200 bg-white p-5"
+                  className="flex items-start gap-4 rounded-bloc border border-craie-200 bg-white p-5"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-600/10 text-brand-600">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                     <Icon size={20} />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-craie-500">
                       {label}
                     </p>
                     {href ? (
                       <a
                         href={href}
-                        className="mt-1 block break-all font-medium text-ink-950 transition-colors hover:text-brand-600"
+                        className="mt-1 block break-all font-medium text-fonte-950 transition-colors hover:text-flamme-600"
                       >
                         {value}
                       </a>
                     ) : (
-                      <p className="mt-1 font-medium text-ink-950">{value}</p>
+                      <p className="mt-1 font-medium text-fonte-950">{value}</p>
                     )}
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} className="mt-8">
-              <Button href={`tel:${siteConfig.phone}`} variant="accent" size="lg" className="w-full">
+              <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg" className="w-full">
                 <Phone size={18} strokeWidth={2.5} />
                 Appeler maintenant
               </Button>

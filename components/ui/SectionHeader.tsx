@@ -31,7 +31,7 @@ export function SectionHeader({
       {eyebrow && (
         <p
           className={`mb-4 text-sm font-semibold uppercase tracking-[0.2em] ${
-            dark ? 'text-accent-400' : 'text-accent-600'
+            dark ? 'text-braise-400' : 'text-braise-600'
           }`}
         >
           {eyebrow}
@@ -40,7 +40,7 @@ export function SectionHeader({
       <Tag
         id={id}
         className={`text-4xl leading-[1.1] md:text-5xl lg:text-[3.5rem] ${
-          dark ? 'text-sand-50' : 'text-ink-950'
+          dark ? 'text-craie-50' : 'text-fonte-950'
         }`}
       >
         {title}
@@ -48,7 +48,7 @@ export function SectionHeader({
       {subtitle && (
         <p
           className={`mt-6 text-lg leading-relaxed md:text-xl ${
-            dark ? 'text-sand-200' : 'text-sand-600'
+            dark ? 'text-craie-200' : 'text-craie-600'
           }`}
         >
           {subtitle}

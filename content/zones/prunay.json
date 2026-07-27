@@ -1,0 +1,43 @@
+{
+  "slug": "prunay",
+  "name": "Prunay",
+  "postalCode": "51360",
+  "context": "Commune de l'est rémois, en secteur plus rural, à dominante de maisons individuelles avec dépendances.",
+  "metaTitle": "Dépannage chauffage et chaudière à Prunay (51)",
+  "metaDescription": "Chauffagiste à Prunay : chaudière en panne, brûleur en défaut, ballon d'eau chaude hors service. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7.",
+  "h1": "Dépannage chauffage et chaudière à Prunay",
+  "intro": "Nous intervenons à Prunay (51360) sur les pannes de chauffage et de production d'eau chaude. À l'est de l'agglomération, dans un secteur nettement plus rural que les communes limitrophes de Reims, Prunay est faite de maisons individuelles souvent accompagnées de dépendances, de granges reconverties et de garages. Les installations y sont fréquemment implantées à l'écart des pièces de vie, ce qui a des conséquences directes sur la façon dont les pannes se manifestent.",
+  "blocks": [
+    {
+      "heading": "Quand l'installation est loin des pièces de vie",
+      "body": "Dans beaucoup de maisons de Prunay, la chaudière et le ballon sont installés dans une dépendance, une ancienne écurie ou un bout de garage, parfois à plusieurs mètres du logement chauffé. Cette implantation, pratique pour le bruit et l'encombrement, crée trois situations que nous rencontrons régulièrement. D'abord, les pertes en ligne : plus le circuit parcourt de distance dans un espace non chauffé, plus la chaleur produite s'échappe avant d'atteindre les radiateurs, et un calorifugeage absent ou dégradé peut représenter une part réelle de la consommation. Ensuite, le risque de gel sur les tronçons exposés lors d'un épisode froid prolongé, en particulier sur la ligne d'eau d'un ballon. Enfin, le retard de détection : un bruit nouveau, un suintement, un voyant de défaut passent inaperçus pendant des jours dans un local où l'on ne va pas quotidiennement, si bien que le problème est découvert au stade de l'arrêt complet plutôt qu'au stade du signal. Notre première question à Prunay porte donc sur l'endroit où se trouve l'appareil, et sur la dernière fois où vous y êtes allé."
+    },
+    {
+      "heading": "Autonomie et anticipation en secteur rural",
+      "body": "Un secteur plus rural implique quelques réflexes utiles. Le premier concerne le stock : sur une installation au fioul, ne pas descendre en fond de cuve évite d'aspirer les dépôts accumulés au fond au fil des années, qui colmatent filtre et gicleur, et évite surtout de dépendre d'un délai de livraison au pire moment de la saison. Le deuxième concerne les pièces : nous vous demandons la marque et le modèle exact de l'appareil dès l'appel, parce qu'un déplacement sans la bonne pièce coûte une journée de plus quand on n'est pas à cinq minutes du dépôt. Une photo de la plaque signalétique, généralement collée sous ou derrière un capot, est l'information la plus utile que vous puissiez nous envoyer. Le troisième concerne l'entretien : dans une maison où l'installation vit à l'écart, la visite annuelle est le seul moment où quelqu'un l'examine vraiment. La caler avant la saison plutôt qu'en plein hiver n'est pas un conseil de confort, c'est ce qui évite de découvrir un défaut le jour où il fait moins cinq."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas de panne à Prunay, notez le code ou le voyant affiché, réarmez une seule fois si l'appareil le permet, coupez le chauffage si de l'eau s'écoule et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Prunay, nous intervenons aussi à Sillery, à Cernay-lès-Reims, à Witry-lès-Reims et à Reims."
+    }
+  ],
+  "neighbours": [
+    "Sillery",
+    "Cernay-lès-Reims",
+    "Puisieulx"
+  ],
+  "faq": [
+    {
+      "q": "Quelles informations préparer avant de vous appeler ?",
+      "a": "Trois choses font gagner un déplacement. La marque et le modèle exact de l'appareil, lisibles sur la plaque signalétique collée sous ou derrière un capot : une photo suffit. Le code d'erreur ou le voyant affiché, à ne pas confondre avec la température de consigne. Et la nature du défaut, chauffage perdu, eau chaude perdue, ou les deux. Avec cela, nous partons avec la bonne pièce plus souvent qu'avec la seule adresse, ce qui compte davantage quand on est un peu à l'écart de la ville."
+    },
+    {
+      "q": "Mes tuyaux passent dans une dépendance non chauffée, y a-t-il un risque de gel ?",
+      "a": "Oui, sur les tronçons non calorifugés lors d'un épisode de gel prolongé, et le risque porte davantage sur la ligne d'eau que sur l'appareil lui-même, qui dispose en général d'une protection antigel intégrée. Deux précautions règlent l'essentiel : isoler les tuyaux qui traversent le local froid, et ne jamais couper l'alimentation électrique de la chaudière pendant une absence hivernale, car c'est cette alimentation qui permet à la protection antigel de fonctionner."
+    },
+    {
+      "q": "Intervenez-vous à Prunay pour un simple entretien, ou seulement en panne ?",
+      "a": "Pour les deux, et l'entretien est même particulièrement pertinent ici. Dans une maison où l'installation se trouve dans une dépendance ou un local à l'écart, la visite annuelle est souvent la seule occasion où l'appareil, son local et son évacuation sont réellement examinés. Nous privilégions un rendez-vous avant la saison, à la fin de l'été ou au début de l'automne, plutôt qu'en plein hiver, pour pouvoir commander une pièce sans que cela vous laisse dans le froid."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "puisieulx",
+  "name": "Puisieulx",
+  "postalCode": "51500",
+  "context": "Petit village résidentiel du sud-est de l'agglomération, entre Taissy et Sillery, à l'habitat presque entièrement individuel.",
+  "metaTitle": "Dépannage chauffage et chaudière à Puisieulx (51)",
+  "metaDescription": "Chauffagiste à Puisieulx : chaudière en panne, radiateurs froids, plus d'eau chaude. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7, tarif annoncé avant.",
+  "h1": "Dépannage chauffage et chaudière à Puisieulx",
+  "intro": "Nous intervenons à Puisieulx (51500) sur les pannes de chauffage et de production d'eau chaude. Puisieulx est l'un des plus petits villages de notre secteur, installé au sud-est de l'agglomération entre Taissy et Sillery. L'habitat y est presque entièrement individuel, avec des maisons de village et quelques constructions plus récentes, et chaque foyer y dépend d'un seul appareil pour se chauffer.",
+  "blocks": [
+    {
+      "heading": "Un village où chaque maison est un cas",
+      "body": "Dans une commune de cette taille, il n'y a pas de parc de logements homogène dont on pourrait déduire la panne probable avant même d'arriver. Une maison de village ancienne à murs épais, un pavillon des années passées et une construction récente équipée d'une pompe à chaleur peuvent se suivre dans la même rue. Nous ne partons donc jamais d'un a priori à Puisieulx : la première question porte sur le type d'appareil, son âge approximatif et sa marque. Cela change tout. Sur un appareil au fioul, le diagnostic commence par la ligne d'alimentation et la cuve, souvent avant la chaudière elle-même. Sur une chaudière à gaz, il commence par la pression, l'évacuation des fumées et le code défaut. Sur une pompe à chaleur, il commence par l'unité extérieure, la régulation et le circuit d'eau. Trois logiques différentes, trois listes de pièces à emporter. Une photo de la plaque signalétique, envoyée avant notre venue, vaut mieux qu'une longue description au téléphone."
+    },
+    {
+      "heading": "Ce que la maison dit avant l'appareil",
+      "body": "Dans un village, une bonne partie des demandes que nous recevons ne concerne pas une panne franche mais une sensation de confort qui se dégrade : la maison monte moins vite en température, certaines pièces ne suivent plus, la facture augmente sans changement d'habitudes. Ces symptômes méritent d'être pris au sérieux, parce qu'ils précèdent souvent la panne réelle. Ils viennent rarement d'un seul organe. Le circuit de chauffage s'est chargé en boues au fil des années et les radiateurs échangent moins bien, ce que confirme un émetteur chaud en haut et froid en bas. L'équilibrage n'a jamais été refait alors que des pièces ont changé d'usage ou que des radiateurs ont été ajoutés. Les vannes thermostatiques, toutes laissées au maximum, ne régulent plus rien. La régulation de l'appareil applique une consigne héritée d'une autre époque du logement. Nous regardons ces points ensemble plutôt que de conclure trop vite à un appareil fatigué : c'est souvent l'installation autour de lui qui a vieilli, pas lui."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas de panne de chauffage à Puisieulx, relevez le code ou le voyant affiché, réarmez une seule fois si l'appareil le permet, coupez le chauffage si de l'eau s'écoule et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Puisieulx, nous intervenons aussi à Sillery, à Taissy, à Cormontreuil et à Reims."
+    }
+  ],
+  "neighbours": [
+    "Sillery",
+    "Taissy",
+    "Cormontreuil"
+  ],
+  "faq": [
+    {
+      "q": "Ma maison chauffe moins bien qu'avant sans panne déclarée, faut-il attendre ?",
+      "a": "Non, c'est justement le bon moment pour intervenir. Une dégradation progressive du confort précède souvent la panne franche, et elle a en général une cause identifiable : circuit chargé en boues, équilibrage jamais refait, vannes thermostatiques qui ne régulent plus, régulation restée sur une consigne inadaptée. Traiter cela hors urgence coûte moins cher et évite l'arrêt complet au premier grand froid."
+    },
+    {
+      "q": "Un village aussi petit est-il bien couvert par votre service d'urgence ?",
+      "a": "Oui. Puisieulx entre pleinement dans le rayon que nous couvrons autour de Reims, et notre ligne y est ouverte les week-ends et les jours fériés comme partout ailleurs sur le secteur. Le délai réel dépend du planning en cours, pas de la taille de la commune. Signalez dès les premières phrases s'il s'agit d'une urgence réelle, logement entier sans chauffage par grand froid, personne fragile au domicile ou écoulement d'eau."
+    },
+    {
+      "q": "Quelle information vous aide le plus avant une intervention à Puisieulx ?",
+      "a": "La plaque signalétique de l'appareil, généralement collée sous un capot ou à l'arrière : une simple photo nous donne la marque, le modèle exact et souvent l'année, donc la bonne pièce à emporter. Ajoutez le code d'erreur affiché et précisez si vous avez perdu le chauffage, l'eau chaude ou les deux. Ces trois éléments réunis évitent le déplacement supplémentaire pour aller chercher une pièce."
+    }
+  ]
+}

@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
 
 function V({ children }: { children?: string }) {
   const val = (children || '').trim()
-  return val ? <>{val}</> : <em className="not-italic text-accent-600">À compléter</em>
+  return val ? <>{val}</> : <em className="not-italic text-braise-600">À compléter</em>
 }
 
 export default function MentionsLegales() {
@@ -47,8 +47,10 @@ export default function MentionsLegales() {
           <li>
             <strong>Directeur de la publication :</strong> <V>{e.directeurPublication}</V>
           </li>
+          {/* Contact : lu depuis la config, jamais dupliqué dans legal.json.
+              Le 09 définitif (ligne Twilio) ne se changera qu'à un seul endroit. */}
           <li>
-            <strong>Contact :</strong> {e.emailContact} · {e.telephone}
+            <strong>Contact :</strong> {siteConfig.email} · {siteConfig.phoneDisplay}
           </li>
         </ul>
       </section>
@@ -57,8 +59,9 @@ export default function MentionsLegales() {
         <h2>Prestataire des interventions</h2>
         <p>
           L&apos;éditeur du site n&apos;est pas l&apos;entreprise qui réalise les interventions de
-          débouchage. Les coordonnées, l&apos;assurance et les qualifications de l&apos;artisan
-          prestataire sont publiées ici dès la mise en service commerciale du site.
+          dépannage et d&apos;entretien de chauffage. Les coordonnées, l&apos;assurance et les
+          qualifications de l&apos;artisan prestataire sont publiées ici dès la mise en service
+          commerciale du site.
         </p>
       </section>
 

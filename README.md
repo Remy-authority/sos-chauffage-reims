@@ -1,4 +1,4 @@
-# Template « Site Local » — SOS Débouchage Metz
+# Template « Site Local », SOS Chauffage Reims
 
 Site **Next.js (App Router, 100 % SSG)** + **Tailwind** + **Framer Motion**, déployé
 sur **Vercel**. Conçu comme un **template de site local paramétrable** : un site N+1
@@ -6,8 +6,9 @@ sur **Vercel**. Conçu comme un **template de site local paramétrable** : un si
 jour** en changeant la **config**, le **contenu** et les **visuels**, sans toucher au
 code ni au SEO.
 
-Instance actuelle : **SOS Débouchage Metz** (débouchage de canalisations à Metz, 57).
-Site n°3 du portefeuille, dupliqué du pilote `sos-fuite-angers.fr`.
+Instance actuelle : **SOS Chauffage Reims** (dépannage chauffage et chaudière à Reims, 51).
+Site n°5 du portefeuille, dupliqué de `sos-debouchage-metz.fr` (qui portait déjà le
+système de design PROTEC-DARD).
 
 ---
 
@@ -39,8 +40,10 @@ La couche visuelle est transposée de la landing de référence **PROTEC-DARD**
 | Fonds, grilles, dégradés de titre, prose | `app/globals.css` (`@layer components`) |
 | Primitives | `components/ui/` (Button, Card, SectionHeader, AnimatedSection, GradientBlob…) |
 
-**Règle de couleur :** `brand` (teal) porte la structure et les surfaces,
-`accent` (vermillon) est réservé à l'ACTION urgente (appel, devis, eyebrow).
+**Règle de couleur :** `brand` (bleu flamme) porte la structure et les surfaces,
+`accent` (braise) est réservé à l'ACTION urgente (appel, devis, eyebrow). La palette
+« chaleur maîtrisée » de cette instance repose sur un `ink` brun fumé (et non un noir
+froid) : c'est ce qui la distingue au premier coup d'oeil des autres sites du portefeuille.
 
 **Changer la palette d'un site N+1 = éditer le bloc `palette` de la config.**
 
@@ -82,7 +85,7 @@ lib/
   motion.ts                # variants Framer Motion partagés
 components/
   layout/                  # Header, Footer, StickyCTA, PageHeader, LegalPage
-  sections/                # Hero, TrustBar, About, Services, Process, Stats, WhyUs, Gallery, ServiceArea
+  sections/                # Hero, TrustBar, About, Services, Symptoms, Process, Stats, WhyUs, Gallery, ServiceArea
   ui/                      # Button, Card, SectionHeader, AnimatedSection, GradientBlob, Faq, LeadForm…
 app/
   page.tsx                 # accueil (page pilier)
@@ -99,7 +102,7 @@ app/
 ## 5. SEO et GEO
 
 - **Metadata API** sur toutes les pages : title, description, canonical absolu, OpenGraph, robots.
-- **JSON-LD** : `Plumber` (global, avec `additionalType` Wikidata « débouchage »,
+- **JSON-LD** : `HVACBusiness` (global, avec `additionalType` Wikidata « chauffage central »,
   `areaServed` et `hasOfferCatalog` généré depuis `content/services`, **sans `address`**
   par défaut, **sans avis**), `Service`, `FAQPage`, `BreadcrumbList`, `Article`.
 - **`/llms.txt`** régénéré au build depuis la config et le contenu (levier GEO).
@@ -122,7 +125,8 @@ app/
 | `persona.jpg` | portrait de l'intervenant (bloc « qui sommes-nous ») |
 | `gallery/01…06-*.jpg` | section « sur le terrain » de l'accueil |
 | `services/<slug>.jpg` | en-tête de chaque page prestation |
-| `zones/zone-*.jpg` | pool partagé des pages communes (assignation déterministe) |
+| `zones/<slug>.jpg` | **image de tête UNIQUE par commune** (règle permanente, jamais de pool partagé) |
+| `zones/geste-*.jpg` | illustrations techniques du corps des pages communes (neutres, sans repère géographique) |
 | `conseils/*.jpg` | couvertures d'articles (`cover:` du front-matter) |
 
 Règles de production : **aucun texte, logo ou filigrane dans l'image**, aucun visage

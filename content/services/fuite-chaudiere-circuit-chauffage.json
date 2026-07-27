@@ -1,0 +1,52 @@
+{
+  "slug": "fuite-chaudiere-circuit-chauffage",
+  "order": 6,
+  "icon": "leak",
+  "navTitle": "Fuite de chaudière",
+  "h1": "Fuite de chaudière et de circuit de chauffage à Reims",
+  "metaTitle": "Fuite de chaudière et de circuit de chauffage à Reims",
+  "metaDescription": "Fuite de chaudière ou de circuit de chauffage à Reims : eau sous l'appareil, pression qui baisse, trace près d'un radiateur. Intervention 7j/7, tarif annoncé avant.",
+  "intro": "De l'eau sous la chaudière ou une pression qui redescend semaine après semaine, ce n'est pas la même urgence, mais c'est le même dossier : le circuit de chauffage perd de l'eau. Nous intervenons à Reims et dans l'agglomération pour localiser cette perte, distinguer ce qui vient de l'appareil de ce qui vient du réseau de radiateurs, et arrêter le phénomène avant qu'il abîme un plancher, un plafond ou la chaudière elle-même.",
+  "bullets": [
+    "Fuite sur l'appareil ou sur le circuit",
+    "Perte de pression sans trace visible",
+    "Intervention d'urgence en cas d'écoulement"
+  ],
+  "blocks": [
+    {
+      "heading": "Les gestes utiles avant notre arrivée",
+      "body": "Si de l'eau s'écoule visiblement, coupez d'abord le chauffage : une chaudière qui continue de chauffer met le circuit en pression et accélère la fuite. Posez une bassine et des serviettes pour protéger le sol, et écartez ce qui craint l'eau, en particulier si la chaudière se trouve au-dessus d'un plancher bois ou à l'étage. Si vous savez où se trouve le robinet d'arrivée d'eau de l'appareil et qu'il est accessible, fermez-le. Coupez également l'alimentation électrique de la chaudière si l'eau ruisselle sur ou près du bloc électrique, en utilisant le disjoncteur du tableau plutôt qu'en débranchant une prise mouillée. Prenez une photo de l'endroit d'où l'eau part, cela nous aide beaucoup et vous sera utile en cas de déclaration à votre assurance. Il n'y a en revanche aucune raison de démonter un capot ou de tenter de resserrer un raccord sous pression : sur un circuit chaud, un serrage improvisé transforme souvent un suintement en fuite franche."
+    },
+    {
+      "heading": "Fuite de l'appareil ou fuite du circuit",
+      "body": "Les deux situations n'appellent pas les mêmes réponses, et le premier travail est de les séparer. Côté appareil, les points qui lâchent le plus souvent sont les raccords d'entrée et de sortie, la soupape de sécurité, le corps de chauffe ou l'échangeur percé par la corrosion, la pompe et ses joints. Un cas particulier revient souvent et n'est pas une fuite : la soupape de sécurité qui laisse partir de l'eau à chaque montée en température parce que la pression devient trop haute, généralement à cause d'un vase d'expansion qui a perdu sa précharge. L'eau que vous voyez est alors le symptôme, pas la cause. Côté circuit, la perte vient d'un raccord de radiateur qui suinte, d'un purgeur mal refermé, d'un té ou d'un coude corrodé dans une gaine, ou d'une boucle noyée dans un plancher chauffant. Ces fuites-là sont souvent invisibles : l'eau s'évapore sur un tuyau chaud ou se perd dans une chape avant d'atteindre le sol. Le seul témoin fiable est alors la pression, qui redescend régulièrement."
+    },
+    {
+      "heading": "Localiser puis réparer",
+      "body": "Sur une fuite visible, le travail est direct : nous identifions l'organe en cause, nous vous disons si le remplacement est possible et à quel coût, et nous le faisons. Sur une perte de pression sans trace, il faut chercher. Nous procédons par élimination, en isolant l'appareil du reste du circuit pour savoir de quel côté l'eau part, en contrôlant la pression à froid puis à chaud pour distinguer une vraie fuite d'un vase d'expansion fatigué, en examinant les raccords accessibles et les points bas du réseau, et en utilisant la caméra thermique sur les zones où un tuyau chaud passe dans un mur ou une chape. Cette dernière lit les écarts de température en surface et signale un tracé anormalement chaud ou une auréole d'humidité invisible à l'oeil. Nous vous disons ce que nous trouvons et ce que la reprise implique concrètement, y compris quand elle demande d'ouvrir un point précis. Sur une chaudière dont le corps de chauffe est percé, la question devient celle de la réparation ou du remplacement de l'appareil, et nous la posons franchement plutôt que d'engager des frais sur une machine condamnée."
+    }
+  ],
+  "relatedServices": [
+    "urgence-depannage-chauffage-chaudiere",
+    "radiateur-froid-desembouage-purge"
+  ],
+  "faq": [
+    {
+      "q": "Il y a de l'eau sous ma chaudière, dois-je couper quelque chose ?",
+      "a": "Coupez le chauffage en premier : une chaudière en fonctionnement met le circuit sous pression et aggrave l'écoulement. Protégez le sol, fermez l'arrivée d'eau de l'appareil si elle est accessible, et coupez l'alimentation électrique de la chaudière au tableau si l'eau ruisselle près du bloc électrique. N'ouvrez pas de capot et ne tentez pas de resserrer un raccord chaud sous pression. Photographiez le point de départ de l'eau avant de tout éponger, la photo servira au diagnostic et à votre assurance."
+    },
+    {
+      "q": "Ma pression baisse toutes les semaines mais je ne vois aucune fuite, est-ce possible ?",
+      "a": "C'est même le cas le plus courant. La majorité du circuit de chauffage passe dans les cloisons, sous une chape ou derrière un habillage, et une fuite goutte à goutte sur un tuyau chaud s'évapore avant de laisser une trace. Deux autres explications ne sont pas des fuites : une soupape de sécurité qui évacue de l'eau à l'égout à chaque montée en température, et un vase d'expansion dégonflé qui fait justement travailler cette soupape. Le contrôle de la pression à froid puis à chaud permet de les distinguer d'une vraie perte."
+    },
+    {
+      "q": "Une trace d'humidité près d'un radiateur vient-elle forcément du chauffage ?",
+      "a": "Non, et c'est utile de le vérifier avant d'engager des travaux. Une auréole sous un radiateur peut venir d'un raccord ou d'un purgeur qui suinte, mais aussi de condensation sur un mur froid mal isolé, ou d'une infiltration extérieure qui n'a rien à voir avec le chauffage et qui suit simplement le tracé du tuyau. Un indice fiable : si la pression de la chaudière ne bouge pas alors que la trace grandit, le chauffage n'est probablement pas en cause."
+    },
+    {
+      "q": "Une fuite de chauffage peut-elle abîmer la chaudière elle-même ?",
+      "a": "Oui, indirectement mais réellement. Chaque appoint d'eau pour compenser la perte réintroduit de l'eau neuve, donc de l'oxygène et du calcaire, dans un circuit conçu pour fonctionner en vase clos. Cela accélère la corrosion interne, la formation de boues et l'entartrage de l'échangeur. Une fuite qu'on compense en rechargeant régulièrement finit donc par coûter bien plus que sa réparation, en usure de l'appareil et en performance perdue."
+    }
+  ],
+  "image": "/services/fuite-chaudiere-circuit-chauffage.jpg"
+}

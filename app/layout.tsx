@@ -23,7 +23,7 @@ const fraunces = Fraunces({
 })
 
 const homeTitle = `${siteConfig.trade} à ${siteConfig.city}, intervention rapide`
-const homeDesc = `Débouchage et curage de canalisations à ${siteConfig.city} et dans l'agglomération. WC, évier, douche, colonne d'immeuble, regard. Prix annoncé avant intervention.`
+const homeDesc = `Dépannage de chauffage et de chaudière à ${siteConfig.city} et dans l'agglomération. Chaudière gaz ou fioul, pompe à chaleur, radiateur froid, ballon d'eau chaude. Prix annoncé avant intervention.`
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.seo.canonicalBase),
@@ -58,10 +58,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: jsonLdScript(localBusinessJsonLd()) }}
         />
       </head>
-      <body className="bg-sand-50">
+      <body className="bg-craie-50">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink-950 focus:px-5 focus:py-3 focus:text-sand-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-fonte-950 focus:px-5 focus:py-3 focus:text-craie-50"
         >
           Aller au contenu
         </a>

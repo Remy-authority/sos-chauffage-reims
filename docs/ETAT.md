@@ -26,7 +26,7 @@ fenêtre est là. Saisonnalité assumée : pic octobre-février, creux été (do
 du gros volume hivernal).
 
 **Domaine pressenti : `sos-chauffage-reims.fr`** (vérifié DISPONIBLE à l'AFNIC le 27/07/2026,
-PAS ENCORE ACHETÉ ; 8 candidats libres dont chauffagiste-reims.fr, voir conversation
+ACHETÉ le 27/07/2026 (validation registrar en cours) ; 8 candidats libres dont chauffagiste-reims.fr, voir conversation
 CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 
 ---
@@ -62,12 +62,26 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - [ ] Rémy : valider le domaine (reco : sos-chauffage-reims.fr), l'acheter, fournir le 09 dédié + email + nom commercial
 - [x] CEO (27/07) : repo GitHub `Remy-authority/sos-chauffage-reims` (public, `main` poussé) + projet Vercel `sos-chauffage-reims` relié au repo + `SEO_NOINDEX=1` posé en Production AVANT le premier déploiement + Framework Preset vérifié via l'API : « nextjs » ✓ (leçon Dijon) + GitHub Action `publish-article.yml` active
 - [x] SEO : carte mots-clés chauffage/chaudière Reims + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` ALIGNÉ SUR LA SAISON (sujets chauffage d'octobre à février en priorité, entretien/été ensuite ; codes postaux via geo.api.gouv.fr) — fait le 27/07/2026, AUDITÉ ET VALIDÉ par le CEO le 27/07 (contre-vérification indépendante des 12 communes sur geo.api.gouv.fr : codes postaux, populations et distances tous exacts)
-- [ ] Builder : `config/site.config.ts` (identité, palette chauffage, persona DEMO, numéro fiction ARCEP en attendant le 09) + `content/legal.json`
-- [ ] Builder : `content/services/*.json` et `content/zones/*.json` (communes agglo Reims) selon le plan SEO
-- [ ] Builder sur Opus : identité visuelle Reims (ADN PROTEC-DARD, rendu distinct de Metz ET Dijon)
-- [ ] Builder : logo, favicon, portrait persona, images (1 UNIQUE par commune, décors champenois, aucun texte/logo/visage flou)
-- [ ] Autoblog : drafts T1 orientés saison de chauffe (préfixes 001-…)
-- [ ] Contrôle visuel CEO (côte à côte avec Metz et Dijon : assez distinct ?) → validation Rémy → mise en ligne (Étape 6) ⏰ avant fin septembre
+- [x] Builder (27/07) : `config/site.config.ts` (identité Reims, palette « chaleur maîtrisée », persona DEMO, numéro de fiction `phoneIsDemo: true`, rayon 30 km déclaré UNE SEULE FOIS via `SERVICE_RADIUS_KM`) + `content/legal.json` (téléphone et email retirés du JSON, désormais lus depuis la config)
+- [x] Builder (27/07) : `content/services/*.json` (8) et `content/zones/*.json` (12) réécrits intégralement selon `docs/SEO-GEO-PLAN.md`, codes postaux revérifiés sur geo.api.gouv.fr le jour même
+- [x] Builder sur Opus (27/07) : identité visuelle Reims (ADN PROTEC-DARD conservé, palette et logo propres, section « du symptôme à la cause » spécifique au site, animation `heat-rise`)
+- [x] Builder (27/07) : logo, favicon + `icon-192/512.png`, portrait persona, OG, 32 visuels générés dont **12 images de commune uniques** (aucun pool partagé), aucun texte/logo/visage flou
+- [x] Builder (27/07) : SEO technique, schema `HVACBusiness` à la place de `Plumber`, `FAQPage` sur toutes les FAQ, `llms.txt` régénéré dynamiquement (8 services + 12 zones)
+- [x] Autoblog (27/07) : 9 drafts T1 (001-009, octobre-décembre) livrés et AUDITÉS par le CEO :
+      conformes doctrine (auteur = persona DEMO, réponses directes en ouverture, zéro tiret,
+      zéro chiffre inventé, zéro mot hors périmètre)
+- [x] Contrôle visuel CEO du 27/07 : POSITIF sous réserve d'une passe corrective à 3 points
+      (backdrop menu mobile, restructuration fingerprint tailwind, permutation des sections
+      d'accueil, les 2 derniers exigés par la directive du CEO-portefeuille « barre Dijon »).
+      12 communes différenciées confirmées, côte à côte Metz/Dijon/Reims distinct, compteur
+      30 km vérifié au DOM (l'alerte « 28 km » de l'agent était une capture mi-animation)
+- [x] Passe corrective Builder (28fe2cb) livrée et RE-CONTRÔLÉE par le CEO le 27/07 : voile
+      menu mobile vérifié en capture (assombrit, floute, ferme au clic), empreinte Tailwind
+      cassée (zéro reliquat ink/sand/brand/accent/--c-, lexique braise/flamme/craie/fonte,
+      48 classes d'opacité toutes vivantes), sections réellement permutées (alternance des
+      fonds saine, une seule paire sombre assumée), tsc + build verts. Barre « niveau Dijon »
+      du CEO-portefeuille : ATTEINTE sur les 6 critères
+- [ ] VALIDATION RÉMY sur la preview → merge `main` → mise en ligne (Étape 6) ⏰ avant fin septembre
 - [ ] Post-mise en ligne : GSC (propriété + sitemap) + Bing Webmaster Tools (nouvelle étape standard)
 
 ## 3. DÉCISIONS RÉMY
@@ -77,7 +91,7 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   saisonnier. Objectif global réaffirmé : ~10 sites, plusieurs métiers, toujours de l'urgence.
 - 27/07/2026 : **rayon d'intervention 30 km** (et non les 15 km proposés par le SEO). Les 12
   communes du plan restent valables (toutes sous 13 km), le rayon élargit la zone annoncée.
-- 27/07/2026 : **domaine validé : sos-chauffage-reims.fr** (reste à acheter).
+- 27/07/2026 : **domaine validé : sos-chauffage-reims.fr**, ACHETÉ par Rémy le 27/07 (en attente de validation registrar/AFNIC). DNS à ne pas toucher avant l'Étape 6.
 - 27/07/2026 : le numéro 09 sera pris sur **Twilio**, tâche CEO (en attente des accès API
   Twilio de Rémy ; aucun identifiant Twilio trouvé sur la machine). Attention : un numéro
   français sur Twilio exige un dossier réglementaire approuvé (justificatif d'adresse et
@@ -116,3 +130,35 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   Message Builder préparé et remis à Rémy. Écart signalé par le SEO (page PAC à la place d'une
   page « remplacement chaudière », remplacement traité en blog + FAQ entretien) : approuvé par le
   CEO, cohérent avec le positionnement dépannage.
+- **27/07/2026 (Builder, Opus)** : identité et contenu Reims livrés sur la branche
+  `builder/design-contenu-reims`. Palette « chaleur maîtrisée » (ink brun fumé, sand craie,
+  brand bleu de flamme de gaz, accent braise) : base chaude là où Metz est un noir bleu pétrole
+  et Dijon un noir prune, donc un écart visible avant même les couleurs d'accent. Logo refait
+  (radiateur + flamme) et décliné en favicon. 8 pages services et 12 pages communes écrites
+  d'après le plan SEO, sans en dévier. Nouvelle section « du symptôme à la cause » (8 paires
+  symptôme/piste renvoyant vers la bonne prestation) : c'est la variation de structure qui
+  éloigne le plus le site d'un clone recoloré de Metz. Décision Rémy du 30 km appliquée depuis
+  une constante unique de la config, donc cohérente partout (texte, compteur animé, llms.txt,
+  footer) : 7 occurrences vérifiées dans le rendu, aucune trace de 15 ou 20 km.
+  Vérifications : `tsc` propre, `npm run build` vert (37 pages), 22 captures Playwright
+  desktop et mobile, contrôle automatisé des 29 pages rendues (zéro tiret cadratin, zéro
+  occurrence de « plombier » ou de vocabulaire canalisation hérité, zéro URL Metz).
+  Deux défauts corrigés en cours de route : la première flamme du logo se lisait comme une
+  goutte d'eau (contresens sur un site de chauffage), et deux classes d'opacité Tailwind
+  invalides héritées du template (`bg-brand-500/12`, `bg-brand-500/6`) étaient silencieusement
+  mortes. Reste au CEO : contrôle visuel côte à côte avec Metz et Dijon.
+- **27/07/2026 (Builder, correctifs post-contrôle CEO)** : les trois corrections demandées,
+  et rien d'autre. 1) Menu mobile : voile plein viewport ajouté, posé en z-[45] pour passer
+  au-dessus de la barre d'appel collante (z-40) tout en restant sous l'en-tête (z-50), avec
+  blocage du défilement de la page. Le voile est un vrai bouton de fermeture, donc sans
+  aria-hidden, sinon la règle globale du projet l'aurait rendu inerte ; clics du panneau
+  vérifiés intacts. 2) Empreinte Tailwind cassée : lexique de tokens propre au métier
+  (braise, flamme, craie, fonte à la place de accent, brand, sand, ink), variables CSS
+  passées de `--c-*` à `--teinte-*`, rayons, ombres et animations renommés, ordre des blocs
+  de tailwind.config.ts et structure de globals.css revus, variantes de Button et de
+  GradientBlob renommées. Renommage fait par script ancré sur les préfixes d'utilitaires,
+  puis contrôle des 68 classes à opacité contre le CSS généré : zéro classe morte.
+  3) Ordre des sections d'accueil réellement permuté, avec la logique documentée dans
+  app/page.tsx. Premier essai corrigé : il alignait trois fonds sombres à la suite.
+  Vérifications : tsc propre, build vert (37 pages), 22 captures desktop et mobile
+  re-tirées, contrôle des 29 pages rendues toujours au vert.

@@ -10,8 +10,8 @@ import { Faq } from '@/components/ui/Faq'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Zones d'intervention, débouchage autour de ${siteConfig.city}`,
-  description: `Communes desservies autour de ${siteConfig.city} pour le débouchage et le curage de canalisations : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
+  title: `Zones d'intervention, dépannage chauffage autour de ${siteConfig.city}`,
+  description: `Communes desservies autour de ${siteConfig.city} pour le dépannage de chauffage et de chaudière : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
   path: '/zones',
 })
 
@@ -21,7 +21,7 @@ export default function ZonesHub() {
   const { city, serviceArea, businessName, departmentName, department } = siteConfig
 
   // Réponse courte factuelle « citable » (activité + zone + liste des communes).
-  const citable = `${businessName} intervient à ${city} (${departmentName}, ${department}) et dans ${zones.length} communes de l'agglomération, dans un rayon d'environ ${serviceArea.radiusKm} km : ${names.join(', ')}. Débouchage de canalisations, curage haute pression et inspection caméra, 7j/7.`
+  const citable = `${businessName} intervient à ${city} (${departmentName}, ${department}) et dans ${zones.length} communes de l'agglomération, dans un rayon d'environ ${serviceArea.radiusKm} km : ${names.join(', ')}. Dépannage de chaudière à gaz ou au fioul, de pompe à chaleur, de radiateur et de ballon d'eau chaude, entretien annuel, 7j/7.`
 
   const hubFaq = [
     {
@@ -50,17 +50,17 @@ export default function ZonesHub() {
           <>
             {city} et les communes
             <br />
-            <span className="text-gradient-accent">de l&apos;agglomération</span>
+            <span className="titre-braise">de l&apos;agglomération</span>
           </>
         }
         subtitle={`Nous couvrons ${city} et ${zones.length} communes voisines, dans un rayon d'environ ${serviceArea.radiusKm} km.`}
       />
 
-      <section className="bg-sand-50 py-16 lg:py-24">
+      <section className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           {/* Réponse courte factuelle « citable » (levier GEO). */}
-          <AnimatedSection className="mx-auto max-w-3xl rounded-card border border-brand-600/20 bg-brand-600/5 p-6 lg:p-8">
-            <p className="leading-relaxed text-ink-900">{citable}</p>
+          <AnimatedSection className="mx-auto max-w-3xl rounded-bloc border border-flamme-600/20 bg-flamme-600/5 p-6 lg:p-8">
+            <p className="leading-relaxed text-fonte-900">{citable}</p>
           </AnimatedSection>
 
           <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -68,19 +68,19 @@ export default function ZonesHub() {
               <AnimatedSection key={z.slug} delay={(idx % 3) * 0.07} as="li">
                 <Link
                   href={`/zones/${z.slug}`}
-                  className="group flex h-full flex-col rounded-card border border-sand-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-card-hover"
+                  className="group flex h-full flex-col rounded-bloc border border-craie-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-flamme-400/40 hover:shadow-pose-forte"
                 >
                   <div className="flex items-baseline justify-between gap-3">
-                    <span className="font-display text-xl font-medium text-ink-950 transition-colors group-hover:text-brand-700">
+                    <span className="font-display text-xl font-medium text-fonte-950 transition-colors group-hover:text-flamme-700">
                       {z.name}
                     </span>
-                    <span className="shrink-0 text-sm text-sand-400">{z.postalCode}</span>
+                    <span className="shrink-0 text-sm text-craie-400">{z.postalCode}</span>
                   </div>
                   {z.context && (
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-sand-600">{z.context}</p>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-craie-600">{z.context}</p>
                   )}
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-600 transition-all group-hover:gap-3">
-                    Débouchage à {z.name}
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-braise-600 transition-all group-hover:gap-3">
+                    Chauffagiste à {z.name}
                     <ArrowRight size={16} />
                   </span>
                 </Link>
@@ -88,9 +88,9 @@ export default function ZonesHub() {
             ))}
           </ul>
 
-          <AnimatedSection className="mt-12 rounded-card border border-sand-200 bg-white p-8">
+          <AnimatedSection className="mt-12 rounded-bloc border border-craie-200 bg-white p-8">
             <h2 className="text-2xl">Et à {city} même</h2>
-            <p className="mt-3 leading-relaxed text-sand-600">
+            <p className="mt-3 leading-relaxed text-craie-600">
               {city} n&apos;a pas de page dédiée : c&apos;est notre ville de base. Nous intervenons
               dans tous les quartiers, du centre aux faubourgs.
             </p>
@@ -98,7 +98,7 @@ export default function ZonesHub() {
               {serviceArea.districts.map((d) => (
                 <li
                   key={d}
-                  className="inline-flex rounded-full border border-sand-200 bg-sand-100 px-4 py-2 text-sm text-sand-700"
+                  className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-700"
                 >
                   {d}
                 </li>
@@ -114,7 +114,7 @@ export default function ZonesHub() {
         title={
           <>
             Vos questions
-            <span className="text-gradient-ink italic"> sur notre secteur</span>
+            <span className="titre-fonte italic"> sur notre secteur</span>
           </>
         }
       />

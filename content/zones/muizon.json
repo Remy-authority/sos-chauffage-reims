@@ -1,0 +1,42 @@
+{
+  "slug": "muizon",
+  "name": "Muizon",
+  "postalCode": "51140",
+  "context": "Commune de la vallée de la Vesle, à l'ouest de l'agglomération, la plus excentrée de nos secteurs, à dominante d'habitat individuel.",
+  "metaTitle": "Dépannage chauffage et chaudière à Muizon (51)",
+  "metaDescription": "Chauffagiste à Muizon : chaudière fioul ou gaz en panne, brûleur en défaut, plus d'eau chaude. Diagnostic complet, ligne ouverte 7j/7, tarif annoncé avant.",
+  "h1": "Dépannage chauffage et chaudière à Muizon",
+  "intro": "Nous intervenons à Muizon (51140) sur les pannes de chauffage et d'eau chaude. Située dans la vallée de la Vesle, à l'ouest de l'agglomération, Muizon est la plus excentrée des communes que nous couvrons avec une page dédiée. L'habitat y est très majoritairement individuel, avec une part de maisons anciennes et un recours au fioul plus fréquent que dans les communes collées à Reims, ce qui change nettement la nature des pannes.",
+  "blocks": [
+    {
+      "heading": "Le fioul, une panne qui commence souvent avant la chaudière",
+      "body": "Sur une installation au fioul, le combustible est stocké chez vous, et une bonne part des arrêts vient de la ligne qui va de la cuve au brûleur plutôt que de l'appareil lui-même. Le voyant rouge du brûleur signale simplement que la chaudière a tenté de démarrer, n'a pas obtenu de flamme correcte, et s'est arrêtée par sécurité. Trois familles de causes se partagent l'essentiel des cas. L'alimentation : cuve trop basse, filtre colmaté, ligne désamorcée, aspiration de dépôts accumulés au fond de la cuve, phénomène amplifié quand le niveau descend ou juste après une livraison qui a remué le contenu. La pulvérisation : gicleur usé ou encrassé, pression de pompe qui a dérivé, électrodes mal positionnées. La détection : cellule photoélectrique encrassée qui ne voit plus une flamme pourtant présente et arrête l'appareil à tort. Nous contrôlons donc systématiquement la ligne dans son ensemble à Muizon, du piquage en cuve au brûleur, plutôt que de nous limiter à la chaudière."
+    },
+    {
+      "heading": "Le froid de vallée et les démarrages difficiles",
+      "body": "Les fonds de vallée sont plus froids que les plateaux au petit matin, et le fioul s'épaissit quand la température baisse. Une cuve installée dans un garage non chauffé, un appentis ou un local ouvert peut voir apparaître des paraffines qui gênent l'écoulement et finissent par colmater le filtre. Le symptôme typique est une chaudière qui fonctionne correctement dans la journée puis se met en défaut à l'aube après une nuit froide, ou qui redémarre péniblement après un long arrêt. Ce même froid matinal explique aussi des mises en sécurité intermittentes sur des installations au gaz dont l'évacuation est mal orientée. Dans les deux cas, l'information la plus précieuse que vous puissiez nous donner est l'heure à laquelle le défaut apparaît : une panne qui revient toujours au petit matin ne raconte pas la même histoire qu'une panne qui survient le soir en pleine sollicitation. Notez-la avant d'appeler."
+    },
+    {
+      "heading": "Urgence et communes voisines",
+      "body": "En cas de panne à Muizon, notez le moment où le défaut est apparu, réarmez une seule fois si l'appareil le permet, protégez le sol en cas d'écoulement et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Muizon se trouve à l'extrémité ouest de notre secteur, dans la limite du rayon que nous couvrons autour de Reims ; nous intervenons aussi à Tinqueux et à Saint-Brice-Courcelles sur le même axe."
+    }
+  ],
+  "neighbours": [
+    "Reims",
+    "Tinqueux"
+  ],
+  "faq": [
+    {
+      "q": "Ma chaudière fioul se met en défaut seulement le matin, pourquoi ?",
+      "a": "Le froid de la nuit est le premier suspect. Le fioul s'épaissit quand la température descend, et une cuve ou une ligne d'alimentation installée dans un local non chauffé peut laisser apparaître des paraffines qui gênent l'écoulement et chargent le filtre. L'appareil démarre alors mal, ou pas du tout, jusqu'à ce que la journée réchauffe l'ensemble. C'est une panne réelle, pas une fatalité : elle se traite au niveau de la ligne et de la protection du local."
+    },
+    {
+      "q": "Ma cuve est presque vide, dois-je juste la remplir ?",
+      "a": "Remplir est nécessaire mais pas toujours suffisant. Une cuve qui descend très bas fait aspirer les dépôts et l'eau de condensation accumulés au fond au fil des années, et ces boues colmatent le filtre et le gicleur. Après une remise à niveau, il est fréquent que la ligne demande un nettoyage et un réamorçage avant que le brûleur ne redémarre normalement. Attendre le fond de cuve coûte donc souvent plus cher que de commander plus tôt."
+    },
+    {
+      "q": "Muizon est-elle bien dans votre zone d'intervention ?",
+      "a": "Oui. Muizon est la plus éloignée des communes pour lesquelles nous avons une page dédiée, mais elle reste dans le rayon que nous couvrons autour de Reims. Le trajet ajoute quelques minutes, pas davantage. Comme partout, le délai réel dépend surtout du planning en cours, et nous vous annonçons un créneau réaliste au téléphone plutôt qu'une estimation optimiste."
+    }
+  ]
+}

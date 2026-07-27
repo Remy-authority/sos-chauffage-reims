@@ -38,22 +38,22 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="relative overflow-hidden bg-ink-900 py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-fonte-900 py-16 lg:py-20">
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(var(--c-accent-500)/0.12),transparent_58%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(var(--teinte-braise-500)/0.12),transparent_58%)]"
       />
-      <div className="rule-glow absolute inset-x-0 top-0" aria-hidden="true" />
-      <div className="rule-glow absolute inset-x-0 bottom-0" aria-hidden="true" />
+      <div className="filet-chaud absolute inset-x-0 top-0" aria-hidden="true" />
+      <div className="filet-chaud absolute inset-x-0 bottom-0" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <dl className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <dd className="font-display text-5xl font-medium tracking-tight text-accent-400 lg:text-6xl">
+              <dd className="font-display text-5xl font-medium tracking-tight text-braise-400 lg:text-6xl">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </dd>
-              <dt className="mt-3 text-sm uppercase tracking-[0.18em] text-sand-300">{stat.label}</dt>
+              <dt className="mt-3 text-sm uppercase tracking-[0.18em] text-craie-300">{stat.label}</dt>
             </div>
           ))}
         </dl>

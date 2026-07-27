@@ -46,21 +46,28 @@ function getHeroSrc(slug: string): string {
   return existsOnDisk ? dedicated : HERO_FALLBACK
 }
 
+/**
+ * Visuels de corps de page. ⚠️ À ne pas confondre avec l'image de tête : ce sont
+ * des illustrations TECHNIQUES (un geste, un outil), volontairement neutres et
+ * sans aucun repère géographique. Elles n'ont donc pas à être uniques par commune,
+ * contrairement à l'image de tête, qui doit montrer la ville concernée et reste
+ * câblée sur le slug (règle permanente Rémy du 27/07/2026).
+ */
 const BODY_POOL = [
   {
-    src: '/zones/zone-regard.jpg',
-    alt: 'Regard de visite ouvert dans une allée, flexible de curage engagé',
-    caption: "Le regard de visite, premier point d'accès au réseau enterré.",
+    src: '/zones/geste-manometre.jpg',
+    alt: 'Lecture du manomètre de pression sur une chaudière murale',
+    caption: 'La pression du circuit, lue à froid puis à chaud, écarte déjà des hypothèses.',
   },
   {
-    src: '/zones/zone-siphon.jpg',
-    alt: 'Siphon de lavabo démonté au-dessus d’un seau',
-    caption: 'Sur un bouchon proche, le démontage du siphon suffit souvent.',
+    src: '/zones/geste-purge.jpg',
+    alt: "Purge d'un radiateur, clé sur le purgeur et récipient posé dessous",
+    caption: "Froid en haut, chaud en bas : c'est de l'air, et la purge suffit.",
   },
   {
-    src: '/zones/zone-camera.jpg',
-    alt: "Écran d'inspection caméra montrant l'intérieur d'une canalisation",
-    caption: "La caméra tranche entre bouchon d'usage et défaut de canalisation.",
+    src: '/zones/geste-unite-exterieure.jpg',
+    alt: "Contrôle de l'échangeur d'une unité extérieure de pompe à chaleur",
+    caption: "Sur une pompe à chaleur, le diagnostic commence souvent dehors.",
   },
 ]
 
@@ -80,10 +87,10 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
   const mainServices = getServices()
     .filter((s) =>
       [
-        'urgence-debouchage-canalisation',
-        'debouchage-wc-toilettes-bouchees',
-        'debouchage-evier-lavabo-douche',
-        'debouchage-canalisation-enterree-regard',
+        'urgence-depannage-chauffage-chaudiere',
+        'depannage-chaudiere-gaz',
+        'radiateur-froid-desembouage-purge',
+        'ballon-eau-chaude-cumulus',
       ].includes(s.slug),
     )
     .slice(0, 4)
@@ -103,18 +110,18 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         ]}
       />
 
-      <section className="noise-overlay relative overflow-hidden bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950 py-16 lg:py-20">
-        <div aria-hidden="true" className="bg-grid absolute inset-0" />
+      <section className="grain relative overflow-hidden bg-gradient-to-b from-fonte-950 via-fonte-900 to-fonte-950 py-16 lg:py-20">
+        <div aria-hidden="true" className="trame absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
           <div className="lg:col-span-7">
-            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent-400">
+            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-braise-400">
               <MapPin size={16} />
               {zone.name} · {zone.postalCode}
             </p>
-            <h1 className="mt-5 text-4xl leading-[1.1] text-sand-50 md:text-5xl">{zone.h1}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200">{zone.intro}</p>
+            <h1 className="mt-5 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{zone.h1}</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-craie-200">{zone.intro}</p>
             <div className="mt-8">
-              <Button href={`tel:${siteConfig.phone}`} variant="accent" size="lg">
+              <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
                 {siteConfig.phoneDisplay}
               </Button>
@@ -122,7 +129,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-panel border border-brand-400/20 shadow-card">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-panneau border border-flamme-400/20 shadow-pose">
               <Image
                 src={hero}
                 alt={`${siteConfig.trade} à ${zone.name}`}
@@ -136,15 +143,15 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      <article className="bg-sand-50 py-16 lg:py-24">
+      <article className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
-          <div className="prose-content space-y-10">
+          <div className="texte-page space-y-10">
             {zone.blocks.map((b, i) => (
               <div key={b.heading}>
                 <ServiceBlock block={b} />
                 {i === 0 && (
                   <figure className="mt-8">
-                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-card border border-sand-200 shadow-card">
+                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-bloc border border-craie-200 shadow-pose">
                       <Image
                         src={body.src}
                         alt={body.alt}
@@ -154,7 +161,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                         loading="lazy"
                       />
                     </div>
-                    <figcaption className="mt-3 text-sm text-sand-500">{body.caption}</figcaption>
+                    <figcaption className="mt-3 text-sm text-craie-500">{body.caption}</figcaption>
                   </figure>
                 )}
               </div>
@@ -168,12 +175,12 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="group flex items-center gap-3 rounded-card border border-sand-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/40 hover:shadow-card"
+                    className="group flex items-center gap-3 rounded-bloc border border-craie-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-600/10 text-brand-600">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                       <ServiceIcon icon={s.icon} className="h-5 w-5" />
                     </span>
-                    <span className="font-medium text-ink-900 group-hover:text-brand-700">
+                    <span className="font-medium text-fonte-900 group-hover:text-flamme-700">
                       {s.navTitle}
                     </span>
                   </Link>
@@ -184,7 +191,9 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
 
           {zone.neighbours.length > 0 && (
             <AnimatedSection className="mt-14">
-              <h2 className="text-2xl">Communes limitrophes desservies</h2>
+              {/* « à proximité » et non « limitrophes » : certaines communes de la
+                  liste sont voisines sans partager une limite communale. */}
+              <h2 className="text-2xl">Autres communes desservies à proximité</h2>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {zone.neighbours.map((n) => {
                   const match = zones.find((z) => z.name === n)
@@ -193,12 +202,12 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                       {match ? (
                         <Link
                           href={`/zones/${match.slug}`}
-                          className="inline-flex rounded-full border border-sand-300 bg-white px-4 py-2 text-sm text-sand-700 transition-colors hover:border-brand-500 hover:text-brand-700"
+                          className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
                         >
                           {n}
                         </Link>
                       ) : (
-                        <span className="inline-flex rounded-full border border-sand-200 bg-sand-100 px-4 py-2 text-sm text-sand-600">
+                        <span className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-600">
                           {n}
                         </span>
                       )}
@@ -214,8 +223,8 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       <Faq items={zone.faq} eyebrow={zone.name} />
 
       <CtaBanner
-        title={`Canalisation bouchée à ${zone.name} ?`}
-        subtitle={`Nous intervenons à ${zone.name} et dans les communes voisines. Appelez, nous vous donnons le tarif et un créneau réaliste.`}
+        title={`Plus de chauffage à ${zone.name} ?`}
+        subtitle={`Nous intervenons à ${zone.name} et dans les communes voisines. Donnez-nous le type d'appareil et le code affiché, nous vous annonçons le tarif et un créneau réaliste.`}
       />
     </>
   )

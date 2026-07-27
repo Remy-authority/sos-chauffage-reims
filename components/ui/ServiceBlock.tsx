@@ -24,12 +24,12 @@ export function ServiceBlock({ block, eager = false }: { block: ContentBlock; ea
             {steps.steps.map((s, i) => (
               <li
                 key={s.slice(0, 32)}
-                className="flex gap-4 rounded-card border border-sand-200 bg-white p-5 shadow-card"
+                className="flex gap-4 rounded-bloc border border-craie-200 bg-white p-5 shadow-pose"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-500 font-display text-sm font-medium text-white">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-braise-500 font-display text-sm font-medium text-white">
                   {i + 1}
                 </span>
-                <span className="leading-relaxed text-sand-700">{s}</span>
+                <span className="leading-relaxed text-craie-700">{s}</span>
               </li>
             ))}
           </ol>
@@ -40,7 +40,7 @@ export function ServiceBlock({ block, eager = false }: { block: ContentBlock; ea
 
       {block.image && (
         <figure className="mt-8">
-          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-card border border-sand-200 shadow-card">
+          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-bloc border border-craie-200 shadow-pose">
             <Image
               src={block.image}
               alt={block.imageAlt || block.heading}
@@ -51,7 +51,7 @@ export function ServiceBlock({ block, eager = false }: { block: ContentBlock; ea
             />
           </div>
           {block.imageCaption && (
-            <figcaption className="mt-3 text-sm text-sand-500">{block.imageCaption}</figcaption>
+            <figcaption className="mt-3 text-sm text-craie-500">{block.imageCaption}</figcaption>
           )}
         </figure>
       )}

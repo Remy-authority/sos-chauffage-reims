@@ -1,0 +1,52 @@
+{
+  "slug": "depannage-chaudiere-fioul",
+  "order": 3,
+  "icon": "fuel",
+  "navTitle": "Chaudière au fioul",
+  "h1": "Dépannage de chaudière au fioul à Reims",
+  "metaTitle": "Dépannage de chaudière au fioul à Reims",
+  "metaDescription": "Chaudière fioul en panne à Reims et alentour : brûleur en défaut, gicleur encrassé, désamorçage, cuve. Diagnostic complet et tarif annoncé avant intervention.",
+  "intro": "Une chaudière au fioul ne tombe pas en panne comme une chaudière à gaz. Son combustible est stocké chez vous, il vieillit, il se charge en dépôts, et une bonne partie des arrêts vient de la ligne qui va de la cuve au brûleur plutôt que de la chaudière elle-même. Nous intervenons sur ces appareils dans les communes de l'agglomération rémoise, où le fioul reste courant dans les maisons plus anciennes et les secteurs de village.",
+  "bullets": [
+    "Brûleur, gicleur, filtre et ligne d'alimentation",
+    "Défaut de mise en sécurité du brûleur",
+    "Habitat ancien et maisons de village"
+  ],
+  "blocks": [
+    {
+      "heading": "Le brûleur se met en défaut, ce que ça veut dire",
+      "body": "Sur une chaudière au fioul, le voyant rouge du brûleur signale que l'appareil a tenté de démarrer, n'a pas détecté de flamme correcte dans le temps imparti, et s'est arrêté par sécurité. Les causes se répartissent en trois familles. La première est l'alimentation : plus de fioul dans la cuve, filtre colmaté, ligne désamorcée après une intervention ou une cuve descendue trop bas, ou aspiration d'un fond de cuve chargé de boues. La deuxième est la pulvérisation : gicleur encrassé ou usé, pression de pompe qui a dérivé, électrodes d'allumage mal positionnées ou couvertes de dépôts. La troisième est la détection : cellule photoélectrique encrassée qui ne voit plus la flamme pourtant présente, et arrête l'appareil à tort. Un réarmement du brûleur peut relancer l'appareil pour un cycle, mais si le défaut revient, il ne sert à rien d'insister : chaque tentative envoie du combustible dans une chambre qui ne l'allume pas correctement."
+    },
+    {
+      "heading": "Les démarrages difficiles par temps froid",
+      "body": "Le fioul s'épaissit quand la température baisse. Sur une cuve installée à l'extérieur, dans un garage non chauffé ou dans un local ouvert, un coup de froid marqué peut suffire à faire apparaître des paraffines qui gênent l'écoulement et finissent par encrasser le filtre. Le symptôme typique est une chaudière qui fonctionne correctement en journée puis se met en défaut au petit matin après une nuit froide, ou qui redémarre difficilement après un long arrêt. C'est aussi la période où les dépôts accumulés au fond de la cuve remontent le plus facilement, notamment après une livraison qui a remué le contenu ou quand le niveau devient bas. Nous contrôlons la ligne d'alimentation dans son ensemble, du piquage en cuve au brûleur, plutôt que de nous limiter à l'appareil : sur le fioul, le problème est souvent en amont."
+    },
+    {
+      "heading": "Remise en service et suites de l'intervention",
+      "body": "Une fois la cause identifiée, la remise en service passe par le remplacement de ce qui est en cause, le nettoyage des organes encrassés, le réamorçage de la ligne si elle a désamorcé, puis un réglage de la combustion contrôlé à l'analyseur. Ce dernier point est important sur le fioul : un brûleur qui repart mais reste mal réglé consomme davantage, encrasse la chaudière plus vite et vous ramène en panne dans la saison. Nous vous indiquons aussi ce qui, dans votre installation, a favorisé la panne : une cuve dont le fond mériterait d'être traité, un filtre à changer plus souvent, un local trop exposé au froid. Sur une chaudière au fioul en fin de vie ou sur une installation dont l'entretien a été longtemps repoussé, nous en parlons dans une logique de décision hors urgence, pas au milieu d'une intervention à froid."
+    }
+  ],
+  "relatedServices": [
+    "urgence-depannage-chauffage-chaudiere",
+    "entretien-chaudiere-annuel"
+  ],
+  "faq": [
+    {
+      "q": "Le voyant rouge de mon brûleur fioul est allumé, puis-je réarmer moi-même ?",
+      "a": "Une fois, oui, c'est le geste prévu par le fabricant et il est décrit dans la notice. Si le brûleur repart et fonctionne normalement, le défaut était passager. S'il se remet en sécurité, arrêtez : chaque tentative envoie du fioul dans une chambre de combustion qui ne l'enflamme pas correctement, ce qui encrasse l'appareil et complique la remise en service. Notez plutôt à quel moment le défaut est apparu, notamment s'il suit un coup de froid ou une livraison récente."
+    },
+    {
+      "q": "Ma cuve est presque vide, est-ce que ça peut expliquer la panne ?",
+      "a": "Oui, et de deux manières. Le manque de combustible arrête évidemment le brûleur, mais une cuve qui descend très bas fait aussi aspirer les dépôts et l'eau de condensation accumulés au fond au fil des années. Ces boues colmatent le filtre et le gicleur. Après une remise à niveau, il est fréquent qu'un simple remplissage ne suffise pas et que la ligne demande un nettoyage et un réamorçage."
+    },
+    {
+      "q": "Une chaudière au fioul demande-t-elle plus d'entretien qu'une chaudière à gaz ?",
+      "a": "Elle demande un entretien de nature différente. Le gaz arrive propre et régulé par le réseau, tandis que le fioul est stocké chez vous, vieillit et laisse des résidus à chaque combustion. Un appareil au fioul accumule donc des dépôts dans son corps de chauffe et sur ses organes de combustion, et sa ligne d'alimentation, filtre compris, fait partie intégrante de ce qu'il faut surveiller. L'entretien des appareils de chauffage est encadré par la réglementation en vigueur : nous vous indiquons ce qu'elle prévoit pour votre installation."
+    },
+    {
+      "q": "Une odeur de fioul dans la chaufferie est-elle normale ?",
+      "a": "Une odeur légère et fugace au moment du démarrage peut arriver. Une odeur persistante, elle, signale toujours quelque chose : un suintement sur un raccord de la ligne, un filtre mal refermé, un défaut d'étanchéité sur la cuve, ou une combustion incomplète qui renvoie des imbrûlés. Ventilez le local, n'y stockez rien d'inflammable, et faites contrôler l'installation. Une odeur qui s'installe ne se corrige pas en aérant."
+    }
+  ],
+  "image": "/services/depannage-chaudiere-fioul.jpg"
+}

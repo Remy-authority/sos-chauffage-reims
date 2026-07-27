@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { siteConfig } from '@/config/site.config'
 
 /**
  * Galerie des situations traitées.
@@ -11,52 +12,52 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
  */
 const items = [
   {
-    src: '/gallery/01-furet-electrique.jpg',
-    alt: "Furet électrique déroulé devant un siphon d'évier ouvert",
-    title: 'Furet électrique',
-    caption: 'Le bouchon localisé, attaqué par le siphon ou le tampon de visite.',
+    src: '/gallery/01-chaudiere-gaz-murale.jpg',
+    alt: 'Chaudière murale à gaz ouverte, écran de contrôle allumé',
+    title: 'Chaudière à gaz',
+    caption: 'Mise en sécurité, pression tombée, allumage qui échoue.',
   },
   {
-    src: '/gallery/02-hydrocurage.jpg',
-    alt: 'Flexible haute pression engagé dans un regard de visite ouvert',
-    title: 'Hydrocurage',
-    caption: 'Pour un réseau encrassé sur toute sa longueur, pas seulement bouché.',
+    src: '/gallery/02-bruleur-fioul.jpg',
+    alt: 'Brûleur de chaudière au fioul déposé sur un établi de chaufferie',
+    title: 'Brûleur fioul',
+    caption: "Gicleur encrassé, filtre colmaté, ligne d'alimentation désamorcée.",
   },
   {
-    src: '/gallery/03-inspection-camera.jpg',
-    alt: "Écran de contrôle d'une caméra d'inspection posé au bord d'un regard",
-    title: 'Inspection caméra',
-    caption: 'Quand la cause reste incertaine ou que le bouchon revient.',
+    src: '/gallery/03-pompe-a-chaleur.jpg',
+    alt: "Unité extérieure de pompe à chaleur posée le long d'une maison",
+    title: 'Pompe à chaleur',
+    caption: 'Unité extérieure, dégivrage, régulation mal réglée.',
   },
   {
-    src: '/gallery/04-regard-exterieur.jpg',
-    alt: 'Regard de visite en béton ouvert dans une allée pavée',
-    title: 'Regard et canalisation enterrée',
-    caption: 'Racines, affaissement, mauvaise pente : ça se voit au regard.',
+    src: '/gallery/04-purge-radiateur.jpg',
+    alt: "Purgeur de radiateur ouvert avec un récipient posé dessous",
+    title: 'Radiateur froid',
+    caption: "Froid en haut, c'est de l'air. Froid en bas, c'est de la boue.",
   },
   {
-    src: '/gallery/05-colonne-immeuble.jpg',
-    alt: "Colonne d'évacuation en fonte dans un local technique d'immeuble",
-    title: "Colonne d'immeuble",
-    caption: 'Plusieurs logements qui refoulent en même temps, une seule cause.',
+    src: '/gallery/05-manometre-pression.jpg',
+    alt: 'Manomètre de chaudière relevé pendant un contrôle de pression',
+    title: 'Contrôle de pression',
+    caption: 'À froid puis à chaud, pour distinguer fuite et vase fatigué.',
   },
   {
-    src: '/gallery/06-bac-a-graisse.jpg',
-    alt: 'Bac à graisse ouvert à l’arrière d’une cuisine professionnelle',
-    title: 'Bac à graisse',
-    caption: 'Restauration et collectivités, entretien à périodicité régulière.',
+    src: '/gallery/06-ballon-eau-chaude.jpg',
+    alt: "Ballon d'eau chaude et son groupe de sécurité dans un local technique",
+    title: "Ballon d'eau chaude",
+    caption: 'Résistance, thermostat, groupe de sécurité entartré.',
   },
 ]
 
 export function Gallery() {
   return (
     <section
-      className="noise-overlay relative overflow-hidden bg-ink-950 py-24 lg:py-32"
+      className="grain relative overflow-hidden bg-fonte-950 py-24 lg:py-32"
       aria-labelledby="gallery-title"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgb(var(--c-brand-600)/0.25),transparent_60%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgb(var(--teinte-flamme-600)/0.25),transparent_60%)]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
@@ -66,10 +67,10 @@ export function Gallery() {
           title={
             <>
               Les situations
-              <span className="text-gradient-accent"> que nous traitons</span>
+              <span className="titre-braise"> que nous traitons</span>
             </>
           }
-          subtitle="Six cas de figure qui reviennent tout le temps sur l'agglomération messine, et l'outil qui va avec."
+          subtitle={`Six cas de figure qui reviennent tout l'hiver sur l'agglomération de ${siteConfig.city}, et ce qu'on regarde en premier.`}
           variant="dark"
         />
 
@@ -78,9 +79,9 @@ export function Gallery() {
             <AnimatedSection
               key={item.src}
               delay={(idx % 3) * 0.08}
-              className="group relative overflow-hidden rounded-card border border-ink-700/50"
+              className="group relative overflow-hidden rounded-bloc border border-fonte-700/50"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink-900">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-fonte-900">
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -90,12 +91,12 @@ export function Gallery() {
                 />
                 <div
                   aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/45 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-fonte-950 via-fonte-950/45 to-transparent"
                 />
               </div>
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <p className="font-display text-xl font-medium text-sand-50">{item.title}</p>
-                <p className="mt-1.5 text-sm leading-relaxed text-sand-300">{item.caption}</p>
+                <p className="font-display text-xl font-medium text-craie-50">{item.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-craie-300">{item.caption}</p>
               </div>
             </AnimatedSection>
           ))}
