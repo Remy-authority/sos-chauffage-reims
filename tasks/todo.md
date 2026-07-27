@@ -6,16 +6,17 @@
 
 ## Session du 27/07/2026 (CEO — infrastructure + lancement SEO)
 
-- [ ] Lire CLAUDE.md + docs/ETAT.md + tasks/lessons.md (hérité de Metz)
-- [ ] Créer le repo GitHub `Remy-authority/sos-chauffage-reims` + push de `main`
-- [ ] Créer le projet Vercel relié au repo
-- [ ] Poser `SEO_NOINDEX=1` en environnement Production AVANT tout déploiement
-- [ ] VÉRIFIER Framework Preset = « nextjs » (leçon Dijon : le CLI peut créer en « Other » → 404)
-- [ ] Vérifier `app/robots.ts` (previews bloquées par VERCEL_ENV, prod par SEO_NOINDEX)
-- [ ] Vérifier que le build Vercel passe (déploiement Ready, robots.txt = Disallow: /)
-- [ ] Vérifier la GitHub Action `publish-article.yml` sur le nouveau repo
-- [ ] Préparer le message SEO (le plan SEO est la référence unique des pages, AVANT le Builder)
-- [ ] Mettre à jour docs/ETAT.md avant la fin de session
+- [x] Lire CLAUDE.md + docs/ETAT.md + tasks/lessons.md (hérité de Metz)
+- [x] Créer le repo GitHub `Remy-authority/sos-chauffage-reims` + push de `main`
+- [x] Créer le projet Vercel relié au repo (liaison git vérifiée par l'API)
+- [x] Poser `SEO_NOINDEX=1` en environnement Production AVANT tout déploiement
+- [x] VÉRIFIER Framework Preset = « nextjs » via l'API Vercel : confirmé (leçon Dijon)
+- [x] Vérifier `app/robots.ts` (IS_NOINDEX câblé sur SEO_NOINDEX=1 + previews Vercel)
+- [x] Vérifier que le build Vercel passe (Ready en 41 s, HTTP 200, robots.txt = Disallow: /)
+- [x] Vérifier la GitHub Action `publish-article.yml` : active sur le nouveau repo
+- [x] Préparer le message SEO (le plan SEO est la référence unique des pages, AVANT le Builder)
+- [x] Mettre à jour docs/ETAT.md avant la fin de session
+- [ ] SUITE : Rémy colle le message à l'agent SEO → compte-rendu SEO → audit CEO → message Builder
 
 ## En attente de Rémy
 

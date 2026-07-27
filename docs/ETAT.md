@@ -60,7 +60,7 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 ## 2. RESTE À FAIRE (checklist playbook)
 
 - [ ] Rémy : valider le domaine (reco : sos-chauffage-reims.fr), l'acheter, fournir le 09 dédié + email + nom commercial
-- [ ] CEO : repo GitHub + projet Vercel + `SEO_NOINDEX=1` en Production AVANT tout déploiement + Framework Preset « nextjs » vérifié (leçon Dijon : le CLI peut créer le projet en « Other », tout part en 404)
+- [x] CEO (27/07) : repo GitHub `Remy-authority/sos-chauffage-reims` (public, `main` poussé) + projet Vercel `sos-chauffage-reims` relié au repo + `SEO_NOINDEX=1` posé en Production AVANT le premier déploiement + Framework Preset vérifié via l'API : « nextjs » ✓ (leçon Dijon) + GitHub Action `publish-article.yml` active
 - [ ] SEO : carte mots-clés chauffage/chaudière Reims + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` ALIGNÉ SUR LA SAISON (sujets chauffage d'octobre à février en priorité, entretien/été ensuite ; codes postaux via geo.api.gouv.fr)
 - [ ] Builder : `config/site.config.ts` (identité, palette chauffage, persona DEMO, numéro fiction ARCEP en attendant le 09) + `content/legal.json`
 - [ ] Builder : `content/services/*.json` et `content/zones/*.json` (communes agglo Reims) selon le plan SEO
@@ -81,3 +81,12 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - **27/07/2026 (CEO-portefeuille)** : création du dossier par duplication de Metz, nettoyage du
   contenu Metz, CLAUDE.md adapté (identité Reims + impératif calendaire), journal neuf, git
   initialisé. Aucun contenu Reims encore écrit : SEO d'abord, puis Builder.
+- **27/07/2026 (CEO site, infrastructure)** : repo GitHub `Remy-authority/sos-chauffage-reims`
+  créé et `main` poussé. Projet Vercel `sos-chauffage-reims` créé et relié au repo,
+  `SEO_NOINDEX=1` posé en Production AVANT le premier déploiement, Framework Preset vérifié
+  par l'API : « nextjs » (leçon Dijon appliquée). Premier déploiement Ready en 41 s,
+  production `https://sos-chauffage-reims.vercel.app` en HTTP 200, robots.txt = `Disallow: /`
+  (noindex confirmé). GitHub Action `publish-article.yml` active. Message de lancement SEO
+  préparé et remis à Rémy : le plan SEO (`docs/SEO-GEO-PLAN.md`) sera la référence unique
+  des pages, le Builder n'improvise rien (leçon Dijon). Prochaine étape : compte-rendu SEO,
+  puis lancement Builder.
