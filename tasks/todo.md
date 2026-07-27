@@ -79,7 +79,11 @@
       la publication auto (prochaine : mercredi 05:00 UTC). Retitrage sujet 14 sans âge : validé
 - [x] Autoblog lot 2 (024-036, f125472) : AUDITÉ CEO 13/13 conformes (les mentions
       canalisation/électricien sont les désambiguïsations et renvois de périmètre demandés)
-- [ ] Autoblog lot 3 (sujets 37-49, octobre) : ordre de mission remis à Rémy
+- [x] Autoblog lot 3 (037-049, efe084b) : AUDITÉ CEO 13/13 conformes. Contrôles ciblés :
+      zéro code constructeur inventé (040), renvoi électrique correct (046), chevauchement
+      042/043 vs article 006 publié mesuré à 2,4 % et 1,3 % (négligeable)
+- [ ] Autoblog lot 4 (sujets 50-62, novembre) : ordre de mission remis à Rémy, attention
+      renforcée sujet 52 (fuite de gaz : sécurité avant acquisition)
 - [ ] Rémy : GSC cliquer VALIDER (TXT visible publiquement, prêt) puis soumettre le sitemap
 - [ ] Ensuite : Bing Webmaster Tools (session guidée)
 - [ ] Cosmétique, à glisser dans une future passe Builder : commentaire obsolète au-dessus de
