@@ -96,6 +96,11 @@
 - [ ] Sentinelle posée : vérifier le PREMIER run planifié du cron (mercredi 29/07 ~05:00 UTC),
       un cron neuf doit être vu tourner une fois. Si absent mercredi midi : vérifier l'onglet
       Actions (les crons de repos neufs démarrent parfois avec du retard)
+- [x] Builder Opus (88 couvertures d'articles, f5b4461) : AUDITÉ CEO. Contre-vérifié : 88 images
+      uniques par empreinte, 9,8 Mo total, aucun fichier >300 Ko, 88 frontmatters câblés au slug
+      POST-publication (anomalie de nommage anticipée par le Builder, publication simulée),
+      cover servie en prod (77 Ko), échantillon visuel contrôlé dont sécurité (sobres) et paires
+      à risque (distinguables). Diff strictement limité : 88 mdx +1 ligne chacun
 - [ ] À planifier vers novembre 2026 : calendrier v3 par le SEO (sortie d'hiver mars-avril,
       hors fenêtre de la v2, signalé par le SEO dès la livraison v2)
 - [x] Bing Webmaster Tools (29/07) : 11 sites importés depuis GSC par Rémy, sitemaps soumis
