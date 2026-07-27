@@ -16,7 +16,23 @@
 - [x] Vérifier la GitHub Action `publish-article.yml` : active sur le nouveau repo
 - [x] Préparer le message SEO (le plan SEO est la référence unique des pages, AVANT le Builder)
 - [x] Mettre à jour docs/ETAT.md avant la fin de session
-- [ ] SUITE : Rémy colle le message à l'agent SEO → compte-rendu SEO → audit CEO → message Builder
+- [x] SUITE : Rémy colle le message à l'agent SEO → compte-rendu SEO → audit CEO → message Builder
+
+## Session du 27/07/2026 (CEO — audit SEO + lancement Builder)
+
+- [x] Audit CEO des 2 livrables SEO : verdict POSITIF (plan = référence unique des pages)
+- [x] Contre-vérification indépendante des 12 communes sur geo.api.gouv.fr : tout exact
+- [x] Vérification couverture blog : 24 sujets, chaque service couvert par au moins 2 articles
+- [x] Message Builder préparé et remis à Rémy
+- [ ] SUITE : compte-rendu Builder → contrôle visuel CEO (côte à côte Metz ET Dijon, 1 image
+      unique par commune, zéro tiret cadratin) → passe corrective éventuelle → Autoblog
+
+## Décisions en attente de Rémy (à trancher, non bloquant pour lancer le Builder)
+
+- Rayon d'intervention : le SEO propose 15 km (Metz est à 30). Le Builder posera 15 en DEMO.
+- Périodicité réglementaire de l'entretien chaudière : aucun chiffre publié tant que la source
+  n'est pas confirmée (le site renverra à « la réglementation en vigueur »).
+- Achat du domaine sos-chauffage-reims.fr + numéro 09 dédié + email + nom commercial.
 
 ## En attente de Rémy
 

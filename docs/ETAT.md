@@ -61,7 +61,7 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 
 - [ ] Rémy : valider le domaine (reco : sos-chauffage-reims.fr), l'acheter, fournir le 09 dédié + email + nom commercial
 - [x] CEO (27/07) : repo GitHub `Remy-authority/sos-chauffage-reims` (public, `main` poussé) + projet Vercel `sos-chauffage-reims` relié au repo + `SEO_NOINDEX=1` posé en Production AVANT le premier déploiement + Framework Preset vérifié via l'API : « nextjs » ✓ (leçon Dijon) + GitHub Action `publish-article.yml` active
-- [ ] SEO : carte mots-clés chauffage/chaudière Reims + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` ALIGNÉ SUR LA SAISON (sujets chauffage d'octobre à février en priorité, entretien/été ensuite ; codes postaux via geo.api.gouv.fr)
+- [x] SEO : carte mots-clés chauffage/chaudière Reims + `docs/SEO-GEO-PLAN.md` + `docs/CALENDRIER-EDITORIAL.md` ALIGNÉ SUR LA SAISON (sujets chauffage d'octobre à février en priorité, entretien/été ensuite ; codes postaux via geo.api.gouv.fr) — fait le 27/07/2026, AUDITÉ ET VALIDÉ par le CEO le 27/07 (contre-vérification indépendante des 12 communes sur geo.api.gouv.fr : codes postaux, populations et distances tous exacts)
 - [ ] Builder : `config/site.config.ts` (identité, palette chauffage, persona DEMO, numéro fiction ARCEP en attendant le 09) + `content/legal.json`
 - [ ] Builder : `content/services/*.json` et `content/zones/*.json` (communes agglo Reims) selon le plan SEO
 - [ ] Builder sur Opus : identité visuelle Reims (ADN PROTEC-DARD, rendu distinct de Metz ET Dijon)
@@ -90,3 +90,22 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   préparé et remis à Rémy : le plan SEO (`docs/SEO-GEO-PLAN.md`) sera la référence unique
   des pages, le Builder n'improvise rien (leçon Dijon). Prochaine étape : compte-rendu SEO,
   puis lancement Builder.
+- **27/07/2026 (SEO)** : rédaction de `docs/SEO-GEO-PLAN.md` (8 pages services dont dépannage
+  pompe à chaleur, chaudière gaz/fioul, radiateur froid, fuite, ballon d'eau chaude, entretien
+  annuel ; 12 pages zones avec codes postaux vérifiés un par un sur geo.api.gouv.fr, rayon
+  proposé 15 km ; schema.org `HVACBusiness` suggéré à la place de `Plumber` hérité de Metz) et
+  de `docs/CALENDRIER-EDITORIAL.md` (24 sujets sur 12 mois, cadence pondérée 9/6/4/5 par
+  trimestre pour que le premier trimestre de publication, Octobre-Décembre, soit le plus
+  fourni). Périmètre respecté : uniquement `docs/`, aucun fichier `content/`, `config/` ou
+  code touché. En attente d'audit CEO avant transmission au Builder.
+- **27/07/2026 (CEO, audit SEO)** : audit des deux livrables SEO, verdict POSITIF. Contre-vérification
+  indépendante des 12 communes sur geo.api.gouv.fr (script CEO) : codes postaux, populations et
+  distances tous exacts. Doctrine respectée (aucun chiffre inventé, pas de tiret cadratin dans les
+  textes destinés au site, périmètre docs/ seul). Couverture blog vérifiée : 24 sujets, chaque
+  service couvert par au moins 2 articles, cadence pondérée 9/6/4/5 confirmée dans le calendrier.
+  Deux points relevés, non bloquants : le plan indique « rayon 20 km retenu pour Metz » alors que
+  Rémy a tranché 30 km le 26/07 (sans effet sur la proposition Reims) ; la proposition de rayon
+  15 km et la périodicité réglementaire de l'entretien restent à trancher/confirmer par Rémy.
+  Message Builder préparé et remis à Rémy. Écart signalé par le SEO (page PAC à la place d'une
+  page « remplacement chaudière », remplacement traité en blog + FAQ entretien) : approuvé par le
+  CEO, cohérent avec le positionnement dépannage.
