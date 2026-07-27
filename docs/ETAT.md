@@ -92,10 +92,20 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - 27/07/2026 : **rayon d'intervention 30 km** (et non les 15 km proposés par le SEO). Les 12
   communes du plan restent valables (toutes sous 13 km), le rayon élargit la zone annoncée.
 - 27/07/2026 : **domaine validé : sos-chauffage-reims.fr**, ACHETÉ par Rémy le 27/07 (en attente de validation registrar/AFNIC). DNS à ne pas toucher avant l'Étape 6.
-- 27/07/2026 : le numéro 09 sera pris sur **Twilio**, tâche CEO (en attente des accès API
-  Twilio de Rémy ; aucun identifiant Twilio trouvé sur la machine). Attention : un numéro
-  français sur Twilio exige un dossier réglementaire approuvé (justificatif d'adresse et
-  d'identité) avant l'achat.
+- 27/07/2026 : le numéro 09 sera pris sur **Twilio**. MISE À JOUR 28/07 après vérification
+  CEO : le système Twilio du portefeuille existe et fonctionne (clés dans
+  `APPLICATIONS/RépondeurIA/leadcatch/.env.local`, bundle réglementaire FR approuvé, numéros
+  Metz et Dijon déjà achetés avec renvoi vers le 07 de Rémy). Le 09 de Reims n'est PAS encore
+  acheté : stock Twilio de +339 vérifié à ZÉRO le 28/07. La surveillance d'achat automatique
+  du CEO-portefeuille tourne (processus `achat-09-twilio.sh` vérifié actif) : NE PAS lancer
+  de 2e surveillance (risque de double achat). À l'achat : vérifier voice_url, puis Builder
+  pour site.config + cockpit (recette `docs/INFRA-NOUVEAU-SITE.md` du portefeuille).
+- 28/07/2026 : infra domaine/email gérée par le CEO-portefeuille via l'API OVH : domaine
+  commandé (AFNIC en cours), redirection `contact@sos-chauffage-reims.fr` → boîte de Rémy
+  posée (MX + SPF, schéma Dijon). Le pointage DNS vers Vercel attendra le GO de mise en ligne.
+- 28/07/2026 : CEO site : `RESEND_API_KEY` + `RESEND_FROM` posées en Production sur le projet
+  Vercel Reims (recette INFRA §2) : les leads du formulaire partiront par email dès la mise
+  en ligne (prendra effet au prochain déploiement).
 - 27/07/2026 : **validation visuelle Rémy du site → merge sur `main` fait** (commit 88edd49).
   La prod Vercel sert le site Reims complet, toujours noindex.
 - 27/07/2026 : **nouvelle cadence éditoriale décidée par Rémy** : 10 articles publiés le jour
