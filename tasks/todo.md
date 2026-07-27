@@ -45,11 +45,21 @@
       (script Playwright), valeurs finales correctes 24h/24, 7j/7, 30 km, 8 prestations.
       C'était une capture à ~90 % de l'animation (leçon Metz confirmée une 2e fois)
 - [x] Verdict CEO : POSITIF sous réserve d'une passe corrective à 3 points
-- [ ] Passe corrective Builder : (1) backdrop du menu mobile, (2) restructuration fingerprint
-      du tailwind.config (noms de tokens, ordre, variables CSS), (3) permutation réelle de
-      l'ordre des sections d'accueil
-- [ ] Autoblog : drafts T1 (9 articles octobre-décembre, préfixes 001-009) sur la branche builder
-- [ ] Re-contrôle CEO après passe corrective → validation Rémy → merge main
+- [x] Passe corrective Builder (28fe2cb) : les 3 points livrés
+- [x] Autoblog : 9 drafts T1 livrés (3b03eaa)
+- [x] Re-contrôle CEO de la passe corrective, TOUT REVÉRIFIÉ INDÉPENDAMMENT :
+      zéro reliquat des anciens tokens (ink/sand/brand/accent/--c-), ordre des sections
+      réellement permuté (non superposable à Metz), tsc + build verts, 48 classes d'opacité
+      toutes vivantes dans le CSS généré, voile du menu mobile vérifié en capture (page
+      assombrie et floutée, clic sur le voile ferme le menu), alternance des fonds saine
+      sur la pleine page (une seule paire sombre, assumée)
+- [x] Audit CEO des 9 drafts Autoblog : conformes (frontmatter complet, auteur = persona DEMO
+      Aurélien Godart, ouvertures en réponse directe, zéro tiret, zéro chiffre inventé, zéro
+      mot hors périmètre ; l'unique « canalisation » est la désambiguïsation exigée par le
+      plan SEO). Point noté : champ `author` du frontmatter dormant (non consommé par le
+      template), sans effet de rendu, à brancher plus tard si utile
+- [ ] VALIDATION RÉMY sur la preview → merge `main`
+- [ ] Ensuite : achat domaine + 09 Twilio (clés attendues) + email/identité → mise en ligne Étape 6
 
 ## Directive du CEO-portefeuille reçue le 27/07/2026 (barre « niveau Dijon » + fingerprint)
 

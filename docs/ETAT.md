@@ -67,13 +67,21 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
 - [x] Builder sur Opus (27/07) : identité visuelle Reims (ADN PROTEC-DARD conservé, palette et logo propres, section « du symptôme à la cause » spécifique au site, animation `heat-rise`)
 - [x] Builder (27/07) : logo, favicon + `icon-192/512.png`, portrait persona, OG, 32 visuels générés dont **12 images de commune uniques** (aucun pool partagé), aucun texte/logo/visage flou
 - [x] Builder (27/07) : SEO technique, schema `HVACBusiness` à la place de `Plumber`, `FAQPage` sur toutes les FAQ, `llms.txt` régénéré dynamiquement (8 services + 12 zones)
-- [ ] Autoblog : drafts T1 orientés saison de chauffe (préfixes 001-…)
+- [x] Autoblog (27/07) : 9 drafts T1 (001-009, octobre-décembre) livrés et AUDITÉS par le CEO :
+      conformes doctrine (auteur = persona DEMO, réponses directes en ouverture, zéro tiret,
+      zéro chiffre inventé, zéro mot hors périmètre)
 - [x] Contrôle visuel CEO du 27/07 : POSITIF sous réserve d'une passe corrective à 3 points
       (backdrop menu mobile, restructuration fingerprint tailwind, permutation des sections
       d'accueil, les 2 derniers exigés par la directive du CEO-portefeuille « barre Dijon »).
       12 communes différenciées confirmées, côte à côte Metz/Dijon/Reims distinct, compteur
       30 km vérifié au DOM (l'alerte « 28 km » de l'agent était une capture mi-animation)
-- [ ] Passe corrective Builder (3 points) → re-contrôle CEO → validation Rémy → mise en ligne (Étape 6) ⏰ avant fin septembre
+- [x] Passe corrective Builder (28fe2cb) livrée et RE-CONTRÔLÉE par le CEO le 27/07 : voile
+      menu mobile vérifié en capture (assombrit, floute, ferme au clic), empreinte Tailwind
+      cassée (zéro reliquat ink/sand/brand/accent/--c-, lexique braise/flamme/craie/fonte,
+      48 classes d'opacité toutes vivantes), sections réellement permutées (alternance des
+      fonds saine, une seule paire sombre assumée), tsc + build verts. Barre « niveau Dijon »
+      du CEO-portefeuille : ATTEINTE sur les 6 critères
+- [ ] VALIDATION RÉMY sur la preview → merge `main` → mise en ligne (Étape 6) ⏰ avant fin septembre
 - [ ] Post-mise en ligne : GSC (propriété + sitemap) + Bing Webmaster Tools (nouvelle étape standard)
 
 ## 3. DÉCISIONS RÉMY
