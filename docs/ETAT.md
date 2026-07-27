@@ -139,6 +139,19 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   MISE À JOUR 28/07 : livré, voir `docs/CALENDRIER-EDITORIAL.md` v2 (78 sujets, sujets 1-10
   déjà consommés/en cours retirés de la liste) et l'historique ci-dessous. En attente d'audit CEO.
 
+## 🏁 BILAN DE LA SÉQUENCE DE LANCEMENT (27/07/2026, une seule journée)
+
+Site n°5 passé de la duplication à EN LIGNE en une journée : infra (repo + Vercel + noindex
+verrouillé), plan SEO audité, site construit et contrôlé (2 passes), 10 articles publiés,
+domaine acheté + DNS + email, GSC validée, Bing (11 propriétés du portefeuille), et
+CALENDRIER V2 INTÉGRALEMENT RÉDIGÉ : 88 articles produits (10 publiés + 78 en réservoir),
+publication automatique 3/semaine armée jusqu'à fin janvier 2027. Audits CEO : 6 lots de
+13 drafts contrôlés un par un, pire chevauchement mesuré entre articles voisins : 2,9 %.
+
+**Veilles actives** : premier run planifié du cron (mercredi 29/07 ~05:00 UTC, sentinelle
+posée), achat automatique du 09 Twilio (watcher portefeuille), calendrier v3 (SEO, novembre
+2026), identité du locataire (Rémy), favicon GSC (délai de crawl normal).
+
 ## 4. HISTORIQUE DES SESSIONS
 
 - **27/07/2026 (CEO-portefeuille)** : création du dossier par duplication de Metz, nettoyage du
