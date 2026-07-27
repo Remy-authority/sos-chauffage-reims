@@ -115,6 +115,8 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   éditorial 24 sujets/12 mois est SUPERSEDÉ : le SEO doit produire un calendrier étendu
   (~80 sujets ordonnés, saisonnalité recalée sur un démarrage fin juillet, zéro cannibalisation),
   l'Autoblog rédige par lots de 13 (≈1 mois de publications), audit CEO entre chaque lot.
+  MISE À JOUR 28/07 : livré, voir `docs/CALENDRIER-EDITORIAL.md` v2 (78 sujets, sujets 1-10
+  déjà consommés/en cours retirés de la liste) et l'historique ci-dessous. En attente d'audit CEO.
 
 ## 4. HISTORIQUE DES SESSIONS
 
@@ -181,3 +183,18 @@ CEO-portefeuille). Numéro 09 dédié à prévoir (règle du portefeuille).
   app/page.tsx. Premier essai corrigé : il alignait trois fonds sombres à la suite.
   Vérifications : tsc propre, build vert (37 pages), 22 captures desktop et mobile
   re-tirées, contrôle des 29 pages rendues toujours au vert.
+- **28/07/2026 (SEO)** : `docs/CALENDRIER-EDITORIAL.md` v2, suite au changement d'échelle décidé
+  par Rémy (3 articles/semaine pendant 6 mois via la GitHub Action FIFO existante, ≈78
+  publications au lieu de 24/an). Les sujets 1-9 de la v1 déjà publiés et le sujet 10 (pression
+  de chaudière) en cours ont été retirés ; la numérotation reprend à 11. Les 14 sujets restants
+  de la v1 (anciens 11-24) sont réutilisés et repositionnés, complétés par 64 sujets nouveaux
+  organisés en familles (par appareil gaz/fioul/PAC, par symptôme, par pièce, par situation
+  locataire/propriétaire/copropriété, par événement achat/vente/absence) pour éviter toute
+  cannibalisation à cette échelle. Fenêtre couverte : Août 2026 à Janvier 2027 (6 mois pleins à
+  partir de cette semaine), 13 sujets/mois, saisonnalité recalée sur ce départ (Août-Septembre
+  entretien/prép, Octobre démarrage, Novembre-Janvier pic). Mars-avril (sortie d'hiver) hors
+  fenêtre, à traiter dans une v3 si la campagne se prolonge. Répartition par service vérifiée par
+  extraction automatique du tableau (78 lignes, chaque service couvert par au moins 2 articles,
+  minimum sur `fuite-chaudiere-circuit-chauffage`). Périmètre respecté : uniquement
+  `docs/CALENDRIER-EDITORIAL.md` et `docs/ETAT.md` touchés. En attente d'audit CEO avant
+  lancement de la rédaction des lots par l'Autoblog.
