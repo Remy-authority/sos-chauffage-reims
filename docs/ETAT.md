@@ -5,7 +5,33 @@
 
 ---
 
-## 🔖 POINT DE REPRISE (état exact au 27/07/2026 — à lire en premier)
+## 🔖 POINT DE REPRISE (état exact au 28/07/2026 au soir, à lire en premier)
+
+**LE SITE EST EN LIGNE** : https://www.sos-chauffage-reims.fr (depuis le 27/07 au soir),
+GSC validée + sitemap soumis, Bing importé (11 propriétés), 10 articles publiés + 78 en
+réservoir (publication auto lun/mer/ven, chargée jusqu'à fin janvier 2027), 88 couvertures
+d'articles en place, passe de direction artistique photos faite (décors habités).
+
+**EN ATTENTE D'AUDIT CEO À LA REPRISE** : la 9e prestation CLIMATISATION livrée par le
+Builder (commit 876199e, spec = section 7 du plan SEO commitée juste après). Points ouverts
+du compte-rendu Builder à traiter pendant l'audit :
+1. DÉCISION À PRENDRE : ajouter « climatisation » au formulaire de qualification de
+   l'accueil (LeadForm, grille passerait de 8 à 9 choix, arbitrage design) ;
+2. lien croisé PAC→clim TEXTUEL non cliquable (asymétrie de maillage, le Builder propose
+   de le rendre actif si autorisé à toucher le relatedServices de la page PAC) ;
+3. second lien clim sur la zone Bezannes (prévu en 7.3, pas encore fait) ;
+4. sous-titre du bloc prestations « Quatre logiques différentes... » antérieur à la clim ;
+5. retouche de la cover 002 (mur lépreux) : LIVRÉE dans le même commit, à contrôler.
+Bonus Builder à contrôler aussi : llms.txt corrigé (l'exclusion clim contradictoire retirée).
+
+**VEILLES ACTIVES** : premier run planifié du cron de publication (mercredi 29/07 ~05:00 UTC,
+sentinelle posée en session, à re-vérifier à la reprise via gh run list) ; achat auto du 09
+Twilio (watcher portefeuille, stock fermé au 28/07) ; calendrier v3 clim/sortie d'hiver (SEO,
+vers novembre) ; identité locataire (Rémy) ; favicon GSC (délai de crawl).
+
+---
+
+## 🔖 ANCIEN POINT DE REPRISE (27/07/2026, avant lancement)
 
 **Site n°5 du portefeuille** (métier : dépannage chauffage/chaudière, ville : Reims, 51). Rien
 n'est en ligne : dossier créé par duplication de **`sos-debouchage-metz.fr`** (socle design
