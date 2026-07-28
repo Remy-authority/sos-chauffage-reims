@@ -41,11 +41,17 @@ obligatoire. **Le site NE couvre PAS** :
   circuit de chauffage (radiateurs, tuyauterie de chauffage) ;
 - l'électricité générale : déjà couvert par `sos-electricien-annecy.fr` et
   `sos-electricien-dijon.fr` ;
-- la climatisation, les poêles à bois/granulés et l'installation neuve
-  (chaudière neuve, pompe à chaleur neuve hors dépannage) : marchés et
-  installateurs différents, hors positionnement « dépannage » de ce site. La
-  pompe à chaleur est couverte ici uniquement sous l'angle dépannage d'un
-  appareil existant, jamais sous l'angle installation/vente.
+- les poêles à bois/granulés et l'installation neuve (chaudière neuve, pompe
+  à chaleur neuve hors dépannage) : marchés et installateurs différents, hors
+  positionnement « dépannage » de ce site. La pompe à chaleur est couverte ici
+  uniquement sous l'angle dépannage d'un appareil existant, jamais sous
+  l'angle installation/vente.
+
+> **Amendement du 28/07/2026** : la climatisation sortait jusqu'ici de ce
+> cadrage. Décision de Rémy du 28/07/2026, le site ajoute la climatisation à
+> ses prestations. Elle n'est plus une exclusion, elle a désormais sa propre
+> page service (9e page, cf. section 2.1 et section 7 pour la frontière
+> précise avec la pompe à chaleur).
 
 Doctrine SEO/GEO du CLAUDE.md : pas de fiche Google Business, pas d'avis, SEO
 organique + citabilité IA uniquement. Aucun chiffre inventé (pas de nombre
@@ -124,13 +130,18 @@ pendant la panne.
 
 ### 1.5 Négatif / à ne jamais cibler
 
-- climatisation, clim, poêle à bois, poêle à granulés, installation de pompe
-  à chaleur neuve, installation de chaudière neuve hors remplacement d'un
-  appareil en fin de vie (hors positionnement dépannage, cf. cadrage) ;
+- poêle à bois, poêle à granulés, installation de pompe à chaleur neuve,
+  installation de chaudière neuve hors remplacement d'un appareil en fin de
+  vie (hors positionnement dépannage, cf. cadrage) ;
 - plomberie générale, recherche de fuite d'eau sanitaire, débouchage de
   canalisation (chevauchement avec Angers et Metz, cf. cadrage) ;
 - électricien, installation électrique (chevauchement avec Annecy et Dijon) ;
 - toute requête impliquant avis Google, note, classement (doctrine sans avis).
+
+> **Amendement du 28/07/2026** : climatisation et clim retirées de cette
+> liste négative. Décision de Rémy du 28/07/2026 d'ajouter la climatisation
+> aux prestations du site, ces mots-clés sont désormais autorisés et ciblés
+> par la nouvelle page `depannage-climatisation` (cf. section 7).
 
 Note : contrairement au site Metz où « plombier » était à éviter, **« chauffagiste »
 n'est pas un mot à éviter ici, c'est le terme métier cible** à utiliser
@@ -140,7 +151,7 @@ naturellement dans les H1, intros et FAQ.
 
 ## 2. Architecture de pages
 
-### 2.1 Pages SERVICES (8) — `content/services/*.json`
+### 2.1 Pages SERVICES (9) — `content/services/*.json`
 
 Ordre = ordre `order` recommandé (urgence en premier). Les 8 fichiers déjà
 présents dans `content/services/` sont des templates Metz à renommer et
@@ -156,6 +167,7 @@ réécrire intégralement (mapping exact en section 6).
 | 6 | `fuite-chaudiere-circuit-chauffage` | Fuite de chaudière et de circuit de chauffage à Reims | fuite chaudière Reims | Urgence dégât des eaux, distinction fuite chaudière vs fuite circuit |
 | 7 | `ballon-eau-chaude-cumulus` | Dépannage de ballon d'eau chaude et cumulus à Reims | ballon eau chaude en panne Reims | Panne d'eau chaude, groupe de sécurité, résistance |
 | 8 | `entretien-chaudiere-annuel` | Entretien annuel de chaudière à Reims | entretien chaudière Reims, contrat entretien | Obligation réglementaire, contenu de la visite, meilleur moment (avant l'hiver) |
+| 9 | `depannage-climatisation` | Dépannage et entretien de climatisation à Reims | dépannage climatisation Reims, clim qui ne refroidit plus | Panne en mode froid, fuite/condensats, entretien clim, splits muraux. Frontière précise avec la PAC en section 7 |
 
 Notes de construction (structure identique au modèle
 `curage-canalisation-haute-pression.json` de Metz : `intro`, `bullets` (3),
@@ -182,6 +194,11 @@ Notes de construction (structure identique au modèle
   « réparer ou remplacer » : la question du remplacement d'une chaudière en
   fin de vie est traitée ici et en blog plutôt que sur une page dédiée, pour
   rester dans le positionnement dépannage et non vente d'installation neuve.
+- Page 9 (climatisation, ajoutée le 28/07/2026) : ne couvre que le mode
+  rafraîchissement/froid et l'entretien clim, jamais le mode chauffage d'une
+  PAC air-air réversible en panne, qui reste sur la page 4. Voir la
+  définition complète de cette frontière en section 7, à respecter au mot
+  près pour éviter le duplicate de contenu entre les deux pages.
 - Le mot « plombier » ne doit apparaître nulle part dans ces pages.
 
 ### 2.2 Pages ZONES (12) — `content/zones/*.json`
@@ -251,7 +268,7 @@ Builder couvre les 12 zones du tableau 2.2.
 ### 2.4 Page d'accueil
 
 H1 recommandé : « Dépannage chauffage et chaudière à Reims, intervention
-rapide ». Reprend la liste des 8 services en aperçu + zone de couverture
+rapide ». Reprend la liste des 9 services en aperçu + zone de couverture
 (Reims + 12 communes) + FAQ homepage (5-6 questions transversales, mix
 urgence/prix/process, tirées de la section 1.3) :
 
@@ -261,6 +278,15 @@ urgence/prix/process, tirées de la section 1.3) :
 4. Faut-il réparer ou remplacer une chaudière ancienne ?
 5. Intervenez-vous sur les chaudières gaz, fioul et les pompes à chaleur ?
 6. Que couvre l'entretien annuel obligatoire de la chaudière ?
+7. *(ajout du 28/07/2026)* Intervenez-vous aussi sur les pannes de
+   climatisation ?
+
+**Ajout du 28/07/2026** : la page `depannage-climatisation` s'insère en
+**position 9, dernière position** du grid de services sur l'accueil (`order`
+9 dans le tableau 2.1). Le site garde son identité première de dépannage
+chauffage, la climatisation est une prestation ajoutée, pas un
+repositionnement, elle n'a donc pas vocation à remonter devant l'urgence
+chauffage.
 
 ---
 
@@ -273,7 +299,7 @@ urgence/prix/process, tirées de la section 1.3) :
    la question du H2/FAQ, développement ensuite. Format « question → réponse
    → nuance/exception ».
 3. **`llms.txt`** (`app/llms.txt/route.ts`, déjà présent dans le template) : à
-   tenir à jour avec la liste des 8 services + 12 zones + articles publiés,
+   tenir à jour avec la liste des 9 services + 12 zones + articles publiés,
    description en une ligne par page. Vérifier avec le Builder que la route
    régénère bien la liste dynamiquement.
 4. **Articles de désambiguïsation métier** (section 1.3) : « chaudière gaz ou
@@ -304,6 +330,13 @@ urgence/prix/process, tirées de la section 1.3) :
   possible en second plan, urgence en premier quand même).
 - Chaque article de blog (section GEO) renvoie vers 1-2 pages services
   pertinentes en fin d'article, pas un bloc générique répété.
+- *(ajout du 28/07/2026)* `depannage-climatisation` et
+  `depannage-pompe-a-chaleur` se renvoient l'une vers l'autre pour les cas
+  ambigus (PAC air-air réversible) : lien explicite en fin d'intro sur les
+  deux pages, cf. section 7 pour le libellé exact. Côté zones, la page
+  Bezannes (logements récents, cf. section 2.2) est la mieux placée pour un
+  second lien vers `depannage-climatisation` en plus de son lien PAC
+  existant.
 
 ---
 
@@ -317,6 +350,12 @@ urgence/prix/process, tirées de la section 1.3) :
 - Périodicité exacte de l'entretien annuel de chaudière à afficher en page 8 :
   ne pas publier de chiffre avant confirmation d'une source fiable (cf. note
   section 2.1).
+- *(ajout du 28/07/2026)* Climatisation, page 9 : la réglementation sur le
+  contrôle périodique d'étanchéité des systèmes contenant du fluide
+  frigorigène existe mais dépend de la charge de fluide de l'appareil, donc
+  variable selon l'installation. Même doctrine que la page 8 : ne rien
+  afficher de chiffré (seuils, fréquence) tant que Rémy n'a pas validé une
+  source fiable, formuler en renvoyant à « la réglementation en vigueur ».
 
 ---
 
@@ -336,6 +375,11 @@ urgence/prix/process, tirées de la section 1.3) :
    | `debouchage-canalisation-enterree-regard.json` | `fuite-chaudiere-circuit-chauffage.json` |
    | `debouchage-bac-a-graisse.json` | `ballon-eau-chaude-cumulus.json` |
    | `debouchage-colonne-immeuble-copropriete.json` | `entretien-chaudiere-annuel.json` |
+
+   *(ajout du 28/07/2026)* Créer en plus un 9e fichier
+   `content/services/depannage-climatisation.json`, entièrement nouveau
+   (aucun équivalent Metz à renommer, le site Metz n'a que 8 services), selon
+   la structure de la section 7.
 
 2. Renommer et réécrire intégralement les 12 fichiers `content/zones/*.json`
    (actuellement des communes de Metz) selon le mapping suivant, contenu
@@ -370,3 +414,121 @@ urgence/prix/process, tirées de la section 1.3) :
    revérifiés au moment de la mise en ligne.
 6. Adapter le schema.org de `lib/seo.ts` de `Plumber` vers `HVACBusiness`
    (voir section 3, point 5).
+
+---
+
+## 7. Addendum climatisation (28/07/2026)
+
+> Décision de Rémy du 28/07/2026 : le site ajoute la climatisation à ses
+> prestations. Cet addendum amende le plan initial (sections 0, 1.5, 2.1,
+> 2.4, 4, 5 et 6 déjà mises à jour ci-dessus) et détaille la nouvelle page,
+> la frontière avec la pompe à chaleur, le maillage et l'impact sur le
+> calendrier éditorial futur. **Les 88 articles déjà publiés ne sont pas
+> concernés, aucune retouche.**
+
+### 7.1 La 9e page service
+
+| Champ | Valeur |
+|---|---|
+| slug | `depannage-climatisation` |
+| order | 9 |
+| H1 | Dépannage et entretien de climatisation à Reims |
+| Mot-clé principal | dépannage climatisation Reims |
+| Mots-clés secondaires | clim qui ne refroidit plus, fuite de clim, entretien climatisation, clim qui fait de l'eau |
+| Angle | Panne en mode rafraîchissement, fuite/condensats, entretien avant l'été, splits muraux. Ne couvre jamais une panne en mode chauffage (renvoi page 4) |
+
+Structure (identique aux 8 autres pages, cf. notes de construction section
+2.1 : `intro`, `bullets` (3), `blocks` (2-3), `relatedServices` (2), `faq`
+(3-4), `image`) :
+
+- **intro** : pose d'emblée le périmètre (rafraîchissement, entretien,
+  splits muraux) et le renvoi vers la page pompe à chaleur pour le mode
+  chauffage, pour couper court à toute ambiguïté dès la première phrase, y
+  compris pour l'extraction GEO.
+- **bullets** (3) : ex. « la clim ne refroidit plus ou souffle de l'air
+  tiède », « fuite d'eau ou de condensats sous l'unité intérieure »,
+  « entretien avant la saison chaude, filtres et contrôle du fluide ».
+- **blocks** (2-3) :
+  1. Diagnostic panne en mode froid : unité extérieure encrassée ou gelée,
+     filtre encrassé, fluide frigorigène insuffisant, carte électronique ou
+     télécommande.
+  2. Fuite et évacuation des condensats : bac de récupération bouché, tuyau
+     d'évacuation mal positionné ou obstrué. Préciser explicitement que
+     c'est distinct d'une fuite du circuit de chauffage (page 6), pour
+     éviter toute confusion GEO entre les deux pages.
+  3. *(optionnel)* Entretien clim avant l'été : nettoyage des filtres,
+     contrôle visuel, sans donner de fréquence chiffrée tant que Rémy n'a
+     pas validé une source (cf. section 5).
+- **relatedServices** (2) : `depannage-pompe-a-chaleur` en premier (frontière
+  directe, cf. 7.2), puis `entretien-chaudiere-annuel` (même logique
+  d'entretien préventif, saisonnalité complémentaire).
+- **faq** (3-4) :
+  1. Ma climatisation réversible sert aussi à chauffer l'hiver, en cas de
+     panne en mode chauffage, qui contacter ? Réponse courte : renvoi
+     explicite vers `depannage-pompe-a-chaleur`.
+  2. Pourquoi ma climatisation fait-elle de l'eau sous l'unité intérieure ?
+  3. Faut-il faire entretenir sa climatisation chaque année ?
+  4. Ma climatisation refroidit moins bien qu'avant, est-ce grave ?
+- **image** : `public/services/depannage-climatisation.jpg`, décor propre
+  (unité intérieure murale ou technicien sur unité extérieure), jamais
+  réutilisée depuis une autre page du site.
+
+### 7.2 Frontière PAC / climatisation, règle noir sur blanc
+
+Une clim réversible est une PAC air-air. Sans règle claire, les deux pages
+se recouvrent et se cannibalisent en SEO. Règle retenue :
+
+| Cas | Page cible |
+|---|---|
+| L'appareil ne chauffe plus, panne en hiver, mode chauffage en général | `depannage-pompe-a-chaleur` (page 4) |
+| L'appareil ne refroidit plus, panne en été, mode rafraîchissement | `depannage-climatisation` (page 9) |
+| Fuite ou eau de condensats en mode froid, sous l'unité intérieure | `depannage-climatisation` |
+| Fuite ou dégât des eaux côté circuit de chauffage (inchangé) | `fuite-chaudiere-circuit-chauffage` (page 6) |
+| Entretien clim (filtres, fluide, désinfection) | `depannage-climatisation` |
+| Entretien chaudière/PAC classique (inchangé) | `entretien-chaudiere-annuel` (page 8) |
+| Split mural, quel que soit le mode évoqué | `depannage-climatisation`, avec renvoi PAC si la panne décrite est en mode chauffage |
+
+Chaque page renvoie explicitement vers l'autre pour les cas ambigus :
+
+- `depannage-pompe-a-chaleur` (page 4) ajoute une phrase en intro ou un
+  premier item FAQ du type : « Si votre pompe à chaleur est un modèle
+  réversible et qu'elle ne refroidit plus en été, direction notre page
+  dépannage climatisation. »
+- `depannage-climatisation` (page 9) ajoute le symétrique : « Si votre
+  climatisation réversible ne chauffe plus en hiver, c'est une panne de
+  pompe à chaleur, direction notre page dédiée. »
+
+Objectif : chaque page couvre un mode d'usage distinct du même type
+d'appareil, aucune des deux ne doit lister les causes de panne de l'autre
+mode, pour éviter le duplicate de contenu et clarifier l'intention de
+recherche autant pour Google que pour les moteurs IA.
+
+### 7.3 Maillage (résumé, détail en section 4 amendée)
+
+- Accueil : page 9 en dernière position du grid de services, FAQ homepage
+  question 7 ajoutée (cf. section 2.4).
+- Zones : Bezannes en priorité pour un second lien climatisation (logements
+  récents, cf. section 2.2), les autres zones gardent leur premier lien
+  actuel sans modification.
+- Pages services : lien croisé PAC ↔ climatisation obligatoire (cf. 7.2).
+
+### 7.4 Note pour le calendrier éditorial v3 (à ne pas exécuter maintenant)
+
+Les 88 articles déjà publiés (`CALENDRIER-EDITORIAL.md` v1/v2) ne sont **pas
+retouchés**. Cette note prépare uniquement une v3 future :
+
+- Les sujets climatisation deviennent autorisés (ils étaient exclus en
+  section 1.5 avant ce 28/07/2026).
+- Le créneau **mai à septembre**, jusqu'ici un creux d'audience pour un site
+  positionné chauffage, devient la saison naturelle des sujets clim :
+  entretien avant l'été, panne de clim en pleine canicule, choix entre
+  entretien et dépannage avant la saison chaude. C'est un vrai levier pour
+  lisser la saisonnalité du site sur l'année plutôt que de concentrer tout
+  le trafic sur octobre-novembre.
+- Angle GEO à prévoir en v3 : mêmes principes que la section 3 (réponse
+  courte et autonome, balisage `FAQPage`), sur des requêtes du type
+  « pourquoi ma clim fait de l'eau », « clim qui ne refroidit plus, que
+  faire », « faut-il entretenir sa climatisation tous les ans ».
+- Pas de nouveaux articles à écrire maintenant : cette section sert de mémo
+  pour la prochaine passe calendrier, décision de lancement au CEO le
+  moment venu.
