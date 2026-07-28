@@ -273,3 +273,26 @@ posée), achat automatique du 09 Twilio (watcher portefeuille), calendrier v3 (S
   pour doublon visuel ou texte incrusté), listing `/conseils` et 3 articles en desktop et mobile
   (aucune image cassée, aucune erreur console), `og:image` et le JSON-LD `Article` reprennent bien
   le cover.
+- **28/07/2026 (Builder)** : **passe de direction artistique corrective** sur les photos, demandée
+  par Rémy (plusieurs visuels versaient dans le misérabilisme : cave d'abandon du brûleur fioul,
+  mur lépreux du radiateur froid, pénombre de plusieurs cartes). Cap tenu : on reste chez de vrais
+  gens dans de vrais logements, mais **habités et entretenus**. Planche contact des **120 visuels**
+  du site puis classement en trois piles : **55 conformes, 18 limites, 47 à refaire**. Les 47 ont
+  été régénérés (hero, 5 des 6 cartes de la galerie d'accueil, 6 des 8 images de service, 35
+  couvertures d'articles), sujet technique identique par image, traitement du décor et de la
+  lumière changé. Gardés volontairement : `05-manometre-pression` (registre cible cité par Rémy),
+  les 3 gestes, les 12 images de commune, le persona et l'OG. Interdits ajoutés au style de
+  génération : cave à l'abandon, mur écaillé ou moisi, crasse, rouille envahissante,
+  sous-exposition. **Contrôle antitexte en grand format** sur les 47 : 5 rejets détectés et repris
+  (un écran de chaudière affichant du texte inventé, deux marques de fabricant réelles gravées par
+  le modèle, une étiquette signalétique lisible, un corps de chauffe rouillé là où l'article parle
+  de calcaire). Mêmes largeurs qu'avant (hero 1920, galerie 900, services 1600, covers 1200), JPEG
+  progressif q80 : `public/` passe de **15 à 14 Mo**. Contrôles : build vert (47 pages), accueil,
+  `/conseils`, deux articles et une page service capturés en desktop et mobile, aucune image
+  cassée, aucune erreur console. Poussé sur `main` (`c4756c0`).
+  ⚠️ **À faire à la mise en ligne** : les images ont gardé leur nom de fichier, donc le cache de
+  l'optimiseur d'images (en local `.next/cache/images`, en production celui de Vercel) peut
+  continuer à servir les ANCIENNES photos après déploiement. Vérifier le rendu réel après le
+  premier déploiement et purger le cache Vercel si les anciennes images réapparaissent.
+  ➜ La 9e prestation climatisation n'a pas été anticipée (addendum SEO en cours d'audit) :
+  elle fera l'objet d'un ordre de mission séparé, visuel compris.
