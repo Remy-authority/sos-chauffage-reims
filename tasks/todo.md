@@ -157,5 +157,11 @@ Constats CEO sur Reims vis-à-vis de cette barre :
       PAC/clim) et décision consignée. Les 88 articles existants ne sont pas retouchés.
 - [x] Décision Rémy : passe DA photos (décors trop pauvres) → message Builder Opus
       (planche contact 3 piles, priorité galerie accueil)
-- [ ] Audit CEO de l'addendum SEO clim → ordre de mission Builder (9e page)
-- [ ] Audit CEO de la passe photos (avant/après, unicité, poids)
+- [x] Audit CEO de l'addendum SEO clim : VALIDÉ (table de frontière PAC/clim au cordeau,
+      renvois croisés symétriques, sections 0/1.5/2.1/2.4/4/6 amendées et datées, note v3)
+- [x] Audit CEO de la passe photos : VALIDÉ. Contre-vérifié : 120 images uniques, 13,3 Mo,
+      88 covers câblées, prod à jour Y COMPRIS l'optimiseur d'images (vérifié visuellement).
+      Résidu identifié : la cover de l'article 002 (mur lépreux) conservée à cause d'une
+      « référence » ambiguë du CEO (leçon consignée) → dans la mission clim
+- [ ] Builder : page climatisation (addendum section 7) + lien croisé PAC + image service
+      + retouche cover 002 → audit CEO
