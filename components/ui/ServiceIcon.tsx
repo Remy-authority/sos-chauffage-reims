@@ -1,4 +1,5 @@
 import {
+  AirVent,
   BadgeCheck,
   CalendarCheck,
   Clock,
@@ -34,6 +35,7 @@ const ICONS: Record<string, LucideIcon> = {
   leak: Droplets,
   tank: Thermometer,
   maintenance: CalendarCheck,
+  aircon: AirVent,
   // Étapes et arguments
   phone: Phone,
   search: Search,

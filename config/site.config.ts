@@ -285,6 +285,10 @@ export const siteConfig = {
       q: "Que couvre l'entretien annuel obligatoire de la chaudière ?",
       a: "La visite d'entretien couvre le nettoyage et la vérification de l'appareil, le contrôle des organes de sécurité et de l'évacuation des fumées, le réglage de la combustion et la mesure des émissions, puis la remise d'une attestation d'entretien. Cette attestation est le document que votre assureur peut réclamer après un sinistre. L'entretien des appareils de chauffage est encadré par la réglementation en vigueur : nous vous indiquons ce qu'elle impose pour votre appareil au moment de la prise de rendez-vous.",
     },
+    {
+      q: 'Intervenez-vous aussi sur les pannes de climatisation ?',
+      a: "Oui, sur la climatisation en mode rafraîchissement : un appareil qui ne refroidit plus ou souffle tiède, de l'eau qui apparaît sous l'unité intérieure, et l'entretien des filtres avant la saison chaude. Une précision utile si votre appareil est réversible : quand il ne chauffe plus en hiver, la panne relève du mode chauffage et se traite comme une panne de pompe à chaleur, pas comme une panne de climatisation. Ce sont deux diagnostics différents sur la même machine, alors indiquez-nous le mode dans lequel elle vous lâche.",
+    },
   ],
 
   /* ── Légal (GABARIT, à compléter par Rémy avant prod) ── */

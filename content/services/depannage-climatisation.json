@@ -1,0 +1,52 @@
+{
+  "slug": "depannage-climatisation",
+  "order": 9,
+  "icon": "aircon",
+  "navTitle": "Climatisation",
+  "h1": "Dépannage et entretien de climatisation à Reims",
+  "metaTitle": "Dépannage et entretien de climatisation à Reims",
+  "metaDescription": "Climatisation qui ne refroidit plus, eau sous l'unité intérieure, entretien avant la saison chaude à Reims. Dépannage de splits muraux, tarif annoncé avant.",
+  "intro": "Cette page couvre la climatisation en mode rafraîchissement, l'eau qui apparaît sous l'unité intérieure et l'entretien des splits muraux avant la saison chaude ; si votre climatisation réversible ne chauffe plus en hiver, c'est une panne de pompe à chaleur et c'est notre page dépannage de pompe à chaleur qui traite ce cas. Nous intervenons sur des climatiseurs déjà installés à Reims et dans les communes de l'agglomération, sous l'angle du dépannage et de l'entretien, jamais de l'installation neuve.",
+  "bullets": [
+    "La clim ne refroidit plus ou souffle tiède",
+    "Eau ou condensats sous l'unité intérieure",
+    "Entretien des filtres avant la saison chaude"
+  ],
+  "blocks": [
+    {
+      "heading": "La climatisation ne refroidit plus ou souffle de l'air tiède",
+      "body": "Une climatisation qui souffle mais ne rafraîchit plus a rarement une cause unique, et les plus fréquentes sont aussi les plus simples. Nous commençons par ce qui se voit : le filtre de l'unité intérieure, qui s'empoussière au fil des saisons et étouffe le débit d'air jusqu'à faire givrer l'échangeur, puis l'unité extérieure, dont les ailettes se chargent de poussière, de pollen et de feuilles, et qui se met à recycler son propre air chaud quand un coffrage, une haie ou un abri a été posé trop près. Vient ensuite la commande elle-même : un appareil basculé sur ventilation ou sur déshumidification souffle sans refroidir, et une consigne restée haute produit exactement la même impression de panne. Restent les causes internes, sonde, ventilateur, carte électronique, et le cas d'une charge en fluide frigorigène devenue insuffisante, qui se traduit par un refroidissement de plus en plus faible. Sur ce dernier point, une limite à connaître dès l'appel : les interventions sur le circuit frigorifique, celui qui contient le fluide, relèvent d'une attestation de capacité spécifique et d'un outillage dédié. Quand le diagnostic conduit là, nous vous le disons clairement et nous vous orientons plutôt que de bricoler."
+    },
+    {
+      "heading": "De l'eau sous l'unité intérieure, ce sont les condensats",
+      "body": "De l'eau qui goutte sous un split mural vient presque toujours des condensats, pas d'une fuite de votre installation de chauffage. En mode froid, l'appareil refroidit l'air de la pièce, l'humidité de cet air se condense sur l'échangeur exactement comme sur un verre glacé, et cette eau est récupérée dans un bac puis évacuée par un petit tuyau. Tant que le chemin est libre, vous ne voyez rien. Dès que le bac s'encrasse, que le tuyau se bouche, se pince derrière un meuble ou remonte au lieu de descendre, l'eau déborde du bac et coule le long du mur. C'est désagréable, cela tache la peinture et le sol, mais cela se reprend. La distinction compte pour vous comme pour nous : une eau qui apparaît sous un climatiseur en pleine saison chaude est un problème d'évacuation de condensats, alors qu'une eau qui apparaît sous une chaudière ou le long d'un radiateur est une fuite du circuit de chauffage, traitée sur notre page dédiée à la fuite de chaudière et de circuit de chauffage. Deux origines différentes, deux interventions différentes."
+    },
+    {
+      "heading": "L'entretien de la climatisation avant la saison chaude",
+      "body": "Le bon moment pour faire entretenir une climatisation est le printemps, avant la première vraie chaleur, parce que c'est le seul moment où l'on peut prendre rendez-vous sans subir la panne. La visite porte sur le nettoyage ou le remplacement des filtres de l'unité intérieure, le dépoussiérage de l'échangeur et du ventilateur, le contrôle de l'écoulement des condensats du bac jusqu'à la sortie, l'état de l'unité extérieure et de ses abords, puis un essai en mode froid pour vérifier que l'appareil tient sa consigne. Un climatiseur entretenu refroidit avec moins d'efforts, consomme moins pour le même résultat et souffle un air plus sain, un filtre encrassé étant un support à poussière et à odeurs. Sur la périodicité, nous ne vous donnerons pas de chiffre à la légère : elle dépend de l'appareil, de son usage et du type d'installation, et certains équipements sont en plus soumis à des contrôles périodiques selon leur charge en fluide frigorigène. Nous vérifions ce qui s'applique à votre installation au moment de la prise de rendez-vous."
+    }
+  ],
+  "relatedServices": [
+    "depannage-pompe-a-chaleur",
+    "entretien-chaudiere-annuel"
+  ],
+  "faq": [
+    {
+      "q": "Ma climatisation réversible sert aussi à chauffer l'hiver, en cas de panne en mode chauffage, qui contacter ?",
+      "a": "Une climatisation réversible qui ne chauffe plus est une panne de pompe à chaleur air-air, et c'est notre page dépannage de pompe à chaleur qui traite ce cas. La raison est simple : en mode chauffage, l'appareil travaille à l'envers, il prélève la chaleur de l'air extérieur, son unité extérieure givre et lance des cycles de dégivrage, et les causes de panne n'ont plus rien à voir avec celles du mode froid. Nous intervenons dans les deux cas, mais le diagnostic n'est pas le même, alors décrivez-nous le mode dans lequel l'appareil vous lâche."
+    },
+    {
+      "q": "Pourquoi ma climatisation fait-elle de l'eau sous l'unité intérieure ?",
+      "a": "Parce que l'évacuation de ses condensats ne se fait plus. Un climatiseur en mode froid condense l'humidité de l'air ambiant sur son échangeur, récupère cette eau dans un bac et l'évacue par un tuyau. Si le bac est encrassé, si le tuyau est bouché, pincé ou mal orienté, l'eau déborde et coule le long du mur. Ce n'est pas une fuite de votre circuit de chauffage, et ce n'est pas non plus le fluide frigorigène, qui est un gaz et ne coule pas. La remise en état consiste à nettoyer le bac et à rétablir l'écoulement."
+    },
+    {
+      "q": "Faut-il faire entretenir sa climatisation chaque année ?",
+      "a": "Un entretien régulier est utile sur tout climatiseur, ne serait-ce que pour les filtres, qui conditionnent à la fois le froid produit et la qualité de l'air soufflé. Quant à la périodicité exacte, elle dépend de l'appareil, de son usage et du type d'installation, et certains équipements sont soumis en plus à des contrôles périodiques liés à leur charge en fluide frigorigène. Plutôt que d'annoncer une règle unique qui ne vaudrait pas pour tout le monde, nous vérifions ce qui s'applique à votre installation quand vous nous appelez."
+    },
+    {
+      "q": "Ma climatisation refroidit moins bien qu'avant, est-ce grave ?",
+      "a": "Pas forcément, mais c'est un signal à ne pas laisser traîner. Une perte de froid progressive vient le plus souvent d'un filtre encrassé ou d'une unité extérieure empoussiérée, deux causes qui se corrigent par un nettoyage. Elle peut aussi venir d'une charge en fluide devenue insuffisante, et là il y a une raison à trouver, car un circuit frigorifique est fermé et ne se vide pas tout seul. Le repère utile est la progressivité : une baisse installée sur plusieurs saisons oriente vers l'encrassement, une baisse apparue en quelques jours oriente vers un défaut."
+    }
+  ],
+  "image": "/services/depannage-climatisation.jpg"
+}
