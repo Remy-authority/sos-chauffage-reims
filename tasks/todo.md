@@ -163,5 +163,19 @@ Constats CEO sur Reims vis-à-vis de cette barre :
       88 covers câblées, prod à jour Y COMPRIS l'optimiseur d'images (vérifié visuellement).
       Résidu identifié : la cover de l'article 002 (mur lépreux) conservée à cause d'une
       « référence » ambiguë du CEO (leçon consignée) → dans la mission clim
-- [ ] Builder : page climatisation (addendum section 7) + lien croisé PAC + image service
-      + retouche cover 002 → audit CEO
+- [x] Builder : page climatisation LIVRÉE (876199e) + retouche cover 002 + fix llms.txt
+      (exclusion clim contradictoire retirée). Addendum SEO flottant commité par le CEO
+      suite au signalement du Builder (bon réflexe de sa part)
+
+## PROCHAINE SESSION (reprise du 29/07)
+
+- [ ] Vérifier la sentinelle cron : le premier run PLANIFIÉ de publish-article.yml a-t-il
+      tourné mercredi ~05:00 UTC ? (gh run list, event=schedule) → article 011 publié ?
+- [ ] AUDIT CEO de la page climatisation (876199e) : conformité spec 7.1, lien croisé PAC,
+      image (nouveau standard DA), grid accueil à 9 + FAQ à 7, llms.txt, cover 002 refaite
+      (distinguable de la carte galerie), balayage tirets/chiffres
+- [ ] DÉCISION Rémy/CEO : 9e choix « climatisation » dans le LeadForm de l'accueil
+      (grille 4×2 → arbitrage design, le Builder attend le feu vert)
+- [ ] Builder (si accord) : lien PAC→clim cliquable, lien clim sur Bezannes (spec 7.3),
+      sous-titre « Quatre logiques » à rafraîchir, LeadForm selon décision
+- [ ] Veilles : 09 Twilio (watcher), favicon GSC, calendrier v3 (novembre)
