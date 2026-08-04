@@ -1,0 +1,6 @@
+{
+  "_role": "Ancrage visuel du site, lu par scripts/generate-article-images.mjs. Il fixe l'identite des images generees a la publication des articles. Deux sites du portefeuille ne doivent JAMAIS partager le meme ancrage (regle anti-footprint, docs/RECETTE-VISUELS-ARTICLES.md).",
+  "contexte": "Reims et la Marne, France : craie champenoise, facades art deco remoises, pavillons de la couronne urbaine",
+  "metier": "depannage et entretien de chauffage, chaudieres et pompes a chaleur",
+  "ambiance": "photographie d'intervention sobre, palette bordeaux et gris froid, chaufferies et organes techniques nets"
+}
