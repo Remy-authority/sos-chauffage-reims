@@ -49,8 +49,8 @@ export const siteConfig = {
   // aucun risque d'appeler un tiers. Le 09 définitif viendra de la ligne Twilio du
   // site : au moment de la bascule, SEULES ces deux lignes changent, tout le site
   // (liens tel:, schema JSON-LD, llms.txt, mentions légales) les lit d'ici.
-  phone: '+33939985100',
-  phoneDisplay: '09 39 98 51 00',
+  phone: '+33939200040',
+  phoneDisplay: '09 39 20 00 40',
   phoneIsDemo: true,
   // DEMO – domaine pas encore acheté.
   email: 'contact@sos-chauffage-reims.fr',
