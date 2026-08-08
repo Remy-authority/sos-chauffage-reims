@@ -44,13 +44,13 @@ export const siteConfig = {
   department: '51',
 
   /* ── Contact ── */
-  // DEMO – numéro pris dans la plage 09 39 98 00 00 à 09 39 98 99 99, que l'ARCEP
+  // DEMO – numéro pris dans la plage 03 53 01 00 51 à 03 53 01 00 51, que l'ARCEP
   // réserve à la fiction : aucun abonné réel ne peut se la voir attribuer, donc
   // aucun risque d'appeler un tiers. Le 09 définitif viendra de la ligne Twilio du
   // site : au moment de la bascule, SEULES ces deux lignes changent, tout le site
   // (liens tel:, schema JSON-LD, llms.txt, mentions légales) les lit d'ici.
-  phone: '+33939200040',
-  phoneDisplay: '09 39 20 00 40',
+  phone: '+33353010051',
+  phoneDisplay: '03 53 01 00 51',
   phoneIsDemo: true,
   // DEMO – domaine pas encore acheté.
   email: 'contact@sos-chauffage-reims.fr',
