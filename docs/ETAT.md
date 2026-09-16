@@ -1,5 +1,10 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 17/09/2026 : numéro 09 Twilio posé
+- Faux numéro de démo 03 53 01 00 51 retiré, remplacé par le vrai numéro 09 39 20 00 17 (décision Rémy, site avec clics).
+- Il sonne sur le téléphone de Rémy via renvoi Twilio.
+- Commit : fdd0c4e
+
 > Mémoire du projet. Chaque session lit ce fichier en arrivant et le met à jour avant de finir.
 > Dernière mise à jour : 2026-07-28 (CEO : MISE EN LIGNE du site).
 
