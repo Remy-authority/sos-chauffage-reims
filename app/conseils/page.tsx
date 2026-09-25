@@ -11,8 +11,8 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
-  title: `Conseils chauffage, ${siteConfig.city} et ${siteConfig.departmentName}`,
-  description: `Guides pratiques sur les pannes de chauffage : chaudière en sécurité, radiateur froid, pompe à chaleur, ballon d'eau chaude, entretien avant l'hiver à ${siteConfig.city}.`,
+  title: `Chauffagiste ${siteConfig.city} : conseils chaudière et chauffage`,
+  description: `Chaudière en sécurité, radiateur froid, pression qui chute, entretien : les conseils de notre chauffagiste à ${siteConfig.city} pour comprendre la panne avant d'appeler.`,
   path: '/conseils',
 })
 
@@ -52,8 +52,8 @@ export default function ConseilsListing() {
                 Les premiers articles arrivent bientôt
               </p>
               <p className="mt-4 leading-relaxed text-craie-600">
-                En attendant, une question sur une chaudière ou un radiateur qui ne suit
-                plus&nbsp;? Appelez, on vous répond directement.
+                D&apos;ici là, un souci précis avec votre chaudière ou un radiateur qui reste
+                tiède&nbsp;? Appelez, on vous répond directement.
               </p>
               <a
                 href={`tel:${siteConfig.phone}`}
@@ -82,8 +82,8 @@ export default function ConseilsListing() {
                         />
                       </div>
                     )}
-                    <div className="flex flex-1 flex-col p-7">
-                      <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-craie-500">
+                    <div className="flex flex-1 flex-col p-7 text-center lg:text-left">
+                      <div className="flex items-center justify-center gap-3 text-xs lg:justify-start font-medium uppercase tracking-wider text-craie-500">
                         <time dateTime={a.date}>{formatDateFr(a.date)}</time>
                         <span className="inline-flex items-center gap-1">
                           <Clock size={13} />
@@ -96,7 +96,7 @@ export default function ConseilsListing() {
                       <p className="mt-3 flex-1 text-sm leading-relaxed text-craie-600">
                         {a.description}
                       </p>
-                      <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-braise-600 transition-all group-hover:gap-3">
+                      <span className="mt-6 inline-flex items-center justify-center gap-2 text-sm font-medium text-braise-600 transition-all group-hover:gap-3 lg:justify-start">
                         Lire l&apos;article
                         <ArrowRight size={16} />
                       </span>

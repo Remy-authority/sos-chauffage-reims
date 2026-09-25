@@ -1,0 +1,171 @@
+{
+  "arbre-panne": {
+    "titre": "Quel symptôme, quelle prestation",
+    "branches": [
+      {
+        "symptome": "Plus de chauffage ni d'eau chaude",
+        "cause": "Chaudière en sécurité ou en panne",
+        "prestation": "urgence-depannage-chauffage-chaudiere"
+      },
+      {
+        "symptome": "Code erreur sur la chaudière gaz",
+        "cause": "Allumage, sonde ou carte électronique",
+        "prestation": "depannage-chaudiere-gaz"
+      },
+      {
+        "symptome": "Le brûleur fioul ne démarre plus",
+        "cause": "Gicleur encrassé ou pompe fioul",
+        "prestation": "depannage-chaudiere-fioul"
+      },
+      {
+        "symptome": "Un radiateur reste froid",
+        "cause": "Air ou boues dans le circuit",
+        "prestation": "radiateur-froid-desembouage-purge"
+      },
+      {
+        "symptome": "La pression chute, eau au sol",
+        "cause": "Fuite sur la chaudière ou le circuit",
+        "prestation": "fuite-chaudiere-circuit-chauffage"
+      },
+      {
+        "symptome": "Le chauffage marche, pas l'eau chaude",
+        "cause": "Ballon, résistance ou groupe de sécurité",
+        "prestation": "ballon-eau-chaude-cumulus"
+      },
+      {
+        "symptome": "Pompe à chaleur en défaut",
+        "cause": "Sonde, ventilateur ou fluide",
+        "prestation": "depannage-pompe-a-chaleur"
+      }
+    ]
+  },
+  "deroule-urgence": {
+    "titre": "Notre intervention, du premier appel à la réparation",
+    "etapes": [
+      {
+        "titre": "Vous nous appelez",
+        "texte": "Vous décrivez ce qui se passe : plus de chauffage, plus d'eau chaude, un bruit, une fuite, un voyant allumé."
+      },
+      {
+        "titre": "Le code et l'appareil",
+        "texte": "Nous vous demandons le code ou le voyant affiché, la marque et l'énergie de l'appareil, pour venir avec les bonnes pièces."
+      },
+      {
+        "titre": "La mise en sécurité",
+        "texte": "Si la situation l'exige, nous vous indiquons au téléphone les gestes qui évitent qu'elle s'aggrave."
+      },
+      {
+        "titre": "Le diagnostic sur place",
+        "texte": "Nous cherchons l'origine de la panne, pas seulement le symptôme visible."
+      },
+      {
+        "titre": "Le prix annoncé",
+        "texte": "Avant de réparer, nous vous donnons le prix ligne par ligne. Vous décidez."
+      },
+      {
+        "titre": "La réparation",
+        "texte": "Nous réparons, vérifions le fonctionnement complet et vous expliquons ce qui s'est passé."
+      }
+    ]
+  },
+  "entretien-obligation": {
+    "titre": "Entretien de chaudière : ce que dit la loi",
+    "points": [
+      {
+        "titre": "Quelles chaudières",
+        "texte": "Toute chaudière au gaz, au fioul ou à combustible solide d'une puissance de 4 à 400 kW."
+      },
+      {
+        "titre": "Quand",
+        "texte": "Une fois par année civile, par un professionnel qualifié."
+      },
+      {
+        "titre": "Qui s'en charge",
+        "texte": "L'occupant pour une chaudière individuelle, sauf si le bail prévoit autre chose. Le propriétaire ou le syndicat des copropriétaires pour une chaudière collective."
+      },
+      {
+        "titre": "L'attestation",
+        "texte": "Remise dans les 15 jours qui suivent la visite, à conserver au moins 2 ans."
+      }
+    ],
+    "source": {
+      "nom": "Légifrance, code de l'environnement, articles R224-41-4 à R224-41-8 (décret n° 2009-649 du 9 juin 2009)",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074220/LEGISCTA000020725503/",
+      "date": "2026-09-25"
+    }
+  },
+  "tva-taux": {
+    "titre": "Taux de TVA sur les travaux de chauffage",
+    "lignes": [
+      {
+        "taux": "5,5 %",
+        "cas": "Travaux d'amélioration énergétique (régulation du chauffage, calorifugeage des tuyaux, équipements à énergie renouvelable) dans un logement achevé depuis au moins 2 ans."
+      },
+      {
+        "taux": "10 %",
+        "cas": "Entretien, réparation et travaux d'amélioration dans un logement achevé depuis plus de 2 ans, y compris l'entretien d'une chaudière gaz ou fioul."
+      },
+      {
+        "taux": "20 %",
+        "cas": "Fourniture et installation d'une chaudière gaz ou fioul depuis le 1er mars 2025, travaux dans un local qui n'est pas un logement, équipement acheté directement par le particulier."
+      }
+    ],
+    "source": {
+      "nom": "Entreprendre Service-Public.fr (DILA), fiche F23568",
+      "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23568",
+      "date": "2026-02-21"
+    }
+  },
+  "desembouage-etapes": {
+    "titre": "Les étapes d'un désembouage à la pompe",
+    "etapes": [
+      {
+        "titre": "Mesurer l'embouement",
+        "texte": "Un test de turbidité de l'eau du circuit montre si les boues sont là, et en quelle quantité."
+      },
+      {
+        "titre": "Raccorder et rincer",
+        "texte": "La pompe de désembouage est branchée, toutes les vannes sont ouvertes, puis le circuit est rincé jusqu'à ce que l'eau sorte claire."
+      },
+      {
+        "titre": "Faire circuler le produit",
+        "texte": "Le désembouant tourne dans tout le circuit, avec l'eau chauffée par la chaudière quand c'est possible."
+      },
+      {
+        "titre": "Radiateur par radiateur",
+        "texte": "Chaque radiateur ou chaque boucle de plancher est traité seul, en inversant le sens du flux pour décoller les dépôts."
+      },
+      {
+        "titre": "Rincer zone par zone",
+        "texte": "Le circuit est rincé par zones, jusqu'à une eau de rinçage claire."
+      },
+      {
+        "titre": "Protéger le circuit",
+        "texte": "À la remise en eau, un inhibiteur de corrosion est ajouté, avec un biocide si le logement a un plancher chauffant, puis sa concentration est vérifiée."
+      }
+    ],
+    "source": {
+      "nom": "Xpair, dossier technique Sentinel « Comment désembouer »",
+      "url": "https://conseils.xpair.com/consulter_savoir_faire/performances-installations-chauffage-ecs/comment-desembouer.htm",
+      "date": "2026-09-25"
+    }
+  },
+  "monoxyde": {
+    "titre": "Monoxyde de carbone : l'entretien protège",
+    "chiffre": "3 000",
+    "texte": "personnes environ sont intoxiquées accidentellement au monoxyde de carbone chaque année en France. Chaudières et chauffe-eau mal entretenus ou mal réglés figurent parmi les causes principales : une vérification par un professionnel au moins une fois par an, et avant chaque remise en route, réduit ce risque.",
+    "source": {
+      "nom": "Santé publique France, communiqué du 26 novembre 2025",
+      "url": "https://www.santepubliquefrance.fr/presse/intoxications-au-monoxyde-de-carbone-adopter-les-bons-gestes-peut-sauver-des-vies",
+      "date": "2025-11-26"
+    }
+  },
+  "carte-communes": {
+    "titre": "Les communes que nous couvrons autour de Reims",
+    "source": {
+      "nom": "geo.api.gouv.fr (IGN, INSEE)",
+      "url": "https://geo.api.gouv.fr/decoupage-administratif/communes",
+      "date": "2026-09"
+    }
+  }
+}

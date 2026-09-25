@@ -2,42 +2,60 @@
   "slug": "cernay-les-reims",
   "name": "Cernay-lès-Reims",
   "postalCode": "51420",
-  "context": "Petite commune limitrophe à l'est de Reims, pavillonnaire, à quelques minutes des quartiers est de la ville.",
-  "metaTitle": "Dépannage chauffage et chaudière à Cernay-lès-Reims (51)",
-  "metaDescription": "Chauffagiste à Cernay-lès-Reims : chaudière à l'arrêt, radiateur froid, panne d'eau chaude. Gaz, fioul, pompe à chaleur. Intervention 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Cernay-lès-Reims",
-  "intro": "Nous intervenons à Cernay-lès-Reims (51420) sur les pannes de chauffage et de production d'eau chaude. Commune limitrophe à l'est de Reims, Cernay-lès-Reims est de taille modeste et essentiellement pavillonnaire : des maisons individuelles à qui il faut souvent moins de dix minutes de route depuis les quartiers est de Reims. C'est le type de commune où la rapidité d'intervention n'est jamais le sujet, et où le diagnostic fait toute la différence.",
+  "context": "Commune à l'est de Reims où le fioul reste une énergie de chauffage courante, même s'il recule.",
+  "metaTitle": "Chaudière fioul à Cernay-lès-Reims ? Chauffagiste local",
+  "metaDescription": "Brûleur fioul en défaut, cuve désamorcée, gicleur encrassé à Cernay-lès-Reims : dépannage de chaudière fioul et gaz, tarif connu avant intervention.",
+  "h1": "Chauffagiste fioul et gaz à Cernay-lès-Reims",
+  "intro": "Le fioul chauffe encore une part notable des maisons de Cernay-lès-Reims (51420), même s'il a nettement reculé en une décennie. Sur ces installations, la panne commence souvent avant la chaudière, sur la ligne qui l'alimente. Les chaudières gaz, les pompes à chaleur et les ballons d'eau chaude de la commune relèvent aussi de nos interventions.",
+  "fait": {
+    "texte": "À Cernay-lès-Reims, 14,6 % des résidences principales (93 logements) ont encore le fioul comme combustible principal de chauffage en 2023, contre 28,7 % en 2012.",
+    "source": {
+      "nom": "INSEE, dossier complet Cernay-lès-Reims, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51105",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Un seul appareil pour toute la maison",
-      "body": "Dans une maison individuelle de Cernay-lès-Reims, un seul générateur assure généralement le chauffage de toutes les pièces et, très souvent, l'eau chaude sanitaire. Cette centralisation a une conséquence directe : quand il s'arrête, tout s'arrête, et il n'existe aucune solution de repli à part le chauffage d'appoint. C'est ce qui rend la panne de chauffage plus critique en maison qu'en appartement, où les logements voisins réchauffent un peu les murs mitoyens. Cela justifie aussi une approche différente du diagnostic : plutôt que de remplacer la pièce qui a lâché et de repartir, nous regardons ce qui a conduit à cette défaillance, parce qu'un défaut non traité vous ramènera au même point dans la même saison. Concrètement, une sonde de température qui claque après un fonctionnement en surchauffe raconte quelque chose sur la circulation d'eau du circuit ; un circulateur bloqué au redémarrage d'octobre raconte quelque chose sur l'encrassement du réseau. Nous vous donnons cette lecture plutôt que la seule référence de la pièce remplacée."
+      "heading": "De la cuve au brûleur, suivre le fioul",
+      "body": "Une chaudière fioul ne démarre que si le combustible lui parvient propre et en quantité suffisante. Nous suivons donc son trajet. Dans la cuve, un niveau trop bas aspire les dépôts et l'eau accumulés au fond. Sur la ligne, un filtre colmaté ou une prise d'air désamorce la pompe. Au brûleur, un gicleur usé pulvérise mal, des électrodes déréglées n'enflamment plus le brouillard de fioul, une cellule encrassée ne voit plus la flamme et coupe tout. Le voyant rouge de mise en sécurité s'allume dans tous ces cas : il dit qu'il y a un problème, pas où il se trouve. D'où notre contrôle complet de la chaîne."
     },
     {
-      "heading": "La remise en route de la saison",
-      "body": "Sur une commune essentiellement pavillonnaire, les appels se concentrent sur quelques jours, ceux du premier vrai coup de froid, quand chacun relance une installation à l'arrêt depuis le printemps. Les défauts de cette période forment une liste courte et bien identifiée. La pression du circuit a lentement baissé pendant l'été et la chaudière refuse de démarrer. De l'air s'est accumulé en partie haute des radiateurs et une purge suffit à les remettre en service. Les vannes thermostatiques sont restées grippées en position fermée, leur pointeau enfoncé après des mois d'immobilité, ce qui laisse un ou deux radiateurs totalement froids alors que le reste chauffe. Le circulateur, immobile depuis des mois, n'arrive plus à repartir. Aucune de ces situations n'est une grosse panne, et toutes se règlent bien mieux au calme en septembre qu'un dimanche de novembre. C'est l'argument principal en faveur d'un entretien calé avant la saison plutôt qu'au milieu."
+      "heading": "Garder le fioul ou en changer : ce que la panne vous apprend",
+      "body": "Le fioul recule nettement dans la commune, et une panne est souvent le moment où la question se pose. Une chaudière fioul bien entretenue, dont les pièces restent disponibles, peut encore rendre de bons services : la réparer est alors le choix raisonnable. Si l'appareil accumule les défauts ou si la cuve montre des signes de fatigue, mieux vaut préparer un changement d'énergie à tête reposée plutôt qu'en plein hiver. Nous ne posons pas d'installation neuve, mais nous vous remettons un état précis de la chaudière, de la cuve et du circuit, utile pour comparer des devis.",
+      "image": {
+        "src": "/zones/cernay-les-reims-corps.jpg",
+        "alt": "Chaufferie claire au carrelage gris, chaudière au sol avec son conduit de fumée et tuyauterie en cuivre"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas d'arrêt du chauffage à Cernay-lès-Reims, notez le code affiché, n'insistez pas au-delà d'une tentative de réarmement, et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Cernay-lès-Reims, nous intervenons aussi à Reims et dans ses quartiers est, à Witry-lès-Reims, à Prunay et à Taissy."
+      "heading": "Cernay-lès-Reims, Witry-lès-Reims, Cormontreuil, Taissy",
+      "body": "Cernay-lès-Reims se trouve à l'est de Reims. La carte situe les communes voisines où nous intervenons également : Witry-lès-Reims au nord, Taissy et Cormontreuil au sud-ouest. Pour une chaudière fioul, précisez dès l'appel le niveau approximatif de votre cuve et la date de la dernière livraison : ce sont les deux informations qui orientent le mieux notre diagnostic.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Witry-lès-Reims",
-    "Prunay"
+    "Cormontreuil",
+    "Taissy"
+  ],
+  "prix": [
+    "depannage-fioul",
+    "entretien-fioul",
+    "deplacement"
   ],
   "faq": [
     {
-      "q": "Un radiateur est resté froid à la remise en route, faut-il appeler tout de suite ?",
-      "a": "Commencez par deux vérifications simples. Touchez le radiateur en haut et en bas : froid en haut et chaud en bas signale de l'air, et une purge le règle. Entièrement froid alors que les autres chauffent oriente plutôt vers une vanne thermostatique bloquée après l'été, un défaut classique dont le pointeau reste enfoncé sous la tête. Si la purge ne donne rien et que le radiateur reste totalement froid, appelez plutôt que d'insister, car purger en boucle ne fait que vider le circuit."
+      "q": "Le voyant rouge du brûleur fioul est allumé, combien de fois puis-je réarmer ?",
+      "a": "Une seule fois. Chaque réarmement injecte du fioul dans la chambre de combustion ; si la flamme ne prend pas, ce fioul s'accumule et le prochain allumage peut être brutal et enfumer la chaufferie. Si la chaudière se remet en sécurité après ce premier essai, laissez-la ainsi et appelez-nous."
     },
     {
-      "q": "Ma chaudière refuse de démarrer alors qu'elle marchait très bien au printemps, pourquoi ?",
-      "a": "C'est le cas le plus fréquent d'octobre. Pendant les mois d'arrêt, la pression du circuit descend lentement, de l'air s'accumule, les organes mobiles restent immobiles. Un appareil peut donc refuser de démarrer sans qu'aucune pièce ne soit défectueuse. La bonne nouvelle, c'est que ces remises en service sont rapides. La mauvaise, c'est qu'elles arrivent toutes la même semaine, ce qui allonge les délais partout dans l'agglomération."
+      "q": "Faut-il arrêter la chaudière pendant une livraison de fioul ?",
+      "a": "C'est une bonne précaution. Le remplissage brasse les dépôts présents au fond de la cuve ; si le brûleur aspire à ce moment-là, ces impuretés partent vers le filtre et le gicleur. Arrêtez la chaudière pendant la livraison et laissez le fioul reposer un moment avant de la relancer."
     },
     {
-      "q": "Le délai est-il plus long à Cernay-lès-Reims qu'à Reims même ?",
-      "a": "Non. Cernay-lès-Reims est limitrophe de Reims, à quelques minutes des quartiers est : le trajet ne pèse pas dans le délai, c'est le planning en cours qui le détermine. Nous vous annonçons un créneau réaliste au moment de l'appel. Précisez tout de suite s'il s'agit d'une urgence réelle, logement entier sans chauffage par grand froid, personne fragile au domicile ou écoulement d'eau, car cela change l'ordre de passage."
+      "q": "Une odeur de fioul dans la chaufferie, est-ce normal ?",
+      "a": "Une légère odeur au démarrage peut se produire, mais une odeur persistante ne l'est pas. Elle signale un suintement sur un flexible ou un raccord, une combustion mal réglée, ou des fumées qui s'échappent par un conduit défaillant. Aérez, surveillez l'apparition de traces au sol, et faites contrôler l'installation sans attendre la prochaine visite d'entretien."
     }
   ]
 }

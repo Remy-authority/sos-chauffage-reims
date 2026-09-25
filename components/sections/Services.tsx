@@ -38,7 +38,7 @@ export function Services({ services }: { services: Service[] }) {
             <AnimatedSection key={service.slug} delay={(idx % 3) * 0.1}>
               <Link
                 href={`/services/${service.slug}`}
-                className="group relative flex h-full flex-col overflow-hidden rounded-bloc border border-fonte-700/50 bg-fonte-900/45 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-flamme-400/45 hover:bg-fonte-800/60"
+                className="group relative flex h-full flex-col items-center overflow-hidden text-center sm:items-start sm:text-left rounded-bloc border border-fonte-700/50 bg-fonte-900/45 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-flamme-400/45 hover:bg-fonte-800/60"
               >
                 <span
                   aria-hidden="true"
@@ -51,7 +51,7 @@ export function Services({ services }: { services: Service[] }) {
 
                 <h3 className="mt-8 text-2xl leading-snug text-craie-50">{service.navTitle}</h3>
 
-                <ul className="mt-5 space-y-2.5">
+                <ul className="mt-5 space-y-2.5 text-left">
                   {service.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2.5 text-sm text-craie-200">
                       <Check size={16} strokeWidth={3} className="mt-0.5 shrink-0 text-braise-400" />

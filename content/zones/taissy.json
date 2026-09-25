@@ -2,42 +2,64 @@
   "slug": "taissy",
   "name": "Taissy",
   "postalCode": "51500",
-  "context": "Commune du sud-est de l'agglomération, pavillonnaire, à la lisière du vignoble de la Montagne de Reims.",
-  "metaTitle": "Dépannage chauffage et chaudière à Taissy (51)",
-  "metaDescription": "Chauffagiste à Taissy : chaudière en panne, pannes répétées, ballon d'eau chaude hors service. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7.",
-  "h1": "Dépannage chauffage et chaudière à Taissy",
-  "intro": "Nous intervenons à Taissy (51500) sur les pannes de chauffage et d'eau chaude. Située au sud-est de l'agglomération, à la lisière du vignoble de la Montagne de Reims, Taissy s'est étendue par lotissements tout en gardant un noyau ancien. On y trouve donc, parfois dans la même rue, une maison de village aux murs épais et un pavillon des années récentes, deux logements qui ne se chauffent pas du tout de la même manière.",
+  "context": "Commune au sud-est de Reims où la plupart des ménages habitent leur maison depuis longtemps.",
+  "metaTitle": "Chauffagiste à Taissy pour radiateurs et chaudière",
+  "metaDescription": "Radiateurs tièdes en bas, chaudière qui tourne sans fin, vannes grippées : à Taissy, nous purgeons, désembouons et réglons. Prix indiqué avant de commencer.",
+  "h1": "Chauffagiste à Taissy : radiateurs, chaudière",
+  "intro": "À Taissy (51500), la plupart des foyers habitent leur maison depuis plus de dix ans. Ils connaissent leur installation, ses bruits et ses caprices, et ce savoir nous met souvent sur la bonne piste avant même d'ouvrir l'appareil. Chaudière, radiateurs ou ballon d'eau chaude : notre diagnostic part de ce que vous avez observé.",
+  "fait": {
+    "texte": "À Taissy, 68,3 % des ménages occupent leur résidence principale depuis 10 ans ou plus.",
+    "source": {
+      "nom": "INSEE, dossier complet Taissy, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51562",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Murs épais ou construction récente, deux logiques de chauffe",
-      "body": "Une maison ancienne à murs épais a une forte inertie : elle met longtemps à monter en température, mais elle la garde longtemps une fois chauffée. Un pavillon récent bien isolé réagit vite dans les deux sens. Cette différence, qui semble théorique, explique une bonne part des insatisfactions que l'on nous décrit. Dans une maison à inertie, un chauffage programmé par à-coups, avec des coupures profondes la nuit et de fortes relances le matin, donne un résultat médiocre et coûteux : la maison n'a jamais le temps de se stabiliser. Une consigne stable, réduite modérément plutôt que coupée, y fonctionne bien mieux. Dans une construction récente, à l'inverse, une programmation fine apporte un gain réel. Or beaucoup de réglages sont laissés tels quels après l'installation, ou repris de l'ancien logement. Avant de conclure à un défaut d'appareil, nous regardons donc comment votre installation est programmée par rapport à ce que votre maison sait faire. Cela ne remplace pas un diagnostic technique, mais cela évite de remplacer une pièce pour un problème de consigne."
+      "heading": "Votre mémoire de l'installation, notre premier outil",
+      "body": "Quand on vit depuis longtemps avec la même chaudière, on remarque ce qui change. Un sifflement apparu cet automne, une pression qu'il faut compléter plus souvent qu'avant, une pièce qui met une heure de plus à chauffer : ces comparaisons avec les hivers précédents valent bien des mesures. Avant de venir, nous vous demandons donc ce qui a évolué, depuis quand, et dans quelles conditions. Gardez aussi vos anciennes attestations d'entretien et les factures de pièces : elles racontent l'histoire de l'appareil et évitent de remplacer deux fois la même chose."
     },
     {
-      "heading": "Radiateurs anciens et circuits chargés",
-      "body": "Dans les maisons de Taissy chauffées depuis longtemps par le même réseau, nous rencontrons régulièrement des radiateurs en fonte ou en acier installés bien avant la chaudière actuelle. Ce n'est pas un problème en soi, ces émetteurs sont durables et se comportent bien avec une chaudière moderne, à condition que le circuit soit propre. Le point de vigilance est l'accumulation de boues, produite par la corrosion interne au fil des décennies, qui se dépose dans la partie basse des radiateurs et dans les points bas du réseau. Le symptôme est reconnaissable au toucher : chaud en haut, franchement froid en bas. La conséquence est double, un confort dégradé et une chaudière qui tourne plus longtemps pour compenser. Le traitement est le désembouage du circuit de chauffage, radiateurs et tuyauterie de chauffage exclusivement. Nous vous disons ce qu'il peut récupérer sur votre installation et, quand un radiateur est trop atteint, nous vous le disons aussi plutôt que de laisser espérer un miracle."
+      "heading": "Des radiateurs qui ont vécu",
+      "body": "Des radiateurs en place depuis des années peuvent très bien fonctionner avec une chaudière récente, à condition de les soigner. Trois soucis reviennent. L'air, d'abord, qui se loge en partie haute et laisse le radiateur tiède en haut : une purge le chasse. Les robinets thermostatiques, ensuite, dont le pointeau reste coincé après l'été et bloque le passage de l'eau : on le débloque ou on remplace la tête. Les boues, enfin, qui se déposent au fond et rendent le radiateur froid en bas : c'est le signe qu'un désembouage du circuit de chauffage devient utile. Nous vous disons lequel des trois est en cause avant d'agir.",
+      "image": {
+        "src": "/zones/taissy-corps.jpg",
+        "alt": "Radiateur à colonnes blanc dans un salon lumineux, robinet en cuivre au premier plan"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas de panne de chauffage à Taissy, coupez l'appareil si de l'eau s'écoule, relevez le code affiché et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Taissy, nous intervenons aussi à Reims et dans ses quartiers sud, à Cormontreuil, à Sillery et à Puisieulx."
+      "heading": "Des réglages qui n'ont pas suivi la famille",
+      "body": "Une installation réglée il y a des années correspondait à un autre mode de vie. Les enfants sont partis, une chambre est devenue bureau, un étage est moins occupé, et pourtant la consigne et les horaires n'ont jamais bougé. Résultat : on chauffe des pièces vides pendant que le séjour peine à monter en température. Revoir la programmation, la température d'eau et l'équilibrage des radiateurs selon l'usage réel des pièces améliore le confort et limite la consommation, sans rien remplacer."
+    },
+    {
+      "heading": "Taissy, Puisieulx, Cormontreuil et Sillery",
+      "body": "Taissy s'étend au sud-est de Reims, entre Cormontreuil et Puisieulx, avec Sillery un peu plus loin. La carte place ces communes, où nous intervenons aussi, au sein de notre secteur autour de la ville. Le tarif de chaque intervention vous est communiqué avant notre venue.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
+    "Puisieulx",
     "Cormontreuil",
     "Sillery"
   ],
+  "prix": [
+    "desembouage-radiateurs",
+    "entretien-gaz",
+    "diagnostic"
+  ],
   "faq": [
     {
-      "q": "Faut-il couper le chauffage la nuit dans une maison ancienne ?",
-      "a": "Une coupure profonde y est rarement une bonne idée. Une maison à murs épais possède une forte inertie : elle se refroidit lentement, mais elle met aussi très longtemps à remonter en température, si bien qu'une relance matinale fait travailler l'appareil à pleine puissance pendant des heures. Un abaissement modéré donne en général un meilleur résultat qu'un arrêt. Dans une construction récente et bien isolée, à l'inverse, une programmation plus marquée fonctionne très bien."
+      "q": "Un bruit que la chaudière ne faisait pas l'an dernier : grave ou pas ?",
+      "a": "Tout dépend du bruit. Un sifflement ou un bouillonnement évoque souvent du calcaire ou des boues dans l'échangeur, un claquement au démarrage un allumage difficile, un ronronnement continu un circulateur qui fatigue. Aucun n'est urgent en soi, mais un bruit qui s'installe annonce une panne : mieux vaut le faire vérifier pendant que l'appareil chauffe encore."
     },
     {
-      "q": "Puis-je garder mes radiateurs en fonte avec une chaudière moderne ?",
-      "a": "Oui, dans la grande majorité des cas. Les radiateurs en fonte sont durables et leur inertie se marie bien avec un fonctionnement à température modérée. La vraie question n'est pas le matériau mais l'état interne du circuit : des émetteurs anciens chargés de boues échangent mal, quelle que soit la qualité de la chaudière qui les alimente. Un contrôle de l'eau du circuit et, si nécessaire, un désembouage valent mieux que leur remplacement pur et simple."
+      "q": "Nos enfants sont partis : faut-il encore chauffer toutes les chambres ?",
+      "a": "Inutile de les chauffer comme une pièce de vie, mais ne les coupez pas complètement. Une pièce laissée froide favorise l'humidité et les moisissures, et ses murs refroidissent les pièces voisines. Réglez leurs robinets thermostatiques sur une position basse et fermez les portes : le confort des pièces occupées s'en trouve souvent amélioré."
     },
     {
-      "q": "Mes radiateurs mettent très longtemps à chauffer, est-ce normal ?",
-      "a": "Cela dépend de votre logement et de vos émetteurs. Des radiateurs en fonte dans une maison ancienne montent lentement, c'est leur nature, et une fois chauds ils restituent longtemps. En revanche, un allongement du délai par rapport aux hivers précédents signale un changement : circuit qui s'encrasse, circulateur qui faiblit, ou température de départ réglée trop bas. La comparaison avec les saisons passées est l'information la plus utile que vous puissiez nous donner."
+      "q": "Où retrouver l'historique des entretiens de ma chaudière ?",
+      "a": "Les attestations remises après chaque visite en constituent la trace officielle ; certaines entreprises tiennent aussi un carnet collé à l'intérieur du capot. Si vous n'avez plus rien, la plaque signalétique indique au moins le modèle et l'année de fabrication, ce qui nous permet de savoir quelles pièces surveiller en priorité."
     }
   ]
 }

@@ -2,42 +2,68 @@
   "slug": "bezannes",
   "name": "Bezannes",
   "postalCode": "51430",
-  "context": "Commune du sud-ouest rémois, transformée par l'arrivée de la gare TGV Champagne-Ardenne et par un quartier d'affaires de construction récente.",
-  "metaTitle": "Dépannage chauffage et chaudière à Bezannes (51)",
-  "metaDescription": "Chauffagiste à Bezannes : pompe à chaleur en défaut, chaudière à condensation, régulation déréglée, plus d'eau chaude. Intervention 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Bezannes",
-  "intro": "Nous intervenons à Bezannes (51430) sur les installations de chauffage et de production d'eau chaude. Bezannes est un cas à part dans l'agglomération : l'arrivée de la gare TGV Champagne-Ardenne et le développement du quartier d'affaires qui l'entoure ont fait sortir de terre un parc de logements et de bureaux très récent, à côté du village d'origine. Les appareils y sont donc jeunes, et les pannes n'ont presque rien à voir avec celles d'un parc ancien.",
+  "context": "Commune au sud-ouest de Reims, dont les logements sont devenus en majorité des appartements en une décennie.",
+  "metaTitle": "Chauffagiste Bezannes : PAC, chaudière, logement récent",
+  "metaDescription": "Logement récent à Bezannes et chauffage qui ne suit pas ? Réglage de pompe à chaleur, plancher chauffant, chaudière à condensation : on remet tout au point.",
+  "h1": "Chauffagiste à Bezannes, logements récents",
+  "intro": "En un peu plus de dix ans, Bezannes (51430) est passée d'un habitat surtout fait de maisons à une large majorité d'appartements, en grande partie récents. Les appels que nous y recevons concernent donc des installations jeunes, chaudières, pompes à chaleur, planchers chauffants, où la panne vient plus souvent d'un réglage que d'une pièce usée.",
+  "fait": {
+    "texte": "Les appartements représentent 69,5 % des logements de Bezannes en 2023, contre 17,4 % en 2012.",
+    "source": {
+      "nom": "INSEE, dossier complet Bezannes, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51058",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Des appareils récents, d'autres pannes",
-      "body": "Sur une installation de moins de dix ans, l'usure mécanique n'est presque jamais la cause. Ce que nous trouvons à Bezannes relève plutôt de la mise au point et de l'électronique. La régulation arrive en tête : des consignes modifiées sans le vouloir, un programme horaire hérité de l'occupant précédent, une sonde extérieure mal placée ou mal prise en compte, une loi d'eau inadaptée qui fait chauffer l'appareil trop haut ou trop bas. Viennent ensuite les défauts de mise en service jamais corrigés : circuit incomplètement purgé à la livraison, équilibrage des émetteurs jamais fait, plancher chauffant dont les boucles ne sont pas réglées, si bien que certaines pièces surchauffent pendant que d'autres restent tièdes. Enfin, sur les pompes à chaleur, très présentes dans les constructions récentes, une part importante des appels concerne des cycles de dégivrage pris pour des pannes, une unité extérieure installée trop près d'un mur ou d'une haie qui recycle son propre air froid, ou un écoulement de condensats qui s'est bouché."
+      "heading": "Installation jeune, panne de paramétrage",
+      "body": "Sur un équipement récent, l'usure est rarement en cause. Ce que nous rencontrons, ce sont des réglages restés en configuration d'usine : une loi d'eau qui fait chauffer trop fort ou trop peu selon la météo, un programme horaire hérité du logement témoin, une sonde extérieure placée au soleil qui fausse toute la régulation. Viennent ensuite les défauts de mise en service jamais repris : circuit mal purgé, débits de plancher chauffant non ajustés, thermostat connecté appairé à la mauvaise zone. Le symptôme ressemble à une panne, mais la solution tient dans quelques réglages bien faits plutôt que dans une pièce neuve."
     },
     {
-      "heading": "Le neuf n'est pas synonyme de réglé",
-      "body": "Un appareil récent sous garantie n'est pas un appareil forcément bien paramétré. Beaucoup de logements livrés en série reçoivent un réglage standard, valable pour un cas moyen mais pas pour votre exposition, votre surface et vos habitudes. Cela se traduit par des symptômes qui ressemblent à des pannes sans en être : une pompe à chaleur qui démarre et s'arrête sans arrêt parce que sa consigne est trop réactive, des pièces qui n'atteignent jamais la température demandée alors que le générateur fonctionne, ou une facture nettement supérieure à celle des voisins à surface équivalente. Notre travail dans ces cas consiste d'abord à lire l'installation telle qu'elle a été paramétrée, puis à la remettre en cohérence avec votre logement. C'est souvent plus efficace, et beaucoup moins coûteux, que de remplacer un organe qui fonctionne parfaitement. Nous vous disons également, sans détour, quand une anomalie relève encore de la garantie ou de l'installateur d'origine plutôt que d'une intervention payante."
+      "heading": "Chauffage collectif ou individuel : le premier tri",
+      "body": "Dans un immeuble récent, le chauffage peut être produit chez vous par une chaudière ou une pompe à chaleur individuelle, ou venir d'une chaufferie commune, avec un compteur d'énergie et une vanne de zone dans votre logement. La différence change tout. En individuel, nous intervenons directement sur votre appareil. En collectif, la production relève du gestionnaire de l'immeuble ; nous contrôlons alors ce qui se trouve chez vous, vanne de zone, collecteur du plancher, thermostat, et vous indiquons si le problème se situe en amont. Un coup d'œil au placard technique suffit souvent à trancher.",
+      "image": {
+        "src": "/zones/bezannes-corps.jpg",
+        "alt": "Vannes en laiton à capuchons rouges sur tuyaux en cuivre dans un placard technique blanc d'appartement neuf"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "Si votre installation s'arrête à Bezannes, relevez le code affiché sur la commande, notez si le défaut concerne le chauffage, l'eau chaude ou les deux, et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Bezannes, nous intervenons aussi à Reims, à Tinqueux et à Cormontreuil."
+      "heading": "Sous garantie : qui appeler d'abord",
+      "body": "Un logement neuf s'accompagne de garanties portées par le promoteur et par l'installateur. Si l'appareil ou son installation présentent un défaut couvert et que l'entreprise d'origine répond vite, passez d'abord par elle. Nous devenons utiles quand le problème sort de ce cadre : réglage jamais optimisé, entretien à assurer, installateur injoignable, ou panne qui ne peut pas attendre en plein hiver. Dans le doute, décrivez-nous la situation au téléphone, nous vous orientons honnêtement."
+    },
+    {
+      "heading": "Bezannes et ses voisines, Tinqueux et Cormontreuil",
+      "body": "Bezannes se trouve au sud-ouest de Reims, entre Tinqueux et Cormontreuil, deux communes où nous intervenons aussi. La carte les situe avec le reste de notre secteur autour de la ville. Depuis Bezannes, la démarche est identique partout : description de la panne, tarif annoncé, créneau convenu ensemble.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Tinqueux",
-    "Cormontreuil"
+    "Cormontreuil",
+    "Saint-Brice-Courcelles"
+  ],
+  "prix": [
+    "diagnostic",
+    "depannage-pac",
+    "desembouage-plancher"
   ],
   "faq": [
     {
-      "q": "Mon logement est récent, pourquoi ai-je déjà un problème de chauffage ?",
-      "a": "Parce que la plupart des difficultés sur une installation récente ne viennent pas de l'usure mais du réglage. Un programme horaire inadapté, une loi d'eau standard qui ne correspond pas à votre logement, un circuit mal équilibré à la livraison ou un plancher chauffant dont les boucles n'ont jamais été ajustées produisent des symptômes qui ressemblent à une panne. Ces situations se corrigent au niveau de la régulation et de l'équilibrage, sans remplacer de matériel."
+      "q": "Mon plancher chauffant chauffe mal dans une seule pièce, que vérifier ?",
+      "a": "Commencez par le thermostat de la pièce : piles, consigne, bonne zone associée. Si tout est correct, la boucle de cette pièce est peut-être mal équilibrée sur le collecteur ou partiellement fermée, ou de l'air s'y est logé. Nous réglons les débits boucle par boucle et purgeons le collecteur, une intervention courte quand l'origine est bien identifiée."
     },
     {
-      "q": "Ma pompe à chaleur démarre et s'arrête sans arrêt, est-ce normal ?",
-      "a": "Des cycles très courts et répétés ne sont pas un bon fonctionnement. Ils viennent en général d'une consigne trop réactive, d'un circuit d'eau au débit insuffisant parce que trop d'émetteurs sont fermés, ou d'un appareil surdimensionné pour le besoin réel du logement. Cela use la machine et dégrade son rendement. Le réglage de la régulation et l'ouverture d'un volume tampon suffisant règlent la plupart de ces cas, sans intervention sur la machine elle-même."
+      "q": "Chaufferie commune dans mon immeuble : que pouvez-vous réparer dans l'appartement ?",
+      "a": "Oui, pour tout ce qui se trouve dans votre logement : vanne de zone, collecteur, robinets, thermostat, radiateurs ou boucles de plancher. La production de chaleur elle-même, chaufferie ou sous-station, dépend du gestionnaire de l'immeuble. Si notre diagnostic montre que l'eau arrive déjà froide chez vous, nous vous le confirmons pour que vous puissiez le signaler au syndic."
     },
     {
-      "q": "Mon installation est sous garantie, dois-je vous appeler ou l'installateur ?",
-      "a": "Si le défaut porte sur un organe couvert et que l'installateur d'origine est joignable dans un délai acceptable, passez d'abord par lui : c'est plus simple et cela ne vous coûte rien. Appelez-nous quand la garantie ne couvre pas le sujet, typiquement un problème de réglage ou d'équilibrage, quand l'installateur n'est plus joignable, ou quand la situation est urgente et ne peut pas attendre. Nous vous le dirons franchement si nous estimons que votre demande relève de la garantie."
+      "q": "Le thermostat connecté affiche la bonne consigne mais il fait froid, pourquoi ?",
+      "a": "Un thermostat connecté commande un appareil ; il ne produit pas de chaleur. S'il ne communique plus avec la chaudière ou la pompe à chaleur, ou s'il pilote la mauvaise zone, la consigne s'affiche sans effet. Nous vérifions la liaison, le récepteur et le câblage avant de mettre en cause le générateur."
+    },
+    {
+      "q": "La garantie du promoteur remplace-t-elle l'entretien annuel de la chaudière ?",
+      "a": "Non. La garantie ne dispense pas de l'entretien, et un fabricant peut refuser une prise en charge si l'appareil n'a pas été entretenu. Gardez chaque attestation de visite : elle prouve que l'installation a été suivie et facilite un éventuel recours auprès de l'installateur."
     }
   ]
 }

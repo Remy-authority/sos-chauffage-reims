@@ -5,6 +5,17 @@
 
 ---
 
+## 0. REQUÊTE D'ARGENT (mesurée le 25/09/2026, DataForSEO Google Ads, France)
+
+Requête d'argent : « chauffagiste reims »
+390 recherches/mois (CPC 5,83 €). Voisines mesurées : « chauffagiste urgence » 390/mois (CPC 6,29 €),
+« plombier chauffagiste reims » 170, « urgence chaudière » 210 (CPC 16,41 €), « dépannage chaudière reims » 10 (CPC 20,04 €).
+Pour la page Tarifs : « désembouage radiateur » 6 600, « tarif entretien chaudière gaz » 1 300, « prix entretien chaudière » 1 000,
+« prix désembouage radiateur » 1 000. Détail : `../tasks/.maj-reims/volumes-25-09.txt`.
+H1 de l'accueil (décision Rémy 25/09) : « Chauffagiste d'urgence à Reims, on remonte à la cause. »
+
+---
+
 ## 1. CONTEXTE DU PROJET
 
 - **Modèle économique : rank & rent.** On construit un site local, on le classe en SEO

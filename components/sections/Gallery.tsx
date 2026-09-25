@@ -36,14 +36,14 @@ const items = [
     caption: "Froid en haut, c'est de l'air. Froid en bas, c'est de la boue.",
   },
   {
-    src: '/gallery/05-manometre-pression.jpg',
-    alt: 'Manomètre de chaudière relevé pendant un contrôle de pression',
+    src: '/gallery/05-manometre-pression-v2.jpg',
+    alt: 'Manomètre à cadran chromé sur la façade blanche d\'une chaudière murale, raccords en cuivre dessous',
     title: 'Contrôle de pression',
     caption: 'À froid puis à chaud, pour distinguer fuite et vase fatigué.',
   },
   {
     src: '/gallery/06-ballon-eau-chaude.jpg',
-    alt: "Ballon d'eau chaude et son groupe de sécurité dans un local technique",
+    alt: "Local technique : groupe de sécurité raccordé à un ballon d'eau chaude",
     title: "Ballon d'eau chaude",
     caption: 'Résistance, thermostat, groupe de sécurité entartré.',
   },
@@ -94,7 +94,10 @@ export function Gallery() {
                   className="absolute inset-0 bg-gradient-to-t from-fonte-950 via-fonte-950/45 to-transparent"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              {/* Légende centrée (Rémy, 25/09) : le bloc 2 n'a pas de visuel À CÔTÉ du
+                  texte, les photos sont sous les légendes, donc tout le texte du bloc
+                  se centre, comme l'en-tête de section. */}
+              <div className="absolute inset-x-0 bottom-0 p-6 text-center">
                 <p className="font-display text-xl font-medium text-craie-50">{item.title}</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-craie-300">{item.caption}</p>
               </div>

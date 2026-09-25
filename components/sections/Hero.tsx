@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Euro, Flame, MapPin, Phone, ShieldCheck, Thermometer } from 'lucide-react'
+import { ArrowRight, Euro, MapPin, Phone, ShieldCheck, Thermometer } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { GradientBlob } from '@/components/ui/GradientBlob'
 import { LiveDot } from '@/components/ui/LiveDot'
@@ -12,8 +12,7 @@ import { siteConfig } from '@/config/site.config'
 
 const badges = [
   { icon: Euro, label: 'Prix annoncé avant' },
-  { icon: Flame, label: 'Gaz, fioul, pompe à chaleur' },
-  { icon: ShieldCheck, label: 'Diagnostic avant réparation' },
+  { icon: ShieldCheck, label: "Diagnostic d'abord" },
   { icon: MapPin, label: `${siteConfig.serviceArea.radiusKm} km autour de ${siteConfig.city}` },
 ]
 
@@ -24,18 +23,9 @@ const badges = [
  * portefeuille (où cette colonne porte un argument de prix).
  */
 const triage = [
-  {
-    symptom: 'Plus rien ne chauffe',
-    lead: "L'appareil ou sa régulation",
-  },
-  {
-    symptom: 'Un seul radiateur froid',
-    lead: 'Le circuit, pas la chaudière',
-  },
-  {
-    symptom: "Plus d'eau chaude seule",
-    lead: 'Le ballon ou la partie sanitaire',
-  },
+  { symptom: 'Plus rien ne chauffe', lead: "L'appareil" },
+  { symptom: 'Un radiateur froid', lead: 'Le circuit' },
+  { symptom: "Plus d'eau chaude", lead: 'Le ballon' },
 ]
 
 export function Hero() {
@@ -48,20 +38,22 @@ export function Hero() {
     <section
       ref={ref}
       id="top"
-      className="grain relative isolate flex min-h-[92vh] items-center overflow-hidden bg-fonte-950 pb-20 pt-28 lg:pt-36"
+      className="grain relative isolate flex min-h-[92vh] items-center overflow-hidden bg-fonte-950 bg-[radial-gradient(ellipse_at_top,rgb(var(--teinte-fonte-800)/0.75),transparent_62%),radial-gradient(ellipse_at_bottom_right,rgb(var(--teinte-braise-500)/0.18),transparent_55%),linear-gradient(180deg,rgb(var(--teinte-fonte-950))_0%,rgb(var(--teinte-fonte-900))_52%,rgb(var(--teinte-fonte-950))_100%)] pb-20 pt-28 lg:pt-36"
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgb(var(--teinte-fonte-800)/0.75),transparent_62%),radial-gradient(ellipse_at_bottom_right,rgb(var(--teinte-braise-500)/0.18),transparent_55%),linear-gradient(180deg,rgb(var(--teinte-fonte-950))_0%,rgb(var(--teinte-fonte-900))_52%,rgb(var(--teinte-fonte-950))_100%)]"
-      />
+      {/* Le dégradé de fond est posé sur la section elle-même (et non sur un calque
+          enfant) : il est SOUS la photo, ce n'est pas un voile. Posé en calque, il
+          était compté comme un voile par-dessus la photo par audit-design.mjs.
 
-      {/* Photo d'ambiance, très en retrait. Fondue par le bas sur mobile (le texte
-          occupe le haut), fondue par la droite à partir du desktop. */}
+          Photo d'ambiance, très en retrait. Fondue par le bas sur mobile (le texte
+          occupe le haut), fondue par la droite à partir du desktop. Le cadre fait
+          62 % de la largeur (au-delà des 60 % qu'audit-design exige pour une photo
+          de fond) ; le masque démarre plus loin dans le cadre, si bien que la zone
+          visible reste la même qu'avec l'ancien cadre à 54 %. */}
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 right-0 w-full opacity-[0.12] [mask-image:linear-gradient(180deg,transparent_35%,black)] lg:w-[54%] lg:opacity-20 lg:[mask-image:linear-gradient(90deg,transparent,black_48%)]"
+        className="absolute inset-y-0 right-0 w-full opacity-[0.12] [mask-image:linear-gradient(180deg,transparent_35%,black)] lg:w-[62%] lg:opacity-20 lg:[mask-image:linear-gradient(90deg,transparent_13%,black_55%)]"
       >
-        <Image src="/hero.jpg" alt="" fill priority sizes="(min-width: 1024px) 54vw, 100vw" className="object-cover" />
+        <Image src="/hero.jpg" alt="" fill priority sizes="(min-width: 1024px) 62vw, 100vw" className="object-cover" />
       </div>
 
       <div aria-hidden="true" className="trame absolute inset-0" />
@@ -72,27 +64,26 @@ export function Hero() {
 
       <motion.div
         style={{ y, opacity }}
-        className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:px-10 xl:grid-cols-12"
+        className="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-6 lg:px-10 xl:grid-cols-12"
       >
-        <div className="xl:col-span-7">
+        <div className="text-center lg:text-left xl:col-span-7">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
           >
-            <LiveDot>Ligne urgence ouverte, week-ends et jours fériés compris</LiveDot>
+            <LiveDot>Ligne ouverte 7j/7</LiveDot>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-            className="mt-7 text-[clamp(2.5rem,6vw,5rem)] leading-[1.05] text-craie-50"
+            className="mt-7 text-[clamp(2rem,8.6vw,3.4rem)] leading-[1.05] text-craie-50 lg:text-[3.875rem]"
           >
-            Chaudière à l&apos;arrêt
-            <br />
-            à {siteConfig.city},
-            <br />
+            Chauffagiste d&apos;urgence
+            <br className="hidden lg:inline" /> à {siteConfig.city},{' '}
+            <br className="hidden lg:inline" />
             <span className="titre-braise">on remonte à la cause.</span>
           </motion.h1>
 
@@ -100,18 +91,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
-            className="mt-7 max-w-xl text-lg leading-relaxed text-craie-200 md:text-xl"
+            className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-craie-200 md:text-xl lg:mx-0"
           >
-            Chaudière à gaz ou au fioul en sécurité, pompe à chaleur qui ne suit plus, radiateurs
-            froids, plus d&apos;eau chaude. Nous lisons le défaut avant de changer une pièce, et nous
-            annonçons le prix avant de commencer.
+            Gaz, fioul, pompe à chaleur : nous lisons le défaut avant de changer la moindre
+            pièce.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: EASE }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row"
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start"
           >
             <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
               <Phone size={18} strokeWidth={2.5} />
@@ -127,10 +117,13 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
+            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-4 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-3 lg:justify-start"
           >
             {badges.map(({ icon: Icon, label }) => (
-              <li key={label} className="flex items-center gap-2 text-sm text-craie-300">
+              <li
+                key={label}
+                className="flex flex-col items-center gap-1.5 text-center text-sm text-craie-300 last:col-span-2 sm:flex-row sm:gap-2 sm:text-left"
+              >
                 <Icon size={16} className="shrink-0 text-flamme-300" strokeWidth={2.4} />
                 {label}
               </li>
@@ -152,11 +145,11 @@ export function Hero() {
 
             <div className="relative overflow-hidden rounded-cadre border border-flamme-400/25 bg-gradient-to-br from-fonte-800/70 to-fonte-950/85 p-8 backdrop-blur-xl">
               <span className="inline-flex rounded-full border border-flamme-400/40 bg-flamme-500/10 px-3 py-1 text-xs uppercase tracking-wider text-flamme-300">
-                Ce que dit votre symptôme
+                Votre symptôme
               </span>
 
               <p className="mt-7 font-display text-2xl font-medium leading-snug text-craie-50">
-                Trois pannes qui se ressemblent, trois origines différentes.
+                Trois pannes, trois origines.
               </p>
 
               <ul className="mt-7 space-y-3">
@@ -178,8 +171,7 @@ export function Hero() {
 
               <p className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-craie-400">
                 <ShieldCheck size={14} className="mt-0.5 shrink-0 text-flamme-300" />
-                Le code d&apos;erreur affiché sur votre appareil oriente déjà le diagnostic. Notez-le
-                avant d&apos;appeler.
+                Notez le code d&apos;erreur.
               </p>
             </div>
 

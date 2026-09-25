@@ -33,9 +33,11 @@ export function TrustBar() {
   return (
     <section className="relative border-b border-craie-200 bg-craie-50">
       <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Téléphone : grille régulière de 2 colonnes, icône au-dessus, texte centré.
+            À partir de 640 px, la disposition d'origine (icône à gauche). */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-8 sm:gap-y-6 lg:grid-cols-4">
           {items.map(({ icon: Icon, label, description }, i) => (
-            <AnimatedSection key={label} delay={i * 0.06} className="flex items-center gap-4">
+            <AnimatedSection key={label} delay={i * 0.06} className="flex flex-col items-center gap-3 text-center sm:flex-row sm:gap-4 sm:text-left">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                 <Icon size={22} strokeWidth={2} />
               </span>

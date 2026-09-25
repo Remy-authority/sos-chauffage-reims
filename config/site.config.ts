@@ -164,27 +164,18 @@ export const siteConfig = {
     blog: true,
   },
 
-  /* ── Persona artisan (DEMO, à remplacer par les infos du loueur) ── */
-  persona: {
-    // DEMO – à remplacer par les infos du loueur
-    name: 'Aurélien Godart',
-    // DEMO – portrait généré, remplaçable par une photo réelle
-    photo: '/persona.jpg',
-    // DEMO – à remplacer par les infos du loueur
-    title: 'Responsable des interventions chauffage',
-    // DEMO – à remplacer par les infos du loueur
-    quote:
-      "Une chaudière qui s'arrête a presque toujours prévenu avant. On lit ce qu'elle dit, puis on répare la cause, pas le symptôme.",
-  },
+  /* ── Persona : SUPPRIMÉ le 25/09/2026. Règle du portefeuille (30/07/2026) :
+     aucune personne fictive (nom, titre, portrait, citation attribuée). La
+     section « à propos » montre une photo métier et parle en « nous ». ── */
 
   /* ── Bloc « à propos » ── */
   about: {
     eyebrow: 'Qui sommes-nous',
-    title: 'Le chauffage,\nnotre seul métier',
+    title: 'Le chauffage,\nnotre cœur de métier',
     // DEMO – texte à valider avec le loueur
     body: [
       "SOS Chauffage Reims intervient sur les pannes de chauffage et d'eau chaude à Reims et dans les communes de l'agglomération. Chaudière à l'arrêt, radiateurs qui restent froids, pompe à chaleur qui ne suit plus, plus une goutte d'eau chaude : nous rétablissons d'abord la situation, puis nous expliquons ce qui l'a provoquée.",
-      "Nous ne faisons que du chauffage et de l'eau chaude sanitaire liée à l'appareil. Gaz, fioul, pompe à chaleur, ballon : ce sont quatre logiques de panne différentes, et c'est ce qui rend le diagnostic utile. Le devis est annoncé avant l'intervention.",
+      "Notre cœur de métier reste le chauffage et l'eau chaude produite par l'appareil, la climatisation venant en complément. Gaz, fioul, pompe à chaleur, ballon : quatre logiques de panne différentes, et c'est ce qui rend le diagnostic utile. Le devis est annoncé avant l'intervention.",
     ],
     highlight: 'Gaz, fioul, pompe à chaleur, ballon',
   },
@@ -196,7 +187,7 @@ export const siteConfig = {
       step: '01',
       title: 'Votre appel',
       desc: "Vous décrivez ce qui se passe : plus de chauffage, un code d'erreur affiché, un radiateur froid, plus d'eau chaude. Nous situons l'appareil et le degré d'urgence.",
-      duration: 'Immédiat',
+      duration: 'Au téléphone',
     },
     {
       icon: 'search',
@@ -210,7 +201,7 @@ export const siteConfig = {
       step: '03',
       title: 'Réparation',
       desc: "Remise en service quand c'est un réglage ou une sécurité, remplacement de la pièce en cause quand elle est fautive. Vous savez ce qui est remplacé et pourquoi.",
-      duration: 'Jour J',
+      duration: 'Prix accepté',
     },
     {
       icon: 'check',
@@ -242,37 +233,37 @@ export const siteConfig = {
     {
       icon: 'clock',
       title: 'Une ligne ouverte 7j/7',
-      desc: "Une maison sans chauffage un dimanche de janvier ne peut pas attendre le lundi, surtout avec un bébé ou une personne âgée. Vous nous joignez le week-end et les jours fériés.",
+      desc: "Une maison sans chauffage un dimanche de janvier ne peut pas attendre le lundi, surtout avec un bébé ou une personne âgée. Un appel passé un samedi, un dimanche ou un jour férié aboutit quand même chez nous.",
     },
     {
       icon: 'euro',
       title: 'Le prix annoncé avant',
-      desc: "Vous savez ce que coûte l'intervention avant qu'elle commence. Si le diagnostic change la donne, vous l'apprenez avant la réparation, pas sur la facture.",
+      desc: "Le montant vous est donné avant le premier coup de clé, pas après. Si le diagnostic change la donne, vous l'apprenez avant la réparation, pas sur la facture.",
     },
     {
       icon: 'star',
       title: 'Artisan local, pas une plateforme',
-      desc: "Vous parlez à la personne qui intervient. Pas de centrale nationale qui revend votre demande au premier disponible du secteur.",
+      desc: "Votre demande arrive à un seul interlocuteur qui connaît l'agglomération : elle n'est jamais mise en concurrence entre plusieurs entreprises.",
     },
   ],
 
   /* ── FAQ accueil ── */
   homeFaq: [
     {
-      q: 'Que faire si ma chaudière tombe en panne en plein hiver ?',
+      q: 'Chaudière arrêtée par grand froid : quels réflexes avoir en attendant le dépannage ?',
       a: "Coupez le chauffage si vous voyez de l'eau s'écouler sous l'appareil, relevez le code d'erreur affiché sur l'écran, et n'insistez pas sur le bouton de réarmement au-delà d'une tentative : une sécurité qui se redéclenche protège quelque chose. Fermez les pièces inoccupées pour concentrer la chaleur restante et appelez. Le code d'erreur que vous nous donnez au téléphone oriente déjà le diagnostic et la pièce à emporter.",
     },
     {
       q: 'Intervenez-vous le week-end et en soirée ?',
-      a: "Oui. Une panne de chauffage ou d'eau chaude ne choisit pas son horaire, et c'est justement le soir et le week-end qu'elle se déclare, au moment où la maison redemande de la puissance. Notre ligne est ouverte les week-ends et les jours fériés pour les urgences à Reims et dans les communes de l'agglomération.",
+      a: "Oui. Une panne de chauffage ou d'eau chaude ne choisit pas son horaire, et c'est justement le soir et le week-end qu'elle se déclare, au moment où la maison redemande de la puissance. Les urgences de Reims et de son agglomération nous parviennent donc aussi pendant les week-ends et les jours fériés.",
     },
     {
       q: 'Combien coûte un dépannage de chaudière ?',
-      a: "Le prix dépend de trois choses : la nature de la panne, la pièce à remplacer si une pièce est en cause, et l'énergie de l'appareil. Une sécurité à réarmer après diagnostic, une carte électronique à changer ou un corps de chauffe percé ne représentent pas le même travail. Nous annonçons le tarif de l'intervention au téléphone à partir de ce que vous décrivez, puis nous le confirmons sur place avant de commencer. Aucun travail n'est lancé sans votre accord.",
+      a: "Le prix dépend de trois choses : la nature de la panne, la pièce à remplacer si une pièce est en cause, et l'énergie de l'appareil. Une sécurité à réarmer après diagnostic, une carte électronique à changer ou un corps de chauffe percé ne représentent pas le même travail. Votre description au téléphone nous suffit pour chiffrer l'intervention, et ce chiffre est confirmé devant l'appareil, avant tout démontage. Aucun travail n'est lancé sans votre accord.",
     },
     {
       q: 'Faut-il réparer ou remplacer une chaudière ancienne ?',
-      a: "La question se tranche sur trois critères, pas sur l'âge seul : le coût de la réparation comparé à celui d'un appareil neuf, la disponibilité des pièces détachées du modèle, et la répétition des pannes sur les dernières saisons. Une chaudière ancienne mais bien entretenue, dont la pièce fautive existe encore, se répare sans hésiter. Une chaudière dont les pièces ne se trouvent plus ou qui vous a déjà immobilisé plusieurs fois dans l'hiver appelle une décision de remplacement, qu'il vaut mieux prendre hors saison que dans l'urgence.",
+      a: "La question se tranche sur trois critères, pas sur l'âge seul : le coût de la réparation comparé à celui d'un appareil neuf, la disponibilité des pièces détachées du modèle, et la répétition des pannes sur les dernières saisons. Tant que la pièce en cause se commande encore et que l'appareil a été suivi, l'âge ne justifie pas à lui seul un remplacement : on répare. Une chaudière dont les pièces ne se trouvent plus ou qui vous a déjà immobilisé plusieurs fois dans l'hiver appelle une décision de remplacement, qu'il vaut mieux prendre hors saison que dans l'urgence.",
     },
     {
       q: 'Intervenez-vous sur les chaudières gaz, fioul et les pompes à chaleur ?',

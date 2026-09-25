@@ -1,7 +1,22 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone } from 'lucide-react'
 import { siteConfig } from '@/config/site.config'
 import { Button } from '@/components/ui/Button'
+
+/**
+ * Métadonnées propres à la page 404. Sans elles, la 404 héritait de celles du
+ * layout racine (title et description de l'accueil, canonical vers l'accueil,
+ * « index, follow » en plus du « noindex » posé par Next) : toute URL absente
+ * se présentait à Google comme un doublon de l'accueil. Défaut relevé le 25/09/2026.
+ */
+export const metadata: Metadata = {
+  title: { absolute: `Page introuvable, ${siteConfig.businessName}` },
+  description: `Cette adresse n'existe pas ou plus sur le site de ${siteConfig.businessName}.`,
+  alternates: { canonical: null },
+  openGraph: null,
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
+}
 
 export default function NotFound() {
   return (

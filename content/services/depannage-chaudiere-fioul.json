@@ -3,50 +3,77 @@
   "order": 3,
   "icon": "fuel",
   "navTitle": "Chaudière au fioul",
-  "h1": "Dépannage de chaudière au fioul à Reims",
-  "metaTitle": "Dépannage de chaudière au fioul à Reims",
-  "metaDescription": "Chaudière fioul en panne à Reims et alentour : brûleur en défaut, gicleur encrassé, désamorçage, cuve. Diagnostic complet et tarif annoncé avant intervention.",
-  "intro": "Une chaudière au fioul ne tombe pas en panne comme une chaudière à gaz. Son combustible est stocké chez vous, il vieillit, il se charge en dépôts, et une bonne partie des arrêts vient de la ligne qui va de la cuve au brûleur plutôt que de la chaudière elle-même. Nous intervenons sur ces appareils dans les communes de l'agglomération rémoise, où le fioul reste courant dans les maisons plus anciennes et les secteurs de village.",
+  "h1": "Chaudière fioul en panne à Reims",
+  "metaTitle": "Chaudière fioul en panne à Reims ? Brûleur, cuve, gicleur",
+  "metaDescription": "Brûleur fioul en sécurité, voyant rouge, démarrage difficile ? Chauffagiste fioul (fuel) à Reims et dans les villages alentour, prix donné avant. Appelez.",
+  "intro": "Une chaudière au fioul ne tombe pas en panne comme une chaudière à gaz : le combustible dort dans votre cuve, se charge de dépôts avec le temps, et c'est souvent sur le trajet entre cuve et brûleur que tout se joue. Nous dépannons ces chaudières à Reims et autour, notamment dans les maisons anciennes et les villages où le fioul reste courant.",
   "bullets": [
-    "Brûleur, gicleur, filtre et ligne d'alimentation",
-    "Défaut de mise en sécurité du brûleur",
-    "Habitat ancien et maisons de village"
+    "Brûleur, gicleur, filtre, ligne d'alimentation",
+    "Réamorçage après une panne sèche",
+    "Maisons anciennes et villages"
   ],
   "blocks": [
     {
-      "heading": "Le brûleur se met en défaut, ce que ça veut dire",
-      "body": "Sur une chaudière au fioul, le voyant rouge du brûleur signale que l'appareil a tenté de démarrer, n'a pas détecté de flamme correcte dans le temps imparti, et s'est arrêté par sécurité. Les causes se répartissent en trois familles. La première est l'alimentation : plus de fioul dans la cuve, filtre colmaté, ligne désamorcée après une intervention ou une cuve descendue trop bas, ou aspiration d'un fond de cuve chargé de boues. La deuxième est la pulvérisation : gicleur encrassé ou usé, pression de pompe qui a dérivé, électrodes d'allumage mal positionnées ou couvertes de dépôts. La troisième est la détection : cellule photoélectrique encrassée qui ne voit plus la flamme pourtant présente, et arrête l'appareil à tort. Un réarmement du brûleur peut relancer l'appareil pour un cycle, mais si le défaut revient, il ne sert à rien d'insister : chaque tentative envoie du combustible dans une chambre qui ne l'allume pas correctement."
+      "heading": "Voyant rouge du brûleur fioul : ce que la mise en sécurité veut dire",
+      "body": "Quand le voyant rouge s'allume, le brûleur a tenté de démarrer, n'a pas vu de flamme correcte dans le temps prévu, et s'est verrouillé. Trois familles de causes se partagent la plupart des cas. L'alimentation d'abord : cuve vide, filtre colmaté, ligne qui a pris de l'air, fond de cuve aspiré. La pulvérisation ensuite : gicleur usé ou bouché, pompe du brûleur qui ne donne plus la bonne pression, électrodes sales ou mal écartées. La détection enfin : une cellule noircie qui croit la flamme absente alors qu'elle brûle bien. Un réarmement peut relancer un cycle ; si le verrouillage revient, insister envoie du fioul dans une chambre qui l'allume mal et complique la remise en service."
     },
     {
-      "heading": "Les démarrages difficiles par temps froid",
-      "body": "Le fioul s'épaissit quand la température baisse. Sur une cuve installée à l'extérieur, dans un garage non chauffé ou dans un local ouvert, un coup de froid marqué peut suffire à faire apparaître des paraffines qui gênent l'écoulement et finissent par encrasser le filtre. Le symptôme typique est une chaudière qui fonctionne correctement en journée puis se met en défaut au petit matin après une nuit froide, ou qui redémarre difficilement après un long arrêt. C'est aussi la période où les dépôts accumulés au fond de la cuve remontent le plus facilement, notamment après une livraison qui a remué le contenu ou quand le niveau devient bas. Nous contrôlons la ligne d'alimentation dans son ensemble, du piquage en cuve au brûleur, plutôt que de nous limiter à l'appareil : sur le fioul, le problème est souvent en amont."
+      "heading": "De la cuve au gicleur : où se cache la panne d'une chaudière fioul",
+      "body": "Sur le fioul, le problème est souvent en amont de la chaudière. Nous suivons donc le trajet du combustible depuis la cuve : état du fond de cuve, crépine d'aspiration, vanne, canalisation, filtre, pompe du brûleur, puis gicleur. Un filtre noirci ou chargé de boues raconte une cuve qui mériterait un nettoyage, une ligne qui se vide la nuit trahit une prise d'air sur un raccord ou un clapet fatigué. Contrôler ce trajet en entier évite de changer un gicleur neuf qui se boucherait à nouveau la semaine suivante.",
+      "image": {
+        "src": "/services/depannage-chaudiere-fioul-corps-1.jpg",
+        "alt": "Bol de filtre transparent rempli de fioul sur un support en laiton, tuyaux en cuivre neufs contre un mur blanc"
+      }
     },
     {
-      "heading": "Remise en service et suites de l'intervention",
-      "body": "Une fois la cause identifiée, la remise en service passe par le remplacement de ce qui est en cause, le nettoyage des organes encrassés, le réamorçage de la ligne si elle a désamorcé, puis un réglage de la combustion contrôlé à l'analyseur. Ce dernier point est important sur le fioul : un brûleur qui repart mais reste mal réglé consomme davantage, encrasse la chaudière plus vite et vous ramène en panne dans la saison. Nous vous indiquons aussi ce qui, dans votre installation, a favorisé la panne : une cuve dont le fond mériterait d'être traité, un filtre à changer plus souvent, un local trop exposé au froid. Sur une chaudière au fioul en fin de vie ou sur une installation dont l'entretien a été longtemps repoussé, nous en parlons dans une logique de décision hors urgence, pas au milieu d'une intervention à froid."
+      "heading": "Panne sèche : réamorcer la ligne et repartir",
+      "body": "Une cuve qui descend trop bas arrête le brûleur, mais le problème ne s'arrête pas au remplissage. Le brûleur a aspiré de l'air, et souvent une partie des sédiments du fond. Après la livraison, il faut purger l'air de la ligne, contrôler le filtre et parfois le gicleur, puis réamorcer la pompe du brûleur. Une jauge qui indique encore du fioul n'est pas une garantie : un flotteur bloqué ou une crépine posée trop haut peuvent laisser croire à une réserve qui n'est pas réellement aspirable."
+    },
+    {
+      "heading": "Chaudière fioul en défaut au petit matin, par temps froid",
+      "body": "Par grand froid, le fioul perd de sa fluidité. Sur une cuve extérieure, dans un garage ouvert ou une dépendance non chauffée, un coup de froid marqué peut suffire à gêner l'écoulement et à encrasser le filtre. On le repère à une chaudière sage toute la journée, qui se verrouille à l'aube après une nuit glaciale. Nous vous indiquons ce qui protège la ligne dans votre configuration, par exemple la protection des tronçons exposés ou le choix d'un filtre adapté, plutôt que de relancer l'appareil sans rien changer.",
+      "image": {
+        "src": "/services/depannage-chaudiere-fioul-corps-2.jpg",
+        "alt": "Cuve de fioul grise et chaudière blanche au sol dans un local technique clair, fenêtre sur un jardin enneigé"
+      }
+    },
+    {
+      "heading": "Réglage de combustion : ce qui suit la réparation",
+      "body": "Une fois la cause traitée, la remise en service se termine par un réglage de combustion contrôlé à l'analyseur. Un brûleur qui repart mais reste mal réglé consomme davantage, encrasse plus vite son corps de chauffe et vous ramène en panne dans la saison. Nous vous disons aussi ce qui, dans votre installation, a favorisé l'arrêt : une cuve à nettoyer, un filtre à changer plus souvent, un local trop exposé. Si la chaudière arrive en fin de parcours, nous en parlons pour une décision au calme, pas au milieu d'une intervention dans une maison froide."
     }
   ],
   "relatedServices": [
     "urgence-depannage-chauffage-chaudiere",
-    "entretien-chaudiere-annuel"
+    "entretien-chaudiere-annuel",
+    "fuite-chaudiere-circuit-chauffage"
   ],
   "faq": [
     {
-      "q": "Le voyant rouge de mon brûleur fioul est allumé, puis-je réarmer moi-même ?",
-      "a": "Une fois, oui, c'est le geste prévu par le fabricant et il est décrit dans la notice. Si le brûleur repart et fonctionne normalement, le défaut était passager. S'il se remet en sécurité, arrêtez : chaque tentative envoie du fioul dans une chambre de combustion qui ne l'enflamme pas correctement, ce qui encrasse l'appareil et complique la remise en service. Notez plutôt à quel moment le défaut est apparu, notamment s'il suit un coup de froid ou une livraison récente."
+      "q": "Ma chaudière fioul fait de la fumée noire à la sortie du conduit, est-ce grave ?",
+      "a": "Oui, à traiter vite : la combustion est incomplète, trop de fioul pour l'air disponible, gicleur usé, réglage qui a dérivé ou chaudière encrassée. L'appareil consomme plus, s'encrasse plus vite et peut finir par se verrouiller. Une fumée noire ou une odeur de suie justifie un contrôle rapide avec analyse de combustion."
     },
     {
-      "q": "Ma cuve est presque vide, est-ce que ça peut expliquer la panne ?",
-      "a": "Oui, et de deux manières. Le manque de combustible arrête évidemment le brûleur, mais une cuve qui descend très bas fait aussi aspirer les dépôts et l'eau de condensation accumulés au fond au fil des années. Ces boues colmatent le filtre et le gicleur. Après une remise à niveau, il est fréquent qu'un simple remplissage ne suffise pas et que la ligne demande un nettoyage et un réamorçage."
+      "q": "La jauge indique qu'il reste du fioul, pourquoi le brûleur en manque-t-il ?",
+      "a": "La jauge mesure le niveau, pas ce que le brûleur peut réellement aspirer. Un flotteur coincé, une crépine bouchée, un filtre colmaté ou une prise d'air sur la canalisation privent le brûleur de combustible alors que la cuve n'est pas vide. Le contrôle se fait sur toute la ligne, de la cuve au brûleur."
     },
     {
-      "q": "Une chaudière au fioul demande-t-elle plus d'entretien qu'une chaudière à gaz ?",
-      "a": "Elle demande un entretien de nature différente. Le gaz arrive propre et régulé par le réseau, tandis que le fioul est stocké chez vous, vieillit et laisse des résidus à chaque combustion. Un appareil au fioul accumule donc des dépôts dans son corps de chauffe et sur ses organes de combustion, et sa ligne d'alimentation, filtre compris, fait partie intégrante de ce qu'il faut surveiller. L'entretien des appareils de chauffage est encadré par la réglementation en vigueur : nous vous indiquons ce qu'elle prévoit pour votre installation."
+      "q": "Une odeur de fioul dans la maison doit-elle faire arrêter la chaudière ?",
+      "a": "Une odeur brève au démarrage peut arriver. Une odeur qui s'installe signale un suintement sur la ligne, un filtre mal refermé ou une combustion qui renvoie des imbrûlés. Aérez, éloignez tout ce qui peut s'enflammer, coupez l'appareil si l'odeur est forte, et faites contrôler l'installation plutôt que de masquer l'odeur."
     },
     {
-      "q": "Une odeur de fioul dans la chaufferie est-elle normale ?",
-      "a": "Une odeur légère et fugace au moment du démarrage peut arriver. Une odeur persistante, elle, signale toujours quelque chose : un suintement sur un raccord de la ligne, un filtre mal refermé, un défaut d'étanchéité sur la cuve, ou une combustion incomplète qui renvoie des imbrûlés. Ventilez le local, n'y stockez rien d'inflammable, et faites contrôler l'installation. Une odeur qui s'installe ne se corrige pas en aérant."
+      "q": "Peut-on encore faire réparer une chaudière au fioul ancienne ?",
+      "a": "Oui, tant que les pièces de ce modèle se trouvent et que la réparation reste raisonnable face à l'état du corps de chauffe. Ces deux questions sont tranchées avant toute commande, et si réparer n'a plus de sens, vous l'entendez de notre bouche."
+    },
+    {
+      "q": "Ma maison de village près de Reims se chauffe au fioul : venez-vous jusque-là ?",
+      "a": "Oui, c'est même là que le fioul reste le plus présent. Nous nous déplaçons notamment à Sillery, Prunay, Puisieulx, Muizon, Taissy ou Cernay-lès-Reims, pour un dépannage comme pour un entretien. Précisez où se trouvent la chaudière et la cuve, maison, garage ou dépendance."
     }
+  ],
+  "prix": [
+    "deplacement",
+    "diagnostic",
+    "depannage-fioul",
+    "entretien-fioul"
   ],
   "image": "/services/depannage-chaudiere-fioul.jpg"
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { ArrowRight, Phone } from 'lucide-react'
-import { getRelatedArticles, getService, getServices, getZones } from '@/lib/content'
+import { getRelatedArticles, getService, getServices, getZones, resolveBlockImage } from '@/lib/content'
 import { buildMetadata, jsonLdScript, serviceJsonLd } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
@@ -14,6 +14,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { ServiceQuickFacts } from '@/components/ui/ServiceQuickFacts'
 import { ServiceBlock } from '@/components/ui/ServiceBlock'
+import { PrixBloc } from '@/components/ui/PrixBloc'
 
 // 100 % SSG : une page statique par prestation.
 export const dynamicParams = false
@@ -40,7 +41,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const related = getServices().filter((s) => service.relatedServices.includes(s.slug))
   const articles = getRelatedArticles(service.slug)
   const zones = getZones().slice(0, 6)
-  const firstImageIndex = service.blocks.findIndex((b) => b.image)
+  const firstImageIndex = service.blocks.findIndex((b) => resolveBlockImage(b))
 
   return (
     <>
@@ -61,13 +62,13 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="grain relative overflow-hidden bg-gradient-to-b from-fonte-950 via-fonte-900 to-fonte-950 py-16 lg:py-20">
         <div aria-hidden="true" className="trame absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
-          <div className="lg:col-span-7">
-            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-flamme-500/15 text-flamme-300 ring-1 ring-flamme-400/25">
+          <div className="text-center lg:col-span-7 lg:text-left">
+            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-flamme-500/15 text-flamme-300 ring-1 ring-flamme-400/25 lg:mx-0">
               <ServiceIcon icon={service.icon} className="h-6 w-6" />
             </span>
             <h1 className="mt-6 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{service.h1}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-craie-200">{service.intro}</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0">{service.intro}</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
                 {siteConfig.phoneDisplay}
@@ -106,9 +107,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             ))}
           </div>
 
+          <PrixBloc ids={service.prix} />
+
           {related.length > 0 && (
             <AnimatedSection className="mt-16">
-              <h2 className="text-2xl">Prestations liées</h2>
+              <h2 className="text-center text-2xl lg:text-left">Prestations liées</h2>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                 {related.map((r) => (
                   <li key={r.slug}>
@@ -130,8 +133,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           )}
 
           <AnimatedSection className="mt-14">
-            <h2 className="text-2xl">Cette prestation, près de chez vous</h2>
-            <ul className="mt-5 flex flex-wrap gap-2">
+            <h2 className="text-center text-2xl lg:text-left">Cette prestation, près de chez vous</h2>
+            <ul className="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
               {zones.map((z) => (
                 <li key={z.slug}>
                   <Link
@@ -154,7 +157,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </AnimatedSection>
 
           {articles.length > 0 && (
-            <AnimatedSection className="mt-14 rounded-bloc border border-craie-200 bg-white p-8">
+            <AnimatedSection className="mt-14 rounded-bloc border border-craie-200 bg-white p-8 text-center lg:text-left">
               <h2 className="text-2xl">À lire aussi</h2>
               <ul className="mt-4 space-y-2">
                 {articles.map((a) => (
@@ -177,7 +180,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
       <CtaBanner
         title={`${service.navTitle} à ${siteConfig.city} ?`}
-        subtitle="Appelez pour une estimation immédiate, ou décrivez la situation en ligne et nous vous rappelons."
+        subtitle="Un appel vous donne un premier chiffrage sur le moment. Sinon, laissez la description en ligne : nous revenons vers vous."
       />
     </>
   )

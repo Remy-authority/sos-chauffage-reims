@@ -1,0 +1,113 @@
+{
+  "source": {
+    "nom": "geo.api.gouv.fr, découpage administratif (IGN, INSEE)",
+    "url": "https://geo.api.gouv.fr/decoupage-administratif/communes",
+    "date": "2026-09-25"
+  },
+  "centre": {
+    "slug": "reims",
+    "nom": "Reims",
+    "insee": "51454",
+    "codePostal": "51100",
+    "lon": 4.0551,
+    "lat": 49.2535
+  },
+  "communes": [
+    {
+      "slug": "tinqueux",
+      "nom": "Tinqueux",
+      "insee": "51573",
+      "codePostal": "51430",
+      "lon": 3.9895,
+      "lat": 49.2488
+    },
+    {
+      "slug": "cormontreuil",
+      "nom": "Cormontreuil",
+      "insee": "51172",
+      "codePostal": "51350",
+      "lon": 4.0522,
+      "lat": 49.2165
+    },
+    {
+      "slug": "betheny",
+      "nom": "Bétheny",
+      "insee": "51055",
+      "codePostal": "51450",
+      "lon": 4.0623,
+      "lat": 49.2979
+    },
+    {
+      "slug": "bezannes",
+      "nom": "Bezannes",
+      "insee": "51058",
+      "codePostal": "51430",
+      "lon": 3.9915,
+      "lat": 49.2223
+    },
+    {
+      "slug": "saint-brice-courcelles",
+      "nom": "Saint-Brice-Courcelles",
+      "insee": "51474",
+      "codePostal": "51370",
+      "lon": 3.9879,
+      "lat": 49.2705
+    },
+    {
+      "slug": "witry-les-reims",
+      "nom": "Witry-lès-Reims",
+      "insee": "51662",
+      "codePostal": "51420",
+      "lon": 4.1094,
+      "lat": 49.299
+    },
+    {
+      "slug": "cernay-les-reims",
+      "nom": "Cernay-lès-Reims",
+      "insee": "51105",
+      "codePostal": "51420",
+      "lon": 4.1078,
+      "lat": 49.2539
+    },
+    {
+      "slug": "taissy",
+      "nom": "Taissy",
+      "insee": "51562",
+      "codePostal": "51500",
+      "lon": 4.084,
+      "lat": 49.2046
+    },
+    {
+      "slug": "sillery",
+      "nom": "Sillery",
+      "insee": "51536",
+      "codePostal": "51500",
+      "lon": 4.1429,
+      "lat": 49.1921
+    },
+    {
+      "slug": "muizon",
+      "nom": "Muizon",
+      "insee": "51391",
+      "codePostal": "51140",
+      "lon": 3.8851,
+      "lat": 49.2724
+    },
+    {
+      "slug": "prunay",
+      "nom": "Prunay",
+      "insee": "51449",
+      "codePostal": "51360",
+      "lon": 4.1734,
+      "lat": 49.2114
+    },
+    {
+      "slug": "puisieulx",
+      "nom": "Puisieulx",
+      "insee": "51450",
+      "codePostal": "51500",
+      "lon": 4.1154,
+      "lat": 49.204
+    }
+  ]
+}

@@ -4,8 +4,12 @@ import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { siteConfig } from '@/config/site.config'
 
 /**
- * Déroulé d'intervention en 4 étapes, sur fond sombre. Les cartes sont reliées par
- * un filet dégradé qui matérialise la progression d'une étape à la suivante.
+ * Déroulé d'intervention en 4 étapes. Les cartes sont reliées par un filet dégradé
+ * qui matérialise la progression d'une étape à la suivante.
+ *
+ * Fond CLAIR depuis le 25/09/2026 : les zones descendues en bloc 8 (règle du
+ * portefeuille) mettaient Services, Process et Stats côte à côte, trois fonds
+ * sombres d'affilée. Mêmes couleurs de la palette, section passée en clair.
  */
 export function Process() {
   const steps = siteConfig.process
@@ -13,12 +17,12 @@ export function Process() {
   return (
     <section
       id="deroulement"
-      className="grain relative overflow-hidden bg-gradient-to-b from-fonte-950 to-fonte-900 py-24 lg:py-32"
+      className="relative overflow-hidden bg-gradient-to-b from-craie-50 to-craie-100 py-24 lg:py-32"
       aria-labelledby="process-title"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(var(--teinte-flamme-500)/0.18),transparent_52%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgb(var(--teinte-flamme-500)/0.07),transparent_52%)]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
@@ -31,8 +35,7 @@ export function Process() {
               <span className="titre-braise"> à la chaleur revenue</span>
             </>
           }
-          subtitle="Quatre étapes, sans zone d'ombre. Vous savez à chaque moment ce que nous faisons et pourquoi."
-          variant="dark"
+          subtitle="Quatre étapes, sans zone d'ombre. Chaque geste sur votre chaudière vient avec son explication."
         />
 
         <ol className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -41,22 +44,22 @@ export function Process() {
               {idx < steps.length - 1 && (
                 <span
                   aria-hidden="true"
-                  className="absolute left-[calc(100%-1rem)] top-12 hidden h-px w-[calc(100%-3rem)] bg-gradient-to-r from-flamme-400/50 to-transparent lg:block"
+                  className="absolute left-[calc(100%-1rem)] top-12 hidden h-px w-[calc(100%-3rem)] bg-gradient-to-r from-flamme-500/45 to-transparent lg:block"
                 />
               )}
 
-              <div className="group relative h-full overflow-hidden rounded-bloc border border-fonte-700/55 bg-gradient-to-br from-fonte-800/45 to-fonte-950/65 p-8 transition-all duration-500 hover:-translate-y-1 hover:border-flamme-400/45">
+              <div className="group relative h-full overflow-hidden rounded-bloc border border-craie-200 bg-white p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-flamme-400/45 hover:shadow-pose-forte sm:text-left">
                 <div className="flex items-center justify-between">
-                  <span className="font-display text-5xl font-medium text-flamme-400/30">{step.step}</span>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-flamme-500/[0.12] text-flamme-300 ring-1 ring-flamme-400/25 transition-transform duration-500 group-hover:scale-110">
+                  <span className="font-display text-5xl font-medium text-flamme-600/30">{step.step}</span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600 ring-1 ring-flamme-600/20 transition-transform duration-500 group-hover:scale-110">
                     <ServiceIcon icon={step.icon} className="h-5 w-5" strokeWidth={2} />
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-xl text-craie-50">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-craie-300">{step.desc}</p>
+                <h3 className="mt-6 text-xl text-fonte-950">{step.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-craie-600">{step.desc}</p>
 
-                <p className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-fonte-900/70 px-3 py-1 text-xs font-medium uppercase tracking-wider text-braise-300">
+                <p className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-craie-100 px-3 py-1 text-xs font-medium uppercase tracking-wider text-braise-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-braise-400" aria-hidden="true" />
                   {step.duration}
                 </p>

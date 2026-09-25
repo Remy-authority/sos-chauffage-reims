@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { absUrl } from '@/lib/seo'
 import { siteConfig } from '@/config/site.config'
-import { getServices, getZones, getArticles } from '@/lib/content'
+import { getServices, getZones, getArticles, getTarifs } from '@/lib/content'
 
 /**
  * sitemap.xml généré au build (SSG). N'inclut QUE les pages indexables.
@@ -11,13 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString()
 
   const staticPaths = ['/', '/zones', '/contact', '/mentions-legales']
+  if (getTarifs()) staticPaths.push('/tarifs')
   if (siteConfig.features.blog) staticPaths.push('/conseils')
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
     url: absUrl(p),
     lastModified: now,
     changeFrequency: p === '/' ? 'weekly' : 'monthly',
-    priority: p === '/' ? 1 : 0.7,
+    priority: p === '/' ? 1 : p === '/tarifs' ? 0.8 : 0.7,
   }))
 
   for (const s of getServices()) {

@@ -31,7 +31,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const a = getArticle(params.slug)
   if (!a) return {}
   return buildMetadata({
-    title: a.title,
+    title: a.seoTitle || a.title,
     description: a.description,
     path: `/conseils/${a.slug}`,
     ogImage: a.cover,
@@ -81,7 +81,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-braise-400">
             {article.category}
           </p>
-          <h1 className="mt-4 text-4xl leading-[1.12] text-craie-50 md:text-5xl">{article.title}</h1>
+          <h1 className="mt-4 text-[1.875rem] leading-[1.12] text-craie-50 md:text-5xl">{article.seoTitle || article.title}</h1>
           <p className="mt-5 text-lg leading-relaxed text-craie-200">{article.description}</p>
           <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-craie-400">
             <time dateTime={article.date}>{formatDateFr(article.date)}</time>
@@ -101,7 +101,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-panneau border border-craie-200 shadow-pose">
                 <Image
                   src={article.cover}
-                  alt=""
+                  alt={article.coverAlt || ""}
                   fill
                   priority
                   sizes="(min-width: 1024px) 768px, 100vw"

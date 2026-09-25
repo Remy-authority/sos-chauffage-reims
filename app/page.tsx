@@ -17,10 +17,16 @@ import { LeadForm } from '@/components/ui/LeadForm'
 import { Faq } from '@/components/ui/Faq'
 import { CtaBanner } from '@/components/ui/CtaBanner'
 
-const TITLE = `Dépannage chauffage et chaudière à ${siteConfig.city}, intervention rapide`
-const DESC = `Dépannage de chauffage et de chaudière à ${siteConfig.city} et dans l'agglomération : chaudière gaz ou fioul en panne, pompe à chaleur, radiateur froid, ballon d'eau chaude, entretien annuel. Urgence 7j/7, prix annoncé avant intervention.`
+// Requête d'argent en tête (« chauffagiste reims », CLAUDE.md §0). Le title est
+// posé en `absolute` : le gabarit « %s, SOS Chauffage Reims » du layout ne doit
+// pas l'allonger au-delà de 60 caractères.
+const TITLE = `Chauffagiste ${siteConfig.city}, dépannage chaudière d'urgence 7j/7`
+const DESC = `Chauffagiste d'urgence à ${siteConfig.city} : chaudière gaz ou fioul en panne, radiateurs froids, plus d'eau chaude. Ligne ouverte 7j/7, prix annoncé avant de commencer.`
 
-export const metadata: Metadata = buildMetadata({ title: TITLE, description: DESC, path: '/' })
+export const metadata: Metadata = {
+  ...buildMetadata({ title: TITLE, description: DESC, path: '/' }),
+  title: { absolute: TITLE },
+}
 
 export default function HomePage() {
   const services = getServices()
@@ -29,33 +35,35 @@ export default function HomePage() {
   return (
     <>
       {/*
-        Ordre des sections, propre à ce site et volontairement différent de celui
-        des autres sites du portefeuille. La séquence suit l'ordre des questions
-        que se pose quelqu'un dont le chauffage vient de s'arrêter, et non l'ordre
-        d'une plaquette de présentation :
-          1. vous traitez mon cas → Gallery, la preuve visuelle du métier, tout de suite
-          2. qu'est-ce que j'ai   → Symptoms, avant même la grille des prestations
-          3. quelle prestation    → Services
-          4. vous venez chez moi  → ServiceArea
-          5. ça se passe comment  → Process, refermé par sa bande de chiffres
-          6. vous êtes qui        → About, une fois rassuré sur l'essentiel
-          7. pourquoi vous        → WhyUs, juste avant le formulaire
-        Le « qui sommes-nous » passe donc en aval : sur une urgence, il ne vient
-        qu'après « pouvez-vous m'aider, et quand ».
-        Rythme des fonds : l'alternance clair/sombre est tenue jusqu'au formulaire,
-        avec une seule paire sombre assumée, Process et Stats, la bande de chiffres
-        étant faite pour refermer le bloc sombre du déroulé. La queue de page
-        (formulaire, FAQ) reste claire par nature, et le bandeau CTA rebascule
-        sur le sombre pour préparer l'entrée dans le pied de page.
+        Ordre des sections, propre à ce site. La séquence suit les questions que se
+        pose quelqu'un dont le chauffage vient de s'arrêter :
+          1. Hero         le métier, la ville, le numéro
+          2. TrustBar     les engagements de fonctionnement
+          3. Gallery      vous traitez mon cas (bloc 2, texte centré, cartes photo)
+          4. Symptoms     qu'est-ce que j'ai (schéma « arbre de panne » + cartes)
+          5. Services     quelle prestation
+          6. Process      ça se passe comment
+          7. Stats        la bande de chiffres qui referme le déroulé
+          8. ServiceArea  vous venez chez moi (les 12 communes en liens)
+          9. About        vous êtes qui
+         10. WhyUs        pourquoi vous
+         11. formulaire, 12. FAQ, 13. bandeau d'appel
+        Règle du portefeuille (18/09/2026) : les zones couvertes ne sont jamais le
+        bloc 2 de l'accueil, elles vont en bloc 7 ou 8. Ici, bloc 8.
+        Rythme des fonds (jamais trois sombres d'affilée) :
+          sombre, clair, sombre, clair, sombre (Services), clair (Process),
+          sombre (Stats, bande courte), clair (ServiceArea, About, WhyUs,
+          formulaire, FAQ), puis le bandeau d'appel rebascule sur le sombre
+          pour préparer l'entrée dans le pied de page.
       */}
       <Hero />
       <TrustBar />
       {siteConfig.features.gallery && <Gallery />}
       <Symptoms services={services} />
       <Services services={services} />
-      <ServiceArea zones={zones} />
       <Process />
       <Stats />
+      <ServiceArea zones={zones} />
       <About />
       <WhyUs />
 

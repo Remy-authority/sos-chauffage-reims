@@ -1,9 +1,18 @@
 {
-  "_role": "Ancrage visuel du site, lu par scripts/generate-article-images.mjs. Il fixe l'identite des images generees a la publication des articles. Deux sites du portefeuille ne doivent JAMAIS partager le meme ancrage (regle anti-footprint, docs/RECETTE-VISUELS-ARTICLES.md).",
-  "contexte": "Reims et la Marne, France : craie champenoise, facades art deco remoises, pavillons de la couronne urbaine",
-  "metier": "depannage et entretien de chauffage, chaudieres et pompes a chaleur",
-  "ambiance": "photographie d'intervention sobre, palette bordeaux et gris froid : 70% de résultats finis en scène entière montrant le confort retrouvé — une chaudière propre et en marche dans une chaufferie ou un local technique rangé et net, ou une pièce chauffée confortable — jamais une chaudière en panne ni une pièce en désordre ; 30% de métier en action, l'artisan vu de dos ou par ses mains et ses outils seulement, jamais de visage, une seule main visible au plus. Jamais un défaut seul en gros plan (chaudière en panne, fuite), jamais de ton dramatique ni de gyrophare, lumière naturelle douce, cadrage de photographe d'intérieur.",
+  "_role": "Style des images d'articles, lu par scripts/generate-article-images.mjs : SEULEMENT la lumiere et la palette. La scene (chaudiere, pompe a chaleur, radiateur, ballon...) est choisie dans le script par mots-cles ; le sujet de l'article n'entre jamais dans la consigne. Deux sites du portefeuille ne partagent jamais la meme palette (anti-footprint).",
+  "_direction": "25/09/2026, mise a jour du site : l'ancien ancrage (craie champenoise, facades art deco, 'photographie d'intervention', artisan de dos) faisait venir des poeles a bois, des artisans de face, des caves en pierre et des tuyaux rouilles. Palette bordeaux et gris froid conservee, en touches, sur des equipements neufs dans des pieces renovees.",
+  "lumiere": "Soft cool northern French daylight from a large window",
+  "lumiereExterieur": "Soft bright overcast northern French daylight",
+  "palettes": [
+    "cool pale grey walls, white oak details, a single deep burgundy accent",
+    "chalk white walls, brushed steel details, a small burgundy ceramic vase",
+    "soft dove grey walls, pale oak details, a folded burgundy linen towel",
+    "warm white walls, light oak shelving, cool grey accents"
+  ],
+  "palettesExterieur": [
+    "pale grey render, light grey paving, a few clipped green shrubs",
+    "warm off-white render, pale stone paving, a deep burgundy front door"
+  ],
   "convention": "plat",
-  "_convention_role": "Ou poser les images quand le brouillon ne declare aucun cover. dossier = public/conseils/<slug>/cover.jpg ; plat = public/conseils/<slug>.jpg. Doit refleter ce que le site sert deja en production.",
-  "_direction": "26/08/2026, decision Remy : pour un site d'urgence, le resultat fini est le confort retrouve a l'interieur du logement (pas un chantier exterieur) ; resultats finis en scene entiere (70%) et metier en action (30%, artisan vu de dos ou par ses mains/outils seulement), jamais un defaut seul en gros plan."
+  "_convention_role": "Ou poser les images quand le brouillon ne declare aucun cover. dossier = public/conseils/<slug>/cover.jpg ; plat = public/conseils/<slug>.jpg. Doit refleter ce que le site sert deja en production."
 }

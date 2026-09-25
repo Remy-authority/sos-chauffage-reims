@@ -32,3 +32,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dossiers de build des agents en parallèle (NEXT_DIST_DIR)
+/.next-*/

@@ -43,7 +43,7 @@ export function CtaBanner({
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-craie-300">
               {subtitle ??
-                "Le type d'appareil et le code affiché suffisent à démarrer. Nous vous disons ce qui est en cause, ce que ça coûte et sous quel délai nous pouvons passer."}
+                "Le type d'appareil et le code affiché suffisent à démarrer. En retour, vous repartez avec une piste sur l'origine de la panne, un ordre de prix et l'heure possible de notre venue."}
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
