@@ -187,7 +187,7 @@ export const siteConfig = {
       step: '01',
       title: 'Votre appel',
       desc: "Vous décrivez ce qui se passe : plus de chauffage, un code d'erreur affiché, un radiateur froid, plus d'eau chaude. Nous situons l'appareil et le degré d'urgence.",
-      duration: 'Immédiat',
+      duration: 'Au téléphone',
     },
     {
       icon: 'search',
@@ -201,7 +201,7 @@ export const siteConfig = {
       step: '03',
       title: 'Réparation',
       desc: "Remise en service quand c'est un réglage ou une sécurité, remplacement de la pièce en cause quand elle est fautive. Vous savez ce qui est remplacé et pourquoi.",
-      duration: 'Jour J',
+      duration: 'Prix accepté',
     },
     {
       icon: 'check',
