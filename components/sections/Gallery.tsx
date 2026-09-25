@@ -36,8 +36,8 @@ const items = [
     caption: "Froid en haut, c'est de l'air. Froid en bas, c'est de la boue.",
   },
   {
-    src: '/gallery/05-manometre-pression.jpg',
-    alt: 'Manomètre de chaudière relevé pendant un contrôle de pression',
+    src: '/gallery/05-manometre-pression-v2.jpg',
+    alt: 'Manomètre à cadran chromé sur la façade blanche d\'une chaudière murale, raccords en cuivre dessous',
     title: 'Contrôle de pression',
     caption: 'À froid puis à chaud, pour distinguer fuite et vase fatigué.',
   },
