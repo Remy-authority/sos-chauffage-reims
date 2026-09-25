@@ -94,7 +94,10 @@ export function Gallery() {
                   className="absolute inset-0 bg-gradient-to-t from-fonte-950 via-fonte-950/45 to-transparent"
                 />
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              {/* Légende centrée (Rémy, 25/09) : le bloc 2 n'a pas de visuel À CÔTÉ du
+                  texte, les photos sont sous les légendes, donc tout le texte du bloc
+                  se centre, comme l'en-tête de section. */}
+              <div className="absolute inset-x-0 bottom-0 p-6 text-center">
                 <p className="font-display text-xl font-medium text-craie-50">{item.title}</p>
                 <p className="mt-1.5 text-sm leading-relaxed text-craie-300">{item.caption}</p>
               </div>

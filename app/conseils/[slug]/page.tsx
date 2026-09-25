@@ -31,7 +31,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const a = getArticle(params.slug)
   if (!a) return {}
   return buildMetadata({
-    title: a.title,
+    title: a.seoTitle || a.title,
     description: a.description,
     path: `/conseils/${a.slug}`,
     ogImage: a.cover,
@@ -101,7 +101,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-panneau border border-craie-200 shadow-pose">
                 <Image
                   src={article.cover}
-                  alt=""
+                  alt={article.coverAlt || ""}
                   fill
                   priority
                   sizes="(min-width: 1024px) 768px, 100vw"

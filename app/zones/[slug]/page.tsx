@@ -15,6 +15,8 @@ import { CtaBanner } from '@/components/ui/CtaBanner'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { ServiceBlock } from '@/components/ui/ServiceBlock'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
+import { PrixBloc } from '@/components/ui/PrixBloc'
+import { RepereLocal } from '@/components/ui/RepereLocal'
 
 export const dynamicParams = false
 
@@ -46,42 +48,26 @@ function getHeroSrc(slug: string): string {
   return existsOnDisk ? dedicated : HERO_FALLBACK
 }
 
-/**
- * Visuels de corps de page. ⚠️ À ne pas confondre avec l'image de tête : ce sont
- * des illustrations TECHNIQUES (un geste, un outil), volontairement neutres et
- * sans aucun repère géographique. Elles n'ont donc pas à être uniques par commune,
- * contrairement à l'image de tête, qui doit montrer la ville concernée et reste
- * câblée sur le slug (règle permanente Rémy du 27/07/2026).
- */
-const BODY_POOL = [
-  {
-    src: '/zones/geste-manometre.jpg',
-    alt: 'Lecture du manomètre de pression sur une chaudière murale',
-    caption: 'La pression du circuit, lue à froid puis à chaud, écarte déjà des hypothèses.',
-  },
-  {
-    src: '/zones/geste-purge.jpg',
-    alt: "Purge d'un radiateur, clé sur le purgeur et récipient posé dessous",
-    caption: "Froid en haut, chaud en bas : c'est de l'air, et la purge suffit.",
-  },
-  {
-    src: '/zones/geste-unite-exterieure.jpg',
-    alt: "Contrôle de l'échangeur d'une unité extérieure de pompe à chaleur",
-    caption: "Sur une pompe à chaleur, le diagnostic commence souvent dehors.",
-  },
-]
+/** Comparaison de noms de communes insensible aux accents, à la casse et aux tirets. */
+function cle(nom: string): string {
+  return nom
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
 
 export default function ZonePage({ params }: { params: { slug: string } }) {
   const zone = getZone(params.slug)
   if (!zone) notFound()
 
   const zones = getZones()
-  const idx = Math.max(
-    0,
-    zones.findIndex((z) => z.slug === zone.slug),
-  )
   const hero = getHeroSrc(zone.slug)
-  const body = BODY_POOL[(idx + 1) % BODY_POOL.length]
+  // Communes proches : liens vers les pages DU SITE (nom ou slug → page).
+  const voisines = zone.neighbours
+    .map((n) => ({ nom: n, page: zones.find((z) => cle(z.name) === cle(n) || z.slug === cle(n)) }))
+    .filter((v) => v.page?.slug !== zone.slug)
 
   // Maillage : les prestations les plus probables sur une commune résidentielle.
   const mainServices = getServices()
@@ -113,13 +99,13 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
       <section className="grain relative overflow-hidden bg-gradient-to-b from-fonte-950 via-fonte-900 to-fonte-950 py-16 lg:py-20">
         <div aria-hidden="true" className="trame absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
-          <div className="lg:col-span-7">
-            <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-braise-400">
+          <div className="text-center lg:col-span-7 lg:text-left">
+            <p className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-braise-400 lg:justify-start">
               <MapPin size={16} />
               {zone.name} · {zone.postalCode}
             </p>
             <h1 className="mt-5 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{zone.h1}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-craie-200">{zone.intro}</p>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0">{zone.intro}</p>
             <div className="mt-8">
               <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
@@ -145,31 +131,20 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
 
       <article className="bg-craie-50 py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
+          <RepereLocal fait={zone.fait} commune={zone.name} />
+
+          {/* Visuel de corps : porté par les blocs de CHAQUE commune (image ou schéma),
+              plus aucune image partagée entre communes (règle Rémy du 27/07/2026). */}
           <div className="texte-page space-y-10">
-            {zone.blocks.map((b, i) => (
-              <div key={b.heading}>
-                <ServiceBlock block={b} />
-                {i === 0 && (
-                  <figure className="mt-8">
-                    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-bloc border border-craie-200 shadow-pose">
-                      <Image
-                        src={body.src}
-                        alt={body.alt}
-                        fill
-                        sizes="(min-width: 768px) 768px, 100vw"
-                        className="object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                    <figcaption className="mt-3 text-sm text-craie-500">{body.caption}</figcaption>
-                  </figure>
-                )}
-              </div>
+            {zone.blocks.map((b) => (
+              <ServiceBlock key={b.heading} block={b} zoneSlug={zone.slug} />
             ))}
           </div>
 
+          <PrixBloc ids={zone.prix} lieu={zone.name} />
+
           <AnimatedSection className="mt-16">
-            <h2 className="text-2xl">Nos prestations à {zone.name}</h2>
+            <h2 className="text-center text-2xl lg:text-left">Nos prestations à {zone.name}</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {mainServices.map((s) => (
                 <li key={s.slug}>
@@ -189,31 +164,28 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
             </ul>
           </AnimatedSection>
 
-          {zone.neighbours.length > 0 && (
+          {voisines.length > 0 && (
             <AnimatedSection className="mt-14">
               {/* « à proximité » et non « limitrophes » : certaines communes de la
                   liste sont voisines sans partager une limite communale. */}
-              <h2 className="text-2xl">Autres communes desservies à proximité</h2>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {zone.neighbours.map((n) => {
-                  const match = zones.find((z) => z.name === n)
-                  return (
-                    <li key={n}>
-                      {match ? (
-                        <Link
-                          href={`/zones/${match.slug}`}
-                          className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
-                        >
-                          {n}
-                        </Link>
-                      ) : (
-                        <span className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-600">
-                          {n}
-                        </span>
-                      )}
-                    </li>
-                  )
-                })}
+              <h2 className="text-center text-2xl lg:text-left">Autres communes desservies à proximité</h2>
+              <ul className="mt-5 flex flex-wrap justify-center gap-2 lg:justify-start">
+                {voisines.map(({ nom, page }) => (
+                  <li key={nom}>
+                    {page ? (
+                      <Link
+                        href={`/zones/${page.slug}`}
+                        className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
+                      >
+                        {page.name}
+                      </Link>
+                    ) : (
+                      <span className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-600">
+                        {nom}
+                      </span>
+                    )}
+                  </li>
+                ))}
               </ul>
             </AnimatedSection>
           )}

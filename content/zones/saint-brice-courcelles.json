@@ -2,42 +2,64 @@
   "slug": "saint-brice-courcelles",
   "name": "Saint-Brice-Courcelles",
   "postalCode": "51370",
-  "context": "Commune résidentielle du nord-ouest de Reims, traversée par la Vesle et le canal, avec une part de logement collectif notable.",
-  "metaTitle": "Dépannage chauffage et chaudière à Saint-Brice-Courcelles (51)",
-  "metaDescription": "Chauffagiste à Saint-Brice-Courcelles : chaudière en sécurité, radiateurs froids, plus d'eau chaude. Maison et appartement. Ligne ouverte 7j/7.",
-  "h1": "Dépannage chauffage et chaudière à Saint-Brice-Courcelles",
-  "intro": "Nous intervenons à Saint-Brice-Courcelles (51370) pour le dépannage des chaudières, des pompes à chaleur et des ballons d'eau chaude. Commune du nord-ouest de Reims, traversée par la Vesle et le canal, Saint-Brice-Courcelles associe des rues pavillonnaires calmes et une part de logement collectif plus importante que dans les communes voisines de taille comparable. Maison ou appartement, la panne ne se traite pas de la même façon.",
+  "context": "Commune au nord-ouest de Reims où près d'un ménage sur deux est locataire de son logement.",
+  "metaTitle": "Locataire à Saint-Brice-Courcelles ? Chauffagiste chaudière",
+  "metaDescription": "Locataire ou propriétaire à Saint-Brice-Courcelles, qui paie la réparation de la chaudière ? Nous dépannons et vous disons qui prend en charge quoi.",
+  "h1": "Chauffagiste à Saint-Brice-Courcelles",
+  "intro": "Près d'un ménage sur deux est locataire à Saint-Brice-Courcelles (51370). Avant la technique, la première question est souvent pratique : qui appelle, qui décide, qui règle la facture ? Chez les propriétaires comme chez les locataires, nous remettons en route chaudières, ballons d'eau chaude et radiateurs, et nous aidons chacun à y voir clair.",
+  "fait": {
+    "texte": "En 2023, 45,8 % des résidences principales de Saint-Brice-Courcelles sont occupées par des locataires, et 34,5 % sont des logements HLM loués vides.",
+    "source": {
+      "nom": "INSEE, dossier complet Saint-Brice-Courcelles, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51474",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "En maison ou en appartement, deux périmètres",
-      "body": "La différence n'est pas cosmétique, elle détermine qui doit faire quoi. Dans une maison individuelle, tout est chez vous : l'appareil, son évacuation, le circuit de radiateurs, le ballon. Le diagnostic peut aller d'un bout à l'autre de l'installation sans autre autorisation que la vôtre. Dans un appartement équipé d'une chaudière individuelle, votre périmètre s'arrête à votre logement : l'appareil, ses raccordements et vos émetteurs. Au delà commencent les parties communes, conduit collectif d'évacuation, colonne d'alimentation, ventilation générale, qui relèvent du syndic. Cette frontière compte parce que certains symptômes la traversent : une chaudière qui se met en sécurité sur défaut d'évacuation peut parfaitement être en bon état, le problème venant du conduit commun. Dans un immeuble chauffé par une chaufferie collective, votre logement n'a pas de générateur du tout, et un radiateur froid relève alors de l'équilibrage de la colonne ou d'un robinet de votre logement. Nous vous disons de quel côté de la frontière se trouve votre panne, ce qui vous évite de payer pour un problème qui n'est pas le vôtre."
+      "heading": "Locataire : l'entretien pour vous, le remplacement pour le bailleur",
+      "body": "En location, la règle générale est simple à retenir. L'entretien courant de la chaudière, la visite annuelle et les menues réparations, comme un joint ou un purgeur, sont à la charge de l'occupant. Le remplacement d'un appareil hors d'usage par vétusté, ou une grosse réparation qui ne découle pas d'un défaut d'entretien, revient au propriétaire. Entre les deux, tout dépend de la cause : c'est précisément ce que notre diagnostic établit. Notre compte rendu écrit indique ce qui a lâché et pourquoi, un document que vous pouvez transmettre tel quel à votre bailleur."
     },
     {
-      "heading": "L'humidité de fond de vallée",
-      "body": "Saint-Brice-Courcelles s'étire le long de la Vesle et du canal, en fond de vallée, ce qui donne des sous-sols et des rez-de-chaussée plus humides que sur les plateaux voisins. Cette humidité ambiante a des effets concrets sur une installation de chauffage. Elle accélère la corrosion externe des appareils et des raccords installés dans un sous-sol ou une buanderie, si bien qu'un suintement met plus longtemps à être identifié comme tel au milieu de traces d'humidité générales. Elle rend le diagnostic d'une trace au mur plus délicat, puisqu'une auréole près d'un radiateur peut aussi bien venir d'un raccord qui goutte que d'une remontée du mur ou d'une condensation. L'indice le plus fiable dans ces cas reste la pression de la chaudière : si elle ne bouge pas alors que la trace s'étend, le chauffage n'est probablement pas en cause. Enfin, un air ambiant humide favorise le givrage des unités extérieures de pompes à chaleur, donc des cycles de dégivrage plus fréquents en hiver."
+      "heading": "Logement social : le contrat d'entretien passe d'abord",
+      "body": "Beaucoup de bailleurs sociaux confient l'entretien des chaudières de leurs logements à une entreprise sous contrat, dont les coordonnées figurent sur l'avis d'échéance ou dans le hall de l'immeuble. Si c'est votre cas, appelez d'abord ce prestataire : la visite annuelle est souvent déjà comprise dans vos charges et vous n'avez pas à payer une seconde fois. Nous intervenons pour les locataires du parc privé, pour les propriétaires occupants, et pour les bailleurs qui gèrent eux-mêmes leurs logements. Au téléphone, nous vous aidons à savoir dans quelle situation vous êtes.",
+      "image": {
+        "src": "/zones/saint-brice-courcelles-corps.jpg",
+        "alt": "Chaudière murale récente dans l'entrée d'un appartement lumineux, dossier d'entretien et attestation posés sur une console"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas de panne de chauffage à Saint-Brice-Courcelles, notez le code affiché, coupez l'appareil si de l'eau s'écoule et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Saint-Brice-Courcelles, nous couvrons aussi Reims et ses quartiers nord-ouest, Tinqueux, Bétheny et Muizon."
+      "heading": "Saint-Brice-Courcelles, Tinqueux, Bétheny et Muizon",
+      "body": "Saint-Brice-Courcelles se trouve au nord-ouest de Reims. Sur la carte, vous retrouvez les communes voisines que nous couvrons : Tinqueux juste au sud, Bétheny à l'est, Muizon plus à l'ouest. Le déroulé ne change pas d'une commune à l'autre : panne décrite, tarif annoncé, rendez-vous fixé avec vous, et un compte rendu utile si un bailleur doit être informé.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Tinqueux",
-    "Bétheny"
+    "Bétheny",
+    "Muizon"
+  ],
+  "prix": [
+    "entretien-gaz",
+    "depannage-gaz",
+    "ballon-remplacement"
   ],
   "faq": [
     {
-      "q": "Dans un immeuble, qui prend en charge la panne de chauffage ?",
-      "a": "Cela dépend de l'installation. Avec une chaudière individuelle dans le logement, l'appareil et vos radiateurs relèvent de l'occupant ou du propriétaire selon la nature de l'opération, et nous intervenons directement. Avec un chauffage collectif, le générateur se trouve en partie commune et relève du syndic : un radiateur froid dans votre logement peut alors venir de votre robinet, donc de chez vous, ou de l'équilibrage de la colonne, donc des parties communes. Le diagnostic sert précisément à situer la frontière."
+      "q": "Je suis locataire, puis-je vous appeler directement pour une panne de chaudière ?",
+      "a": "Oui. Prévenez aussi votre propriétaire ou votre agence, surtout si la réparation risque de lui revenir. Nous établissons un diagnostic écrit qui précise la cause de la panne : entretien, usure normale ou défaut de l'appareil. Ce document évite les discussions sur la prise en charge."
     },
     {
-      "q": "Une trace d'humidité sous mon radiateur vient-elle forcément d'une fuite ?",
-      "a": "Non, et dans un secteur de fond de vallée la question mérite d'être posée. Une auréole peut venir d'un raccord ou d'un purgeur qui suinte, mais aussi d'une condensation sur un mur froid ou d'une remontée d'humidité qui suit le tracé du tuyau sans rapport avec le chauffage. Le repère le plus fiable est la pression au manomètre de la chaudière : si elle reste stable pendant que la trace grandit, le circuit ne perd pas d'eau et la cause est ailleurs."
+      "q": "Mon logement HLM a un contrat d'entretien, dois-je quand même vous contacter ?",
+      "a": "Appelez d'abord l'entreprise titulaire du contrat, dont les coordonnées sont fournies par votre bailleur. Elle intervient déjà pour la visite annuelle et, souvent, pour les pannes. Si elle ne répond pas ou si la situation devient urgente, signalez-le au bailleur ; il vous dira s'il autorise une autre entreprise à intervenir."
     },
     {
-      "q": "Ma chaudière d'appartement se met en sécurité, est-ce forcément elle qui est en cause ?",
-      "a": "Pas toujours. Une chaudière individuelle raccordée à un conduit collectif d'évacuation peut se mettre en sécurité alors qu'elle fonctionne parfaitement, parce que le conduit commun ne dégage plus correctement. Un indice utile : si plusieurs logements de la même colonne rencontrent le même défaut à la même période, la cause est presque certainement en partie commune. Nous vous fournissons dans ce cas un constat écrit à transmettre au syndic."
+      "q": "Ballon d'eau chaude hors d'usage en location : à qui la facture ?",
+      "a": "Un ballon hors d'usage par vieillissement est en principe remplacé aux frais du propriétaire. Les petites pièces d'usure et l'entretien restent à la charge du locataire, tout comme une casse due à un défaut d'entretien. Le diagnostic indique l'origine exacte, ce qui permet de répartir la dépense sans conflit."
+    },
+    {
+      "q": "Mon propriétaire me réclame l'attestation d'entretien, où la trouver ?",
+      "a": "Elle vous est remise par le professionnel à la fin de chaque visite d'entretien, sur papier ou par mail. Si vous l'avez égarée, l'entreprise qui a réalisé la visite peut vous en fournir un double. Si l'entretien n'a pas été fait cette année, planifiez-le avant l'hiver : nous vous remettons l'attestation le jour même."
     }
   ]
 }

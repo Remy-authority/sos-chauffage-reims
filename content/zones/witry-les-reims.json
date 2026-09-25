@@ -2,42 +2,68 @@
   "slug": "witry-les-reims",
   "name": "Witry-lès-Reims",
   "postalCode": "51420",
-  "context": "Commune du nord-est de l'agglomération, en expansion pavillonnaire continue depuis plusieurs décennies.",
-  "metaTitle": "Dépannage chauffage et chaudière à Witry-lès-Reims (51)",
-  "metaDescription": "Chauffagiste à Witry-lès-Reims : chaudière en panne, pannes à répétition, radiateurs froids. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Witry-lès-Reims",
-  "intro": "Nous intervenons à Witry-lès-Reims (51420) sur les pannes de chauffage et d'eau chaude. Witry-lès-Reims s'est étendue par lotissements successifs au nord-est de l'agglomération, ce qui donne une commune où chaque quartier correspond à une époque de construction, et donc à une génération d'appareils. C'est le terrain type de la question réparer ou remplacer, que nous préférons poser au bon moment plutôt qu'en pleine panne.",
+  "context": "Commune au nord-est de Reims, dont une grande partie des maisons a été construite à la fin des années 1970.",
+  "metaTitle": "Witry-lès-Reims : chauffagiste, réparer ou remplacer ?",
+  "metaDescription": "Chaudière qui tombe en panne chaque hiver à Witry-lès-Reims ? Nous chiffrons la réparation et vous aidons à décider s'il vaut mieux la garder. Parlons-en.",
+  "h1": "Chauffagiste à Witry-lès-Reims",
+  "intro": "Une large part des maisons de Witry-lès-Reims (51420) a été bâtie en quelques années, entre la fin des années 1970 et le début des années 1980. Leurs installations de chauffage ont vieilli ensemble, et beaucoup de foyers se posent la même question au même moment : réparer encore, ou remplacer ? Chaudière, pompe à chaleur ou ballon, nous aidons à trancher, pièces et chiffres à l'appui.",
+  "fait": {
+    "texte": "Le nombre de résidences principales de Witry-lès-Reims est passé de 552 en 1975 à 1 388 en 1982.",
+    "source": {
+      "nom": "INSEE, dossier complet Witry-lès-Reims, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51662",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Des chaudières de tous les âges dans la même commune",
-      "body": "Passer d'une rue à l'autre à Witry-lès-Reims, c'est changer de décennie de construction, et cela s'entend dans les appels que nous recevons. Sur les maisons les plus anciennes, l'appareil en place a souvent dépassé la durée de vie sur laquelle on l'avait acheté, et les défauts s'enchaînent : une sonde cette année, un circulateur l'an prochain, une carte électronique la saison suivante. Sur les lotissements intermédiaires, nous trouvons des chaudières à condensation de première génération, encore très réparables mais dont certaines pièces spécifiques commencent à se raréfier. Sur les constructions les plus récentes, ce sont les pompes à chaleur et les appareils très régulés qui dominent, avec des pannes de nature électronique. Cette diversité est plutôt une bonne nouvelle pour vous : elle nous oblige à identifier votre appareil avant de venir, ce qui évite les allers-retours pour chercher une pièce."
+      "heading": "Des maisons du même âge, des pannes qui se ressemblent",
+      "body": "Quand un quartier entier sort de terre en quelques années, ses installations suivent un calendrier commun. Les circuits de radiateurs en acier accumulent des boues au même rythme, les robinets d'origine se grippent, et bon nombre de maisons en sont à leur deuxième ou troisième chaudière. Pour nous, c'est un avantage : les défauts de ces réseaux nous sont familiers, et une description précise au téléphone suffit souvent à préparer les bonnes pièces. Pour vous, c'est le signal que l'installation mérite un regard d'ensemble plutôt qu'une réparation après l'autre."
     },
     {
-      "heading": "Le bon moment pour trancher entre réparer et remplacer",
-      "body": "Quand une chaudière vous a déjà immobilisé plusieurs fois dans la même saison, la vraie question n'est plus quelle pièce changer mais s'il faut continuer. Nous la tranchons sur quatre critères vérifiables, jamais sur l'âge seul. Le coût de la réparation envisagée comparé à celui d'un appareil neuf de même catégorie. La disponibilité réelle des pièces détachées de votre modèle, point décisif et souvent ignoré : une chaudière ancienne bien approvisionnée se répare sans hésiter, une chaudière dont la carte ne se trouve plus est condamnée quelle que soit sa robustesse. La répétition des pannes sur les dernières saisons, qui compte autant que leur gravité. Et l'état du corps de chauffe, que seule une inspection permet d'observer. Le moment idéal pour poser ces questions se situe au printemps ou à la fin de l'été, quand vous avez le temps de comparer et de décider. Le pire moment, c'est un soir de janvier avec la maison à douze degrés : la décision est alors prise sous contrainte. Nous ne vendons pas d'installation neuve depuis ce site, ce qui nous laisse libres de vous conseiller de garder votre appareil quand c'est la bonne réponse."
+      "heading": "Réparer ou remplacer : quatre questions à se poser",
+      "body": "L'âge seul ne décide rien. Nous vous aidons à trancher avec quatre questions vérifiables. Que coûte la réparation proposée comparée au prix d'un appareil neuf équivalent ? Les pièces de votre modèle se trouvent-elles encore, ou faudra-t-il attendre, voire renoncer ? Combien de pannes l'appareil a-t-il connu sur les derniers hivers ? Dans quel état est le corps de chauffe, que seule une inspection permet de juger ? Si les réponses penchent vers la réparation, nous réparons. Si elles penchent vers le remplacement, nous vous le disons, sans rien vous vendre : nous ne posons pas d'appareil neuf, et ce conseil n'engage donc aucun intérêt de notre part.",
+      "image": {
+        "src": "/zones/witry-les-reims-corps.jpg",
+        "alt": "Chaudière gaz ouverte pour inspection dans une chaufferie de maison rénovée, carnet de relevés et pièce détachée neuve posés à côté"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas d'arrêt du chauffage à Witry-lès-Reims par temps froid, relevez le code d'erreur, ne réarmez pas plus d'une fois, protégez le sol si de l'eau s'écoule et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Witry-lès-Reims, nous intervenons aussi à Reims, à Bétheny, à Cernay-lès-Reims et à Prunay."
+      "heading": "Si vous remplacez, préparez le terrain",
+      "body": "Une chaudière neuve raccordée à un vieux circuit hérite de ses défauts. Avant le remplacement, trois vérifications évitent bien des déceptions. Le circuit doit être propre : un désembouage protège l'échangeur du nouvel appareil. Le conduit d'évacuation doit convenir : une chaudière à condensation rejette des fumées froides et humides qui exigent un conduit adapté, parfois un tubage. Enfin, les condensats doivent pouvoir s'écouler vers une évacuation. Nous réalisons ces contrôles en amont, pour que votre installateur parte d'un état des lieux fiable."
+    },
+    {
+      "heading": "Witry-lès-Reims, Bétheny, Cernay-lès-Reims, Saint-Brice-Courcelles",
+      "body": "Witry-lès-Reims se situe au nord-est de Reims. La carte montre les communes proches que nous desservons aussi : Bétheny à l'ouest, Cernay-lès-Reims au sud, Saint-Brice-Courcelles plus loin au nord-ouest. Depuis chacune, le déplacement vous est chiffré dès l'appel, avant toute intervention.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Bétheny",
-    "Cernay-lès-Reims"
+    "Cernay-lès-Reims",
+    "Saint-Brice-Courcelles"
+  ],
+  "prix": [
+    "diagnostic",
+    "remplacement-piece",
+    "depannage-gaz"
   ],
   "faq": [
     {
-      "q": "À partir de quel âge faut-il remplacer une chaudière ?",
-      "a": "Il n'existe pas d'âge limite universel, et se fier au seul nombre d'années conduit souvent à la mauvaise décision. Une chaudière entretenue régulièrement, dont les pièces existent encore et qui n'a jamais posé de problème sérieux, se garde. Une chaudière plus jeune mais dont le corps de chauffe se dégrade, dont les pièces ne se trouvent plus ou qui vous a immobilisé plusieurs fois dans un même hiver appelle une décision de remplacement. Ce sont ces critères qui tranchent, pas la date de fabrication."
+      "q": "Une pièce de ma chaudière est introuvable, est-ce forcément la fin de l'appareil ?",
+      "a": "Pas toujours. Certaines pièces existent en version adaptable ou reconditionnée, et un composant équivalent convient parfois. Si aucune solution fiable n'existe pour une pièce de sécurité, en revanche, nous refusons le bricolage : la chaudière doit alors être remplacée. Nous vous présentons les options disponibles avant toute décision."
     },
     {
-      "q": "Ma chaudière tombe en panne plusieurs fois par saison, est-ce forcément la fin ?",
-      "a": "Pas nécessairement, mais cela mérite un diagnostic d'ensemble plutôt qu'une nouvelle réparation isolée. Des pannes répétées ont parfois une cause commune que les interventions successives n'ont jamais traitée : un circuit encrassé qui fait surchauffer l'appareil, un vase d'expansion hors service qui malmène la pression à chaque cycle, une évacuation de fumées imparfaite. Traiter cette cause peut rendre plusieurs années à un appareil qu'on croyait perdu."
+      "q": "Faut-il désembouer le circuit avant de poser une chaudière neuve ?",
+      "a": "Sur un réseau ancien, c'est fortement recommandé, et les fabricants le demandent souvent dans leurs conditions de garantie. Les boues d'un vieux circuit migrent vers le nouvel échangeur, plus fin et plus sensible, et l'encrassent rapidement. Un désembouage suivi d'un traitement de l'eau protège l'investissement dès le départ."
     },
     {
-      "q": "Vaut-il mieux faire remplacer sa chaudière en été ou attendre la panne ?",
-      "a": "Hors saison, sans hésiter. Un remplacement anticipé se prépare : vous comparez, vous choisissez, vous planifiez la coupure. Un remplacement dans l'urgence se subit : vous décidez en quelques heures, dans le froid, avec ce qui est disponible. À qualité d'appareil égale, la différence se joue surtout sur votre confort de décision, et c'est loin d'être un détail quand il s'agit d'un équipement qu'on garde longtemps."
+      "q": "Pouvez-vous nous dire franchement si la réparation vaut le coup ?",
+      "a": "C'est même ce que nous préférons faire. Comme nous ne vendons pas de chaudière neuve, notre avis n'est pas orienté. Nous comparons le coût de la réparation, la disponibilité des pièces et l'historique des pannes, puis nous vous donnons une recommandation argumentée, que vous restez libre de suivre ou non."
+    },
+    {
+      "q": "Mon conduit de fumée convient-il à une chaudière à condensation ?",
+      "a": "Pas nécessairement. Un conduit prévu pour une ancienne chaudière reçoit des fumées chaudes et sèches ; celles d'un appareil à condensation sont tièdes et chargées d'humidité, et peuvent dégrader un conduit non adapté. Un contrôle du conduit avant remplacement indique s'il faut prévoir un tubage ou une ventouse."
     }
   ]
 }

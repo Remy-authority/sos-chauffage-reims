@@ -1,5 +1,41 @@
 # tasks/todo.md — SOS Chauffage Reims
 
+## MISE À JOUR du 25/09/2026 (CEO Opus 5.5, règle ../tasks/regle-mise-a-jour-site.md), branche `maj-25-09`
+
+### Décisions de Rémy (25/09, mode interview, ne plus reposer)
+- Article « chaudière en panne : louer un chauffage d'appoint ou réparer, ce que ça coûte à Reims » (capte « location chaudière reims »).
+- Les 5 retouches ordinateur exigées par les contrôles : OUI (menu Zones déroulant, H1 3 lignes max, texte du bloc 1 raccourci, bloc 2 centré, un schéma sur l'accueil). Couleurs, polices, photos inchangées.
+- Mesure DataForSEO (~0,10 $) : OUI, faite. Requête d'argent = « chauffagiste reims » 390/mois (CLAUDE.md §0).
+- H1 accueil : « Chauffagiste d'urgence à Reims, on remonte à la cause. »
+- Intouchables : numéro 09 39 20 00 17, contact@, formulaire, aucun backlink.
+
+### État des lieux (25/09)
+- GSC 28 j : 580 vues, 5 clics (tous sur des articles). Fal.ai 11,40 $.
+- Série sur la PRODUCTION (`../tasks/.maj-reims/avant-*.txt`) : design ECHEC 5 (H1 4 lignes, 698 car. bloc 1, aucun schéma, alignement, « pas de photo » à vérifier), navigation ECHEC 3 (aucun menu déroulant, contact sans FAQ ni prestations, bloc 2 non centré), blocs ECHEC 21/21 (aucun visuel de corps dans la source), visuels articles OK (33 + 55 à la publication), footprint : doublons internes des FAQ zones (« Notre ligne est ouverte… » ×12).
+- Curl : /tarifs 404 qui sert le title « Électricien d'urgence à Annecy » (page 404 héritée), accueil title 61 car., description 225 car., H1 sans le métier.
+- Accueil : zones (ServiceArea) en bloc 6 → à descendre en bloc 8. Pied de page mobile très long, texte non centré sur mobile.
+
+### Quatre listes Search Console
+1. Vues ≥ 10 sans clic (28 j) : pilier /services/urgence-depannage-chauffage-chaudiere 141 (pos 69,5) ; /conseils/entretien-chaudiere-location-qui-paie 58 (20) ; /conseils/desembouage-circuit-chauffage-a-quoi-ca-sert-quand-envisager 52 (85) ; /conseils 51 (50) ; / 32 (64) ; /conseils/vanne-thermostatique-bloquee-radiateur-ne-reagit-plus 26 (28) ; /services/fuite-chaudiere-circuit-chauffage 26 (85) ; /contact 19 (62) ; /zones/cormontreuil 19 (38) ; /conseils/chaudiere-perd-pression-vase-expansion 13 (8,8) ; /zones/witry-les-reims 13 (13,5) ; /services/ballon-eau-chaude-cumulus 12 (49) ; /services/radiateur-froid-desembouage-purge 11 (6,6) ; /zones/bezannes 11 (54) ; /services/depannage-chaudiere-fioul 10 (65).
+2. Gains rapides (pos 8-30, 90 j) : location chaudière reims 80 (22) ; location chauffage reims 27 (26) ; entretien chaudière fioul autour de moi 6 (11) ; installation chauffage cormontreuil 6 (18) ; chauffagiste autour de moi 4 (10) ; chauffagiste 2 (12,5) ; chauffagiste 24h/24 (15) ; chauffagiste fuel (10) ; dépannage chaudière fioul autour de moi (8).
+3. Prix : aucune requête mesurée en GSC ; volumes Google : désembouage radiateur 6 600, tarif entretien chaudière gaz 1 300, prix entretien chaudière 1 000, prix désembouage radiateur 1 000, prix désembouage 720, prix remplacement chaudière 90, prix dépannage chaudière 50.
+4. Pilier : /services/urgence-depannage-chauffage-chaudiere (141 vues, pos 69,5) ; requêtes : urgence chaudière 39, sos chauffage 30, dépannage chauffage urgence 20, sos dépannage chaudière 20, sos chaudière 18, chauffagiste urgence 11, urgence dépannage chaudière 8, urgence chauffage 6.
+
+### Note AVANT (25/09, grille §6) : 0/10
+1 ❌ (H1 sans métier, desc 225, title 61) · 2 ❌ (pas de /tarifs) · 3 ❌ (pilier 3 blocs) · 4 ❌ (aucun fait sourcé, titles sans « chauffagiste ») · 5 ❌ · 6 ❌ · 7 ❌ (mobile non centré, pied de page long) · 8 ❌ (21 pages sans visuel de corps) · 9 ❌ (3/semaine, 56 brouillons) · 10 ❌ (série rouge)
+
+### Chantiers
+- [ ] A1 Builder pages : blocs image/schéma, /tarifs, contact riche, 404 propre, prix sur prestations et communes, communes voisines, centrage mobile des pages
+- [ ] A2 Builder accueil : H1, bloc 1 ≤ 320 car., zones en bloc 8, schéma, menu Zones, bloc 2 centré, pied de page mobile en volets, Tarifs au pied de page
+- [ ] B Tarifs et faits sourcés (content/tarifs.json, content/schemas.json)
+- [ ] C Prestations : pilier profond + 8 prestations (titles, descriptions, blocs, FAQ, prix, emplacements d'images)
+- [ ] D Communes : 12 pages (title chauffagiste + commune, fait sourcé, FAQ réécrites, emplacements d'images)
+- [ ] E Autoblog : cron 1-5, brouillons ≥ 65 dont l'article location/appoint, titres des articles vus sans clic, maillage
+- [ ] F Photos (après C et D) : couvertures et corps, regardées une par une
+- [ ] Contrôles passe 1, captures 3 formats, relecture critique, passe 2
+- [ ] Livraison à Rémy (GO), puis mise en ligne, Rank OS, indexation
+
+
 > Suivi opérationnel des sessions. La checklist de référence long terme vit dans
 > `docs/ETAT.md` (section 2). Ici : les tâches des sessions en cours.
 > ⏰ IMPÉRATIF : site EN LIGNE avant fin septembre 2026 (pic de la saison de chauffe en octobre).

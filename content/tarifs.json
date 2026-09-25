@@ -1,0 +1,365 @@
+{
+  "metaTitle": "Tarifs et prix d'un chauffagiste à Reims",
+  "metaDescription": "Dépannage de chaudière, entretien annuel, désembouage : nos fourchettes de prix, sourcées et datées. Le prix exact vous est annoncé avant l'intervention.",
+  "h1": "Tarifs et prix d'un chauffagiste à Reims",
+  "intro": "Chaque montant de cette page est une fourchette constatée, relevée dans une source que nous citons avec sa date. Votre facture dépend de l'appareil, de la panne, de la pièce et de l'heure : le prix exact de votre intervention vous est donc annoncé avant que nous commencions.",
+  "miseAJour": "septembre 2026",
+  "cover": {
+    "src": "/tarifs/couverture.jpg",
+    "alt": "Chauffagiste contrôlant une chaudière murale gaz dans une cuisine récente"
+  },
+  "groupes": [
+    {
+      "titre": "Déplacement, diagnostic et horaires",
+      "lignes": [
+        {
+          "id": "deplacement",
+          "poste": "Frais de déplacement",
+          "prix": "30 à 70 €",
+          "unite": "par intervention",
+          "note": "Selon la distance et la zone. Prix constatés en France.",
+          "source": {
+            "nom": "Chaudieregaz.com",
+            "url": "https://www.chaudieregaz.com/blog/prix-depannage-chaudiere-gaz/",
+            "date": "2025-12-28"
+          }
+        },
+        {
+          "id": "diagnostic",
+          "poste": "Diagnostic d'une panne de chauffage",
+          "prix": "80 à 150 €",
+          "unite": "forfait",
+          "note": "Contrôle complet de l'appareil et recherche de la cause. Prix constatés en France.",
+          "source": {
+            "nom": "Chaudieregaz.com",
+            "url": "https://www.chaudieregaz.com/blog/prix-depannage-chaudiere-gaz/",
+            "date": "2025-12-28"
+          }
+        },
+        {
+          "id": "majoration-nuit-weekend",
+          "poste": "Majoration soir, nuit, week-end ou jour férié",
+          "prix": "25 à 50 %",
+          "unite": "en plus",
+          "note": "S'ajoute à la main-d'œuvre et au déplacement. Prix constatés en France.",
+          "source": {
+            "nom": "Chaudieregaz.com",
+            "url": "https://www.chaudieregaz.com/blog/prix-depannage-chaudiere-gaz/",
+            "date": "2025-12-28"
+          }
+        }
+      ]
+    },
+    {
+      "titre": "Dépannage et réparation",
+      "lignes": [
+        {
+          "id": "depannage-gaz",
+          "poste": "Dépannage d'une chaudière gaz",
+          "prix": "100 à 300 €",
+          "unite": "par intervention",
+          "note": "Selon la panne, sa complexité et l'urgence. Prix constatés en France.",
+          "source": {
+            "nom": "Chaudieregaz.com",
+            "url": "https://www.chaudieregaz.com/blog/prix-depannage-chaudiere-gaz/",
+            "date": "2025-12-28"
+          }
+        },
+        {
+          "id": "depannage-fioul",
+          "poste": "Visite de dépannage d'une chaudière fioul",
+          "prix": "99 à 313 €",
+          "unite": "déplacement et main-d'œuvre",
+          "note": "Hors pièces. Le haut de la fourchette est un tarif du soir, hors taxes, d'une enseigne nationale.",
+          "source": {
+            "nom": "Selectra",
+            "url": "https://selectra.info/energie/renovation-energetique/chaudiere/fioul/depannage",
+            "date": "2026-06-15"
+          }
+        },
+        {
+          "id": "depannage-pac",
+          "poste": "Dépannage d'une pompe à chaleur",
+          "prix": "100 à 300 €",
+          "unite": "par intervention",
+          "note": "Déplacement et une heure de main-d'œuvre, sans pièce majeure. Prix constatés en France.",
+          "source": {
+            "nom": "La Prime Énergie",
+            "url": "https://www.laprimeenergie.fr/les-travaux/la-pompe-a-chaleur/depannage",
+            "date": "2026-09-25"
+          }
+        },
+        {
+          "id": "remplacement-piece",
+          "poste": "Remplacement d'une pièce de chaudière",
+          "prix": "250 à 600 €",
+          "unite": "pièce et main-d'œuvre",
+          "note": "Circulateur, carte électronique, brûleur : le prix suit la pièce. Prix constatés en France.",
+          "source": {
+            "nom": "Énergie Futée",
+            "url": "https://energiefutee.fr/chauffage/prix-depannage-chaudiere/",
+            "date": "2025-12-27"
+          }
+        },
+        {
+          "id": "recherche-fuite",
+          "poste": "Recherche de fuite par caméra thermique",
+          "prix": "250 à 375 €",
+          "unite": "par recherche",
+          "note": "Sans casse, sur plancher chauffant ou chauffage central. La réparation s'ajoute.",
+          "source": {
+            "nom": "Prodestravaux",
+            "url": "https://www.prodestravaux.com/devis-travaux/recherche-fuite",
+            "date": "2026-09-25"
+          }
+        }
+      ]
+    },
+    {
+      "titre": "Entretien annuel",
+      "lignes": [
+        {
+          "id": "entretien-gaz",
+          "poste": "Entretien d'une chaudière gaz",
+          "prix": "90 à 120 €",
+          "unite": "par visite",
+          "note": "Hors contrat. Chaudière gaz à condensation : 140 à 190 €. Prix TTC constatés en France.",
+          "source": {
+            "nom": "Hello Watt",
+            "url": "https://www.hellowatt.fr/chaudiere/entretien-chaudiere/prix-entretien-chaudiere",
+            "date": "2026-05-21"
+          }
+        },
+        {
+          "id": "entretien-fioul",
+          "poste": "Entretien d'une chaudière fioul",
+          "prix": "110 à 150 €",
+          "unite": "par visite",
+          "note": "Hors contrat. Prix TTC constatés en France.",
+          "source": {
+            "nom": "Hello Watt",
+            "url": "https://www.hellowatt.fr/chaudiere/entretien-chaudiere/prix-entretien-chaudiere",
+            "date": "2026-05-21"
+          }
+        },
+        {
+          "id": "entretien-pac",
+          "poste": "Entretien d'une pompe à chaleur air-air ou air-eau",
+          "prix": "150 à 250 €",
+          "unite": "par visite annuelle",
+          "note": "Nettoyage de l'appareil et contrôle des réglages. Prix constatés en France.",
+          "source": {
+            "nom": "Effy",
+            "url": "https://www.effy.fr/travaux-energetique/chauffage/pompe-a-chaleur/assurance/depannage",
+            "date": "2026-09-25"
+          }
+        }
+      ]
+    },
+    {
+      "titre": "Circuit de chauffage et eau chaude",
+      "lignes": [
+        {
+          "id": "desembouage-radiateurs",
+          "poste": "Désembouage de radiateurs (moins de 10)",
+          "prix": "350 à 550 €",
+          "unite": "forfait",
+          "note": "Au-delà de 10 radiateurs : 600 à 1 000 €. Prix TTC constatés en France.",
+          "source": {
+            "nom": "Habitatpresto",
+            "url": "https://www.habitatpresto.com/mag/chauffage/desembouage-radiateur-plancher-chauffant-prix",
+            "date": "2025-10-10"
+          }
+        },
+        {
+          "id": "desembouage-plancher",
+          "poste": "Désembouage d'un plancher chauffant",
+          "prix": "500 à 900 €",
+          "unite": "forfait",
+          "note": "Selon la surface et l'encrassement. Prix TTC constatés en France.",
+          "source": {
+            "nom": "Habitatpresto",
+            "url": "https://www.habitatpresto.com/mag/chauffage/desembouage-radiateur-plancher-chauffant-prix",
+            "date": "2025-10-10"
+          }
+        },
+        {
+          "id": "ballon-remplacement",
+          "poste": "Remplacement d'un ballon d'eau chaude",
+          "prix": "500 à 1 700 €",
+          "unite": "fourni et posé",
+          "note": "De 50 à 300 litres, dépose de l'ancien ballon comprise. Prix constatés en France.",
+          "source": {
+            "nom": "Prix Pose",
+            "url": "https://www.prix-pose.com/changement-chauffe-eau",
+            "date": "2025-01-09"
+          }
+        },
+        {
+          "id": "groupe-securite",
+          "poste": "Remplacement du groupe de sécurité du ballon",
+          "prix": "132 à 200 €",
+          "unite": "pièce et pose",
+          "note": "La pièce qui protège le ballon des excès de pression. Prix TTC constatés en France.",
+          "source": {
+            "nom": "Thermocom",
+            "url": "https://thermocom.fr/prix-remplacement-dun-groupe-de-securite-de-chauffe-eau/",
+            "date": "2026-01-12"
+          }
+        }
+      ]
+    },
+    {
+      "titre": "Climatisation",
+      "lignes": [
+        {
+          "id": "clim-depannage",
+          "poste": "Déplacement et diagnostic d'une climatisation en panne",
+          "prix": "100 à 200 €",
+          "unite": "hors réparation",
+          "note": "Recharge de fluide ou pièce en plus. Prix TTC constatés en France.",
+          "source": {
+            "nom": "ViteMaClim",
+            "url": "https://vitemaclim.fr/guide/cout-depannage-climatisation",
+            "date": "2026-05-06"
+          }
+        },
+        {
+          "id": "clim-entretien",
+          "poste": "Entretien d'une climatisation monosplit",
+          "prix": "150 à 200 €",
+          "unite": "par visite",
+          "note": "Chaque unité intérieure en plus ajoute 30 à 60 €. Prix TTC constatés en France.",
+          "source": {
+            "nom": "MesDépanneurs.fr",
+            "url": "https://www.mesdepanneurs.fr/blog/prix-entretien-climatisation",
+            "date": "2026-04-08"
+          }
+        }
+      ]
+    },
+    {
+      "titre": "En attendant la réparation",
+      "lignes": [
+        {
+          "id": "appoint-location",
+          "poste": "Location d'un chauffage électrique d'appoint (3,3 kW)",
+          "prix": "25,80 à 33,62 €",
+          "unite": "par jour",
+          "note": "33,62 € pour une journée, 25,80 € par jour au-delà de 7 jours, sur prise domestique. Tarif web TTC d'un loueur de matériel, transport non compris.",
+          "source": {
+            "nom": "Loxam",
+            "url": "https://www.loxam.fr/p/chauffage-electr-230v-3-3kw/036-0050-010597",
+            "date": "2026-09-25"
+          }
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "heading": "Prix d'un dépannage de chaudière : ce que contient la facture",
+      "body": "Une facture de dépannage additionne trois lignes : le déplacement, le temps passé à trouver la panne, puis la pièce s'il faut en changer une. Pour une chaudière gaz, les prix constatés en France vont de 100 à 300 € selon la panne et l'urgence. Pour une pompe à chaleur, un déplacement et une heure de travail sans grosse pièce se situent aussi entre 100 et 300 €. Quand un circulateur, une carte électronique ou un brûleur lâche, la ligne pièce et main-d'œuvre monte plutôt entre 250 et 600 €. Nous vous donnons chacune de ces lignes avant d'intervenir, pour que la facture ne réserve aucune surprise.",
+      "image": {
+        "src": "/tarifs/corps-1.jpg",
+        "alt": "Chauffagiste remplaçant une pièce dans une chaudière gaz ouverte"
+      }
+    },
+    {
+      "heading": "Tarif d'un entretien de chaudière gaz, fioul ou pompe à chaleur",
+      "body": "L'entretien d'une chaudière gaz se facture en général entre 90 et 120 € hors contrat, et entre 140 et 190 € pour un modèle à condensation. Pour une chaudière fioul, la fourchette constatée va de 110 à 150 €. La visite annuelle d'une pompe à chaleur air-air ou air-eau se situe entre 150 et 250 €. Pour les chaudières de 4 à 400 kW, cette visite n'a rien de facultatif : le code de l'environnement l'impose chaque année civile, et elle se conclut par une attestation à garder.",
+      "schema": "entretien-obligation"
+    },
+    {
+      "heading": "Prix d'un désembouage de radiateurs ou de plancher chauffant",
+      "body": "Des radiateurs froids en bas, un circuit bruyant, une chaudière qui peine à chauffer : les boues se sont installées. Le désembouage d'un circuit de moins de 10 radiateurs coûte en général 350 à 550 €, puis 600 à 1 000 € au-delà. Sur un plancher chauffant, la fourchette constatée va de 500 à 900 €, la surface et le niveau d'encrassement faisant varier la note. Le schéma ci-dessous montre le déroulé d'un désembouage à la pompe, du test de l'eau jusqu'à l'inhibiteur qui protège ensuite le circuit.",
+      "schema": "desembouage-etapes"
+    },
+    {
+      "heading": "TVA à 5,5 %, 10 % ou 20 % : quel taux sur vos travaux",
+      "body": "Dans un logement achevé depuis plus de 2 ans, l'entretien et la réparation d'une chaudière gaz ou fioul sont facturés avec une TVA à 10 %. Depuis le 1er mars 2025, la fourniture et l'installation d'une chaudière qui fonctionne au gaz ou au fioul relèvent du taux normal de 20 %. Le taux de 5,5 % concerne les travaux d'amélioration énergétique, comme la régulation du chauffage ou le calorifugeage des tuyaux. Pour bénéficier d'un taux réduit, une mention que vous certifiez sur le devis ou la facture suffit désormais.",
+      "schema": "tva-taux"
+    },
+    {
+      "heading": "Nuit, week-end, pièce, accès : ce qui fait varier le prix",
+      "body": "Le soir, la nuit, le week-end et les jours fériés, la main-d'œuvre et le déplacement sont en général majorés de 25 à 50 %. Vient ensuite la pièce : un groupe de sécurité de ballon se remplace pour 132 à 200 €, un ballon d'eau chaude complet pour 500 à 1 700 € selon sa contenance. L'accès à l'appareil et la configuration du logement comptent aussi, tout comme la recherche d'une fuite invisible, qui se fait par caméra thermique pour 250 à 375 €. Chacun de ces éléments figure sur le prix que nous vous annonçons.",
+      "image": {
+        "src": "/tarifs/corps-2.jpg",
+        "alt": "Groupe de sécurité neuf posé sur un ballon d'eau chaude dans un cellier"
+      }
+    }
+  ],
+  "cas": [
+    {
+      "titre": "Chaudière gaz en sécurité un dimanche",
+      "situation": "La chaudière s'est mise en sécurité un dimanche matin. Nous nous déplaçons, cherchons la cause et remettons l'appareil en route, sans pièce à remplacer.",
+      "lignes": [
+        [
+          "Déplacement",
+          "30 à 70 €"
+        ],
+        [
+          "Diagnostic de la panne",
+          "80 à 150 €"
+        ],
+        [
+          "Majoration du dimanche (25 à 50 % des deux lignes)",
+          "27,50 à 110 €"
+        ]
+      ],
+      "total": "137,50 à 330 €"
+    },
+    {
+      "titre": "Entretien annuel et ballon qui goutte",
+      "situation": "Visite d'entretien d'une chaudière gaz classique, pendant laquelle nous remplaçons aussi le groupe de sécurité du ballon, qui fuit.",
+      "lignes": [
+        [
+          "Entretien de la chaudière gaz",
+          "90 à 120 €"
+        ],
+        [
+          "Remplacement du groupe de sécurité",
+          "132 à 200 €"
+        ]
+      ],
+      "total": "222 à 320 €"
+    },
+    {
+      "titre": "Désembouage d'un circuit de 8 radiateurs",
+      "situation": "Maison chauffée par une chaudière gaz, 8 radiateurs dont plusieurs restent froids en bas. Désembouage complet du circuit.",
+      "lignes": [
+        [
+          "Désembouage de moins de 10 radiateurs",
+          "350 à 550 €"
+        ]
+      ],
+      "total": "350 à 550 €"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte le dépannage d'une chaudière gaz ?",
+      "a": "Le prix dépend de trois lignes du tableau ci-dessus : le déplacement, le diagnostic et la réparation elle-même, avant une éventuelle pièce. Les fourchettes constatées en France y sont indiquées avec leur source. Nous vous annonçons le total avant d'intervenir."
+    },
+    {
+      "q": "Qui paie l'entretien de la chaudière dans un logement loué ?",
+      "a": "Pour une chaudière individuelle, c'est au locataire de faire faire l'entretien annuel, sauf si le bail prévoit le contraire. S'il ne présente pas d'attestation d'entretien, le bailleur peut retenir le montant de l'entretien sur le dépôt de garantie, rappelle service-public.fr."
+    },
+    {
+      "q": "Chaudière en panne : louer un chauffage d'appoint ou réparer ?",
+      "a": "La location dépanne quelques jours : un chauffage électrique sur prise domestique se loue à la journée ou à la semaine chez un loueur de matériel (voir la ligne « location d'un chauffage électrique d'appoint » du tableau). Elle ne remplace pas la réparation. Avec un appareil d'appoint à combustion, Santé publique France conseille de ne pas le faire fonctionner plus de deux heures de suite."
+    },
+    {
+      "q": "Quel taux de TVA sur l'entretien d'une chaudière gaz ?",
+      "a": "10 % dans un logement achevé depuis plus de 2 ans, selon impots.gouv.fr, et ce taux n'a pas changé au 1er mars 2025. Ce jour-là, c'est la fourniture et l'installation d'une chaudière gaz ou fioul qui sont passées au taux normal de 20 %."
+    },
+    {
+      "q": "Combien coûte le désembouage d'un plancher chauffant ?",
+      "a": "Un plancher chauffant coûte plus cher à désembouer qu'un circuit de radiateurs : la surface et le niveau d'encrassement font le prix. Les deux fourchettes, radiateurs et plancher, sont côte à côte dans le tableau, avec leur source."
+    },
+    {
+      "q": "Un dépannage le soir ou le dimanche coûte-t-il plus cher ?",
+      "a": "Oui : la main-d'œuvre et le déplacement sont en général majorés le soir, la nuit, le week-end et les jours fériés. Le pourcentage constaté figure dans le tableau, ligne « majoration soir, nuit, week-end ou jour férié » ; nous vous le disons avant de nous déplacer."
+    }
+  ]
+}

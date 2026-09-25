@@ -3,50 +3,73 @@
   "order": 7,
   "icon": "tank",
   "navTitle": "Ballon d'eau chaude",
-  "h1": "Dépannage de ballon d'eau chaude et cumulus à Reims",
-  "metaTitle": "Dépannage de ballon d'eau chaude et cumulus à Reims",
-  "metaDescription": "Plus d'eau chaude à Reims : ballon en panne, cumulus qui ne chauffe plus, groupe de sécurité qui coule. Diagnostic sur place, tarif annoncé avant intervention.",
-  "intro": "Plus d'eau chaude est l'une des demandes les plus fréquentes, et l'une des plus faciles à mal orienter. Selon que votre eau chaude vient d'un ballon indépendant ou de la chaudière elle-même, la panne et sa réparation n'ont rien à voir. Nous intervenons à Reims et dans les communes voisines sur les ballons électriques et les préparateurs raccordés à une chaudière, du diagnostic au remplacement de la pièce en cause.",
+  "h1": "Ballon d'eau chaude en panne à Reims",
+  "metaTitle": "Plus d'eau chaude à Reims ? Dépannage ballon et cumulus",
+  "metaDescription": "Cumulus qui ne chauffe plus, groupe de sécurité qui coule, ballon qui fuit à Reims : nous trouvons la cause et chiffrons avant de réparer. Contactez-nous.",
+  "intro": "Plus d'eau chaude, c'est une panne qui se trompe facilement de coupable. Selon que l'eau chaude vient d'un ballon électrique, d'un préparateur relié à la chaudière ou d'une chaudière mixte, la panne et la réparation n'ont rien à voir. Nous dépannons ballons et cumulus à Reims et alentour, du diagnostic au remplacement de la pièce en cause, ou du ballon quand la cuve est percée.",
   "bullets": [
-    "Ballon électrique et préparateur de chaudière",
+    "Cumulus électrique et préparateur de chaudière",
     "Résistance, thermostat, groupe de sécurité",
-    "Eau tiède, eau chaude trop vite épuisée"
+    "Réparation ou remplacement chiffré avant"
   ],
   "blocks": [
     {
-      "heading": "D'où vient votre eau chaude, la première question",
-      "body": "Avant tout diagnostic, il faut savoir ce qui produit votre eau chaude, car deux installations très différentes se cachent derrière le même symptôme. Un ballon électrique, souvent appelé cumulus, est une cuve indépendante qui chauffe l'eau avec une résistance, généralement la nuit. Un préparateur d'eau chaude est un ballon raccordé à la chaudière, qui le réchauffe par un serpentin. Une chaudière mixte, elle, ne stocke rien : elle produit l'eau chaude à la demande au moment où vous ouvrez le robinet. Le test est simple. Si le chauffage fonctionne mais que l'eau chaude a disparu, sur une installation à ballon la panne est presque toujours dans le ballon, alors que sur une chaudière mixte elle vient de la partie sanitaire de l'appareil. Si le chauffage et l'eau chaude sont tombés ensemble, c'est la chaudière ou son alimentation qui est en cause. Dites-nous simplement au téléphone si vous avez une cuve dans un placard, un garage ou une salle de bain, et si le chauffage marche encore."
+      "heading": "Plus d'eau chaude : ballon, préparateur ou chaudière mixte",
+      "body": "Avant de chercher la panne, il faut savoir ce qui produit l'eau chaude. Un cumulus est une cuve indépendante chauffée par une résistance électrique, souvent pendant les heures creuses. Un préparateur est un ballon relié à la chaudière, qui le réchauffe par un serpentin. Une chaudière mixte ne stocke rien et chauffe l'eau au moment où vous ouvrez le robinet. Le chauffage marche mais l'eau chaude a disparu : sur une installation à ballon, regardez le ballon ; sur une chaudière mixte, c'est sa partie sanitaire. Chauffage et eau chaude tombés ensemble : c'est la chaudière ou son alimentation. Dites-nous au téléphone si vous avez une cuve dans un placard, un garage ou une salle de bain."
     },
     {
-      "heading": "Les pannes courantes d'un ballon",
-      "body": "Plus une goutte d'eau chaude sur un ballon électrique oriente vers trois causes principales. La résistance a lâché, souvent entartrée après des années sans entretien, et ne chauffe plus. Le thermostat est en défaut ou s'est mis en sécurité, ce qui arrive typiquement après une surchauffe ou un entartrage important. L'alimentation électrique ne se fait plus : disjoncteur déclenché, contacteur jour et nuit resté en position basse, ou contact fatigué. Cette dernière cause est fréquente et souvent la plus simple à corriger. D'autres symptômes racontent une autre histoire. De l'eau chaude qui devient tiède ou qui s'épuise beaucoup plus vite qu'avant signale généralement une cuve entartrée dont le volume utile a diminué, ou un thermostat qui a dérivé. De l'eau colorée ou une odeur inhabituelle indique un état interne dégradé. Enfin, un ballon qui fait des claquements en chauffant est presque toujours un ballon très entartré, où la vapeur se forme sous la couche de calcaire déposée sur la résistance."
+      "heading": "Cumulus qui ne chauffe plus : résistance, thermostat, alimentation",
+      "body": "Sur un ballon électrique, trois causes se partagent la plupart des pannes. L'alimentation d'abord : disjoncteur dédié déclenché, contacteur heures creuses resté sur arrêt ou fatigué, câble ou borne qui a chauffé. Le thermostat ensuite, qui peut avoir coupé par sécurité après une surchauffe. La résistance enfin, entartrée ou claquée, qui ne chauffe plus ou fait sauter le disjoncteur. Nous mesurons chaque élément avant d'en remplacer un, puis nous contrôlons l'anode et l'entartrage de la cuve pour vous dire si le ballon a encore de belles années ou s'il arrive au bout.",
+      "image": {
+        "src": "/services/ballon-eau-chaude-cumulus-corps-1.jpg",
+        "alt": "Ballon d'eau chaude électrique blanc récent installé dans un cellier moderne propre, capot de la résistance ouvert pour contrôle"
+      }
     },
     {
-      "heading": "Le groupe de sécurité, souvent pris pour une fuite",
-      "body": "Le groupe de sécurité est le petit bloc en laiton avec une molette, placé à l'entrée d'eau froide du ballon. Il joue deux rôles : il empêche l'eau chaude de repartir dans le réseau d'eau froide, et il évacue la surpression qui se crée quand l'eau chauffe et se dilate. C'est ce second rôle qui inquiète, parce qu'il se traduit par un goutte à goutte au siphon du groupe pendant les périodes de chauffe. Ce phénomène fait partie du fonctionnement : l'eau dilatée doit bien sortir quelque part. Il y a en revanche un problème quand l'écoulement devient continu et ne s'arrête jamais, quand il se produit hors des périodes de chauffe, ou quand le groupe fuit par son corps plutôt que par sa sortie prévue. Un groupe entartré ou grippé ne joue plus son rôle de sécurité, ce qui est plus ennuyeux qu'une fuite : la cuve travaille alors en surpression. Manoeuvrer sa molette de temps en temps fait partie de l'entretien courant décrit par les fabricants, et un groupe qui ne se remet pas à couler du tout après manoeuvre mérite un contrôle."
+      "heading": "Groupe de sécurité : l'écoulement normal et celui qui ne l'est pas",
+      "body": "Le groupe de sécurité est ce bloc en laiton à molette monté sous le ballon, côté eau froide. Quand l'eau chauffe, elle se dilate, et le groupe laisse partir ce surplus vers l'évacuation : quelques gouttes pendant la chauffe sont donc normales. Il faut s'inquiéter d'un écoulement continu, d'un écoulement quand le ballon ne chauffe pas, ou d'une eau qui sort du corps du groupe au lieu de son évacuation. Un groupe grippé qui ne laisse plus rien passer est plus préoccupant encore, car la cuve travaille alors en surpression. La manoeuvre régulière de la molette, prévue par les fabricants, le garde en état."
+    },
+    {
+      "heading": "Réparer ou remplacer un ballon d'eau chaude",
+      "body": "Une fuite sur un raccord, sur le groupe de sécurité ou au niveau de la trappe de la résistance se répare. Une fuite qui vient de la cuve elle-même, percée par la corrosion, ne se répare pas : le ballon est en fin de vie et seul son remplacement règle le problème. Nous localisons le point de départ de l'eau avant de conclure, et nous vous chiffrons les deux options quand elles se discutent. En cas de remplacement, nous vérifions l'emplacement, le raccordement et le groupe de sécurité pour que le nouvel appareil démarre sur une installation saine.",
+      "image": {
+        "src": "/services/ballon-eau-chaude-cumulus-corps-2.jpg",
+        "alt": "Chauffagiste raccordant un ballon d'eau chaude neuf dans une buanderie contemporaine lumineuse, finitions impeccables"
+      }
+    },
+    {
+      "heading": "Ballon qui fuit ou qui claque : les gestes avant notre passage",
+      "body": "Si le ballon fuit, coupez son alimentation électrique au tableau, fermez l'eau froide au robinet du groupe de sécurité, et protégez le sol. N'ouvrez pas le capot de la résistance, sous tension ou plein d'eau. Si le ballon claque ou siffle en chauffant, c'est en général un fond de cuve très entartré où l'eau bout sous la couche de calcaire : il n'y a pas de danger immédiat si le groupe de sécurité fonctionne, mais l'appareil s'use vite et consomme davantage. Notez la marque et la capacité inscrites sur l'étiquette, elles nous aident à préparer l'intervention."
     }
   ],
   "relatedServices": [
     "urgence-depannage-chauffage-chaudiere",
-    "entretien-chaudiere-annuel"
+    "entretien-chaudiere-annuel",
+    "fuite-chaudiere-circuit-chauffage"
   ],
   "faq": [
     {
-      "q": "Je n'ai plus d'eau chaude mais mon chauffage fonctionne, que faut-il vérifier ?",
-      "a": "Cette combinaison oriente d'abord vers votre production d'eau chaude plutôt que vers le chauffage. Si vous avez un ballon indépendant, regardez le tableau électrique : un disjoncteur déclenché ou un contacteur jour et nuit resté en position automatique sans déclenchement expliquent beaucoup de cas, et se corrigent en quelques secondes. Si le ballon est bien alimenté et ne chauffe toujours pas, la résistance ou le thermostat sont en cause. Si votre eau chaude vient d'une chaudière mixte, c'est la partie sanitaire de l'appareil qu'il faut regarder."
+      "q": "Mon ballon fait disjoncter le tableau électrique, que faut-il faire ?",
+      "a": "Laissez le disjoncteur du ballon coupé et ne le réarmez pas en boucle. Le plus souvent, la résistance est en défaut d'isolement, parfois un câble ou une borne a chauffé. C'est une panne électrique sur un appareil rempli d'eau : elle se diagnostique à l'appareil de mesure, pas par essais successifs."
     },
     {
-      "q": "Mon groupe de sécurité goutte, est-ce une fuite ?",
-      "a": "Le plus souvent, non. Le groupe de sécurité évacue la surpression créée par l'eau qui se dilate en chauffant : un goutte à goutte au siphon pendant les périodes de chauffe fait partie du fonctionnement normal. Il faut s'en préoccuper quand l'écoulement devient continu, quand il se produit alors que le ballon ne chauffe pas, ou quand l'eau sort du corps du groupe et non de sa sortie prévue. Un groupe entartré qui ne s'ouvre plus du tout est un problème plus sérieux qu'un groupe qui goutte."
+      "q": "L'eau chaude sent l'oeuf pourri, d'où cela vient-il ?",
+      "a": "Cette odeur, qui ne touche que l'eau chaude, vient en général d'une réaction chimique dans la cuve, souvent liée à l'anode ou à une eau restée longtemps tiède. Un contrôle de l'anode, une montée en température et parfois une vidange règlent le problème. Si l'eau froide sent aussi, la cause est dans le réseau, pas dans le ballon."
     },
     {
-      "q": "Mon eau chaude s'épuise beaucoup plus vite qu'avant, pourquoi ?",
-      "a": "Deux explications dominent. La première est l'entartrage : le calcaire déposé au fond de la cuve et sur la résistance réduit le volume réellement disponible et dégrade l'échange de chaleur, si bien que le ballon chauffe moins et moins vite pour la même consommation. La seconde est un thermostat qui a dérivé et arrête la chauffe trop tôt. Un ballon qui claque pendant qu'il chauffe penche nettement vers la première hypothèse."
+      "q": "Le ballon chauffe la nuit, mais l'eau est froide le matin : pourquoi ?",
+      "a": "Si le ballon est commandé en heures creuses, vérifiez d'abord la position du contacteur au tableau : resté sur arrêt, il empêche toute chauffe. S'il est bien sur automatique, le contacteur, le thermostat ou la résistance sont en cause. Un essai en marche forcée, si votre contacteur le permet, aide à trancher."
     },
     {
-      "q": "Faut-il réparer ou remplacer un ballon qui fuit ?",
-      "a": "Cela dépend d'où vient l'eau. Une fuite au niveau d'un raccord, du groupe de sécurité ou de la trappe de visite se répare, souvent simplement. Une fuite qui vient de la cuve elle-même, c'est à dire de la paroi percée par la corrosion, ne se répare pas : le ballon est en fin de vie et seul son remplacement règle le problème. Nous localisons précisément le point de départ de l'eau avant de vous orienter, plutôt que de conclure sur la seule vue d'une flaque au sol."
+      "q": "L'eau sort brûlante du robinet, est-ce normal ?",
+      "a": "Non. Un thermostat déréglé ou défaillant peut laisser le ballon chauffer trop fort, avec un risque de brûlure et une usure accélérée de la cuve. Réduisez l'usage d'eau chaude, surveillez le groupe de sécurité qui va beaucoup couler, et faites contrôler le thermostat rapidement."
     }
   ],
-  "image": "/services/ballon-eau-chaude-cumulus.jpg"
+  "prix": [
+    "ballon-remplacement",
+    "groupe-securite",
+    "deplacement",
+    "diagnostic"
+  ],
+  "image": "/services/ballon-eau-chaude-cumulus-v2.jpg"
 }

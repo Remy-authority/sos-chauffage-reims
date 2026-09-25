@@ -13,7 +13,8 @@
  * En cas d'échec, sort en code 1 SANS rien committer : le workflow s'arrête, `main` reste
  * intact et le brouillon repart au prochain passage. Un article ne se publie jamais nu.
  *
- * Nécessite GEMINI_API_KEY dans l'environnement.
+ * Nécessite FAL_KEY dans l'environnement (IMAGE_PROVIDER=gemini : GEMINI_API_KEY).
+ * Contrôle sans appel payant : node scripts/generate-article-images.mjs --prompt "<sujet>" [--corps] [--slug <slug>] [--titre "<titre>"]
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -28,15 +29,23 @@ const CONSEILS = path.join(ROOT, 'content', 'conseils')
 const PUBLIC = path.join(ROOT, 'public')
 const MAX_TENTATIVES = 3
 
-const slug = process.argv[2]
-if (!slug) {
+// Mode contrôle, SANS aucun appel payant : imprime la consigne réellement envoyée.
+//   node scripts/generate-article-images.mjs --prompt "<sujet>" [--corps] [--slug <slug>] [--titre "<titre>"]
+const args = process.argv.slice(2)
+const option = (nom) => {
+  const i = args.indexOf(nom)
+  return i === -1 ? undefined : args[i + 1]
+}
+const modePrompt = args.includes('--prompt')
+const slug = modePrompt ? option('--slug') || 'essai' : args[0]
+if (!slug || slug.startsWith('--')) {
   console.error('Usage : node scripts/generate-article-images.mjs <slug>')
   process.exit(1)
 }
 
 const provider = process.env.IMAGE_PROVIDER || 'flux'
 const apiKey = provider === 'flux' ? process.env.FAL_KEY : process.env.GEMINI_API_KEY
-if (!apiKey) {
+if (!apiKey && !modePrompt) {
   console.error(
     provider === 'flux'
       ? 'FAL_KEY absent de l\'environnement.'
@@ -53,6 +62,159 @@ if (!fs.existsSync(stylePath)) {
   process.exit(1)
 }
 const style = JSON.parse(fs.readFileSync(stylePath, 'utf8'))
+
+/**
+ * Types de scène. Le SUJET de l'article ne sert qu'à choisir l'un d'eux par mots-clés : il
+ * n'entre JAMAIS tel quel dans la consigne (sinon FLUX dessine la panne, la personne ou le
+ * décor qu'il décrit). Chaque scène a une vue large (couverture) et une vue proche (corps).
+ * L'ordre compte : la première règle qui correspond l'emporte.
+ */
+const SCENES = [
+  {
+    cle: 'collectif',
+    motif: /collectif|immeuble|syndic|copropri/,
+    large: 'Wide architectural interior photograph of the clean, modern collective boiler room of a recent apartment building: a row of three brand-new white wall-mounted condensing boilers in cascade above neatly insulated pipes in white cladding, a pale grey epoxy floor and bright ceiling light panels.',
+    proche: 'Close architectural interior photograph of neatly insulated pipes in white cladding and polished chrome valves running beneath a row of brand-new white wall-mounted condensing boilers in a clean, modern collective boiler room.',
+  },
+  {
+    cle: 'desembouage',
+    motif: /d[ée]sembou|embou|boue|filtre magn[ée]tique/,
+    large: 'Wide architectural interior photograph of a bright, tastefully furnished renovated living room with two spotless modern white horizontal steel panel radiators with fine vertical ribs, each mounted low under its own large window, a light oak parquet floor, a linen sofa and a low oak table.',
+    proche: 'Close architectural interior photograph of the underside of a single brand-new compact rectangular white wall-hung gas combi boiler, short straight copper pipes dropping vertically from it, one of them fitted with a compact brand-new magnetic system filter, a smooth matt black cylinder.',
+  },
+  {
+    cle: 'thermodynamique',
+    motif: /thermodynamique/,
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new heat pump water heater, a tall white cylinder topped by a compact fan unit, standing on a light grey tiled floor beside white shelving.',
+    proche: 'Close architectural interior photograph of a brand-new heat pump water heater, a tall white cylinder topped by a compact fan unit, with its neat copper and chrome connections, in a clean bright utility room.',
+  },
+  {
+    cle: 'pac',
+    motif: /pompe [àa] chaleur|\bpac\b|unit[ée] ext[ée]rieure|d[ée]givr|aérotherm|aerotherm/,
+    exterieur: true,
+    large: 'Wide architectural exterior photograph of the side terrace of a recently built house: a brand-new air-to-water heat pump outdoor unit, a white box with a large round fan grille, standing on low feet on clean light grey paving against a smooth pale rendered wall.',
+    proche: 'Close architectural exterior photograph of a brand-new air-to-water heat pump outdoor unit, a white box with a large round fan grille and neatly insulated pipes running into a smooth pale rendered wall, on clean light grey paving.',
+  },
+  {
+    cle: 'securite-ballon',
+    motif: /groupe de s[ée]curit[ée]/,
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new tall white cylindrical electric hot water tank standing on a light grey tiled floor, neat copper and chrome connections at its base.',
+    proche: 'Close architectural interior photograph of the polished chrome safety valve assembly, a small white drain funnel and straight copper pipes beneath a brand-new white cylindrical hot water tank, clean light grey wall tiles.',
+  },
+  {
+    cle: 'ballon',
+    motif: /ballon|cumulus|eau chaude sanitaire|eau chaude/,
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new tall white cylindrical electric hot water tank standing on a light grey tiled floor beside white shelving.',
+    proche: 'Close architectural interior photograph of a brand-new tall white cylindrical hot water tank and its neat copper and chrome connections in a clean bright utility room.',
+  },
+  {
+    cle: 'plancher',
+    motif: /plancher chauffant|collecteur/,
+    large: 'Wide architectural interior photograph of a bright renovated open-plan living room with a warm light oak parquet floor heated from below, large windows and a linen sofa.',
+    proche: 'Close architectural interior photograph of a neat brass underfloor heating manifold with white valve heads, fitted in a clean white technical cupboard of a recent house.',
+  },
+  {
+    cle: 'clim',
+    motif: /climatis|\bclim\b|split/,
+    large: 'Wide architectural interior photograph of a bright renovated bedroom with a slim white wall-mounted air conditioner indoor unit placed high on the wall above the bed.',
+    proche: 'Close architectural interior photograph of a slim white wall-mounted air conditioner indoor unit high on a smooth pale wall of a bright renovated room.',
+  },
+  {
+    cle: 'radiateur',
+    motif: /radiateur|vanne|thermostatique|purg|pointeau/,
+    large: 'Wide architectural interior photograph of a bright, tastefully furnished renovated living room: a single modern white horizontal steel panel radiator with fine vertical ribs, mounted low on the wall under a large window, a white thermostatic valve on its side pipe, a linen sofa and a low oak table nearby, a light oak parquet floor.',
+    proche: 'Close architectural interior photograph of the end of a modern white horizontal steel panel radiator with fine vertical ribs, its smooth white thermostatic valve head with a plain ribbed grip on a short chrome pipe, a bright furnished room softly blurred behind.',
+  },
+  {
+    cle: 'vase',
+    motif: /vase d'expansion|vase d’expansion|expansion/,
+    large: 'Wide architectural interior photograph of a bright renovated utility room with a single brand-new compact rectangular white wall-hung gas combi boiler and a small red expansion vessel fixed on the wall beside it, short straight copper pipes dropping vertically from the boiler.',
+    proche: 'Close architectural interior photograph of a small red expansion vessel fixed on a pale wall beside a single brand-new compact rectangular white wall-hung gas combi boiler, joined to it by a short straight copper pipe with a chrome valve.',
+  },
+  {
+    cle: 'fioul',
+    motif: /fioul|mazout|cuve|br[ûu]leur|gicleur/,
+    large: 'Wide architectural interior photograph of a clean, tidy, freshly painted boiler room in a recent family house: a brand-new floor-standing oil condensing boiler, a tall white rectangular cabinet with a flat door, its insulated flue rising neatly into the wall, a light grey tiled floor.',
+    proche: 'Close architectural interior photograph of a brand-new floor-standing oil condensing boiler, a tall white rectangular cabinet with a flat door, with neat copper supply lines and chrome valves at its side, in a clean freshly painted boiler room.',
+  },
+  {
+    cle: 'conduit',
+    motif: /conduit|ventouse|fum[ée]e|fa[çc]ade|ext[ée]rieur/,
+    exterieur: true,
+    large: 'Wide architectural exterior photograph of the clean, smooth, pale rendered facade of a recently built house with a neat white horizontal boiler flue terminal set in the wall beside a large window.',
+    proche: 'Close architectural exterior photograph of a neat white horizontal boiler flue terminal set in a clean, smooth, pale rendered wall of a recently built house.',
+  },
+  {
+    cle: 'raccords',
+    motif: /fuite|goutte|raccord|robinet|remplissage|pression|manom[èe]tre/,
+    large: 'Wide architectural interior photograph of a bright renovated utility room with a single brand-new compact rectangular white wall-hung gas combi boiler, short straight copper pipes and chrome valves dropping vertically from its underside, a dry spotless light grey tiled floor.',
+    proche: 'Close architectural interior photograph of the underside of a single brand-new compact rectangular white wall-hung gas combi boiler: short straight shiny copper pipes with polished chrome valves dropping vertically from it into a spotless pale wall.',
+  },
+]
+
+/** Pièces possibles pour une chaudière murale (scène par défaut). Un mot du sujet l'impose,
+ *  sinon le slug choisit, pour que deux articles voisins ne montrent pas la même pièce. */
+const PIECES_CHAUDIERE = [
+  { motif: /cuisine|appartement|locat|propri[ée]taire|bail|lou[ée]/, piece: 'bright renovated apartment kitchen with light oak worktops and tall white cabinets' },
+  { motif: /buanderie|linge/, piece: 'bright renovated laundry room with white shelving and a light grey tiled floor' },
+  { motif: /cellier|garage|local technique/, piece: 'clean renovated utility room with tidy white storage cabinets' },
+  { motif: /entr[ée]e|couloir|placard/, piece: 'renovated hallway alcove of a recent family house with light oak shelving' },
+  { motif: /salle de bain|salle d'eau/, piece: 'bright renovated bathroom with large pale stone-look tiles and a light oak vanity unit' },
+]
+
+function graineDe(texte) {
+  return [...texte].reduce((n, c) => (Math.imul(n, 31) + c.charCodeAt(0)) >>> 0, 7)
+}
+
+/**
+ * Consigne d'image. RÉÉCRITE LE 25/09/2026 (mise à jour du site) sur le modèle de
+ * peintre-beauvais.fr (13/09, #L217). L'ancienne consigne (longue, en français, genre
+ * « photographie documentaire », « Éviter de montrer des personnes », décor « craie
+ * champenoise ») a produit sur les 33 articles publiés : poêles à bois, artisans de face,
+ * tuyaux rouillés, caves en pierre, texte brodé sur les vêtements, une machine à laver prise
+ * pour une chaudière. Causes : FLUX tronque une consigne longue et ne garde que le sujet de
+ * tête ; le genre « documentaire » fait venir des personnes (#L154) ; une négation fait venir
+ * ce qu'elle interdit ; le décor régional commande des caves en pierre (#L089).
+ * Désormais : 5 phrases en anglais, la première EST l'image finie, choisie par mots-clés parmi
+ * des scènes d'équipement neuf ; aucune négation ; le style du site se réduit à sa lumière
+ * et à sa palette (config/image-style.json).
+ */
+function habillerPrompt(scene, { corps = false, titre = '' } = {}) {
+  const sujet = (scene || '').toLowerCase()
+  const secours = (titre || '').toLowerCase()
+  const trouvee = SCENES.find((s) => s.motif.test(sujet)) || SCENES.find((s) => s.motif.test(secours))
+
+  const graine = graineDe(slug)
+  let cadre
+  if (trouvee) {
+    cadre = corps ? trouvee.proche : trouvee.large
+  } else {
+    // Scène par défaut : la chaudière gaz murale neuve, dans une pièce propre.
+    const imposee = PIECES_CHAUDIERE.find((p) => p.motif.test(sujet)) || PIECES_CHAUDIERE.find((p) => p.motif.test(secours))
+    const piece = imposee ? imposee.piece : PIECES_CHAUDIERE[(graine + (corps ? 1 : 0)) % PIECES_CHAUDIERE.length].piece
+    cadre = corps
+      ? `Close architectural interior photograph of a single brand-new compact rectangular white wall-hung gas combi boiler with a flat blank front, short straight copper pipes and chrome valves dropping vertically from its underside, in a ${piece}.`
+      : `Wide architectural interior photograph of a ${piece}, with a single brand-new compact rectangular white wall-hung gas combi boiler fixed on the wall, short straight copper pipes dropping vertically from its underside.`
+  }
+
+  // Palette choisie par le SLUG (stable), décalée pour le visuel de corps : deux images d'un
+  // même article ne partagent jamais la même teinte.
+  const exterieur = trouvee?.exterieur
+  const palettes = exterieur ? style.palettesExterieur : style.palettes
+  const palette = palettes[(graine + (corps ? 1 : 0)) % palettes.length]
+  return [
+    cadre,
+    `Editorial magazine quality, realistic photograph, contemporary 2020s renovation, ${palette}.`,
+    `Every appliance has a plain smooth unbranded white casing; pipes are straight, clean and evenly spaced; flawless pristine finish, spotless surfaces.`,
+    `${exterieur ? style.lumiereExterieur : style.lumiere}, gentle shadows, architectural photographer framing, one single coherent ${exterieur ? 'scene' : 'room'}.`,
+    `A calm, tidy, ${exterieur ? 'well-kept' : 'tastefully furnished'} home photographed as an unoccupied still life, every surface blank and plain.`,
+  ].join(' ')
+}
+
+if (modePrompt) {
+  console.log(habillerPrompt(option('--prompt') || '', { corps: args.includes('--corps'), titre: option('--titre') || '' }))
+  process.exit(0)
+}
 
 const articlePath = path.join(CONSEILS, `${slug}.mdx`)
 if (!fs.existsSync(articlePath)) {
@@ -74,20 +236,6 @@ if (!raw.startsWith('---') || finFrontmatter === -1) {
 }
 let frontmatterBrut = raw.slice(0, finFrontmatter + 4)
 let body = raw.slice(finFrontmatter + 4)
-
-/** Prompt commun : ancrage local + consignes de rendu. */
-function habillerPrompt(scene) {
-  return [
-    `Photographie documentaire professionnelle, réaliste, haute qualité.`,
-    `Sujet : ${scene}`,
-    `Lieu : ${style.contexte}. Décor, matériaux et architecture cohérents avec cette région française.`,
-    `Métier illustré : ${style.metier}.`,
-    `Ambiance : ${style.ambiance}`,
-    `Lumière naturelle, cadrage soigné, profondeur de champ photographique.`,
-    `Ne pas incruster de texte, de filigrane ni de mention en surimpression.`,
-    `Éviter de montrer des personnes en pied ou des visages reconnaissables ; si une main apparaît, une seule main visible, anatomie correcte.`,
-  ].join(' ')
-}
 
 const FLUX_ENDPOINT = 'https://fal.run/fal-ai/flux/dev'
 
@@ -267,7 +415,7 @@ async function main() {
   } else {
     // Sans coverAlt, le titre de l'article fait une description de scène acceptable.
     const sceneCover = fm.coverAlt || fm.title || slug
-    const octets = await genererAvecReprises(habillerPrompt(sceneCover), 'couverture')
+    const octets = await genererAvecReprises(habillerPrompt(sceneCover, { titre: fm.title }), 'couverture')
     await ecrireJpeg(octets, coverDest)
   }
 
@@ -299,7 +447,7 @@ async function main() {
     const extrait = suite.slice(0, 320)
 
     const scene = `${cible.titre}. Éléments concrets à représenter, tirés du texte : ${extrait}`
-    const octets = await genererAvecReprises(habillerPrompt(scene), 'visuel de corps')
+    const octets = await genererAvecReprises(habillerPrompt(scene, { corps: true, titre: fm.title }), 'visuel de corps')
 
     // Le visuel suit la convention du site, déduite du chemin de la couverture :
     // dossier par article (/conseils/<slug>/cover.jpg) ou fichiers à plat.

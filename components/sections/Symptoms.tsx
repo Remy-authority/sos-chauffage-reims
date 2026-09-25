@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
+import { ArbrePanne } from '@/components/schemas/ArbrePanne'
 import type { Service } from '@/lib/content'
 
 /**
@@ -94,12 +95,18 @@ export function Symptoms({ services }: { services: Service[] }) {
           subtitle="Huit symptômes qui reviennent en boucle pendant la saison de chauffe, et la piste la plus probable derrière chacun. De quoi savoir quoi nous dire au téléphone."
         />
 
-        <ul className="mt-16 grid gap-4 md:grid-cols-2">
+        {/* Le schéma d'abord : il aide à choisir (symptôme, origine, prestation) ;
+            les cartes détaillées suivent pour qui veut lire l'explication. */}
+        <AnimatedSection className="mx-auto mt-14 max-w-6xl">
+          <ArbrePanne />
+        </AnimatedSection>
+
+        <ul className="mt-12 grid gap-4 md:grid-cols-2">
           {rows.map((row, idx) => (
             <AnimatedSection key={row.symptom} delay={(idx % 2) * 0.08} as="li">
               <Link
                 href={`/services/${row.slug}`}
-                className="group flex h-full gap-5 rounded-bloc border border-craie-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-braise-400/45 hover:shadow-pose-forte"
+                className="group flex h-full flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left rounded-bloc border border-craie-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-braise-400/45 hover:shadow-pose-forte"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-braise-500/10 text-braise-600 transition-colors group-hover:bg-braise-500/15">
                   <ServiceIcon icon={row.service!.icon} className="h-5 w-5" />

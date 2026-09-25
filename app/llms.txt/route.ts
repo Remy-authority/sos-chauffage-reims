@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config/site.config'
 import { absUrl } from '@/lib/seo'
-import { getArticles, getServices, getZones } from '@/lib/content'
+import { getArticles, getServices, getTarifs, getZones } from '@/lib/content'
 
 /**
  * /llms.txt : résumé du business pour les moteurs génératifs (levier GEO).
@@ -35,12 +35,24 @@ export function GET() {
     '## Prestations',
     ...services.map((s) => `- ${s.navTitle} : ${s.metaDescription} ${absUrl(`/services/${s.slug}`)}`),
     '',
+  ]
+
+  const tarifs = getTarifs()
+  if (tarifs) {
+    lines.push(
+      '## Tarifs',
+      `- ${tarifs.metaTitle} : fourchettes de prix poste par poste, chacune avec sa source et sa date (mise à jour : ${tarifs.miseAJour}). ${absUrl('/tarifs')}`,
+      '',
+    )
+  }
+
+  lines.push(
     "## Zone d'intervention",
     `Base : ${city}. Quartiers couverts : ${serviceArea.districts.join(', ')}.`,
     `Communes avec page dédiée (rayon d'environ ${radius} km) :`,
     ...zones.map((z) => `- ${z.name} (${z.postalCode}) : ${absUrl(`/zones/${z.slug}`)}`),
     '',
-  ]
+  )
 
   if (articles.length) {
     lines.push('## Conseils publiés')

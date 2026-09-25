@@ -1,17 +1,21 @@
 import Image from 'next/image'
-import { Quote } from 'lucide-react'
+import { Flame } from 'lucide-react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { ServiceIcon } from '@/components/ui/ServiceIcon'
 import { siteConfig } from '@/config/site.config'
 
 /**
- * Bloc « qui sommes-nous » : texte à gauche, portrait de l'intervenant à droite
- * avec une pastille de citation posée en débord. Les méthodes du métier servent
- * de pastilles de bas de colonne (pas de certification, pas de chiffre inventé).
+ * Bloc « qui sommes-nous » : texte à gauche, photo métier à droite avec une
+ * pastille posée en débord. Les méthodes du métier servent de pastilles de bas de
+ * colonne (pas de certification, pas de chiffre inventé).
+ *
+ * 25/09/2026 : le portrait généré, le nom et la citation d'une personne fictive
+ * sont retirés (règle du portefeuille : aucune personne fictive). À la place, une
+ * chaufferie (photo sans visage) et une phrase d'entreprise en « nous ».
  */
 export function About() {
-  const { about, persona, methods } = siteConfig
+  const { about, methods } = siteConfig
 
   return (
     <section id="a-propos" className="relative bg-craie-50 py-24 lg:py-32" aria-labelledby="about-title">
@@ -19,7 +23,10 @@ export function About() {
         {/* items-start : les deux colonnes démarrent sur la même ligne, pas de blanc
             asymétrique au-dessus du texte quand la colonne visuelle est plus haute. */}
         <div className="grid items-start gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+          {/* Téléphone : en-tête et texte centrés ; ordinateur : à gauche, comme avant.
+              SectionHeader en `align="left"` pose `text-left` sur son enveloppe, que
+              le sélecteur `[&>div]` recentre sous 1024 px. */}
+          <div className="text-center lg:col-span-7 lg:text-left [&>div:first-child]:text-center lg:[&>div:first-child]:text-left">
             <SectionHeader
               id="about-title"
               eyebrow={about.eyebrow}
@@ -33,7 +40,7 @@ export function About() {
               align="left"
             />
 
-            <AnimatedSection delay={0.15} className="mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-craie-600">
+            <AnimatedSection delay={0.15} className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-craie-600 lg:mx-0">
               {about.body.map((p) => (
                 <p key={p.slice(0, 24)}>{p}</p>
               ))}
@@ -43,7 +50,7 @@ export function About() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-craie-500">
                 Les techniques que nous utilisons
               </p>
-              <ul className="flex flex-wrap gap-2.5">
+              <ul className="flex flex-wrap justify-center gap-2.5 lg:justify-start">
                 {methods.map((m) => (
                   <li
                     key={m}
@@ -65,36 +72,37 @@ export function About() {
               />
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-panneau border border-craie-200 shadow-pose">
                 <Image
-                  src={persona.photo}
-                  alt={`${persona.name}, ${persona.title.toLowerCase()}`}
+                  src="/services/depannage-chaudiere-fioul.jpg"
+                  alt="Chaufferie au fioul : chaudière au sol et son brûleur, vase d'expansion rouge, ballon d'eau chaude"
                   fill
                   sizes="(min-width: 1024px) 420px, 90vw"
-                  className="object-cover"
+                  className="object-cover object-[42%_50%]"
                 />
                 <div
                   aria-hidden="true"
                   className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-fonte-950/85 to-transparent"
                 />
-                {/* pb généreux : le nom reste lisible au-dessus de la carte de
-                    citation qui vient chevaucher le bas du portrait. */}
+                {/* pb généreux : la légende reste lisible au-dessus de la carte
+                    qui vient chevaucher le bas de la photo. */}
                 <div className="absolute inset-x-0 bottom-0 p-6 pb-16">
-                  <p className="font-display text-xl font-medium text-craie-50">{persona.name}</p>
-                  <p className="mt-1 text-sm text-craie-300">{persona.title}</p>
+                  <p className="font-display text-xl font-medium text-craie-50">Une chaufferie au fioul</p>
+                  <p className="mt-1 text-sm text-craie-300">Brûleur, vase d&apos;expansion, ballon</p>
                 </div>
               </div>
 
               <div className="relative -mt-8 ml-auto mr-4 w-[85%] rounded-bloc border border-craie-200 bg-white p-6 shadow-pose">
-                <Quote size={20} className="text-braise-500" aria-hidden="true" />
-                <blockquote className="mt-3 font-display text-lg font-medium italic leading-snug text-fonte-950">
-                  {persona.quote}
-                </blockquote>
+                <Flame size={20} className="text-braise-500" aria-hidden="true" />
+                <p className="mt-3 font-display text-lg font-medium italic leading-snug text-fonte-950">
+                  Avant de toucher à une pièce, nous voulons comprendre pourquoi l&apos;appareil
+                  s&apos;est arrêté.
+                </p>
               </div>
 
               <div className="mt-6 flex items-center gap-3 rounded-bloc border border-flamme-600/20 bg-flamme-600/5 p-5">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600 text-white">
                   <ServiceIcon icon="tool" className="h-5 w-5" />
                 </span>
-                <p className="text-sm font-medium text-flamme-700">{about.highlight}</p>
+                <p className="text-left text-sm font-medium text-flamme-700">{about.highlight}</p>
               </div>
             </AnimatedSection>
           </div>

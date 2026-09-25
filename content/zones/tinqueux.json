@@ -2,42 +2,64 @@
   "slug": "tinqueux",
   "name": "Tinqueux",
   "postalCode": "51430",
-  "context": "Commune de l'ouest rémois, la plus peuplée des communes limitrophes, qui mêle lotissements pavillonnaires et petits collectifs.",
-  "metaTitle": "Dépannage chauffage et chaudière à Tinqueux (51)",
-  "metaDescription": "Chauffagiste à Tinqueux : chaudière en panne, radiateur froid, plus d'eau chaude. Gaz, fioul et pompe à chaleur. Ligne ouverte 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Tinqueux",
-  "intro": "Nous intervenons à Tinqueux (51430) sur les pannes de chauffage et d'eau chaude, quelle que soit l'énergie de l'appareil. Accolée à Reims par l'ouest, Tinqueux est la plus peuplée des communes limitrophes et la plus variée en matière de logement : des maisons de lotissement des décennies passées côtoient de petits collectifs et des constructions plus récentes. Cette diversité se retrouve dans les appareils que nous y trouvons, et donc dans les pannes.",
+  "context": "Commune accolée à l'ouest de Reims, où le gaz de ville et les réseaux de chaleur chauffent la grande majorité des logements.",
+  "metaTitle": "Tinqueux : chauffagiste pour chaudière murale au gaz",
+  "metaDescription": "Chaudière gaz en sécurité, pression qui chute, plus d'eau chaude à Tinqueux : nous trouvons la panne et vous donnons le prix avant de réparer.",
+  "h1": "Chauffagiste à Tinqueux, chaudières gaz",
+  "intro": "À Tinqueux (51430), le gaz de ville, avec les réseaux de chaleur, chauffe la très grande majorité des résidences principales, en maison comme en appartement. Nos dépannages y commencent donc presque toujours devant une chaudière murale, par son allumage, sa pression et l'évacuation de ses fumées. Pompe à chaleur ou chauffe-eau en panne ? Ce sont aussi des appareils que nous remettons en service ici.",
+  "fait": {
+    "texte": "En 2023, 80,4 % des résidences principales de Tinqueux ont le gaz de ville ou un réseau de chaleur comme combustible principal de chauffage.",
+    "source": {
+      "nom": "INSEE, dossier complet Tinqueux, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51573",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Une commune, plusieurs générations de chaudières",
-      "body": "Tinqueux a grandi par vagues, et chaque vague a laissé sa génération d'appareils. Dans les maisons de lotissement les plus anciennes, nous rencontrons encore des chaudières murales à gaz de conception classique, robustes mais dont les pièces commencent à manquer, avec les défauts qui vont avec : électrode d'allumage encrassée, circulateur qui peine à redémarrer après l'été, vase d'expansion qui a perdu sa précharge et fait chuter la pression à chaque cycle. Dans les logements collectifs, la question est souvent celle du chauffage individuel au gaz installé lot par lot, où un appareil placé dans un placard technique reçoit rarement l'attention qu'il mérite. Dans les constructions récentes, ce sont les chaudières à condensation et les pompes à chaleur qui dominent, avec des pannes d'un autre ordre, plutôt liées à la régulation, aux sondes et aux consignes qu'à l'usure mécanique. Nous vous demandons donc systématiquement l'âge approximatif et la marque de l'appareil avant de venir."
+      "heading": "Une chaudière gaz, trois endroits où chercher",
+      "body": "Quand une chaudière gaz refuse de chauffer, la cause se loge presque toujours dans l'une de trois familles. L'allumage d'abord : l'électrode qui produit l'étincelle s'encrasse, la sonde d'ionisation ne détecte plus la flamme, et l'appareil coupe le gaz par sécurité au bout de quelques secondes. La pression ensuite : un circuit qui manque d'eau empêche le démarrage, et une pression qui retombe sans cesse trahit un vase d'expansion dégonflé, une soupape qui fuit ou une petite perte sur un raccord. L'évacuation enfin : une ventouse obstruée, un conduit mal raccordé ou un extracteur fatigué font disjoncter le contrôle des fumées. Le code affiché sur l'écran oriente déjà vers l'une de ces pistes, et c'est pourquoi nous vous le demandons dès le premier appel."
     },
     {
-      "heading": "Le réflexe utile avant d'appeler",
-      "body": "Deux minutes d'observation depuis chez vous nous font gagner beaucoup de temps. Regardez d'abord si le problème touche tout le logement ou un seul point : plus de chauffage nulle part oriente vers l'appareil ou la régulation, un seul radiateur froid oriente vers le circuit et souvent vers une simple vanne bloquée après l'été. Notez ensuite le code d'erreur affiché sur l'écran de la chaudière, en le distinguant de la température de consigne. Jetez un oeil au manomètre : une pression tombée très bas explique à elle seule beaucoup d'arrêts. Enfin, précisez si vous avez perdu le chauffage, l'eau chaude, ou les deux, car sur une chaudière mixte cette information sépare déjà deux familles de pannes. Avec ces éléments, nous arrivons avec la bonne pièce plus souvent qu'avec la seule adresse."
+      "heading": "La chaudière du placard, en appartement",
+      "body": "À Tinqueux, maisons et appartements se partagent le parc, et beaucoup de logements collectifs ont leur propre chaudière murale, logée dans une cuisine ou un placard technique. Cet emplacement discret a ses revers : l'air manque autour de l'appareil quand on y range des produits ou du linge, la trappe de visite devient difficile d'accès, et une goutte sous le raccord passe des semaines inaperçue derrière une porte fermée. Nous commençons par dégager l'accès, contrôler l'arrivée d'air et le raccordement au conduit, puis nous traitons la panne elle-même. Si le défaut vient d'un conduit partagé par plusieurs logements, nous vous le disons clairement : il relève alors de la copropriété, pas de votre appareil.",
+      "image": {
+        "src": "/zones/tinqueux-corps.jpg",
+        "alt": "Chaudière murale blanche logée entre deux colonnes d'une cuisine contemporaine blanche, plan de travail en bois clair"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas de panne complète de chauffage à Tinqueux par temps froid, coupez l'appareil si vous constatez un écoulement d'eau, protégez le sol, fermez les pièces inoccupées pour garder la chaleur restante, et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Tinqueux, nous couvrons aussi Reims et ses quartiers ouest, Bezannes, Saint-Brice-Courcelles et, plus loin sur la vallée de la Vesle, Muizon."
+      "heading": "Mesurer avant de remplacer une pièce",
+      "body": "Changer une carte électronique ou un circulateur au hasard coûte cher et ne règle pas toujours le problème. Sur place, nous mesurons avant de décider : pression à froid et à chaud, analyse de combustion pour vérifier que le mélange gaz et air est correct, contrôle de l'électrode et du courant d'ionisation, test du vase d'expansion. Ces relevés disent si la pièce suspecte est vraiment en cause ou si elle subit un défaut situé ailleurs. Vous repartez avec une explication, la pièce réellement fautive et un prix annoncé avant tout remplacement."
+    },
+    {
+      "heading": "De Tinqueux vers Saint-Brice-Courcelles, Bezannes et Muizon",
+      "body": "Tinqueux touche Reims par l'ouest, et nous rayonnons depuis la ville vers les communes voisines de ce côté de l'agglomération. La carte situe chaque commune que nous couvrons : Saint-Brice-Courcelles au nord, Bezannes au sud, Muizon plus loin vers l'ouest. Où que vous soyez sur ce secteur, le fonctionnement reste identique : vous décrivez la panne, nous annonçons le tarif, puis nous fixons ensemble un créneau.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
+    "Saint-Brice-Courcelles",
     "Bezannes",
-    "Saint-Brice-Courcelles"
+    "Muizon"
+  ],
+  "prix": [
+    "deplacement",
+    "depannage-gaz",
+    "entretien-gaz"
   ],
   "faq": [
     {
-      "q": "Intervenez-vous à Tinqueux dans un appartement en chauffage individuel au gaz ?",
-      "a": "Oui. Dans un logement collectif équipé d'une chaudière individuelle, l'appareil et son circuit de radiateurs relèvent du logement, donc de son occupant ou de son propriétaire, et nous intervenons comme dans une maison. La limite se situe au niveau des parties communes : conduit collectif d'évacuation, colonne de gaz, chaufferie commune. Si le diagnostic pointe de ce côté, nous vous le disons et c'est au syndic de prendre le relais."
+      "q": "Je sens une odeur de gaz près de ma chaudière à Tinqueux, que faire avant d'appeler ?",
+      "a": "Ne touchez à aucun interrupteur ni appareil électrique, n'allumez rien, ouvrez les fenêtres, fermez le robinet de gaz au compteur et sortez du logement. Appelez ensuite, depuis l'extérieur, le numéro d'urgence sécurité gaz de votre distributeur, indiqué sur votre facture. Une fois la fuite écartée ou réparée sur le réseau, nous prenons le relais pour la chaudière elle-même."
     },
     {
-      "q": "Ma chaudière ne repart pas après l'été, est-ce forcément une panne ?",
-      "a": "Pas nécessairement, et c'est très courant à Tinqueux comme ailleurs à la remise en route de la saison. Après plusieurs mois d'arrêt, la pression a souvent baissé, de l'air s'est accumulé dans les radiateurs et les vannes thermostatiques peuvent rester grippées en position fermée. Une chaudière qui refuse de démarrer dans ces conditions se remet souvent en service sans remplacement de pièce. C'est précisément pour cela que l'entretien se fait mieux à la fin de l'été qu'en décembre."
+      "q": "Le brûleur s'allume puis s'éteint aussitôt, qu'est-ce que cela signifie ?",
+      "a": "La chaudière tente de démarrer mais ne confirme pas la présence de la flamme, alors elle coupe le gaz par précaution. Les suspects habituels sont une sonde d'ionisation encrassée, une électrode mal positionnée, une pression de gaz insuffisante ou une évacuation des fumées gênée. Après une seule tentative de réarmement infructueuse, laissez l'appareil au repos et appelez."
     },
     {
-      "q": "Combien de temps avant votre arrivée à Tinqueux ?",
-      "a": "Tinqueux est directement accolée à Reims, donc à quelques minutes de route : le délai dépend du planning en cours, pas de la distance. Nous vous annonçons un créneau réaliste au moment de l'appel plutôt qu'une promesse générique. Si votre situation relève vraiment de l'urgence, logement entier sans chauffage par grand froid, personne fragile au domicile ou écoulement d'eau, dites-le dès les premières phrases."
+      "q": "Pourquoi la pression de ma chaudière retombe-t-elle toutes les semaines ?",
+      "a": "Une installation étanche garde sa pression des mois durant. Une baisse régulière signale soit une petite perte d'eau quelque part, souvent un raccord de radiateur ou la soupape de sécurité qui goutte dans son évacuation, soit un vase d'expansion qui a perdu sa charge d'air. Remettre de l'eau soulage quelques jours sans soigner la cause : nous testons le vase et cherchons la perte."
     }
   ]
 }

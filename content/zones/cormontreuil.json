@@ -2,42 +2,68 @@
   "slug": "cormontreuil",
   "name": "Cormontreuil",
   "postalCode": "51350",
-  "context": "Commune limitrophe au sud de Reims, très pavillonnaire, adossée à un pôle commercial important de l'agglomération.",
-  "metaTitle": "Dépannage chauffage et chaudière à Cormontreuil (51)",
-  "metaDescription": "Chauffagiste à Cormontreuil : panne de chaudière, radiateur froid, ballon d'eau chaude hors service. Gaz, fioul, pompe à chaleur. Ligne ouverte 7j/7.",
-  "h1": "Dépannage chauffage et chaudière à Cormontreuil",
-  "intro": "Nous intervenons à Cormontreuil (51350) pour le dépannage des chaudières, des pompes à chaleur et des ballons d'eau chaude. Commune du sud de Reims, limitrophe directe, Cormontreuil est très majoritairement pavillonnaire : des maisons individuelles avec garage ou sous-sol, où la chaufferie est souvent reléguée dans un local non chauffé. Ce détail d'implantation a plus de conséquences qu'il n'y paraît sur les pannes que nous y traitons.",
+  "context": "Commune au sud de Reims où la moitié des résidences principales a été achevée entre 1971 et 1990.",
+  "metaTitle": "Chauffagiste Cormontreuil (51350), dépannage et entretien",
+  "metaDescription": "Maison des années 70 ou 80 à Cormontreuil ? Chaudière en panne, radiateurs tièdes, entretien annuel : nous cherchons la cause avant de changer une pièce.",
+  "h1": "Votre chauffagiste à Cormontreuil",
+  "intro": "La moitié des résidences principales de Cormontreuil (51350) a été achevée entre 1971 et 1990. Leurs réseaux de chauffage ont connu plusieurs chaudières successives et réclament souvent plus d'attention que l'appareil lui-même. Chauffagiste de dépannage et d'entretien, nous prenons en charge chaudières gaz et fioul, pompes à chaleur et circuits de radiateurs.",
+  "fait": {
+    "texte": "La moitié des résidences principales de Cormontreuil (50,8 %) a été achevée entre 1971 et 1990.",
+    "source": {
+      "nom": "INSEE, dossier complet Cormontreuil, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51172",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Quand l'appareil vit dans un local froid",
-      "body": "Beaucoup de maisons de Cormontreuil abritent leur chaudière ou leur ballon dans un garage, une buanderie ou un sous-sol qui n'est pas chauffé. Cette configuration confortable pour l'habitant a trois conséquences concrètes. La première est thermique : un appareil et ses tuyaux qui traversent un local froid perdent de la chaleur avant même qu'elle n'arrive aux radiateurs, et lors d'un épisode de gel prolongé, un tronçon mal calorifugé peut geler. La deuxième est acoustique et pratique : une panne qui commence par un bruit nouveau ou un léger suintement passe inaperçue plus longtemps dans un local où l'on ne va qu'une fois par semaine, si bien que le défaut est découvert au stade de l'arrêt complet plutôt qu'au stade du symptôme. La troisième concerne le ballon d'eau chaude : un ballon installé dans un garage froid met plus de temps à chauffer et perd davantage en veille. Notre premier réflexe sur une intervention à Cormontreuil est donc d'aller voir le local, pas seulement l'appareil."
+      "heading": "Maisons des années 1970 et 1980 : ce qui a vieilli",
+      "body": "Dans une maison de cette époque, la chaudière a généralement été remplacée au moins une fois, mais le reste de l'installation est d'origine : tuyauterie en acier ou en cuivre, radiateurs dimensionnés pour une eau très chaude, régulation réduite à un simple thermostat. Ce décalage produit des symptômes typiques. Une chaudière à condensation raccordée à d'anciens radiateurs fonctionne à une température trop haute pour condenser et consomme plus que prévu. Les tuyaux qui traversent un garage ou un vide sanitaire perdent de la chaleur faute d'isolant. Les robinets de radiateur, manipulés depuis des décennies, fuient au presse-étoupe ou restent bloqués. Nous regardons donc l'installation en entier, du générateur au dernier radiateur, avant de conclure."
     },
     {
-      "heading": "Ce que raconte l'eau du circuit",
-      "body": "Dans une maison individuelle chauffée depuis plusieurs décennies par le même réseau de radiateurs, l'état de l'eau du circuit est un indicateur très parlant. Une eau qui sort claire lors d'une purge signale un circuit en bon état. Une eau noire, chargée, qui tache le récipient, indique que la corrosion interne a produit des boues d'oxydes qui se déposent au bas des radiateurs et dans les points bas du réseau. Le symptôme visible est un radiateur chaud en haut et franchement froid en bas, une montée en température qui traîne, des bruits de circulation, et une consommation qui grimpe à confort constant. C'est le moment d'envisager un désembouage du circuit de chauffage, c'est à dire un nettoyage des radiateurs et de la tuyauterie de chauffage, à ne pas confondre avec quoi que ce soit qui touche aux évacuations d'eaux usées. Nous vous disons franchement ce qu'un désembouage peut récupérer sur votre installation et ce qu'il ne récupérera pas."
+      "heading": "Ce que nous faisons à Cormontreuil, et ce que nous ne faisons pas",
+      "body": "Notre métier est le dépannage, l'entretien et la remise en état des installations existantes : chaudières gaz et fioul, pompes à chaleur, ballons d'eau chaude, radiateurs, purge et désembouage du circuit. Nous ne posons pas d'installation de chauffage neuve et nous ne sommes pas ramoneurs : le ramonage d'un conduit de cheminée ou de fumée reste l'affaire d'un professionnel du ramonage, et nous vous signalons lors de l'entretien si votre conduit en a besoin. Si votre projet est de changer complètement de système, nous faisons l'état des lieux de l'existant, ce qui vous permet de consulter un installateur avec des éléments précis en main.",
+      "image": {
+        "src": "/zones/cormontreuil-corps.jpg",
+        "alt": "Technicien réglant une chaudière gaz à condensation dans une buanderie moderne aux murs clairs, outillage rangé sur un plan de travail"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas d'arrêt complet du chauffage à Cormontreuil, coupez l'appareil si de l'eau s'écoule, relevez le code affiché et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Cormontreuil, nous intervenons aussi à Reims et dans ses quartiers sud, à Taissy, à Bezannes et à Puisieulx."
+      "heading": "L'entretien annuel, visite par visite",
+      "body": "L'entretien d'une chaudière n'est pas une simple formalité administrative. Lors de la visite, nous nettoyons le corps de chauffe et le brûleur, contrôlons les dispositifs de sécurité, mesurons la combustion et le monoxyde de carbone rejeté, vérifions le vase d'expansion et la pression du circuit, puis réglons l'appareil. Vous recevez ensuite l'attestation d'entretien, le document que votre assureur ou votre propriétaire peut vous réclamer. Prévue avant les premiers froids, cette visite permet aussi de commander tranquillement une pièce fatiguée, au lieu de la découvrir en panne un soir d'hiver."
+    },
+    {
+      "heading": "Cormontreuil, Taissy, Bezannes, Puisieulx : le sud de l'agglomération",
+      "body": "Cormontreuil borde Reims par le sud, et c'est l'une des communes de ce côté de l'agglomération où nous nous rendons le plus facilement. La carte montre les communes voisines que nous couvrons également : Taissy et Puisieulx vers le sud-est, Bezannes à l'ouest. Pour chacune, le tarif de déplacement vous est annoncé au téléphone, avant toute venue.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Taissy",
-    "Bezannes"
+    "Bezannes",
+    "Puisieulx"
+  ],
+  "prix": [
+    "entretien-gaz",
+    "diagnostic",
+    "desembouage-radiateurs"
   ],
   "faq": [
     {
-      "q": "Ma chaudière est dans un garage non chauffé, est-ce un problème en cas de gel ?",
-      "a": "L'appareil lui-même dispose en général d'une protection antigel qui le fait démarrer brièvement quand la température descend trop bas, à condition qu'il reste alimenté en électricité et en combustible. Le vrai point de vigilance est ailleurs : les tuyaux qui traversent le local froid et, sur une installation avec ballon, la ligne d'eau. Un calorifugeage correct de ces tronçons et le fait de ne jamais couper l'alimentation de la chaudière pendant une absence hivernale règlent l'essentiel du risque."
+      "q": "Faites-vous le ramonage à Cormontreuil ?",
+      "a": "Non, et nous préférons le dire clairement. Le ramonage d'un conduit est réalisé par un ramoneur, qui délivre son propre certificat. Nous nous chargeons de l'entretien de la chaudière, gaz ou fioul, et de la pompe à chaleur. Si, pendant notre visite, le conduit nous semble encrassé ou mal raccordé, nous le notons et vous conseillons de faire intervenir un ramoneur."
     },
     {
-      "q": "L'eau qui sort de mes radiateurs quand je purge est très noire, est-ce grave ?",
-      "a": "Ce n'est pas une urgence, mais c'est un signal net. Cette couleur vient des oxydes de fer produits par la corrosion interne du circuit, qui forment des boues et se déposent là où l'eau ralentit, principalement au bas des radiateurs. Ces dépôts réduisent la surface d'échange, ce qui fait tourner la chaudière plus longtemps pour un résultat moindre. Le traitement s'appelle un désembouage et concerne exclusivement le circuit de chauffage, radiateurs et tuyauterie."
+      "q": "Installez-vous un nouveau système de chauffage à Cormontreuil ?",
+      "a": "Nous ne posons pas d'installation neuve : nous dépannons, entretenons et remettons en état ce qui existe. Avant un projet de remplacement, nous pouvons en revanche contrôler votre circuit, l'état des radiateurs et le conduit d'évacuation. Ces constats vous aident à comparer des devis d'installateurs sur une base solide, sans surprise découverte au moment du chantier."
     },
     {
-      "q": "Faut-il purger avant ou après avoir remis de la pression dans la chaudière ?",
-      "a": "Purgez d'abord, remettez de la pression ensuite. La purge chasse l'air des radiateurs et fait mécaniquement descendre la pression du circuit : si vous rechargez avant, vous devrez recommencer. Procédez chauffage coupé et installation refroidie, en commençant par le radiateur le plus proche de la chaudière, puis contrôlez le manomètre et rétablissez le niveau prévu par la notice de l'appareil avant de relancer."
+      "q": "Ma maison date des années 1980 : dois-je changer les radiateurs avec la chaudière ?",
+      "a": "Pas forcément. Des radiateurs en bon état et un circuit propre fonctionnent avec un appareil récent, à condition de régler une température d'eau adaptée. Le vrai sujet est l'intérieur du réseau : s'il est chargé en boues, un désembouage s'impose avant de raccorder une chaudière neuve, sous peine d'encrasser son échangeur dès les premiers mois."
+    },
+    {
+      "q": "Quel budget prévoir pour l'entretien annuel à Cormontreuil ?",
+      "a": "Les fourchettes de prix de l'entretien et du dépannage sont affichées plus bas sur cette page et détaillées dans nos tarifs, avec leurs sources. Le montant exact dépend de l'appareil, gaz, fioul ou pompe à chaleur, et il vous est confirmé avant la visite. Aucun supplément n'est ajouté sans votre accord."
     }
   ]
 }

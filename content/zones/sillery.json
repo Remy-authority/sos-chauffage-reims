@@ -2,42 +2,60 @@
   "slug": "sillery",
   "name": "Sillery",
   "postalCode": "51500",
-  "context": "Village viticole du sud-est rémois, le long du canal, où les maisons de vigneron anciennes côtoient des pavillons plus récents.",
-  "metaTitle": "Dépannage chauffage et chaudière à Sillery (51)",
-  "metaDescription": "Chauffagiste à Sillery : chaudière fioul ou gaz en panne, radiateurs froids, entretien avant l'hiver. Maisons anciennes et pavillons. Ligne ouverte 7j/7.",
-  "h1": "Dépannage chauffage et chaudière à Sillery",
-  "intro": "Nous intervenons à Sillery (51500) sur les pannes de chauffage et d'eau chaude. Village viticole du sud-est de l'agglomération, installé le long du canal, Sillery a gardé un bâti ancien de maisons de vigneron aux volumes généreux, autour duquel se sont ajoutés des pavillons plus récents. Chauffer une maison de village haute de plafond et une construction contemporaine ne pose pas les mêmes problèmes, et c'est ce qui rend le diagnostic intéressant ici.",
+  "context": "Commune au sud-est de Reims où l'électricité chauffe davantage de logements que le gaz.",
+  "metaTitle": "Sillery : chauffagiste chaudière, cumulus et PAC",
+  "metaDescription": "Chauffe-eau électrique, pompe à chaleur, chaudière gaz ou fioul à Sillery : un seul appel pour le dépannage. Diagnostic clair, tarif annoncé, créneau proposé.",
+  "h1": "Chauffagiste à Sillery, toutes énergies",
+  "intro": "Particularité de Sillery (51500) : l'électricité y est la première énergie de chauffage, devant le gaz de ville et les réseaux de chaleur. Derrière ce mot se cachent des équipements très différents, et nous ne les dépannons pas tous. Notre terrain : chaudières gaz et fioul, pompes à chaleur, ballons d'eau chaude et circuits de radiateurs à eau.",
+  "fait": {
+    "texte": "À Sillery, l'électricité est le premier combustible de chauffage des résidences principales en 2023 (43,6 %), devant le gaz de ville ou réseau de chaleur (29,4 %).",
+    "source": {
+      "nom": "INSEE, dossier complet Sillery, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51536",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Chauffer une maison de village",
-      "body": "Une maison ancienne de village cumule des caractéristiques qui pèsent lourd sur une installation de chauffage : des volumes importants, des hauteurs sous plafond généreuses, des murs épais à forte inertie, souvent une cave voûtée et des combles peu isolés. La chaleur produite doit donc remplir un volume plus grand que ne le laisse penser la surface au sol, et elle a tendance à monter vers des zones qu'on ne cherche pas à chauffer. Le résultat typique est un logement où l'on a froid aux pieds pendant que l'étage surchauffe, avec une chaudière qui tourne beaucoup pour un confort moyen. Avant de conclure à un appareil sous-dimensionné, nous regardons donc la répartition : équilibrage des radiateurs pièce par pièce, réglage des vannes thermostatiques souvent toutes laissées au maximum, température de départ d'eau, et efficacité réelle des émetteurs. Sur un bâti ancien, la marge gagnée par un simple rééquilibrage est régulièrement plus importante que celle qu'apporterait un appareil plus puissant."
+      "heading": "Chauffage électrique : de quoi parle-t-on chez vous ?",
+      "body": "Un logement chauffé à l'électricité peut être équipé de convecteurs, de panneaux rayonnants ou de radiateurs à inertie : ces appareils relèvent d'un électricien, pas de nous. Il peut aussi fonctionner avec une pompe à chaleur air-eau, qui consomme de l'électricité mais alimente un circuit d'eau, des radiateurs ou un plancher : là, c'est notre métier. Enfin, presque toutes ces maisons produisent leur eau chaude avec un ballon électrique, que nous dépannons aussi. Au téléphone, nous vous posons deux ou trois questions pour savoir si votre panne est pour nous, et si elle ne l'est pas, nous vous le disons."
     },
     {
-      "heading": "L'entretien avant l'hiver, plus qu'ailleurs",
-      "body": "Dans les communes de village comme Sillery, deux facteurs rendent l'entretien préventif encore plus rentable qu'en ville. D'abord, les installations au fioul y restent bien représentées, et un appareil au fioul accumule des dépôts à chaque saison de combustion : gicleur, électrodes, corps de chauffe, filtre de ligne. Un brûleur qui repart mal en novembre est presque toujours un brûleur dont l'entretien de fin d'été n'a pas été fait. Ensuite, les maisons anciennes possèdent souvent des chaufferies dans une cave ou une dépendance où l'on ne passe pas tous les jours, si bien qu'un suintement ou un bruit nouveau y reste inaperçu jusqu'à l'arrêt complet. La visite d'entretien est le seul moment où quelqu'un regarde réellement l'appareil, son local et son évacuation. La caler avant la saison, à la fin de l'été ou au début de l'automne, permet de commander une pièce sans conséquence, ce qui devient impossible en pleine vague de froid quand les délais s'allongent partout. L'entretien des appareils de chauffage est encadré par la réglementation en vigueur, et l'attestation remise à l'issue de la visite est le document que votre assureur peut réclamer."
+      "heading": "Le ballon d'eau chaude, premier appel des maisons tout électrique",
+      "body": "Quand la maison ne brûle ni gaz ni fioul, c'est souvent le ballon qui nous fait venir. Plus d'eau chaude du tout : la résistance, le thermostat ou la sécurité de surchauffe sont à tester, après avoir vérifié le disjoncteur. Une eau tiède qui s'épuise vite : le calcaire a envahi la cuve et recouvre la résistance. De l'eau qui coule en continu par le tuyau du groupe de sécurité : la soupape ne se referme plus. Nous contrôlons aussi l'anode, qui protège la cuve de la corrosion et s'use avec le temps. Quand la cuve elle-même fuit, seul le remplacement reste possible.",
+      "image": {
+        "src": "/zones/sillery-corps.jpg",
+        "alt": "Ballon d'eau chaude électrique blanc dans une buanderie contemporaine, groupe de sécurité neuf et tuyauterie cuivre soignée"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas de panne de chauffage à Sillery, relevez le code ou le voyant affiché, ne réarmez pas plus d'une fois et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Sillery, nous intervenons aussi à Taissy, à Puisieulx, à Prunay et à Reims."
+      "heading": "Sillery, Puisieulx, Prunay, Taissy : le sud-est rémois",
+      "body": "Sillery se trouve au sud-est de Reims, à côté de Puisieulx et de Prunay, avec Taissy entre la commune et la ville. La carte place ces communes de notre secteur. Pour un ballon en panne, indiquez sa contenance et son âge approximatif : nous prévoyons ainsi les bonnes pièces, ou un appareil de remplacement si la cuve est percée.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Taissy",
     "Puisieulx",
-    "Prunay"
+    "Prunay",
+    "Taissy"
+  ],
+  "prix": [
+    "ballon-remplacement",
+    "groupe-securite",
+    "depannage-pac"
   ],
   "faq": [
     {
-      "q": "Dans ma maison ancienne, il fait froid en bas et trop chaud à l'étage, que faire ?",
-      "a": "C'est le déséquilibre classique d'un bâti à grands volumes : l'air chaud monte et l'étage se sert en premier, souvent aidé par une cage d'escalier ouverte. Avant d'envisager un appareil plus puissant, il faut rééquilibrer l'installation : régler les vannes thermostatiques pièce par pièce plutôt que de toutes les laisser au maximum, ajuster les débits sur les radiateurs les mieux servis, vérifier la température de départ d'eau. Le gain est souvent net et ne coûte pas le prix d'une chaudière."
+      "q": "Mes convecteurs électriques ne chauffent plus, intervenez-vous ?",
+      "a": "Non, les convecteurs, panneaux rayonnants et radiateurs à inertie relèvent d'un électricien. Nous intervenons sur les installations à eau chaude : chaudière, pompe à chaleur air-eau, radiateurs à eau, plancher chauffant, ainsi que sur les ballons d'eau chaude. Si vous ne savez pas quel type d'équipement vous avez, décrivez-le-nous, nous vous orientons."
     },
     {
-      "q": "Quand faut-il faire entretenir sa chaudière au fioul ?",
-      "a": "À la fin de l'été ou au début de l'automne, avant la remise en route de la saison. Un appareil au fioul accumule des dépôts à chaque hiver de fonctionnement, sur le gicleur, les électrodes, le corps de chauffe et le filtre de ligne, et ces dépôts sont la cause principale des démarrages ratés du premier grand froid. Un entretien fait au calme permet aussi de commander une pièce sans conséquence, alors qu'en novembre l'attente se paie en jours sans chauffage."
+      "q": "De l'eau coule par le tuyau du groupe de sécurité de mon cumulus, est-ce une panne ?",
+      "a": "Quelques gouttes pendant la chauffe sont normales : l'eau se dilate et la soupape libère le surplus. Un écoulement continu, même ballon froid, indique en revanche une soupape entartrée qui ne se ferme plus, ou une pression d'arrivée trop forte. Le groupe de sécurité se remplace alors, une intervention courte."
     },
     {
-      "q": "Ma cave est froide et humide, cela peut-il abîmer la chaudière ?",
-      "a": "Cela ne provoque pas de panne du jour au lendemain, mais cela accélère la corrosion externe de l'appareil, de ses raccords et de la ligne d'alimentation. Le vrai risque est celui du symptôme qui passe inaperçu : dans un local humide où l'on descend rarement, un suintement se confond avec l'humidité ambiante et n'est identifié qu'au stade de l'arrêt. Une ventilation correcte du local et un regard régulier valent mieux que n'importe quel traitement curatif."
+      "q": "L'unité extérieure de ma pompe à chaleur fume en hiver, faut-il l'arrêter ?",
+      "a": "Non, laissez-la faire. Par temps froid et humide, du givre se forme sur la batterie ; la machine inverse brièvement son cycle pour le faire fondre, et cette vapeur ressemble à de la fumée. Si le givre ne disparaît jamais ou si la machine s'arrête en défaut, il faut alors intervenir."
     }
   ]
 }

@@ -32,15 +32,15 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
 
         <div className="mt-20 grid gap-10 lg:grid-cols-12">
           <AnimatedSection className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-panneau border border-craie-200 bg-gradient-to-br from-fonte-900 to-fonte-950 p-10 lg:p-12">
+            <div className="relative overflow-hidden rounded-panneau border border-craie-200 bg-gradient-to-br from-fonte-900 to-fonte-950 p-7 sm:p-10 lg:p-12">
               <div
                 aria-hidden="true"
                 className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgb(var(--teinte-flamme-500)/0.22),transparent_58%)]"
               />
               <div aria-hidden="true" className="trame-serree absolute inset-0 opacity-70" />
 
-              <div className="relative">
-                <p className="flex items-center gap-3 text-flamme-300">
+              <div className="relative text-center sm:text-left">
+                <p className="flex items-center justify-center gap-3 text-flamme-300 sm:justify-start">
                   <MapPin size={22} />
                   <span className="text-xs font-semibold uppercase tracking-[0.2em]">
                     {departmentName} · {department}
@@ -49,7 +49,7 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
 
                 <h3 className="mt-6 text-3xl text-craie-50">Communes desservies</h3>
 
-                <ul className="mt-8 flex flex-wrap gap-2.5">
+                <ul className="mt-8 flex flex-wrap justify-center gap-2.5 sm:justify-start">
                   {zones.map((z) => (
                     <li key={z.slug}>
                       <Link
@@ -80,8 +80,8 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
           </AnimatedSection>
 
           <div className="space-y-5 lg:col-span-5">
-            <AnimatedSection delay={0.1} className="rounded-bloc border border-craie-200 bg-white p-8">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+            <AnimatedSection delay={0.1} className="rounded-bloc border border-craie-200 bg-white p-8 text-center sm:text-left">
+              <span className="mx-auto flex h-12 w-12 items-center sm:mx-0 justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                 <MapPin size={22} />
               </span>
               <h3 className="mt-5 text-xl">Tous les quartiers de {city}</h3>
@@ -90,8 +90,8 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="rounded-bloc border border-craie-200 bg-white p-8">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+            <AnimatedSection delay={0.2} className="rounded-bloc border border-craie-200 bg-white p-8 text-center sm:text-left">
+              <span className="mx-auto flex h-12 w-12 items-center sm:mx-0 justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
                 <Timer size={22} />
               </span>
               <h3 className="mt-5 text-xl">Le délai, dit au téléphone</h3>

@@ -2,41 +2,60 @@
   "slug": "muizon",
   "name": "Muizon",
   "postalCode": "51140",
-  "context": "Commune de la vallée de la Vesle, à l'ouest de l'agglomération, la plus excentrée de nos secteurs, à dominante d'habitat individuel.",
-  "metaTitle": "Dépannage chauffage et chaudière à Muizon (51)",
-  "metaDescription": "Chauffagiste à Muizon : chaudière fioul ou gaz en panne, brûleur en défaut, plus d'eau chaude. Diagnostic complet, ligne ouverte 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Muizon",
-  "intro": "Nous intervenons à Muizon (51140) sur les pannes de chauffage et d'eau chaude. Située dans la vallée de la Vesle, à l'ouest de l'agglomération, Muizon est la plus excentrée des communes que nous couvrons avec une page dédiée. L'habitat y est très majoritairement individuel, avec une part de maisons anciennes et un recours au fioul plus fréquent que dans les communes collées à Reims, ce qui change nettement la nature des pannes.",
+  "context": "Commune à l'ouest de Reims, la plus éloignée de notre secteur, aux logements spacieux.",
+  "metaTitle": "Muizon (51140), chauffagiste pour chaudière et radiateurs",
+  "metaDescription": "Grande maison à Muizon et pièces qui restent froides ? Équilibrage, circulateur, dépannage de chaudière : nous trouvons la cause, puis chiffrons la réparation.",
+  "h1": "Chauffagiste à Muizon pour grandes maisons",
+  "intro": "Cinq pièces en moyenne par résidence principale : à Muizon (51140), à l'ouest de Reims, les maisons sont spacieuses, et un seul appareil doit alimenter de nombreux radiateurs. Autant d'occasions pour qu'une pièce décroche avant les autres. Chaudière, pompe à chaleur ou circuit, nous cherchons où la chaleur se perd en route.",
+  "fait": {
+    "texte": "À Muizon, une résidence principale compte en moyenne 5,0 pièces en 2023, et une maison 5,1 pièces.",
+    "source": {
+      "nom": "INSEE, dossier complet Muizon, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51391",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Le fioul, une panne qui commence souvent avant la chaudière",
-      "body": "Sur une installation au fioul, le combustible est stocké chez vous, et une bonne part des arrêts vient de la ligne qui va de la cuve au brûleur plutôt que de l'appareil lui-même. Le voyant rouge du brûleur signale simplement que la chaudière a tenté de démarrer, n'a pas obtenu de flamme correcte, et s'est arrêtée par sécurité. Trois familles de causes se partagent l'essentiel des cas. L'alimentation : cuve trop basse, filtre colmaté, ligne désamorcée, aspiration de dépôts accumulés au fond de la cuve, phénomène amplifié quand le niveau descend ou juste après une livraison qui a remué le contenu. La pulvérisation : gicleur usé ou encrassé, pression de pompe qui a dérivé, électrodes mal positionnées. La détection : cellule photoélectrique encrassée qui ne voit plus une flamme pourtant présente et arrête l'appareil à tort. Nous contrôlons donc systématiquement la ligne dans son ensemble à Muizon, du piquage en cuve au brûleur, plutôt que de nous limiter à la chaudière."
+      "heading": "Cinq pièces, un seul circuit : l'équilibrage",
+      "body": "Dans une grande maison, l'eau chaude part de la chaudière et emprunte le chemin le plus facile. Les radiateurs proches reçoivent un débit généreux, ceux du bout du réseau se contentent du reste. Sans réglage, on obtient un séjour trop chaud et une chambre d'angle qui ne dépasse jamais la tiédeur. L'équilibrage corrige cela : sur chaque radiateur, un petit organe de réglage, le té ou le robinet à double réglage, limite le débit des émetteurs trop bien servis pour renvoyer l'eau vers les plus éloignés. C'est un travail patient, pièce par pièce, qui transforme souvent le confort d'une maison sans changer d'appareil."
     },
     {
-      "heading": "Le froid de vallée et les démarrages difficiles",
-      "body": "Les fonds de vallée sont plus froids que les plateaux au petit matin, et le fioul s'épaissit quand la température baisse. Une cuve installée dans un garage non chauffé, un appentis ou un local ouvert peut voir apparaître des paraffines qui gênent l'écoulement et finissent par colmater le filtre. Le symptôme typique est une chaudière qui fonctionne correctement dans la journée puis se met en défaut à l'aube après une nuit froide, ou qui redémarre péniblement après un long arrêt. Ce même froid matinal explique aussi des mises en sécurité intermittentes sur des installations au gaz dont l'évacuation est mal orientée. Dans les deux cas, l'information la plus précieuse que vous puissiez nous donner est l'heure à laquelle le défaut apparaît : une panne qui revient toujours au petit matin ne raconte pas la même histoire qu'une panne qui survient le soir en pleine sollicitation. Notez-la avant d'appeler."
+      "heading": "Le circulateur, cette pompe qu'on oublie",
+      "body": "Le circulateur pousse l'eau dans tout le circuit. Dans un grand logement, c'est lui qui décide si le dernier radiateur reçoit assez de chaleur. Réglé trop bas, il laisse les pièces lointaines froides ; trop haut, il fait siffler les robinets et gaspille de l'électricité. Après un été à l'arrêt, son axe peut rester collé : la chaudière chauffe, mais l'eau ne circule pas, et l'appareil se met en sécurité par surchauffe. Nous vérifions sa vitesse, son débit et son démarrage avant de soupçonner la chaudière elle-même.",
+      "image": {
+        "src": "/zones/muizon-corps.jpg",
+        "alt": "Circulateur de chauffage moderne à écran numérique monté sous une chaudière murale, tuyaux isolés dans un cellier rénové"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "En cas de panne à Muizon, notez le moment où le défaut est apparu, réarmez une seule fois si l'appareil le permet, protégez le sol en cas d'écoulement et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Muizon se trouve à l'extrémité ouest de notre secteur, dans la limite du rayon que nous couvrons autour de Reims ; nous intervenons aussi à Tinqueux et à Saint-Brice-Courcelles sur le même axe."
+      "heading": "Muizon, Saint-Brice-Courcelles, Tinqueux, Bezannes",
+      "body": "Muizon marque la limite ouest de notre secteur. Sur la carte, vous voyez les communes voisines où nous intervenons aussi : Saint-Brice-Courcelles et Tinqueux en direction de Reims, Bezannes plus au sud. Le déplacement jusqu'à Muizon vous est annoncé au téléphone, avant toute venue, pour que rien ne vous surprenne sur la facture.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
-    "Tinqueux"
+    "Saint-Brice-Courcelles",
+    "Tinqueux",
+    "Bezannes"
+  ],
+  "prix": [
+    "deplacement",
+    "desembouage-radiateurs",
+    "depannage-gaz"
   ],
   "faq": [
     {
-      "q": "Ma chaudière fioul se met en défaut seulement le matin, pourquoi ?",
-      "a": "Le froid de la nuit est le premier suspect. Le fioul s'épaissit quand la température descend, et une cuve ou une ligne d'alimentation installée dans un local non chauffé peut laisser apparaître des paraffines qui gênent l'écoulement et chargent le filtre. L'appareil démarre alors mal, ou pas du tout, jusqu'à ce que la journée réchauffe l'ensemble. C'est une panne réelle, pas une fatalité : elle se traite au niveau de la ligne et de la protection du local."
+      "q": "La chambre la plus éloignée de la chaudière reste froide, que faire ?",
+      "a": "Vérifiez d'abord que son robinet est bien ouvert et purgez le radiateur. Si rien ne change, c'est souvent un problème d'équilibrage : les radiateurs proches captent l'essentiel du débit. Il faut alors régler le débit de chaque émetteur, parfois augmenter la vitesse du circulateur. Nous réalisons ce réglage sur toute la maison, en une seule intervention."
     },
     {
-      "q": "Ma cuve est presque vide, dois-je juste la remplir ?",
-      "a": "Remplir est nécessaire mais pas toujours suffisant. Une cuve qui descend très bas fait aspirer les dépôts et l'eau de condensation accumulés au fond au fil des années, et ces boues colmatent le filtre et le gicleur. Après une remise à niveau, il est fréquent que la ligne demande un nettoyage et un réamorçage avant que le brûleur ne redémarre normalement. Attendre le fond de cuve coûte donc souvent plus cher que de commander plus tôt."
+      "q": "Mon circulateur propose plusieurs vitesses, laquelle choisir ?",
+      "a": "La plus basse qui chauffe correctement toutes les pièces. Une vitesse trop élevée crée des bruits d'écoulement et consomme inutilement ; une vitesse trop faible prive les radiateurs éloignés. Les circulateurs récents se régulent seuls, mais leur mode de fonctionnement doit être adapté au circuit : nous le paramétrons lors de l'équilibrage."
     },
     {
-      "q": "Muizon est-elle bien dans votre zone d'intervention ?",
-      "a": "Oui. Muizon est la plus éloignée des communes pour lesquelles nous avons une page dédiée, mais elle reste dans le rayon que nous couvrons autour de Reims. Le trajet ajoute quelques minutes, pas davantage. Comme partout, le délai réel dépend surtout du planning en cours, et nous vous annonçons un créneau réaliste au téléphone plutôt qu'une estimation optimiste."
+      "q": "Muizon est à l'écart de Reims : le déplacement coûte-t-il plus cher ?",
+      "a": "Le déplacement fait partie des prix indiqués plus bas et sur notre page Tarifs. Son montant pour Muizon vous est communiqué au téléphone, avant la moindre intervention. Grouper un entretien avec un dépannage ou le réglage des radiateurs permet d'amortir un seul déplacement sur plusieurs travaux."
     }
   ]
 }

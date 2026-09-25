@@ -2,42 +2,60 @@
   "slug": "betheny",
   "name": "Bétheny",
   "postalCode": "51450",
-  "context": "Commune du nord de Reims, résidentielle et dense, bordée par des zones d'activités et d'anciens terrains militaires reconvertis.",
-  "metaTitle": "Dépannage chauffage et chaudière à Bétheny (51)",
-  "metaDescription": "Chauffagiste à Bétheny : chaudière à l'arrêt, plus d'eau chaude, radiateurs froids. Gaz, fioul, pompe à chaleur. Intervention 7j/7, tarif annoncé avant.",
-  "h1": "Dépannage chauffage et chaudière à Bétheny",
-  "intro": "Nous intervenons à Bétheny (51450) sur les pannes de chauffage et de production d'eau chaude. Commune du nord de l'agglomération, Bétheny s'est développée en s'appuyant sur des lotissements successifs et sur la reconversion d'anciens terrains militaires, ce qui lui donne un parc de logements où des maisons des décennies passées voisinent avec des programmes nettement plus récents.",
+  "context": "Commune au nord de Reims, où les façons de se chauffer se diversifient d'un recensement à l'autre.",
+  "metaTitle": "Chaudière ou PAC en panne à Bétheny ? Chauffagiste 7j/7",
+  "metaDescription": "Pompe à chaleur qui givre, chaudière bloquée, poêle et radiateurs qui se contrarient à Bétheny : nous trouvons la panne et annonçons le tarif avant.",
+  "h1": "Chauffagiste à Bétheny : chaudière et PAC",
+  "intro": "Bois, solaire, géothermie : à Bétheny (51450), les foyers qui se chauffent ainsi sont bien plus nombreux qu'en 2012, parfois aux côtés d'une chaudière ou d'une pompe à chaleur. Une panne s'y lit donc sur l'ensemble du système, pas sur un appareil isolé. Chaudières gaz et fioul, pompes à chaleur, ballons d'eau chaude : tout ce qui chauffe l'eau de la maison est de notre ressort.",
+  "fait": {
+    "texte": "À Bétheny, 223 résidences principales se chauffent principalement au bois, au solaire, par géothermie ou avec une autre énergie en 2023, contre 126 en 2012.",
+    "source": {
+      "nom": "INSEE, dossier complet Bétheny, recensement 2023",
+      "url": "https://www.insee.fr/fr/statistiques/2011101?geo=COM-51055",
+      "date": "2026-08-27"
+    }
+  },
   "blocks": [
     {
-      "heading": "Le nord de l'agglomération, un parc contrasté",
-      "body": "À Bétheny, deux profils de pannes cohabitent. Dans les secteurs pavillonnaires installés de longue date, les appareils ont souvent une vingtaine d'années ou davantage, et les défauts sont ceux de l'usure : corps de chauffe entartré, échangeur qui s'encrasse, circulateur fatigué, sonde de température qui dérive et fait travailler la chaudière par à-coups. Le circuit de radiateurs de ces maisons a lui aussi vieilli, et c'est fréquemment lui qui explique une chaudière qui tourne beaucoup pour un résultat médiocre : la boue accumulée dans les émetteurs réduit l'échange bien avant que l'appareil ne tombe en panne. Dans les programmes plus récents, les appareils sont des chaudières à condensation ou des pompes à chaleur, et les appels concernent plutôt des codes défaut, des réglages de régulation ou une unité extérieure qui ne fait plus son travail correctement. Le diagnostic ne part donc pas du même endroit selon la rue."
+      "heading": "Deux énergies dans une même maison",
+      "body": "Une chaudière associée à un poêle, une pompe à chaleur couplée à une chaudière d'appoint : ces installations mixtes sont efficaces quand elles sont réglées ensemble, et déroutantes quand elles ne le sont pas. Le cas le plus fréquent est celui du poêle installé dans le séjour, là où se trouve aussi le thermostat d'ambiance. Le poêle réchauffe la pièce, le thermostat croit la maison chaude et arrête la chaudière, pendant que les chambres refroidissent. Autre situation : une pompe à chaleur hybride dont le point de bascule vers la chaudière a été mal fixé, si bien que l'une travaille à contretemps de l'autre. Avant de démonter quoi que ce soit, nous vérifions comment les appareils se passent la main."
     },
     {
-      "heading": "L'exposition au vent, un facteur qu'on oublie",
-      "body": "Le nord de l'agglomération rémoise est dégagé, avec de larges espaces ouverts hérités des terrains d'aviation et des zones d'activités. Cette exposition compte davantage qu'on ne le croit pour un logement chauffé. Elle accroît les déperditions d'une maison mal calfeutrée, ce qui fait tourner l'appareil plus longtemps pour maintenir la même température et met en évidence des faiblesses qui passeraient inaperçues dans un tissu urbain protégé. Elle joue aussi sur les évacuations de fumées : une ventouse orientée plein vent peut voir son tirage perturbé lors des coups de vent, ce qui déclenche des mises en sécurité intermittentes, difficiles à interpréter parce qu'elles ne se reproduisent pas à la demande. Enfin, sur une pompe à chaleur, une unité extérieure exposée au vent humide givre plus vite et multiplie les cycles de dégivrage. Si vos arrêts semblent liés à la météo plutôt qu'à l'usage, dites-le nous, c'est une piste et non un détail."
+      "heading": "Pompe à chaleur : ce que nous réparons",
+      "body": "Sur une pompe à chaleur air-eau ou air-air déjà installée, nous prenons en charge le diagnostic complet, la régulation, le circuit d'eau, le nettoyage des échangeurs, l'écoulement des condensats et le remplacement des pièces électriques ou hydrauliques, quelle que soit l'entreprise qui l'a posée. Les interventions sur le fluide frigorigène lui-même exigent une attestation de capacité particulière : si le diagnostic y conduit, nous vous le disons avant d'aller plus loin. Une unité extérieure qui se couvre de givre puis fume quelques minutes est le plus souvent en cycle de dégivrage normal ; c'est quand le givre persiste que la panne commence.",
+      "image": {
+        "src": "/zones/betheny-corps.jpg",
+        "alt": "Unité extérieure de pompe à chaleur blanche posée sur un socle devant une façade récente, technicien vérifiant le raccordement"
+      }
     },
     {
-      "heading": "Urgence et communes voisines",
-      "body": "Si le chauffage s'arrête complètement à Bétheny en période de froid, relevez le code d'erreur, n'insistez pas au-delà d'une tentative de réarmement, protégez le sol en cas d'écoulement et appelez. Notre ligne est ouverte les week-ends et les jours fériés. Depuis Bétheny, nous intervenons aussi à Reims et dans ses quartiers nord, à Witry-lès-Reims, à Saint-Brice-Courcelles et à Cernay-lès-Reims."
+      "heading": "Bétheny, Witry-lès-Reims, Cernay-lès-Reims : le nord et l'est",
+      "body": "Bétheny s'étend au nord de Reims, et nous desservons depuis la ville les communes situées de ce côté. La carte indique celles qui ont leur page : Witry-lès-Reims au nord-est, Cernay-lès-Reims à l'est, Saint-Brice-Courcelles au nord-ouest. Si votre commune n'y figure pas mais reste proche, appelez quand même : nous vous disons tout de suite si nous pouvons venir.",
+      "schema": "carte-communes"
     }
   ],
   "neighbours": [
-    "Reims",
     "Witry-lès-Reims",
+    "Cernay-lès-Reims",
     "Saint-Brice-Courcelles"
+  ],
+  "prix": [
+    "depannage-pac",
+    "entretien-pac",
+    "deplacement"
   ],
   "faq": [
     {
-      "q": "Ma chaudière se met en sécurité seulement les jours de grand vent, est-ce possible ?",
-      "a": "Oui, et c'est un cas que nous rencontrons dans les secteurs dégagés comme le nord de l'agglomération. Une évacuation de fumées en ventouse dont la sortie est exposée aux rafales peut voir son tirage momentanément perturbé, ce qui déclenche la sécurité liée à l'évacuation. La panne est intermittente, donc frustrante à diagnostiquer, mais le lien avec la météo est justement l'indice le plus utile. Notez les dates et les conditions des arrêts, cela vaut mieux qu'un long descriptif technique."
+      "q": "Mon poêle chauffe le séjour et les chambres restent froides, pourquoi ?",
+      "a": "Le thermostat d'ambiance se trouve probablement dans la même pièce que le poêle. Il mesure une température atteinte grâce au bois et coupe la chaudière, qui ne chauffe plus le reste de la maison. Déplacer le thermostat, passer par une sonde extérieure ou régler une consigne différente suffit souvent à rétablir l'équilibre entre les pièces."
     },
     {
-      "q": "Ma chaudière tourne en permanence sans que la maison soit chaude, d'où cela vient-il ?",
-      "a": "Trois causes reviennent le plus souvent. Le circuit de chauffage est chargé en boues et les radiateurs n'échangent plus correctement, ce que confirment des émetteurs chauds en haut et froids en bas. La régulation est mal réglée ou la sonde a dérivé, si bien que l'appareil ne s'arrête jamais. Ou les déperditions du logement ont augmenté, par une menuiserie ou une isolation défaillante. Nous contrôlons le circuit et la régulation avant de conclure, car la chaudière est rarement la seule coupable."
+      "q": "Entretenez-vous les poêles à bois et à granulés ?",
+      "a": "Non. Le poêle et le ramonage de son conduit relèvent d'un installateur spécialisé ou d'un ramoneur. Notre domaine, c'est la production d'eau chaude pour le chauffage et la maison : chaudière, pompe à chaleur, radiateurs, ballon. Si le poêle est raccordé à votre circuit de radiateurs, nous traitons en revanche toute la partie hydraulique."
     },
     {
-      "q": "Intervenez-vous à Bétheny sur une pompe à chaleur installée par quelqu'un d'autre ?",
-      "a": "Oui, sans difficulté. Nous dépannons les pompes à chaleur air-eau et air-air déjà installées, quelle que soit l'entreprise qui les a posées : diagnostic, régulation, nettoyage des échangeurs, écoulement des condensats, circuit d'eau, remplacement de pièces hors circuit frigorifique. Les opérations touchant au fluide frigorifique lui-même relèvent d'une attestation de capacité spécifique, et nous vous le disons clairement si le diagnostic mène là."
+      "q": "Chaudière et pompe à chaleur ensemble : laquelle doit démarrer en premier ?",
+      "a": "Dans un système hybride, la pompe à chaleur assure le chauffage tant que la température extérieure le permet, puis la chaudière prend le relais au-delà d'un seuil réglé dans la régulation. Si la chaudière tourne en plein automne ou si la pompe à chaleur peine par grand froid, ce réglage de bascule est à revoir avant de soupçonner une panne."
     }
   ]
 }

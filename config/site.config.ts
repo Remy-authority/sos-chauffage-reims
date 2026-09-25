@@ -164,18 +164,9 @@ export const siteConfig = {
     blog: true,
   },
 
-  /* ── Persona artisan (DEMO, à remplacer par les infos du loueur) ── */
-  persona: {
-    // DEMO – à remplacer par les infos du loueur
-    name: 'Aurélien Godart',
-    // DEMO – portrait généré, remplaçable par une photo réelle
-    photo: '/persona.jpg',
-    // DEMO – à remplacer par les infos du loueur
-    title: 'Responsable des interventions chauffage',
-    // DEMO – à remplacer par les infos du loueur
-    quote:
-      "Une chaudière qui s'arrête a presque toujours prévenu avant. On lit ce qu'elle dit, puis on répare la cause, pas le symptôme.",
-  },
+  /* ── Persona : SUPPRIMÉ le 25/09/2026. Règle du portefeuille (30/07/2026) :
+     aucune personne fictive (nom, titre, portrait, citation attribuée). La
+     section « à propos » montre une photo métier et parle en « nous ». ── */
 
   /* ── Bloc « à propos » ── */
   about: {

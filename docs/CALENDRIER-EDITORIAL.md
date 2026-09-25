@@ -180,3 +180,55 @@ atteint par `fuite-chaudiere-circuit-chauffage`, la plus étroite en volume de
 recherche selon `SEO-GEO-PLAN.md` section 1). `depannage-chaudiere-gaz` et
 `urgence-depannage-chauffage-chaudiere` concentrent le plus d'articles, ce qui
 reflète leur priorité Haute dans la carte des mots-clés.
+
+---
+
+## Mise à jour du 25/09/2026 : cadence 5 par semaine, 12 sujets neufs
+
+> Règle `../tasks/regle-mise-a-jour-site.md` §1 point 9, branche `maj-25-09`.
+
+- **Cadence** : le workflow `publish-article.yml` publie désormais du **lundi au
+  vendredi** (cron `38 5 * * 1-5`, 05:38 UTC, minute décalée conservée), soit
+  **5 articles par semaine** au lieu de 3.
+- **Stock** : 55 brouillons existants (034 à 088) + **12 sujets neufs** (020 à 031)
+  = **67 brouillons**. Les préfixes 020 à 031 passent devant 034 par simple tri
+  alphabétique : aucun brouillon existant n'a été renommé.
+- **Fin de stock** : à 5 par semaine à partir du lundi 28/09/2026, dernière
+  publication le **mardi 29/12/2026** (67 jours ouvrés, 13,4 semaines). Recharge
+  à prévoir avant mi-décembre 2026 (calendrier v3 : sortie d'hiver).
+- **Illustrations** : aucun visuel pré-généré. À la publication, le workflow
+  appelle `scripts/generate-article-images.mjs`, qui crée la couverture au chemin
+  `cover:` (scène décrite par `coverAlt:`) et un visuel de corps
+  `/conseils/<slug>-1.jpg` inséré après la 2e section. La 2e section des sujets
+  neufs décrit volontairement un objet ou un geste (jamais un document) pour
+  passer le garde-fou d'images.
+- **Titres** : chaque brouillon porte un `seoTitle` de 60 caractères au plus (le
+  `title` reste le H1) et une `description` de 120 à 160 caractères.
+
+### Les 12 sujets neufs, dans l'ordre de publication prévu
+
+| Préfixe | Date prévue | Sujet | Source Search Console | Service |
+|---|---|---|---|---|
+| 020 | lun. 28/09 | Chaudière en panne : louer un appoint ou réparer (décision Rémy, on ne loue pas de chaudières) | « location chaudière reims » 80 vues, pos. 22 ; « location chauffage reims » 27, pos. 26 | `urgence-depannage-chauffage-chaudiere` |
+| 021 | mar. 29/09 | SOS chaudière : 5 vérifications avant d'appeler | « sos chaudière » 36, « sos dépannage chaudière » 45 | `urgence-depannage-chauffage-chaudiere`, `depannage-chaudiere-gaz` |
+| 022 | mer. 30/09 | Chauffagiste le dimanche : urgence ou lundi | « chauffagiste urgence » 12, « urgence chauffage » 15 | `urgence-depannage-chauffage-chaudiere` |
+| 023 | jeu. 01/10 | Chaudière fioul au premier froid : niveau, filtre, purge | « chauffagiste fuel » pos. 10, « dépannage chaudière fioul autour de moi » pos. 8 | `depannage-chaudiere-fioul` |
+| 024 | ven. 02/10 | Vanne de radiateur qui suinte après l'été (angle voisin : l'article « vanne thermostatique bloquée » est déjà publié) | « vanne bloquée » 3, « vanne thermostatique radiateur bloquée » 2 | `radiateur-froid-desembouage-purge`, `fuite-chaudiere-circuit-chauffage` |
+| 025 | lun. 05/10 | Désembouage de radiateurs : le déroulé de l'intervention | « désembouage radiateur » 6 600/mois (Google) | `radiateur-froid-desembouage-purge` |
+| 026 | mar. 06/10 | Recherche de fuite sur un circuit de chauffage | « recherche de fuite reims » 47 | `fuite-chaudiere-circuit-chauffage` |
+| 027 | mer. 07/10 | Prix d'un entretien de chaudière gaz | « tarif entretien chaudière gaz » 1 300/mois (Google) | `entretien-chaudiere-annuel` |
+| 028 | jeu. 08/10 | Entretien d'une chaudière fioul : ce qui change | « entretien chaudière fioul autour de moi » pos. 11 | `entretien-chaudiere-annuel`, `depannage-chaudiere-fioul` |
+| 029 | ven. 09/10 | Attestation d'entretien : son rôle le jour de la panne (angle neuf, sans cannibaliser « entretien-chaudiere-location-qui-paie ») | article location vu 58 fois, pos. 20 | `entretien-chaudiere-annuel`, `urgence-depannage-chauffage-chaudiere` |
+| 030 | lun. 12/10 | Chauffagiste près de chez soi : 6 questions à poser | « chauffagiste autour de moi » pos. 10, « chauffagiste cormontreuil » | `urgence-depannage-chauffage-chaudiere`, `entretien-chaudiere-annuel` |
+| 031 | mar. 13/10 | Plancher chauffant à eau qui ne chauffe plus | « fuite sous chape » 3, ligne `desembouage-plancher` de /tarifs | `radiateur-froid-desembouage-purge`, `fuite-chaudiere-circuit-chauffage` |
+
+« installation chauffage cormontreuil » (pos. 18) n'a pas reçu d'article : nous ne
+faisons pas d'installation neuve. L'article 030 le dit et renvoie vers la page de
+Cormontreuil pour le dépannage et l'entretien.
+
+Sources citées dans les sujets neufs (ouvertes le 25/09/2026) : Service Public,
+fiche F20760 « Entretien annuel de la chaudière : quelles règles pour le
+locataire ? » (vérifiée le 19 mai 2025) ; ecologie.gouv.fr, « Intoxication au
+monoxyde de carbone : 5 bons gestes à adopter pour s'en protéger » (publié le
+14 janvier 2026). Aucun montant en euros dans les articles : les prix vivent sur
+`/tarifs`.
