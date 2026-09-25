@@ -14,20 +14,20 @@ export default function PolitiqueCookies() {
   return (
     <LegalPage
       title="Politique de cookies"
-      subtitle="Ce site ne dépose aucun cookie publicitaire ni traceur tiers."
+      subtitle="Nos pages n'installent ni cookie à visée publicitaire ni outil de suivi appartenant à un tiers."
     >
       <section>
         <h2>Qu&apos;est-ce qu&apos;un cookie</h2>
         <p>
-          Un cookie est un petit fichier texte déposé sur votre appareil lors de la consultation
-          d&apos;un site web. Il permet notamment de mémoriser une préférence ou de faire
-          fonctionner certaines fonctionnalités techniques.
+          Le terme désigne un fichier de quelques lignes qu&apos;un site enregistre dans votre
+          navigateur pendant votre visite. Il sert par exemple à retenir un choix que vous avez
+          fait, ou à rendre possible une fonction technique de la page.
         </p>
       </section>
       <section>
         <h2>Cookies utilisés sur ce site</h2>
         <p>
-          Seuls des cookies strictement nécessaires au fonctionnement du site peuvent être déposés.
+          Les seuls cookies susceptibles d&apos;être enregistrés ici sont ceux sans lesquels le site ne marcherait pas.
           <strong> Aucun cookie publicitaire, aucun traceur tiers, aucune mesure d&apos;audience</strong>{' '}
           n&apos;est utilisé en l&apos;état.
         </p>
@@ -35,8 +35,8 @@ export default function PolitiqueCookies() {
       <section>
         <h2>Gérer les cookies</h2>
         <p>
-          Vous pouvez configurer votre navigateur pour refuser les cookies ou être averti de leur
-          dépôt. La navigation sur le site reste possible.
+          Les réglages de votre navigateur permettent de bloquer tout cookie, ou d&apos;être prévenu
+          chaque fois qu&apos;un site tente d&apos;en enregistrer un. La navigation sur le site reste possible.
         </p>
       </section>
       <section>

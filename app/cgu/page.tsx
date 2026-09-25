@@ -19,8 +19,8 @@ export default function CGU() {
       <section>
         <h2>1. Acceptation</h2>
         <p>
-          En consultant ce site, vous acceptez les présentes conditions générales
-          d&apos;utilisation. Si vous les refusez, il vous appartient de ne pas utiliser le site.
+          Toute navigation sur ce site emporte l&apos;adhésion aux règles d&apos;usage exposées
+          ci-dessous. Une personne qui ne les approuve pas doit renoncer à le consulter.
         </p>
       </section>
       <section>
@@ -35,33 +35,35 @@ export default function CGU() {
       <section>
         <h2>3. Demandes envoyées via le site</h2>
         <p>
-          L&apos;envoi d&apos;une demande via le formulaire ne vaut ni commande ni engagement
-          contractuel. Elle déclenche une prise de contact, à l&apos;issue de laquelle une
-          prestation peut être proposée, acceptée ou refusée par l&apos;une ou l&apos;autre partie.
+          Remplir le formulaire de demande n&apos;engage personne : aucun contrat ni aucune commande
+          ne naît de cet envoi. Il ouvre seulement un échange, au terme duquel chacune des deux
+          parties reste libre de proposer, d&apos;accepter ou de décliner une prestation.
         </p>
       </section>
       <section>
         <h2>4. Contenus des conseils</h2>
         <p>
-          Les articles de la rubrique conseils sont des informations générales. Ils ne remplacent
-          pas un diagnostic sur place. Aucune responsabilité ne saurait être engagée en cas de
-          dommage résultant de la mise en oeuvre d&apos;un geste décrit sans vérification préalable
-          de la situation réelle.
+          Nos articles de conseils donnent des repères d&apos;ordre général, valables pour la plupart
+          des installations mais pas pour chacune. Ils ne remplacent pas un diagnostic sur place.
+          Reproduire chez soi un geste qui y est décrit, sans avoir d&apos;abord contrôlé l&apos;état
+          réel de son installation, se fait sous sa propre responsabilité : l&apos;éditeur ne répond
+          pas des dommages qui en découleraient.
         </p>
       </section>
       <section>
         <h2>5. Responsabilité</h2>
         <p>
-          L&apos;éditeur met tout en oeuvre pour assurer l&apos;exactitude des informations
-          publiées, sans garantie d&apos;exhaustivité. Il ne peut être tenu responsable des dommages
-          indirects résultant de l&apos;utilisation du site ou d&apos;une interruption de service.
+          Les informations de ce site sont vérifiées avec soin avant publication, sans que
+          l&apos;éditeur puisse promettre qu&apos;elles couvrent tous les cas. Sa responsabilité ne
+          peut être recherchée pour un préjudice indirect lié à l&apos;usage du site, ni pour une
+          indisponibilité temporaire de celui-ci.
         </p>
       </section>
       <section>
         <h2>6. Droit applicable</h2>
         <p>
-          Les présentes conditions sont régies par le droit français. Tout litige relève de la
-          compétence des tribunaux français.
+          Le droit français s&apos;applique à ces règles d&apos;usage. Un différend né de leur
+          application serait porté devant les juridictions françaises.
         </p>
       </section>
     </LegalPage>

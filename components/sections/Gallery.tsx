@@ -43,7 +43,7 @@ const items = [
   },
   {
     src: '/gallery/06-ballon-eau-chaude.jpg',
-    alt: "Ballon d'eau chaude et son groupe de sécurité dans un local technique",
+    alt: "Local technique : groupe de sécurité raccordé à un ballon d'eau chaude",
     title: "Ballon d'eau chaude",
     caption: 'Résistance, thermostat, groupe de sécurité entartré.',
   },

@@ -73,39 +73,39 @@ const SCENES = [
   {
     cle: 'collectif',
     motif: /collectif|immeuble|syndic|copropri/,
-    large: 'Wide architectural interior photograph of the clean, modern collective boiler room of a recent apartment building: a row of three brand-new white wall-mounted condensing boilers in cascade above neatly insulated pipes in white cladding, a pale grey epoxy floor and bright ceiling light panels.',
-    proche: 'Close architectural interior photograph of neatly insulated pipes in white cladding and polished chrome valves running beneath a row of brand-new white wall-mounted condensing boilers in a clean, modern collective boiler room.',
+    large: 'Wide architectural interior photograph of the clean, modern collective boiler room of a recent apartment building: a row of three newly installed white wall-mounted condensing boilers in cascade above neatly insulated pipes in white cladding, a pale grey epoxy floor and bright ceiling light panels.',
+    proche: 'Close architectural interior photograph of neatly insulated pipes in white cladding and polished chrome valves running beneath a row of newly installed white wall-mounted condensing boilers in a clean, modern collective boiler room.',
   },
   {
     cle: 'desembouage',
     motif: /d[ée]sembou|embou|boue|filtre magn[ée]tique/,
     large: 'Wide architectural interior photograph of a bright, tastefully furnished renovated living room with two spotless modern white horizontal steel panel radiators with fine vertical ribs, each mounted low under its own large window, a light oak parquet floor, a linen sofa and a low oak table.',
-    proche: 'Close architectural interior photograph of the underside of a single brand-new compact rectangular white wall-hung gas combi boiler, short straight copper pipes dropping vertically from it, one of them fitted with a compact brand-new magnetic system filter, a smooth matt black cylinder.',
+    proche: 'Close architectural interior photograph of the underside of a single newly installed compact rectangular white wall-hung gas combi boiler, short straight copper pipes dropping vertically from it, one of them fitted with a compact newly installed magnetic system filter, a smooth matt black cylinder.',
   },
   {
     cle: 'thermodynamique',
     motif: /thermodynamique/,
-    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new heat pump water heater, a tall white cylinder topped by a compact fan unit, standing on a light grey tiled floor beside white shelving.',
-    proche: 'Close architectural interior photograph of a brand-new heat pump water heater, a tall white cylinder topped by a compact fan unit, with its neat copper and chrome connections, in a clean bright utility room.',
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a newly installed heat pump water heater standing on a light grey tiled floor beside white shelving: a tall white floor-standing cylinder about 1.8 metres tall, crowned by a round pale grey fan housing with a circular grille and two short grey air ducts rising into the ceiling.',
+    proche: 'Close architectural interior photograph of the upper half of a newly installed heat pump water heater standing on the floor of a clean bright utility room: a tall white cylinder crowned by a round pale grey fan housing with a circular grille, two short grey air ducts rising into the ceiling.',
   },
   {
     cle: 'pac',
     motif: /pompe [àa] chaleur|\bpac\b|unit[ée] ext[ée]rieure|d[ée]givr|aérotherm|aerotherm/,
     exterieur: true,
-    large: 'Wide architectural exterior photograph of the side terrace of a recently built house: a brand-new air-to-water heat pump outdoor unit, a white box with a large round fan grille, standing on low feet on clean light grey paving against a smooth pale rendered wall.',
-    proche: 'Close architectural exterior photograph of a brand-new air-to-water heat pump outdoor unit, a white box with a large round fan grille and neatly insulated pipes running into a smooth pale rendered wall, on clean light grey paving.',
+    large: 'Wide architectural exterior photograph of the side terrace of a recently built house: a newly installed air-to-water heat pump outdoor unit, a white box with a large round fan grille, standing on low feet on clean light grey paving against a smooth pale rendered wall.',
+    proche: 'Close architectural exterior photograph of a newly installed air-to-water heat pump outdoor unit, a white box with a large round fan grille and neatly insulated pipes running into a smooth pale rendered wall, on clean light grey paving.',
   },
   {
     cle: 'securite-ballon',
     motif: /groupe de s[ée]curit[ée]/,
-    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new tall white cylindrical electric hot water tank standing on a light grey tiled floor, neat copper and chrome connections at its base.',
-    proche: 'Close architectural interior photograph of the polished chrome safety valve assembly, a small white drain funnel and straight copper pipes beneath a brand-new white cylindrical hot water tank, clean light grey wall tiles.',
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a newly installed tall white cylindrical electric hot water tank standing on a light grey tiled floor, neat copper and chrome connections at its base.',
+    proche: 'Close architectural interior photograph of the polished chrome safety valve assembly, a small white drain funnel and straight copper pipes beneath a newly installed white cylindrical hot water tank, clean light grey wall tiles.',
   },
   {
     cle: 'ballon',
     motif: /ballon|cumulus|eau chaude sanitaire|eau chaude/,
-    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a brand-new tall white cylindrical electric hot water tank standing on a light grey tiled floor beside white shelving.',
-    proche: 'Close architectural interior photograph of a brand-new tall white cylindrical hot water tank and its neat copper and chrome connections in a clean bright utility room.',
+    large: 'Wide architectural interior photograph of a clean, bright renovated utility room with a newly installed tall white cylindrical electric hot water tank standing on a light grey tiled floor beside white shelving.',
+    proche: 'Close architectural interior photograph of a newly installed tall white cylindrical hot water tank and its neat copper and chrome connections in a clean bright utility room.',
   },
   {
     cle: 'plancher',
@@ -128,27 +128,27 @@ const SCENES = [
   {
     cle: 'vase',
     motif: /vase d'expansion|vase d’expansion|expansion/,
-    large: 'Wide architectural interior photograph of a bright renovated utility room with a single brand-new compact rectangular white wall-hung gas combi boiler and a small red expansion vessel fixed on the wall beside it, short straight copper pipes dropping vertically from the boiler.',
-    proche: 'Close architectural interior photograph of a small red expansion vessel fixed on a pale wall beside a single brand-new compact rectangular white wall-hung gas combi boiler, joined to it by a short straight copper pipe with a chrome valve.',
+    large: 'Wide architectural interior photograph of a bright renovated utility room with a single newly installed compact rectangular white wall-hung gas combi boiler, a squat red cylindrical expansion vessel with rounded ends mounted horizontally on the wall just below it and joined to it by a short copper pipe.',
+    proche: 'Close architectural interior photograph of a squat red cylindrical expansion vessel with rounded ends, mounted horizontally on a pale wall just below a single newly installed compact rectangular white wall-hung gas combi boiler and joined to its underside by a short straight copper pipe.',
   },
   {
     cle: 'fioul',
     motif: /fioul|mazout|cuve|br[ûu]leur|gicleur/,
-    large: 'Wide architectural interior photograph of a clean, tidy, freshly painted boiler room in a recent family house: a brand-new floor-standing oil condensing boiler, a tall white rectangular cabinet with a flat door, its insulated flue rising neatly into the wall, a light grey tiled floor.',
-    proche: 'Close architectural interior photograph of a brand-new floor-standing oil condensing boiler, a tall white rectangular cabinet with a flat door, with neat copper supply lines and chrome valves at its side, in a clean freshly painted boiler room.',
+    large: 'Wide architectural interior photograph of a clean, tidy, freshly painted boiler room in a recent family house: a newly installed floor-standing oil condensing boiler, a white rectangular cabinet about waist height with a round insulated flue pipe rising from its top and bending into the wall, copper supply lines at its side, a light grey tiled floor.',
+    proche: 'Close architectural interior photograph of a newly installed floor-standing oil condensing boiler in a clean freshly painted boiler room: a white rectangular cabinet about waist height, a round insulated flue pipe rising from its top and bending into the wall, neat copper supply lines and chrome valves at its side.',
   },
   {
     cle: 'conduit',
     motif: /conduit|ventouse|fum[ée]e|fa[çc]ade|ext[ée]rieur/,
     exterieur: true,
-    large: 'Wide architectural exterior photograph of the clean, smooth, pale rendered facade of a recently built house with a neat white horizontal boiler flue terminal set in the wall beside a large window.',
-    proche: 'Close architectural exterior photograph of a neat white horizontal boiler flue terminal set in a clean, smooth, pale rendered wall of a recently built house.',
+    large: 'Wide architectural exterior photograph of the clean, smooth, pale rendered facade of a recently built house beside a large window, with a small round white boiler flue terminal, a short horizontal pipe ending in a round cap, protruding from the wall.',
+    proche: 'Close architectural exterior photograph of a small round white boiler flue terminal, a short horizontal pipe ending in a round cap, protruding from a clean, smooth, pale rendered wall of a recently built house.',
   },
   {
     cle: 'raccords',
     motif: /fuite|goutte|raccord|robinet|remplissage|pression|manom[èe]tre/,
-    large: 'Wide architectural interior photograph of a bright renovated utility room with a single brand-new compact rectangular white wall-hung gas combi boiler, short straight copper pipes and chrome valves dropping vertically from its underside, a dry spotless light grey tiled floor.',
-    proche: 'Close architectural interior photograph of the underside of a single brand-new compact rectangular white wall-hung gas combi boiler: short straight shiny copper pipes with polished chrome valves dropping vertically from it into a spotless pale wall.',
+    large: 'Wide architectural interior photograph of a bright renovated utility room with a single newly installed compact rectangular white wall-hung gas combi boiler, short straight copper pipes and chrome valves dropping vertically from its underside, a dry spotless light grey tiled floor.',
+    proche: 'Close architectural interior photograph of the underside of a single newly installed compact rectangular white wall-hung gas combi boiler: short straight shiny copper pipes with polished chrome valves dropping vertically from it into a spotless pale wall.',
   },
 ]
 
@@ -159,7 +159,7 @@ const PIECES_CHAUDIERE = [
   { motif: /buanderie|linge/, piece: 'bright renovated laundry room with white shelving and a light grey tiled floor' },
   { motif: /cellier|garage|local technique/, piece: 'clean renovated utility room with tidy white storage cabinets' },
   { motif: /entr[ée]e|couloir|placard/, piece: 'renovated hallway alcove of a recent family house with light oak shelving' },
-  { motif: /salle de bain|salle d'eau/, piece: 'bright renovated bathroom with large pale stone-look tiles and a light oak vanity unit' },
+  { motif: /salle de bain|salle d'eau/, piece: 'bright renovated bathroom with large smooth pale grey porcelain tiles and a light oak vanity unit' },
 ]
 
 function graineDe(texte) {
@@ -193,8 +193,8 @@ function habillerPrompt(scene, { corps = false, titre = '' } = {}) {
     const imposee = PIECES_CHAUDIERE.find((p) => p.motif.test(sujet)) || PIECES_CHAUDIERE.find((p) => p.motif.test(secours))
     const piece = imposee ? imposee.piece : PIECES_CHAUDIERE[(graine + (corps ? 1 : 0)) % PIECES_CHAUDIERE.length].piece
     cadre = corps
-      ? `Close architectural interior photograph of a single brand-new compact rectangular white wall-hung gas combi boiler with a flat blank front, short straight copper pipes and chrome valves dropping vertically from its underside, in a ${piece}.`
-      : `Wide architectural interior photograph of a ${piece}, with a single brand-new compact rectangular white wall-hung gas combi boiler fixed on the wall, short straight copper pipes dropping vertically from its underside.`
+      ? `Close architectural interior photograph of a single newly installed compact rectangular white wall-hung gas combi boiler with a flat blank front, short straight copper pipes and chrome valves dropping vertically from its underside, in a ${piece}.`
+      : `Wide architectural interior photograph of a ${piece}, with a single newly installed compact rectangular white wall-hung gas combi boiler fixed on the wall, short straight copper pipes dropping vertically from its underside.`
   }
 
   // Palette choisie par le SLUG (stable), décalée pour le visuel de corps : deux images d'un
@@ -205,7 +205,7 @@ function habillerPrompt(scene, { corps = false, titre = '' } = {}) {
   return [
     cadre,
     `Editorial magazine quality, realistic photograph, contemporary 2020s renovation, ${palette}.`,
-    `Every appliance has a plain smooth unbranded white casing; pipes are straight, clean and evenly spaced; flawless pristine finish, spotless surfaces.`,
+    `Every appliance has a plain, smooth, completely blank white casing; pipes are straight, clean and evenly spaced; flawless pristine finish, spotless surfaces.`,
     `${exterieur ? style.lumiereExterieur : style.lumiere}, gentle shadows, architectural photographer framing, one single coherent ${exterieur ? 'scene' : 'room'}.`,
     `A calm, tidy, ${exterieur ? 'well-kept' : 'tastefully furnished'} home photographed as an unoccupied still life, every surface blank and plain.`,
   ].join(' ')

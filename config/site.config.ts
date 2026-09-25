@@ -233,37 +233,37 @@ export const siteConfig = {
     {
       icon: 'clock',
       title: 'Une ligne ouverte 7j/7',
-      desc: "Une maison sans chauffage un dimanche de janvier ne peut pas attendre le lundi, surtout avec un bébé ou une personne âgée. Vous nous joignez le week-end et les jours fériés.",
+      desc: "Une maison sans chauffage un dimanche de janvier ne peut pas attendre le lundi, surtout avec un bébé ou une personne âgée. Un appel passé un samedi, un dimanche ou un jour férié aboutit quand même chez nous.",
     },
     {
       icon: 'euro',
       title: 'Le prix annoncé avant',
-      desc: "Vous savez ce que coûte l'intervention avant qu'elle commence. Si le diagnostic change la donne, vous l'apprenez avant la réparation, pas sur la facture.",
+      desc: "Le montant vous est donné avant le premier coup de clé, pas après. Si le diagnostic change la donne, vous l'apprenez avant la réparation, pas sur la facture.",
     },
     {
       icon: 'star',
       title: 'Artisan local, pas une plateforme',
-      desc: "Vous parlez à la personne qui intervient. Pas de centrale nationale qui revend votre demande au premier disponible du secteur.",
+      desc: "Vous parlez à la personne qui intervient. Votre appel n'est ni revendu ni transféré à un inconnu choisi sur une liste.",
     },
   ],
 
   /* ── FAQ accueil ── */
   homeFaq: [
     {
-      q: 'Que faire si ma chaudière tombe en panne en plein hiver ?',
+      q: 'Chaudière arrêtée par grand froid : quels réflexes avoir en attendant le dépannage ?',
       a: "Coupez le chauffage si vous voyez de l'eau s'écouler sous l'appareil, relevez le code d'erreur affiché sur l'écran, et n'insistez pas sur le bouton de réarmement au-delà d'une tentative : une sécurité qui se redéclenche protège quelque chose. Fermez les pièces inoccupées pour concentrer la chaleur restante et appelez. Le code d'erreur que vous nous donnez au téléphone oriente déjà le diagnostic et la pièce à emporter.",
     },
     {
       q: 'Intervenez-vous le week-end et en soirée ?',
-      a: "Oui. Une panne de chauffage ou d'eau chaude ne choisit pas son horaire, et c'est justement le soir et le week-end qu'elle se déclare, au moment où la maison redemande de la puissance. Notre ligne est ouverte les week-ends et les jours fériés pour les urgences à Reims et dans les communes de l'agglomération.",
+      a: "Oui. Une panne de chauffage ou d'eau chaude ne choisit pas son horaire, et c'est justement le soir et le week-end qu'elle se déclare, au moment où la maison redemande de la puissance. Les urgences de Reims et de son agglomération nous parviennent donc aussi pendant les week-ends et les jours fériés.",
     },
     {
       q: 'Combien coûte un dépannage de chaudière ?',
-      a: "Le prix dépend de trois choses : la nature de la panne, la pièce à remplacer si une pièce est en cause, et l'énergie de l'appareil. Une sécurité à réarmer après diagnostic, une carte électronique à changer ou un corps de chauffe percé ne représentent pas le même travail. Nous annonçons le tarif de l'intervention au téléphone à partir de ce que vous décrivez, puis nous le confirmons sur place avant de commencer. Aucun travail n'est lancé sans votre accord.",
+      a: "Le prix dépend de trois choses : la nature de la panne, la pièce à remplacer si une pièce est en cause, et l'énergie de l'appareil. Une sécurité à réarmer après diagnostic, une carte électronique à changer ou un corps de chauffe percé ne représentent pas le même travail. Votre description au téléphone nous suffit pour chiffrer l'intervention, et ce chiffre est confirmé devant l'appareil, avant tout démontage. Aucun travail n'est lancé sans votre accord.",
     },
     {
       q: 'Faut-il réparer ou remplacer une chaudière ancienne ?',
-      a: "La question se tranche sur trois critères, pas sur l'âge seul : le coût de la réparation comparé à celui d'un appareil neuf, la disponibilité des pièces détachées du modèle, et la répétition des pannes sur les dernières saisons. Une chaudière ancienne mais bien entretenue, dont la pièce fautive existe encore, se répare sans hésiter. Une chaudière dont les pièces ne se trouvent plus ou qui vous a déjà immobilisé plusieurs fois dans l'hiver appelle une décision de remplacement, qu'il vaut mieux prendre hors saison que dans l'urgence.",
+      a: "La question se tranche sur trois critères, pas sur l'âge seul : le coût de la réparation comparé à celui d'un appareil neuf, la disponibilité des pièces détachées du modèle, et la répétition des pannes sur les dernières saisons. Tant que la pièce en cause se commande encore et que l'appareil a été suivi, l'âge ne justifie pas à lui seul un remplacement : on répare. Une chaudière dont les pièces ne se trouvent plus ou qui vous a déjà immobilisé plusieurs fois dans l'hiver appelle une décision de remplacement, qu'il vaut mieux prendre hors saison que dans l'urgence.",
     },
     {
       q: 'Intervenez-vous sur les chaudières gaz, fioul et les pompes à chaleur ?',

@@ -52,8 +52,8 @@ export default function ConseilsListing() {
                 Les premiers articles arrivent bientôt
               </p>
               <p className="mt-4 leading-relaxed text-craie-600">
-                En attendant, une question sur une chaudière ou un radiateur qui ne suit
-                plus&nbsp;? Appelez, on vous répond directement.
+                D&apos;ici là, un souci précis avec votre chaudière ou un radiateur qui reste
+                tiède&nbsp;? Appelez, on vous répond directement.
               </p>
               <a
                 href={`tel:${siteConfig.phone}`}

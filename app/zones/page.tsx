@@ -29,15 +29,15 @@ export default function ZonesHub() {
       a: `Nous intervenons à ${city} (tous les quartiers : ${serviceArea.districts.slice(0, 6).join(', ')} et les autres) et dans les communes de l'agglomération dans un rayon d'environ ${serviceArea.radiusKm} km : ${names.join(', ')}.`,
     },
     {
-      q: 'Ma commune ne figure pas dans la liste, intervenez-vous quand même ?',
+      q: 'Aucune fiche pour mon adresse, cela veut-il dire que vous ne venez pas ?',
       a: `La liste ci-dessus regroupe les communes qui ont une page dédiée, mais notre zone est plus large. Nous couvrons ${city} et ses environs dans un rayon d'environ ${serviceArea.radiusKm} km. En cas de doute sur votre secteur, appelez-nous : nous vous répondons tout de suite.`,
     },
     {
       q: `Le délai est-il plus long en dehors de ${city} ?`,
-      a: "Le délai dépend surtout du planning en cours, pas de la distance : les communes de l'agglomération sont toutes à quelques minutes de route. Nous vous annonçons un créneau réaliste au moment de l'appel plutôt qu'une promesse générique.",
+      a: "Ce qui fait varier l'attente, c'est le nombre d'interventions déjà prévues, bien plus que les kilomètres : aucune commune de l'agglomération n'est loin en voiture. L'horaire que nous vous donnons au téléphone tient compte de cette charge du moment.",
     },
     {
-      q: 'Le déplacement dans une commune voisine est-il facturé en plus ?',
+      q: `Habiter hors de ${city} fait-il grimper la note ?`,
       a: `Le tarif que nous annonçons au téléphone couvre l'intervention dans notre zone autour de ${city}. S'il devait y avoir un supplément lié à un secteur particulièrement éloigné, vous le sauriez avant de nous engager, pas au moment de la facture.`,
     },
   ]

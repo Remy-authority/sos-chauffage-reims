@@ -64,8 +64,9 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
                 </ul>
 
                 <p className="mt-8 text-sm leading-relaxed text-craie-400">
-                  Votre commune n&apos;est pas dans la liste ? Notre zone est plus large que ces
-                  pages dédiées. Appelez, nous vous dirons tout de suite si nous couvrons votre rue.
+                  Votre commune n&apos;est pas dans la liste ? Ces fiches ne recensent pas tous les villages
+                  que nous desservons autour de Reims. Un coup de fil suffit pour savoir si votre adresse
+                  est dans notre rayon.
                 </p>
 
                 <Link
@@ -96,8 +97,8 @@ export function ServiceArea({ zones }: { zones: Zone[] }) {
               </span>
               <h3 className="mt-5 text-xl">Le délai, dit au téléphone</h3>
               <p className="mt-3 text-sm leading-relaxed text-craie-600">
-                Nous vous annonçons un créneau réaliste au moment de l&apos;appel, en fonction du
-                planning en cours. Pas de promesse tenue au hasard.
+                L&apos;heure de passage se fixe pendant l&apos;appel, d&apos;après les interventions déjà
+                prévues ce jour-là. Pas de promesse tenue au hasard.
               </p>
             </AnimatedSection>
 

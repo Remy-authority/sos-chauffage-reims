@@ -35,7 +35,7 @@ export function Process() {
               <span className="titre-braise"> à la chaleur revenue</span>
             </>
           }
-          subtitle="Quatre étapes, sans zone d'ombre. Vous savez à chaque moment ce que nous faisons et pourquoi."
+          subtitle="Quatre étapes, sans zone d'ombre. Chaque geste sur votre chaudière vient avec son explication."
         />
 
         <ol className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -137,7 +137,7 @@ export function LeadForm() {
                 Qu&apos;est-ce qui ne chauffe plus ?
               </h2>
               <p className="mt-2 text-sm text-craie-400">
-                Choisissez la situation la plus proche de la vôtre.
+                Si plusieurs cases correspondent, retenez celle qui décrit le mieux la panne.
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -195,7 +195,7 @@ export function LeadForm() {
             >
               <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Où, et à quel point c&apos;est pressé ?</h2>
               <p className="mt-2 text-sm text-craie-400">
-                Cela nous permet de vous situer dans notre planning.
+                Avec ces deux réponses, nous savons à quel moment prévoir votre passage.
               </p>
 
               <div className="mt-6 space-y-5">
@@ -339,7 +339,7 @@ export function LeadForm() {
                     id="message"
                     name="message"
                     rows={3}
-                    placeholder="Marque et âge de l'appareil, code d'erreur affiché, depuis quand, maison ou appartement…"
+                    placeholder="Chaudière ou PAC, son âge, le message à l'écran, depuis combien de temps…"
                     value={fields.message}
                     onChange={(e) => set('message', e.target.value)}
                     className={`${inputClass} resize-none`}

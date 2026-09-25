@@ -58,10 +58,9 @@ export default function MentionsLegales() {
       <section>
         <h2>Prestataire des interventions</h2>
         <p>
-          L&apos;éditeur du site n&apos;est pas l&apos;entreprise qui réalise les interventions de
-          dépannage et d&apos;entretien de chauffage. Les coordonnées, l&apos;assurance et les
-          qualifications de l&apos;artisan prestataire sont publiées ici dès la mise en service
-          commerciale du site.
+          Les dépannages et entretiens de chauffage proposés sur ce site sont réalisés par une
+          entreprise distincte de son éditeur. Dès l&apos;ouverture commerciale du site, cette page
+          indiquera l&apos;identité de cet artisan, son assurance et ses qualifications.
         </p>
       </section>
 
@@ -87,9 +86,9 @@ export default function MentionsLegales() {
       <section>
         <h2>Propriété intellectuelle</h2>
         <p>
-          L&apos;ensemble des contenus de ce site (textes, visuels, identité graphique) est protégé
-          par le droit de la propriété intellectuelle. Toute reproduction, même partielle, est
-          interdite sans autorisation préalable écrite.
+          Textes, visuels et charte graphique de ce site relèvent du Code de la propriété
+          intellectuelle. Les copier, en tout ou en partie, suppose l&apos;accord écrit de
+          l&apos;éditeur, obtenu avant toute réutilisation.
         </p>
       </section>
 

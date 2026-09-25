@@ -157,7 +157,7 @@ export default function TarifsPage() {
             </h2>
             <p className="mt-4 leading-relaxed text-craie-600">
               Décrivez l&apos;appareil et ce qu&apos;il affiche : nous vous rappelons avec une
-              estimation pour votre cas. Pour une urgence, le téléphone reste le plus rapide.
+              estimation pour votre cas. Si la maison est déjà froide, appelez plutôt : c&apos;est la voie la plus courte.
             </p>
             <div className="mt-6">
               <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">

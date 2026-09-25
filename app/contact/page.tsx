@@ -65,7 +65,7 @@ export default function ContactPage() {
             <span className="titre-braise"> ne chauffe plus</span>
           </>
         }
-        subtitle="Par téléphone pour une urgence, par le formulaire si ça peut attendre quelques heures."
+        subtitle="Une panne qui ne peut pas attendre se règle au téléphone. Pour le reste, le formulaire suffit."
       />
 
       <section className="bg-craie-50 py-16 lg:py-24">
@@ -75,8 +75,8 @@ export default function ContactPage() {
               <h2 className="text-3xl">Nous joindre</h2>
               <p className="mt-4 leading-relaxed text-craie-600">
                 Un logement qui ne chauffe plus en plein hiver ne se décrit pas bien par écrit.
-                Appelez : c&apos;est plus rapide, et nous pouvons vous guider tout de suite sur les
-                gestes sûrs à faire en attendant notre arrivée.
+                Au téléphone, nous posons les bonnes questions en direct et vous indiquons dans la foulée
+                quoi couper et quoi laisser en marche jusqu&apos;à notre passage.
               </p>
             </AnimatedSection>
 
