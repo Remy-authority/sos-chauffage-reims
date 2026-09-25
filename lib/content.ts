@@ -25,6 +25,8 @@ export interface BlockImage {
   src: string
   alt: string
   caption?: string
+  /** Cadrage (object-position) quand le sujet n'est pas au centre de la photo. */
+  position?: string
 }
 
 /** Source affichée sous un chiffre, un fait ou un schéma. */
@@ -32,6 +34,8 @@ export interface SourceRef {
   nom: string
   url: string
   date: string
+  /** true : la page source n'affiche pas de date, `date` est celle de notre relevé. */
+  releve?: boolean
 }
 
 /**

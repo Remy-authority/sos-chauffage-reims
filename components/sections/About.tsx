@@ -34,7 +34,7 @@ export function About() {
                 <>
                   Le chauffage,
                   <br />
-                  <span className="titre-fonte italic">notre seul métier</span>
+                  <span className="titre-fonte italic">notre cœur de métier</span>
                 </>
               }
               align="left"

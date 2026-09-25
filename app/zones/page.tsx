@@ -11,7 +11,7 @@ import { CtaBanner } from '@/components/ui/CtaBanner'
 
 export const metadata: Metadata = buildMetadata({
   title: `Zones d'intervention, dépannage chauffage autour de ${siteConfig.city}`,
-  description: `Communes desservies autour de ${siteConfig.city} pour le dépannage de chauffage et de chaudière : rayon d'environ ${siteConfig.serviceArea.radiusKm} km.`,
+  description: `Dépannage de chaudière, de pompe à chaleur et de radiateurs à ${siteConfig.city} et dans les communes voisines, jusqu'à environ ${siteConfig.serviceArea.radiusKm} km. Repérez votre commune, appelez-nous.`,
   path: '/zones',
 })
 

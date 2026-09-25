@@ -35,7 +35,7 @@ export function SourceLine({ source, className = '' }: { source?: SourceRef; cla
       ) : (
         source.nom
       )}
-      {date && <>, {date}</>}
+      {date && (source.releve ? <>, relevé le {date}</> : <>, {date}</>)}
     </div>
   )
 }

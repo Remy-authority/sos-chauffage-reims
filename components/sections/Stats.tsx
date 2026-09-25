@@ -16,7 +16,14 @@ import { siteConfig } from '@/config/site.config'
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.5 })
-  const [display, setDisplay] = useState(0)
+  // Valeur finale dans le HTML servi : un robot qui n'exécute pas le JavaScript
+  // (moteurs d'IA) lit « 24 h/24 », jamais « 0 ». Le compteur ne repart de 0
+  // qu'une fois la page hydratée, avant d'entrer dans l'écran.
+  const [display, setDisplay] = useState(value)
+
+  useEffect(() => {
+    if (!inView) setDisplay(0)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!inView) return

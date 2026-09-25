@@ -171,11 +171,11 @@ export const siteConfig = {
   /* ── Bloc « à propos » ── */
   about: {
     eyebrow: 'Qui sommes-nous',
-    title: 'Le chauffage,\nnotre seul métier',
+    title: 'Le chauffage,\nnotre cœur de métier',
     // DEMO – texte à valider avec le loueur
     body: [
       "SOS Chauffage Reims intervient sur les pannes de chauffage et d'eau chaude à Reims et dans les communes de l'agglomération. Chaudière à l'arrêt, radiateurs qui restent froids, pompe à chaleur qui ne suit plus, plus une goutte d'eau chaude : nous rétablissons d'abord la situation, puis nous expliquons ce qui l'a provoquée.",
-      "Nous ne faisons que du chauffage et de l'eau chaude sanitaire liée à l'appareil. Gaz, fioul, pompe à chaleur, ballon : ce sont quatre logiques de panne différentes, et c'est ce qui rend le diagnostic utile. Le devis est annoncé avant l'intervention.",
+      "Notre cœur de métier reste le chauffage et l'eau chaude produite par l'appareil, la climatisation venant en complément. Gaz, fioul, pompe à chaleur, ballon : quatre logiques de panne différentes, et c'est ce qui rend le diagnostic utile. Le devis est annoncé avant l'intervention.",
     ],
     highlight: 'Gaz, fioul, pompe à chaleur, ballon',
   },
@@ -243,7 +243,7 @@ export const siteConfig = {
     {
       icon: 'star',
       title: 'Artisan local, pas une plateforme',
-      desc: "Vous parlez à la personne qui intervient. Votre appel n'est ni revendu ni transféré à un inconnu choisi sur une liste.",
+      desc: "Votre demande arrive à un seul interlocuteur qui connaît l'agglomération : elle n'est jamais mise en concurrence entre plusieurs entreprises.",
     },
   ],
 

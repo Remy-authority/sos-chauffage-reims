@@ -4,7 +4,7 @@
   "icon": "alert",
   "navTitle": "Urgence chauffage",
   "h1": "Urgence chaudière et chauffage à Reims",
-  "metaTitle": "Chauffagiste d'urgence à Reims, SOS chaudière en panne",
+  "metaTitle": "Urgence chaudière Reims : chauffagiste gaz, fioul et PAC",
   "metaDescription": "Chaudière à l'arrêt, plus de chauffage ni d'eau chaude à Reims ? Chauffagiste d'urgence gaz, fioul et pompe à chaleur, prix annoncé avant. Appelez-nous.",
   "intro": "Chauffagiste d'urgence à Reims, nous intervenons quand la chaudière s'arrête, que la maison refroidit ou que l'eau chaude disparaît, sur le gaz, le fioul, la pompe à chaleur et le ballon. Le premier appel sert à trier : ce qui doit être traité maintenant, ce qui peut attendre un créneau ordinaire, et les gestes à faire tout de suite pour que le logement tienne jusqu'à notre passage.",
   "bullets": [
@@ -18,9 +18,9 @@
       "body": "Une chaudière arrêtée n'est pas toujours une urgence, mais certaines situations le sont sans discussion. Un logement qui ne chauffe plus du tout alors que le froid s'installe, surtout quand y vivent un bébé, une personne âgée ou quelqu'un de malade. De l'eau qui sort de l'appareil ou d'un tuyau et gagne le sol, le plafond du dessous ou un tableau électrique. Une odeur de gaz, de fumée ou de fioul qui ne se dissipe pas. Un appareil qui se coupe, redémarre et se recoupe plusieurs fois dans la même soirée. À l'inverse, un radiateur isolé qui reste tiède, un manomètre un peu bas sans autre signe ou un bruit nouveau sur une chaudière qui chauffe normalement se règlent sur un rendez-vous classique, moins contraignant pour vous. Ce tri, nous le faisons avec vous au téléphone, franchement, avant de parler de déplacement."
     },
     {
-      "heading": "Urgence chauffage et sécurité : gaz, fumées, monoxyde de carbone",
-      "body": "Certaines urgences passent avant la chaudière elle-même. Si vous sentez le gaz, ne touchez à aucun interrupteur, n'allumez rien, ouvrez les fenêtres, fermez le robinet de gaz s'il est accessible, sortez et appelez depuis l'extérieur le service d'urgence gaz ou les secours : le chauffagiste vient après, jamais avant. Le monoxyde de carbone est plus sournois, parce qu'il ne se sent pas et ne se voit pas. Il apparaît quand une combustion manque d'air ou quand les fumées refoulent dans la pièce : conduit obstrué, ventouse abîmée, grille d'aération bouchée, appareil d'appoint à combustion utilisé fenêtres closes. Des maux de tête, des nausées ou une somnolence qui touchent plusieurs occupants à la fois et s'estompent à l'air libre sont le signal d'alerte : aérez, arrêtez les appareils à combustion, sortez et appelez les secours. Nous reprenons ensuite l'installation pour comprendre pourquoi les fumées ne partaient plus.",
-      "schema": "monoxyde"
+      "heading": "Urgence dépannage chaudière : du symptôme à la bonne intervention",
+      "body": "Derrière le mot panne se cachent des situations très différentes, et chacune a sa réponse. Plus de chauffage ni d'eau chaude oriente vers l'appareil lui-même ou son alimentation en énergie. Du chauffage mais plus d'eau chaude oriente vers la partie sanitaire de la chaudière ou vers le ballon. Des radiateurs froids alors que la chaudière tourne orientent vers le circuit : air, boues, vanne bloquée. Une pression qui chute encore et encore oriente vers une fuite ou un vase d'expansion fatigué. Une pompe à chaleur qui souffle froid n'obéit pas à la même logique qu'une chaudière. Le schéma reprend ces chemins : il vous aide à décrire la situation, et il nous aide à arriver avec les bons outils.",
+      "schema": "arbre-panne"
     },
     {
       "heading": "SOS chaudière à Reims : que faire dans la première heure",
@@ -35,26 +35,18 @@
       }
     },
     {
+      "heading": "Urgence chauffage et sécurité : gaz, fumées, monoxyde de carbone",
+      "body": "Certaines urgences passent avant la chaudière elle-même. Si vous sentez le gaz, ne touchez à aucun interrupteur, n'allumez rien, ouvrez les fenêtres, fermez le robinet de gaz s'il est accessible, sortez et appelez depuis l'extérieur le service d'urgence gaz ou les secours : le chauffagiste vient après, jamais avant. Le monoxyde de carbone est plus sournois, parce qu'il ne se sent pas et ne se voit pas. Il apparaît quand une combustion manque d'air ou quand les fumées refoulent dans la pièce : conduit obstrué, ventouse abîmée, grille d'aération bouchée, appareil d'appoint à combustion utilisé fenêtres closes. Des maux de tête, des nausées ou une somnolence qui touchent plusieurs occupants à la fois et s'estompent à l'air libre sont le signal d'alerte : aérez, arrêtez les appareils à combustion, sortez et appelez les secours. Nous reprenons ensuite l'installation pour comprendre pourquoi les fumées ne partaient plus.",
+      "schema": "monoxyde"
+    },
+    {
       "heading": "SOS dépannage chaudière : ce qu'il faut nous dire au téléphone",
-      "body": "Un premier appel bien renseigné épargne un aller-retour. Les informations utiles tiennent en peu de mots : l'énergie de l'appareil, gaz, fioul, électricité ou pompe à chaleur ; sa marque et, si vous la trouvez, la référence inscrite sur la plaque signalétique ; le code ou le voyant affiché ; ce qui a disparu, chauffage seul, eau chaude seule, ou tout à la fois ; depuis quand, et ce qui s'est produit juste avant, coupure de courant, orage, livraison de fioul, travaux, premier allumage de la saison. Gardez les photos de l'écran et de la plaque : elles nous servent à choisir les pièces à emporter. Précisez enfin l'accès, appartement en étage, chaufferie en sous-sol, chaudière dans un garage ou une dépendance, pour que le temps passé sur place serve au dépannage et non à chercher l'appareil."
-    },
-    {
-      "heading": "Urgence dépannage chaudière : du symptôme à la bonne intervention",
-      "body": "Derrière le mot panne se cachent des situations très différentes, et chacune a sa réponse. Plus de chauffage ni d'eau chaude oriente vers l'appareil lui-même ou son alimentation en énergie. Du chauffage mais plus d'eau chaude oriente vers la partie sanitaire de la chaudière ou vers le ballon. Des radiateurs froids alors que la chaudière tourne orientent vers le circuit : air, boues, vanne bloquée. Une pression qui chute encore et encore oriente vers une fuite ou un vase d'expansion fatigué. Une pompe à chaleur qui souffle froid n'obéit pas à la même logique qu'une chaudière. Le schéma reprend ces chemins : il vous aide à décrire la situation, et il nous aide à arriver avec les bons outils.",
-      "schema": "arbre-panne"
-    },
-    {
-      "heading": "Dépannage chauffage en urgence le soir et le week-end",
-      "body": "Notre ligne répond 24h/24 et 7j/7, comme l'indique chaque page de ce site, et une intervention en soirée, la nuit, un samedi, un dimanche ou un jour férié reste possible quand la situation l'exige. Ces créneaux portent une majoration, que nous annonçons au téléphone avant de prendre la route, de sorte que vous décidez en connaissance de cause. Nous vous disons aussi quand la panne peut attendre le lendemain matin sans risque pour le logement ni pour ses occupants : vous économisez alors la majoration, et la réparation se fait en journée, avec les fournisseurs de pièces ouverts. Pour une maison sans chauffage avec un nourrisson, une fuite qui gagne un plafond ou une odeur suspecte, la question ne se pose pas : on intervient."
-    },
-    {
-      "heading": "Chauffagiste d'urgence : ce que nous vérifions en arrivant",
-      "body": "Sur place, l'ordre des contrôles compte plus que la vitesse. Nous commençons par la sécurité : aucune odeur de gaz ni de fioul, une évacuation des fumées qui fonctionne, pas d'eau sur les parties électriques. Viennent ensuite les lectures : historique des codes défaut quand l'appareil le garde en mémoire, pression du circuit à froid puis en chauffe, sécurités qui ont coupé l'appareil et, sur un appareil à combustion, analyse des fumées. Une fois la cause établie, et seulement alors, nous vous proposons une solution avec son prix, puis nous réparons. Avant de partir, nous laissons l'installation enchaîner plusieurs cycles pour vérifier qu'elle tient, et nous vous expliquons en mots simples ce qui s'est passé.",
+      "body": "Un premier appel bien renseigné épargne un aller-retour. Les informations utiles tiennent en peu de mots : l'énergie de l'appareil, gaz, fioul, électricité ou pompe à chaleur ; sa marque et, si vous la trouvez, la référence inscrite sur la plaque signalétique ; le code ou le voyant affiché ; ce qui a disparu, chauffage seul, eau chaude seule, ou tout à la fois ; depuis quand, et ce qui s'est produit juste avant, coupure de courant, orage, livraison de fioul, travaux, premier allumage de la saison. Gardez les photos de l'écran et de la plaque : elles nous servent à choisir les pièces à emporter. Précisez enfin l'accès, appartement en étage, chaufferie en sous-sol, chaudière dans un garage ou une dépendance, pour que le temps passé sur place serve au dépannage et non à chercher l'appareil.",
       "schema": "deroule-urgence"
     },
     {
-      "heading": "Chauffagiste à Reims : gaz, fioul, pompe à chaleur et eau chaude",
-      "body": "Chaque énergie a ses urgences typiques. Sur une chaudière à gaz, l'arrêt vient en général d'une sécurité déclenchée par la pression, l'allumage ou l'évacuation des fumées. Sur le fioul, il faut souvent remonter la ligne jusqu'à la cuve : filtre colmaté, gicleur encrassé, désamorçage après une panne sèche. Sur une pompe à chaleur, un arrêt de quelques minutes peut n'être qu'un dégivrage, alors qu'un vrai défaut s'affiche dans les codes de la machine ou dans la régulation. Pour l'eau chaude, tout dépend de ce qui la produit, la chaudière elle-même ou un ballon séparé. Chacun de ces cas a sa page détaillée sur ce site, et dans tous les cas c'est nous qui nous déplaçons, à Reims comme dans les communes de l'agglomération."
+      "heading": "Chauffagiste d'urgence : ce que nous vérifions en arrivant",
+      "body": "Sur place, l'ordre des contrôles compte plus que la vitesse. Nous commençons par la sécurité : aucune odeur de gaz ni de fioul, une évacuation des fumées qui fonctionne, pas d'eau sur les parties électriques. Viennent ensuite les lectures : historique des codes défaut quand l'appareil le garde en mémoire, pression du circuit à froid puis en chauffe, sécurités qui ont coupé l'appareil et, sur un appareil à combustion, analyse des fumées. Une fois la cause établie, et seulement alors, nous vous proposons une solution avec son prix, puis nous réparons. Avant de partir, nous laissons l'installation enchaîner plusieurs cycles pour vérifier qu'elle tient, et nous vous expliquons en mots simples ce qui s'est passé."
     },
     {
       "heading": "Prix d'un dépannage de chaudière en urgence, annoncé avant",
@@ -63,6 +55,14 @@
         "src": "/services/urgence-depannage-chauffage-chaudiere-corps-2.jpg",
         "alt": "Pièces détachées neuves posées à plat : tubes en cuivre, raccord en laiton, joints et capots blancs"
       }
+    },
+    {
+      "heading": "Dépannage chauffage en urgence le soir et le week-end",
+      "body": "Notre ligne répond 24h/24 et 7j/7, comme l'indique chaque page de ce site, et une intervention en soirée, la nuit, un samedi, un dimanche ou un jour férié reste possible quand la situation l'exige. Ces créneaux portent une majoration, que nous annonçons au téléphone avant de prendre la route, de sorte que vous décidez en connaissance de cause. Nous vous disons aussi quand la panne peut attendre le lendemain matin sans risque pour le logement ni pour ses occupants : vous économisez alors la majoration, et la réparation se fait en journée, avec les fournisseurs de pièces ouverts. Pour une maison sans chauffage avec un nourrisson, une fuite qui gagne un plafond ou une odeur suspecte, la question ne se pose pas : on intervient."
+    },
+    {
+      "heading": "Chauffagiste à Reims : gaz, fioul, pompe à chaleur et eau chaude",
+      "body": "Chaque énergie a ses urgences typiques. Sur une chaudière à gaz, l'arrêt vient en général d'une sécurité déclenchée par la pression, l'allumage ou l'évacuation des fumées. Sur le fioul, il faut souvent remonter la ligne jusqu'à la cuve : filtre colmaté, gicleur encrassé, désamorçage après une panne sèche. Sur une pompe à chaleur, un arrêt de quelques minutes peut n'être qu'un dégivrage, alors qu'un vrai défaut s'affiche dans les codes de la machine ou dans la régulation. Pour l'eau chaude, tout dépend de ce qui la produit, la chaudière elle-même ou un ballon séparé. Chacun de ces cas a sa page détaillée sur ce site, et dans tous les cas c'est nous qui nous déplaçons, à Reims comme dans les communes de l'agglomération."
     }
   ],
   "relatedServices": [
@@ -72,32 +72,32 @@
   ],
   "faq": [
     {
-      "q": "Premier allumage de la saison : faut-il régler quelque chose avant de relancer la chaudière ?",
-      "a": "Oui, surtout côté réglages. Une chaudière laissée en mode été ne chauffe que l'eau sanitaire : repassez-la en mode hiver ou chauffage. Vérifiez l'heure de la programmation, souvent décalée par une coupure de courant, et les piles du thermostat d'ambiance, sans lesquelles l'appareil ne reçoit aucune demande. Un coup d'oeil au manomètre complète le tour."
+      "q": "Ma chaudière lâche un dimanche ou au milieu de la nuit, pouvez-vous venir ?",
+      "a": "Oui, notre ligne décroche aussi la nuit, le dimanche et les jours fériés. Le premier échange sert à mesurer l'urgence : maison qui se refroidit avec un occupant fragile, eau qui s'échappe, appareil qui se coupe sans cesse. Quand la panne peut patienter jusqu'au matin sans danger, nous vous le disons, et vous choisissez entre un passage immédiat, majoré, et un créneau de journée."
+    },
+    {
+      "q": "Combien coûte une intervention de chauffagiste en urgence à Reims ?",
+      "a": "Le total additionne le déplacement, le diagnostic, le temps de réparation, les pièces éventuelles et, en dehors des heures de journée, une majoration. Nous ne lançons pas de chiffre dans le vide : chaque ligne vous est annoncée au téléphone, puis sur place avant de poser une pièce. Les fourchettes constatées pour chacune de ces lignes sont détaillées, source par source, sur notre page des tarifs."
+    },
+    {
+      "q": "Combien de fois peut-on réarmer soi-même une chaudière en sécurité ?",
+      "a": "Une seule fois, après avoir noté ou photographié le code affiché. Si l'appareil repart puis se remet en défaut, arrêtez là : il s'est coupé pour se protéger et recommencera tant que la cause reste en place. Et si une odeur de gaz, de fioul, de fumée ou de brûlé accompagne l'arrêt, on ne tente aucun réarmement : on coupe l'appareil et on nous appelle."
+    },
+    {
+      "q": "Je sens une odeur de gaz dans le logement, quels sont les bons réflexes ?",
+      "a": "Ne provoquez aucune étincelle : pas d'interrupteur, pas de sonnette, pas de flamme, aucun appareil électrique qu'on branche ou débranche. Ouvrez grand les fenêtres, fermez l'arrivée du gaz si vous l'atteignez sans risque, faites sortir tout le monde et téléphonez une fois dehors au service d'urgence gaz ou aux secours. Notre travail sur la chaudière vient après, quand le logement a été déclaré sûr."
+    },
+    {
+      "q": "Poêle à pétrole ou radiateur électrique : comment tenir au chaud jusqu'à la réparation ?",
+      "a": "Le radiateur électrique a l'avantage : il ne consomme pas l'oxygène de la pièce et ne rejette aucune fumée. Le poêle au pétrole ou au gaz se réserve à une pièce de vie aérée, jamais à une chambre ni à la nuit, car sa combustion peut produire du monoxyde de carbone, et Santé publique France recommande de ne pas le faire tourner plus de deux heures d'affilée. Four et plaques de cuisson ne remplacent jamais un chauffage."
     },
     {
       "q": "Ma chaudière ne redémarre pas après l'été, est-ce une urgence ?",
       "a": "Pas forcément. Si la maison garde sa chaleur et que personne n'y est fragile, un créneau de jour suffit, sans majoration. Relevez le code, contrôlez le mode et le courant, tentez un unique réarmement. Si rien ne bouge, c'est à nous d'intervenir, avant le premier vrai coup de froid plutôt qu'après."
     },
     {
-      "q": "Une odeur apparaît au premier allumage, faut-il couper la chaudière ?",
-      "a": "Tout dépend de l'odeur. Une légère odeur de chaud sur les radiateurs, qui s'efface dans la journée, vient de la poussière de l'été. Une odeur de gaz impose d'arrêter, d'aérer et de sortir. Une odeur de plastique chaud ou de fumée près de l'appareil, ou un grésillement électrique, justifie de couper la chaudière au disjoncteur et de nous appeler sans attendre."
-    },
-    {
       "q": "La pression est tombée pendant l'été, puis-je la remonter moi-même ?",
       "a": "Oui, par le robinet ou le levier de remplissage décrit dans la notice, installation froide, en surveillant l'aiguille pour rester dans la zone prévue. Si elle redescend dans les jours qui suivent, remplir ne règle rien : de l'eau s'échappe du circuit, ou le vase d'expansion a lâché : c'est là qu'il faut chercher."
-    },
-    {
-      "q": "Mes radiateurs sont froids en haut à la remise en route, est-ce une panne ?",
-      "a": "Non, c'est de l'air qui s'est rassemblé dans les parties hautes pendant l'arrêt. Une purge radiateur par radiateur, chauffage coupé, le chasse, puis on remet la pression à niveau. Si c'est le bas qui reste froid, il s'agit plutôt de boues, et là un désembouage du circuit remplace la purge."
-    },
-    {
-      "q": "Ma chaudière au fioul a dormi tout l'été, pourquoi peine-t-elle à repartir ?",
-      "a": "Pendant l'arrêt, de la condensation se forme dans la cuve et le filtre retient des dépôts. Au premier démarrage, le brûleur peut aspirer ces impuretés et se verrouiller. Contrôlez le niveau de la cuve et réarmez une fois ; si le voyant revient, le filtre, le gicleur et la ligne d'alimentation demandent notre passage."
-    },
-    {
-      "q": "Ma pompe à chaleur ne relance pas le chauffage à l'automne, que regarder ?",
-      "a": "La commande d'abord : mode chauffage sélectionné, consigne au-dessus de la température de la pièce, programmation remise à l'heure. Dégagez ensuite l'unité extérieure des feuilles et des objets posés contre elle pendant l'été. Si la machine affiche un code ou reste muette malgré une demande de chaleur, notez le code et appelez-nous."
     },
     {
       "q": "L'eau chaude fonctionne mais pas les radiateurs, la chaudière est-elle en panne ?",

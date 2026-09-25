@@ -1,12 +1,13 @@
 {
   "metaTitle": "Tarifs et prix d'un chauffagiste à Reims",
-  "metaDescription": "Dépannage de chaudière, entretien annuel, désembouage : nos fourchettes de prix, sourcées et datées. Le prix exact vous est annoncé avant l'intervention.",
+  "metaDescription": "Dépannage de chaudière, entretien annuel, désembouage : les fourchettes de prix constatées, sourcées et datées. Le prix exact est annoncé avant d'intervenir.",
   "h1": "Tarifs et prix d'un chauffagiste à Reims",
   "intro": "Chaque montant de cette page est une fourchette constatée, relevée dans une source que nous citons avec sa date. Votre facture dépend de l'appareil, de la panne, de la pièce et de l'heure : le prix exact de votre intervention vous est donc annoncé avant que nous commencions.",
   "miseAJour": "septembre 2026",
   "cover": {
     "src": "/tarifs/couverture.jpg",
-    "alt": "Chaudière murale blanche au-dessus d'un plan de travail en chêne dans une buanderie rénovée aux meubles blancs"
+    "alt": "Chaudière murale blanche au-dessus d'un plan de travail en chêne dans une buanderie rénovée aux meubles blancs",
+    "position": "85% center"
   },
   "groupes": [
     {
@@ -86,7 +87,8 @@
           "source": {
             "nom": "La Prime Énergie",
             "url": "https://www.laprimeenergie.fr/les-travaux/la-pompe-a-chaleur/depannage",
-            "date": "2026-09-25"
+            "date": "2026-09-25",
+            "releve": true
           }
         },
         {
@@ -110,7 +112,8 @@
           "source": {
             "nom": "Prodestravaux",
             "url": "https://www.prodestravaux.com/devis-travaux/recherche-fuite",
-            "date": "2026-09-25"
+            "date": "2026-09-25",
+            "releve": true
           }
         }
       ]
@@ -151,7 +154,8 @@
           "source": {
             "nom": "Effy",
             "url": "https://www.effy.fr/travaux-energetique/chauffage/pompe-a-chaleur/assurance/depannage",
-            "date": "2026-09-25"
+            "date": "2026-09-25",
+            "releve": true
           }
         }
       ]
@@ -250,7 +254,8 @@
           "source": {
             "nom": "Loxam",
             "url": "https://www.loxam.fr/p/chauffage-electr-230v-3-3kw/036-0050-010597",
-            "date": "2026-09-25"
+            "date": "2026-09-25",
+            "releve": true
           }
         }
       ]

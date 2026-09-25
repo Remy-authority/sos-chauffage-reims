@@ -24,7 +24,8 @@ export function PageHeader({
   title: ReactNode
   subtitle?: ReactNode
   align?: 'left' | 'center'
-  image?: { src: string; alt: string }
+  /** `position` : cadrage CSS (object-position) quand le sujet n'est pas au centre. */
+  image?: { src: string; alt: string; position?: string }
   children?: ReactNode
 }) {
   const decor = (
@@ -63,6 +64,7 @@ export function PageHeader({
                 priority
                 sizes="(min-width: 1024px) 460px, 100vw"
                 className="object-cover"
+                style={image.position ? { objectPosition: image.position } : undefined}
               />
             </div>
           </div>
