@@ -1,5 +1,14 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 26/09/2026 : MISE À JOUR EN LIGNE (GO Rémy), note 0 -> 10/10
+- Règle suivie : ../tasks/regle-mise-a-jour-site.md. Branche `maj-25-09` fusionnée sur main (d9a67b0), production READY, curl 200 sur www avec le vrai title, 404 propre (noindex).
+- Requête d'argent mesurée (DataForSEO, 25/09) : « chauffagiste reims » 390/mois, CPC 5,83 € (CLAUDE.md §0). H1 accueil « Chauffagiste d'urgence à Reims, on remonte à la cause. » (décision Rémy).
+- Livré : /tarifs (18 lignes sourcées et datées, 3 cas, JSON-LD sans prix, reliée par pied de page, prestations, communes, articles) ; pilier /services/urgence-depannage-chauffage-chaudiere (10 H2 sur requêtes réelles, FAQ d'urgence, schémas) ; 9 prestations et 12 communes réécrites (fait INSEE 2023 sourcé, carte des communes, bloc prix, voisines) ; accueil : zones en bloc 8, schéma symptôme -> prestation, menus Prestations et Zones déroulants, Process en fond clair (GO Rémy), personne fictive « Aurélien Godart » retirée partout, promesses de délai retirées ; mobile centré, pied de page en volets ; 83 photos neuves (42 pages, 41 articles), générateur d'images d'articles réparé (consigne courte anglaise) ; 33 articles : seoTitle, descriptions, liens Tarifs et pilier, H1 = seoTitle ; autoblog lundi-vendredi 05:38 UTC, 67 brouillons, fin de stock 29/12/2026.
+- Contrôles : série des 5 + check-serie CODE 0 sur d85327d3 (« OK : série complète ») ; check-fin-de-site CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut sur sos-chauffage-reims.fr » (26/09) ; relecture critique à froid : 19 points corrigés. Preuves : ../tasks/.maj-reims/.
+- Rank OS (cockpit 4386fba) : travaux, cadence 5/semaine, autoblogEndsAt 2026-12-29, 12 pages dans Tâches › Indexation, 5 tâches cochées ; vus à l'écran. Protection Vercel remise (all_except_custom_domains, GET vérifié).
+- Reste à Rémy : demander l'indexation des 12 pages (Rank OS › Tâches › Indexation) ; relever le budget GitHub Actions (autoblog du parc bloqué depuis le 25/09).
+- Captures avant/après : branche GitHub `captures-maj-25-09` et page https://claude.ai/artifact/NiYMfg92VUTeXG29ZVC5aW
+
 ## 17/09/2026 : numéro 09 Twilio posé
 - Faux numéro de démo 03 53 01 00 51 retiré, remplacé par le vrai numéro 09 39 20 00 17 (décision Rémy, site avec clics).
 - Il sonne sur le téléphone de Rémy via renvoi Twilio.

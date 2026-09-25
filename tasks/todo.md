@@ -24,16 +24,19 @@
 ### Note AVANT (25/09, grille §6) : 0/10
 1 ❌ (H1 sans métier, desc 225, title 61) · 2 ❌ (pas de /tarifs) · 3 ❌ (pilier 3 blocs) · 4 ❌ (aucun fait sourcé, titles sans « chauffagiste ») · 5 ❌ · 6 ❌ · 7 ❌ (mobile non centré, pied de page long) · 8 ❌ (21 pages sans visuel de corps) · 9 ❌ (3/semaine, 56 brouillons) · 10 ❌ (série rouge)
 
+### Note APRÈS (26/09) : 10/10
+1 ✅ 2 ✅ 3 ✅ 4 ✅ 5 ✅ 6 ✅ 7 ✅ 8 ✅ 9 ✅ 10 ✅ (fin-de-site CODE 0 aucun défaut). EN LIGNE main d9a67b0, GO Rémy 26/09.
+
 ### Chantiers
-- [ ] A1 Builder pages : blocs image/schéma, /tarifs, contact riche, 404 propre, prix sur prestations et communes, communes voisines, centrage mobile des pages
-- [ ] A2 Builder accueil : H1, bloc 1 ≤ 320 car., zones en bloc 8, schéma, menu Zones, bloc 2 centré, pied de page mobile en volets, Tarifs au pied de page
-- [ ] B Tarifs et faits sourcés (content/tarifs.json, content/schemas.json)
-- [ ] C Prestations : pilier profond + 8 prestations (titles, descriptions, blocs, FAQ, prix, emplacements d'images)
-- [ ] D Communes : 12 pages (title chauffagiste + commune, fait sourcé, FAQ réécrites, emplacements d'images)
-- [ ] E Autoblog : cron 1-5, brouillons ≥ 65 dont l'article location/appoint, titres des articles vus sans clic, maillage
-- [ ] F Photos (après C et D) : couvertures et corps, regardées une par une
-- [ ] Contrôles passe 1, captures 3 formats, relecture critique, passe 2
-- [ ] Livraison à Rémy (GO), puis mise en ligne, Rank OS, indexation
+- [x] A1 Builder pages : blocs image/schéma, /tarifs, contact riche, 404 propre, prix sur prestations et communes, communes voisines, centrage mobile des pages
+- [x] A2 Builder accueil : H1, bloc 1 ≤ 320 car., zones en bloc 8, schéma, menu Zones, bloc 2 centré, pied de page mobile en volets, Tarifs au pied de page
+- [x] B Tarifs et faits sourcés (content/tarifs.json, content/schemas.json)
+- [x] C Prestations : pilier profond + 8 prestations (titles, descriptions, blocs, FAQ, prix, emplacements d'images)
+- [x] D Communes : 12 pages (title chauffagiste + commune, fait sourcé, FAQ réécrites, emplacements d'images)
+- [x] E Autoblog : cron 1-5, brouillons ≥ 65 dont l'article location/appoint, titres des articles vus sans clic, maillage
+- [x] F Photos (après C et D) : couvertures et corps, regardées une par une
+- [x] Contrôles passe 1, captures 3 formats, relecture critique, passe 2
+- [x] Livraison à Rémy (GO), puis mise en ligne, Rank OS, indexation
 
 
 > Suivi opérationnel des sessions. La checklist de référence long terme vit dans
