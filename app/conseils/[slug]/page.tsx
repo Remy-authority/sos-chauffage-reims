@@ -81,7 +81,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-braise-400">
             {article.category}
           </p>
-          <h1 className="mt-4 text-4xl leading-[1.12] text-craie-50 md:text-5xl">{article.title}</h1>
+          <h1 className="mt-4 text-[1.875rem] leading-[1.12] text-craie-50 md:text-5xl">{article.seoTitle || article.title}</h1>
           <p className="mt-5 text-lg leading-relaxed text-craie-200">{article.description}</p>
           <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-craie-400">
             <time dateTime={article.date}>{formatDateFr(article.date)}</time>
