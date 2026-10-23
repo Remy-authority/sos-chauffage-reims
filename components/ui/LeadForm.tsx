@@ -12,6 +12,8 @@ import {
   Flame,
   Fuel,
   Heater,
+  KeyRound,
+  RefreshCw,
   Thermometer,
   type LucideIcon,
 } from 'lucide-react'
@@ -22,6 +24,7 @@ type Step = 1 | 2 | 3
 
 interface Fields {
   probleme: string
+  occupant: string
   ville: string
   urgence: string
   nom: string
@@ -30,7 +33,10 @@ interface Fields {
   message: string
 }
 
-/** Les huit situations qui couvrent la quasi-totalité des appels chauffage. */
+/** Remplacement : à la charge du propriétaire, on lui demande s'il l'est (Rémy, 23/10/2026). */
+const REMPLACEMENT = 'Chaudière à remplacer'
+
+/** Les neuf situations qui couvrent la quasi-totalité des appels chauffage. */
 const TYPES: { id: string; label: string; Icon: LucideIcon }[] = [
   { id: 'Chaudière à gaz en panne', label: 'Chaudière gaz', Icon: Flame },
   { id: 'Chaudière au fioul en panne', label: 'Chaudière fioul', Icon: Fuel },
@@ -39,6 +45,7 @@ const TYPES: { id: string; label: string; Icon: LucideIcon }[] = [
   { id: 'Fuite sur la chaudière ou le circuit', label: 'Fuite', Icon: Droplets },
   { id: "Plus d'eau chaude, ballon ou cumulus", label: "Plus d'eau chaude", Icon: Thermometer },
   { id: 'Entretien annuel à programmer', label: 'Entretien annuel', Icon: CalendarCheck },
+  { id: REMPLACEMENT, label: 'Chaudière à remplacer', Icon: RefreshCw },
   { id: 'Autre', label: 'Autre situation', Icon: CircleAlert },
 ]
 
@@ -74,8 +81,11 @@ const stepVariants = {
 
 export function LeadForm() {
   const [step, setStep] = useState<Step>(1)
+  /** Étape 1 en deux temps pour un remplacement : la situation, puis propriétaire ou locataire. */
+  const [occupantVisible, setOccupantVisible] = useState(false)
   const [fields, setFields] = useState<Fields>({
     probleme: '',
+    occupant: '',
     ville: '',
     urgence: '',
     nom: '',
@@ -95,7 +105,11 @@ export function LeadForm() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...fields, company: '' }),
+        body: JSON.stringify({
+          ...fields,
+          probleme: fields.occupant ? `${fields.probleme} · ${fields.occupant}` : fields.probleme,
+          company: '',
+        }),
       })
       if (!res.ok) throw new Error()
       window.location.href = '/merci'
@@ -124,7 +138,7 @@ export function LeadForm() {
         <ProgressBar step={step} />
 
         <AnimatePresence mode="wait">
-          {step === 1 && (
+          {step === 1 && !occupantVisible && (
             <motion.div
               key="step1"
               variants={stepVariants}
@@ -140,16 +154,72 @@ export function LeadForm() {
                 Si plusieurs cases correspondent, retenez celle qui décrit le mieux la panne.
               </p>
 
-              <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {TYPES.map(({ id, label, Icon }) => {
                   const selected = fields.probleme === id
                   return (
                     <button
                       key={id}
                       type="button"
-                      onClick={() => set('probleme', id)}
+                      onClick={() => {
+                        set('probleme', id)
+                        set('occupant', '')
+                        if (id === REMPLACEMENT) setOccupantVisible(true)
+                        else setStep(2)
+                      }}
                       aria-pressed={selected}
-                      className={`flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-xs font-medium leading-tight transition-all duration-200 ${
+                      className={`${id === 'Autre' ? 'col-span-2 sm:col-span-1 ' : ''}flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-xs font-medium leading-tight transition-all duration-200 ${
+                        selected
+                          ? 'border-braise-400 bg-braise-500/20 text-craie-50'
+                          : 'border-white/10 bg-white/[0.04] text-craie-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-craie-50'
+                      }`}
+                    >
+                      <Icon
+                        className={`h-6 w-6 ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
+                        strokeWidth={1.9}
+                        aria-hidden="true"
+                      />
+                      {label}
+                    </button>
+                  )
+                })}
+              </div>
+            </motion.div>
+          )}
+
+          {step === 1 && occupantVisible && (
+            <motion.div
+              key="step1-occupant"
+              variants={stepVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.3, ease: EASE }}
+            >
+              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Vous êtes propriétaire ou locataire ?</h2>
+              <p className="mt-2 text-sm text-craie-400">
+                Le remplacement d&apos;une chaudière est à la charge du propriétaire du logement.
+              </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                {[
+                  { value: 'Propriétaire', label: 'Je suis propriétaire', Icon: KeyRound },
+                  { value: 'Locataire', label: 'Je suis locataire', Icon: Heater },
+                ].map(({ value, label, Icon }) => {
+                  const selected = fields.occupant === value
+                  return (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => {
+                        set('occupant', value)
+                        if (value === 'Propriétaire') {
+                          setOccupantVisible(false)
+                          setStep(2)
+                        }
+                      }}
+                      aria-pressed={selected}
+                      className={`flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-sm font-medium leading-tight transition-all duration-200 ${
                         selected
                           ? 'border-braise-400 bg-braise-500/20 text-craie-50'
                           : 'border-white/10 bg-white/[0.04] text-craie-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-craie-50'
@@ -166,19 +236,24 @@ export function LeadForm() {
                 })}
               </div>
 
-              <div className="mt-7 flex justify-end">
+              {fields.occupant === 'Locataire' && (
+                <p role="status" className="mt-5 rounded-2xl border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
+                  Le remplacement est à la charge de votre propriétaire : transmettez-lui notre site, il
+                  pourra nous faire sa demande. Rien n&apos;a été envoyé.
+                </p>
+              )}
+
+              <div className="mt-7 flex items-center">
                 <button
                   type="button"
-                  onClick={() => setStep(2)}
-                  disabled={!fields.probleme}
-                  className={`inline-flex min-h-[48px] items-center gap-2 rounded-full px-7 text-sm font-semibold transition-all ${
-                    fields.probleme
-                      ? 'bg-braise-500 text-white hover:bg-braise-400'
-                      : 'cursor-not-allowed bg-white/10 text-craie-500'
-                  }`}
+                  onClick={() => {
+                    setOccupantVisible(false)
+                    set('occupant', '')
+                  }}
+                  className="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-craie-400 transition-colors hover:text-craie-50"
                 >
-                  Continuer
-                  <ArrowRight size={16} strokeWidth={2.5} />
+                  <ArrowLeft size={16} strokeWidth={2.5} />
+                  Retour
                 </button>
               </div>
             </motion.div>
@@ -240,7 +315,10 @@ export function LeadForm() {
               <div className="mt-7 flex items-center justify-between">
                 <button
                   type="button"
-                  onClick={() => setStep(1)}
+                  onClick={() => {
+                    setStep(1)
+                    setOccupantVisible(fields.probleme === REMPLACEMENT)
+                  }}
                   className="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-craie-400 transition-colors hover:text-craie-50"
                 >
                   <ArrowLeft size={16} strokeWidth={2.5} />
