@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   ArrowLeft,
@@ -94,6 +94,22 @@ export function LeadForm() {
     message: '',
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
+  const cadre = useRef<HTMLDivElement>(null)
+  const premierRendu = useRef(true)
+
+  // L'étape suivante est plus courte : sur téléphone, le haut du formulaire
+  // remonterait hors de l'écran. On le ramène s'il n'est plus visible.
+  useEffect(() => {
+    if (premierRendu.current) {
+      premierRendu.current = false
+      return
+    }
+    const el = cadre.current
+    if (el && el.getBoundingClientRect().top < 72) {
+      const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - 88, behavior: reduit ? 'auto' : 'smooth' })
+    }
+  }, [step, occupantVisible])
 
   function set<K extends keyof Fields>(key: K, value: Fields[K]) {
     setFields((prev) => ({ ...prev, [key]: value }))
@@ -120,6 +136,7 @@ export function LeadForm() {
 
   return (
     <div
+      ref={cadre}
       className="grain relative overflow-hidden rounded-panneau border border-flamme-400/20 bg-gradient-to-br from-fonte-900 to-fonte-950 p-6 md:p-9"
       role="region"
       aria-label="Formulaire de demande"
