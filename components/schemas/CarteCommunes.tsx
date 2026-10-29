@@ -48,7 +48,7 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
   const barre = 5 * unitesParKm
 
   const dessin = (
-      <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
         <svg
           viewBox={`0 0 ${W} ${H}`}
           className="h-auto w-full rounded-[3px] bg-craie-50"
@@ -104,8 +104,8 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
           {communes.map((c, i) => {
             const p = pos(c.lon, c.lat)
             const actif = c.slug === zoneSlug
-            return (
-              <g key={c.slug}>
+            const pastille = (
+              <>
                 {actif && <circle cx={p.x} cy={p.y} r={16} className="fill-braise-500/20" />}
                 <circle
                   cx={p.x}
@@ -125,7 +125,17 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
                 >
                   {i + 1}
                 </text>
-              </g>
+              </>
+            )
+            // Pastille cliquable vers la page de la commune (#R60) ; au clavier et pour les
+            // lecteurs d'écran, ce sont les liens de la légende qui portent la navigation.
+            return actif ? (
+              <g key={c.slug}>{pastille}</g>
+            ) : (
+              <a key={c.slug} href={`/zones/${c.slug}`} tabIndex={-1} className="cursor-pointer hover:opacity-80">
+                <title>{c.nom}</title>
+                {pastille}
+              </a>
             )
           })}
 
@@ -147,7 +157,7 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
           </g>
         </svg>
 
-        <ol className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-sm lg:grid-cols-1">
+        <ol className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-sm lg:grid-cols-1 lg:gap-y-2.5 lg:text-[0.9375rem]">
           {communes.map((c, i) => {
             const actif = c.slug === zoneSlug
             return (

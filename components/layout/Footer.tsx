@@ -160,7 +160,7 @@ export function Footer() {
             <h2 className="mb-5 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-braise-400">
               Contact
             </h2>
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-4 text-sm lg:pt-1">
               <li className="flex items-start gap-3">
                 <Phone size={16} className="mt-0.5 shrink-0 text-braise-400" />
                 <a href={`tel:${siteConfig.phone}`} className="text-craie-100 hover:text-braise-300">
