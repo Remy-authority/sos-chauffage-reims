@@ -340,3 +340,4 @@ posée), achat automatique du 09 Twilio (watcher portefeuille), calendrier v3 (S
   premier déploiement et purger le cache Vercel si les anciennes images réapparaissent.
   ➜ La 9e prestation climatisation n'a pas été anticipée (addendum SEO en cours d'audit) :
   elle fera l'objet d'un ordre de mission séparé, visuel compris.
+- 29/10 (soir) : propriétaire ou locataire demandé pour TOUTES les demandes (formulaire, étape 1 bis) et au répondeur (touches 1, 2 et 3) ; un locataire est arrêté avec « contactez directement votre propriétaire avant toute chose », rien n'est envoyé (Rémy, avec Franck Gay).

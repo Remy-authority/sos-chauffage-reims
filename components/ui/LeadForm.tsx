@@ -108,7 +108,11 @@ const stepVariants = {
 
 export function LeadForm() {
   const [step, setStep] = useState<Step>(1)
-  /** Étape 1 en deux temps pour un remplacement : la situation, puis propriétaire ou locataire. */
+  /**
+   * Étape 1 en deux temps : la situation, puis propriétaire ou locataire. Un locataire est arrêté
+   * là, quelle que soit la demande (Rémy 29/10/2026, avec Franck Gay : « on ne veut pas que le
+   * locataire nous contacte »), comme au répondeur du 09.
+   */
   const [occupantVisible, setOccupantVisible] = useState(false)
   const [fields, setFields] = useState<Fields>({
     probleme: '',
@@ -226,8 +230,7 @@ export function LeadForm() {
                       onClick={() => {
                         set('probleme', id)
                         set('occupant', '')
-                        if (id === REMPLACEMENT) setOccupantVisible(true)
-                        else setStep(2)
+                        setOccupantVisible(true)
                       }}
                       aria-pressed={selected}
                       className={`${id === 'Autre' ? 'col-span-2 sm:col-span-1 ' : ''}flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-xs font-medium leading-tight transition-all duration-200 ${
@@ -265,7 +268,7 @@ export function LeadForm() {
             >
               <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Vous êtes propriétaire ou locataire ?</h2>
               <p className="mt-2 text-sm text-craie-400">
-                Le remplacement d&apos;une chaudière est à la charge du propriétaire du logement.
+                Nous intervenons à la demande du propriétaire du logement.
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -305,8 +308,8 @@ export function LeadForm() {
 
               {fields.occupant === 'Locataire' && (
                 <p role="status" className="mt-5 rounded-2xl border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
-                  Le remplacement est à la charge de votre propriétaire : transmettez-lui notre site, il
-                  pourra nous faire sa demande. Rien n&apos;a été envoyé.
+                  Merci de contacter directement votre propriétaire avant toute chose et de lui
+                  transmettre notre site : il pourra nous faire sa demande. Rien n&apos;a été envoyé.
                 </p>
               )}
 
@@ -361,28 +364,6 @@ export function LeadForm() {
                   />
                 </div>
 
-                {fields.probleme !== REMPLACEMENT && (
-                  <fieldset>
-                    <legend className={labelClass}>Vous êtes</legend>
-                    <div className="flex flex-wrap gap-3">
-                      {['Propriétaire', 'Locataire'].map((value) => (
-                        <button
-                          key={value}
-                          type="button"
-                          onClick={() => set('occupant', value)}
-                          aria-pressed={fields.occupant === value}
-                          className={`min-h-[44px] rounded-full border px-5 text-sm font-semibold transition-all ${
-                            fields.occupant === value
-                              ? 'border-braise-400 bg-braise-500 text-white'
-                              : 'border-white/20 text-craie-300 hover:border-white/40 hover:text-craie-50'
-                          }`}
-                        >
-                          {value}
-                        </button>
-                      ))}
-                    </div>
-                  </fieldset>
-                )}
 
                 {!urgent && (
                 <fieldset>
@@ -413,7 +394,7 @@ export function LeadForm() {
                   type="button"
                   onClick={() => {
                     setStep(1)
-                    setOccupantVisible(fields.probleme === REMPLACEMENT)
+                    setOccupantVisible(true)
                   }}
                   className="inline-flex min-h-[44px] items-center gap-1.5 text-sm text-craie-400 transition-colors hover:text-craie-50"
                 >
