@@ -126,6 +126,10 @@ export interface Article {
 
 /* ─────────────────────── Helpers fs + validation ─────────────────────── */
 
+/** Espace insécable avant « : ; ! ? » : le signe ne part jamais seul en début de ligne (relecture du 30/10/2026). */
+const insecables = (_cle: string, v: unknown) =>
+  typeof v === 'string' ? v.replace(/ ([:;!?])/g, '\u00a0$1') : v
+
 function readJsonDir<T>(dir: string, required: (keyof T)[]): T[] {
   const full = path.join(CONTENT_DIR, dir)
   if (!fs.existsSync(full)) return []
@@ -136,7 +140,7 @@ function readJsonDir<T>(dir: string, required: (keyof T)[]): T[] {
       const raw = fs.readFileSync(path.join(full, f), 'utf8')
       let data: T
       try {
-        data = JSON.parse(raw)
+        data = JSON.parse(raw, insecables)
       } catch (e) {
         throw new Error(`content/${dir}/${f} : JSON invalide, ${(e as Error).message}`)
       }

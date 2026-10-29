@@ -120,7 +120,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           {related.length > 0 && (
             <AnimatedSection className="mt-16">
               <h2 className="text-center text-2xl lg:text-left">Prestations liées</h2>
-              <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <ul className={`mt-5 grid gap-3 sm:grid-cols-2 ${related.length === 2 ? '' : 'lg:grid-cols-3'}`}>
                 {related.map((r, i) => (
                   <li
                     key={r.slug}

@@ -297,7 +297,7 @@ export function LeadForm({
             >
               <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>Vous êtes propriétaire ou locataire ?</Q>
               <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
-                Nous intervenons à la demande du propriétaire du logement.
+                Seul le propriétaire du logement peut commander l&apos;intervention.
               </p>
 
               <div className={`${compact ? 'mt-3 gap-2' : 'mt-6 gap-3'} grid grid-cols-2`}>

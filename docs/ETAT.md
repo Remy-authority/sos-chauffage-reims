@@ -1,5 +1,13 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 30/10/2026 : MISE À JOUR COMPLÈTE sur la branche `maj-29-10` (EN ATTENTE DU GO de Rémy)
+- Kickoff portefeuille du 29/10 (site jugé « vraiment dégueulasse »), plan validé « ok go vas y ». Note AVANT 4/10 (relecture à froid 5/10).
+- Livré (be69251, 0f273b8) : bloc 1 scrollytelling (chaudière qui se déshabille, 5 étapes), bloc 3 « le circuit remis en chauffe » (radiateurs froids, purge, boue chassée, pression, pièces qui chauffent) ; accueil réordonné : prestations en cartes photo (l'ancien bloc « situations » fusionné), symptômes, FAQ, pourquoi nous, zones en bloc 7 (carte légendée 5 km / 10 km, titre « Reims et son agglomération »), formulaire final, bandeau ; horaires justes (urgences 24 h/24, le reste 8 h - 19 h 30) ; paragraphes courts ; angles droits ; en-tête opaque ; photo gaz remplacée (chaudière entière) ; icône thermomètre froid.
+- Intouchés : logique du formulaire (propriétaire/locataire, champ « probleme »), répondeur 09.
+- Contrôles sur 0f273b8 : design « AUCUN DÉFAUT », blocs-pages OK 21 pages, navigation OK 12 contrôles, visuels OK, texte OK 687/800 mots ; vitesse mobile médiane aperçu 91 contre production 93 (-2) ; #R68 A : 0 recherche perdue (45 expressions) ; check-fin-de-site www CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut ».
+- Aucun envoi de test du formulaire (il partirait chez Franck Gay). Rien sur main sans GO.
+- Après GO : fusion sur main, curl 200, Rank OS (travaux, capture, Indexation = accueil seulement).
+
 ## 29/10/2026 : urgences 24 h/24, dépannage 8 h - 19 h 30 (Rémy, avec Mr Gay de FG Service)
 - Formulaire (ba41887) : « Fuite ou dégât des eaux » et « Ballon qui fuit » en tête, marqués 24 h/24 ; propriétaire ou locataire demandé à TOUS ; hors 8 h - 19 h 30 (heure de Paris), une demande non urgente affiche « nos techniciens reprennent demain à partir de 8 h » et la demande le dit au partenaire.
 - Répondeur (cockpit 0cba6550) : 1 urgence 24 h/24, 2 entretien/radiateur/panne 8 h - 19 h 30, 3 remplacement (propriétaire seulement). Hors horaires, touche 2 ou 3 : message, rien ne sonne, demande enregistrée et SMS d'appel manqué à Mr Gay « rappelez-le demain dès 8 h ».

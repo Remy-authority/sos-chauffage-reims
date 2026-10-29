@@ -1,5 +1,15 @@
 # tasks/todo.md — SOS Chauffage Reims
 
+## MISE À JOUR du 29-30/10/2026 (kickoff portefeuille, GO Rémy « ok go vas y »), branche `maj-29-10`
+- [x] Note AVANT 4/10 ; plan et deux scrollytellings validés
+- [x] Bloc 1 chaudière qui se déshabille, bloc 3 circuit remis en chauffe
+- [x] Accueil réordonné (prestations photo, symptômes, FAQ, pourquoi nous, zones bloc 7, formulaire final)
+- [x] Horaires justes partout, paragraphes courts, angles droits, en-tête opaque, compteur 4 étapes
+- [x] Relecture critique à froid (1 sous-agent) : 13 points traités
+- [x] Contrôles : design, blocs-pages, navigation, visuels, texte, fin de site www CODE 0 ; vitesse -2 ; 0 recherche perdue
+- [ ] Footprint + check-serie sur le commit final
+- [ ] GO Rémy, fusion sur main, curl 200, Rank OS (travaux, capture, Indexation = accueil)
+
 ## MISE À JOUR du 25/09/2026 (CEO Opus 5.5, règle ../tasks/regle-mise-a-jour-site.md), branche `maj-25-09`
 
 ### Décisions de Rémy (25/09, mode interview, ne plus reposer)
