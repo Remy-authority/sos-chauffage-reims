@@ -54,7 +54,8 @@ export function CtaBanner({
             </div>
 
             <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:mt-10 sm:gap-x-8 text-sm text-craie-400">
-              <li className="flex items-center gap-2">
+              {/* Horaires sur leur propre ligne au téléphone : jamais « • Prix annoncé avant » seul en bout de ligne. */}
+              <li className="flex basis-full items-center justify-center gap-2 md:basis-auto">
                 <Clock size={14} className="text-braise-400" />
                 {siteConfig.availability}
               </li>

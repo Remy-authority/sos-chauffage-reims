@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SchemaVisuel } from '@/components/schemas'
-import { extractNumberedSteps } from '@/lib/text'
+import { enParagraphes, extractNumberedSteps } from '@/lib/text'
 import { resolveBlockImage, type ContentBlock } from '@/lib/content'
 
 /**
@@ -14,6 +14,9 @@ import { resolveBlockImage, type ContentBlock } from '@/lib/content'
  * Visuel du bloc (contrat du 25/09/2026) : une image de corps (`image`) OU un
  * schéma (`schema`), jamais les deux. L'image n'est rendue que si son fichier
  * existe dans public/ (les photos arrivent après les textes).
+ *
+ * Pavés de plus de 45 mots découpés aux fins de phrase (#R67, 30/10/2026) : mêmes mots,
+ * paragraphes plus courts.
  *
  * Téléphone : titre et paragraphes centrés ; ordinateur (lg) : inchangé, à gauche.
  */
@@ -35,7 +38,12 @@ export function ServiceBlock({
 
       {steps ? (
         <>
-          {steps.lead && <p className="text-center lg:text-left">{steps.lead}</p>}
+          {steps.lead &&
+            enParagraphes(steps.lead).map((p) => (
+              <p key={p.slice(0, 40)} className="text-center lg:text-left">
+                {p}
+              </p>
+            ))}
           <ol className="mt-6 space-y-3">
             {steps.steps.map((s, i) => (
               <li
@@ -51,7 +59,11 @@ export function ServiceBlock({
           </ol>
         </>
       ) : (
-        <p className="text-center lg:text-left">{block.body}</p>
+        enParagraphes(block.body).map((p) => (
+          <p key={p.slice(0, 40)} className="text-center lg:text-left">
+            {p}
+          </p>
+        ))
       )}
 
       {image ? (

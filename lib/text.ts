@@ -35,3 +35,29 @@ export function extractNumberedSteps(body: string): NumberedSteps | null {
 
   return { lead, steps }
 }
+
+/**
+ * Découpe un pavé en paragraphes de `max` mots au plus, aux fins de phrase (#R67 et règle de
+ * mise à jour §6 : 45 mots par paragraphe sur les pages intérieures, 30/10/2026). Le texte reste
+ * identique mot pour mot : seuls les retours de paragraphe changent. Une phrase plus longue que
+ * `max` forme son propre paragraphe.
+ */
+export function enParagraphes(texte: string, max = 45): string[] {
+  const phrases = texte.match(/[^.!?…]+(?:[.!?…]+["»”)]*|$)/g)?.map((p) => p.trim()).filter(Boolean) ?? [texte]
+  const mots = (s: string) => s.split(/\s+/).filter(Boolean).length
+  const total = mots(texte)
+  if (total <= max) return [texte]
+  // Paragraphes équilibrés : autant de morceaux que nécessaire, chacun visant total / n mots.
+  const cible = total / Math.ceil(total / max)
+  const sortie: string[] = []
+  let courant = ''
+  for (const p of phrases) {
+    const essai = courant ? `${courant} ${p}` : p
+    if (courant && (mots(essai) > max || mots(courant) >= cible)) {
+      sortie.push(courant)
+      courant = p
+    } else courant = essai
+  }
+  if (courant) sortie.push(courant)
+  return sortie
+}

@@ -95,7 +95,7 @@ function Dropdown({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="flex items-center justify-between gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10 hover:text-flamme-700 focus-visible:bg-flamme-600/10"
+                      className="flex items-center justify-between gap-3 rounded-[3px] px-4 py-3 text-sm font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10 hover:text-flamme-700 focus-visible:bg-flamme-600/10"
                     >
                       {item.label}
                     </Link>
@@ -104,7 +104,7 @@ function Dropdown({
               </ul>
               <Link
                 href={all.href}
-                className="mt-1 flex items-center justify-between gap-3 rounded-2xl border-t border-craie-200 px-4 py-3 text-sm font-semibold text-braise-600 transition-colors hover:bg-braise-500/10"
+                className="mt-1 flex items-center justify-between gap-3 rounded-[3px] border-t border-craie-200 px-4 py-3 text-sm font-semibold text-braise-600 transition-colors hover:bg-braise-500/10"
               >
                 {all.label}
                 <span aria-hidden="true">→</span>
@@ -139,7 +139,7 @@ function MobileVolet({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={toggle}
-        className="flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
+        className="flex items-center justify-between rounded-[3px] px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
       >
         {label}
         <ChevronDown
@@ -274,7 +274,7 @@ export function HeaderClient({ services, zones }: { services: NavService[]; zone
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           solid
-            ? 'bg-craie-50/90 shadow-[0_1px_0_rgb(var(--teinte-fonte-950)/0.08)] backdrop-blur-xl'
+            ? 'bg-craie-50 shadow-[0_1px_0_rgb(var(--teinte-fonte-950)/0.08)]'
             : 'bg-fonte-950/35 backdrop-blur-md'
         }`}
       >
@@ -328,7 +328,7 @@ export function HeaderClient({ services, zones }: { services: NavService[]; zone
             aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-fonte-900 text-craie-50 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-fonte-900 text-craie-50 lg:hidden"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -363,7 +363,7 @@ export function HeaderClient({ services, zones }: { services: NavService[]; zone
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="rounded-2xl px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
+                    className="rounded-[3px] px-4 py-3 text-base font-medium text-fonte-900 transition-colors hover:bg-flamme-600/10"
                   >
                     {item.label}
                   </Link>

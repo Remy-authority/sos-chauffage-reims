@@ -22,10 +22,10 @@ export function ServiceArea() {
           title={
             <>
               {city} et{' '}
-              <span className="titre-fonte italic">{serviceArea.radiusKm} km autour</span>
+              <span className="titre-fonte italic">son agglomération</span>
             </>
           }
-          subtitle="Chaque commune a sa page. La vôtre manque ? Un appel suffit."
+          subtitle={`Chaque commune a sa page. Nous allons jusqu'à ${serviceArea.radiusKm}\u00a0km\u00a0: la vôtre manque ? Un appel suffit.`}
         />
 
         <AnimatedSection className="mt-12 rounded-bloc border border-craie-200 bg-white p-5 shadow-pose sm:p-8">

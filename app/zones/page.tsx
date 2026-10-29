@@ -98,7 +98,7 @@ export default function ZonesHub() {
               {serviceArea.districts.map((d) => (
                 <li
                   key={d}
-                  className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-700"
+                  className="inline-flex rounded-[3px] border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-700"
                 >
                   {d}
                 </li>

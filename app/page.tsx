@@ -5,7 +5,6 @@ import { buildMetadata } from '@/lib/seo'
 import { Hero } from '@/components/sections/Hero'
 import { Services } from '@/components/sections/Services'
 import { Symptoms } from '@/components/sections/Symptoms'
-import { Gallery } from '@/components/sections/Gallery'
 import CircuitMaison from '@/components/sections/CircuitMaison'
 import { ServiceArea } from '@/components/sections/ServiceArea'
 import { PourquoiNous } from '@/components/sections/PourquoiNous'
@@ -31,23 +30,28 @@ export default function HomePage() {
   return (
     <>
       {/*
-        Ordre des sections (mise à jour du 29/10/2026, plan validé par Rémy) : les questions que
-        se pose quelqu'un dont le chauffage vient de s'arrêter, en 750 mots visibles au plus (#R67).
+        Ordre des sections (mise à jour du 29/10/2026, plan validé par Rémy ; revu le 30/10 après la
+        relecture à froid : l'ancien bloc « situations » répétait les prestations, il est fondu dedans).
+        Les questions que se pose quelqu'un dont le chauffage vient de s'arrêter, 800 mots visibles au plus (#R67).
           1. Hero          le métier, la ville, le formulaire (scrollytelling de la chaudière)
-          2. Gallery       les situations traitées (photos)
+          2. Services      quelle prestation (carte photo, une phrase, un picto vivant)
           3. CircuitMaison le circuit remis en chauffe (scrollytelling, schéma dessiné)
           4. Symptoms      qu'est-ce que j'ai (volets fermés)
-          5. Services      quelle prestation (une carte, une phrase, un picto vivant)
+          5. FAQ fermée    ce qu'on nous demande
           6. PourquoiNous  qui êtes-vous, pourquoi vous
           7. ServiceArea   vous venez chez moi (carte des communes, bloc 7 : #R46)
-          8. formulaire de fin d'accueil (#R71), 9. FAQ fermée, 10. bandeau d'appel
-        Fonds : photo, sombre, clair, clair foncé, sombre, clair, clair foncé, blanc, clair, sombre.
+          8. formulaire de fin d'accueil (#R71), 9. bandeau d'appel
+        Fonds : photo, sombre, clair, clair foncé, clair vers clair foncé, clair, clair foncé, blanc, sombre.
       */}
       <Hero />
-      {siteConfig.features.gallery && <Gallery />}
+      <Services services={services} />
       <CircuitMaison />
       <Symptoms services={services} />
-      <Services services={services} />
+      <Faq
+        items={siteConfig.homeFaq as unknown as { q: string; a: string }[]}
+        subtitle={`Ce qu'on nous demande le plus souvent à ${siteConfig.city}.`}
+      />
+
       <PourquoiNous />
       <ServiceArea />
 
@@ -58,22 +62,17 @@ export default function HomePage() {
             eyebrow="Décrire ma panne"
             title={
               <>
-                Trois questions,
+                Quatre questions,
                 <span className="titre-fonte italic"> et on vous rappelle</span>
               </>
             }
-            subtitle="Trois réponses suffisent pour une estimation juste."
+            subtitle="Quatre réponses suffisent pour une estimation juste."
           />
           <div className="mt-10">
             <LeadForm />
           </div>
         </div>
       </section>
-
-      <Faq
-        items={siteConfig.homeFaq as unknown as { q: string; a: string }[]}
-        subtitle={`Ce qu'on nous demande le plus souvent à ${siteConfig.city}.`}
-      />
 
       <CtaBanner />
     </>

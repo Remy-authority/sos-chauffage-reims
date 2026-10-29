@@ -76,21 +76,25 @@ function rappelHorsHoraires(maintenant = new Date()): "aujourd'hui" | 'demain' |
   return null
 }
 
-function ProgressBar({ step }: { step: Step }) {
+/**
+ * Quatre écrans (situation, propriétaire ou locataire, lieu, coordonnées) : le compteur suit
+ * l'écran affiché, jamais « Étape 1 sur 3 » deux fois de suite (relecture du 30/10/2026).
+ */
+function ProgressBar({ ecran }: { ecran: number }) {
   return (
     <div className="flex items-center justify-between gap-4">
       <div className="flex flex-1 gap-2">
-        {([1, 2, 3] as Step[]).map((s) => (
+        {[1, 2, 3, 4].map((s) => (
           <span
             key={s}
             className={`h-[3px] flex-1 transition-all duration-500 ${
-              s < step ? 'bg-braise-500/60' : s === step ? 'bg-braise-500' : 'bg-white/15'
+              s < ecran ? 'bg-braise-500/60' : s === ecran ? 'bg-braise-500' : 'bg-white/15'
             }`}
           />
         ))}
       </div>
       <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-craie-400">
-        Étape {step} sur 3
+        Étape {ecran} sur 4
       </span>
     </div>
   )
@@ -220,7 +224,7 @@ export function LeadForm({
           <input type="text" name="company" tabIndex={-1} autoComplete="off" readOnly />
         </div>
 
-        <ProgressBar step={step} />
+        <ProgressBar ecran={step === 1 ? (occupantVisible ? 2 : 1) : step + 1} />
 
         <AnimatePresence mode="wait">
           {step === 1 && !occupantVisible && (
@@ -393,14 +397,16 @@ export function LeadForm({
                 {!urgent && (
                 <fieldset>
                   <legend className={labelClass}>Degré d&apos;urgence</legend>
-                  <div className="flex flex-wrap gap-3">
+                  {/* Trois choix sur une ligne dès que la place le permet, empilés au téléphone : jamais
+                      deux plus un orphelin (#R53). */}
+                  <div className="grid gap-3 sm:grid-cols-3">
                     {['Au plus vite', 'Cette semaine', 'Pas pressé'].map((value) => (
                       <button
                         key={value}
                         type="button"
                         onClick={() => set('urgence', value)}
                         aria-pressed={fields.urgence === value}
-                        className={`min-h-[44px] rounded-[3px] border px-5 text-sm font-semibold transition-all ${
+                        className={`min-h-[44px] rounded-[3px] border px-3 text-sm font-semibold transition-all ${
                           fields.urgence === value
                             ? 'border-braise-400 bg-braise-500 text-white'
                             : 'border-white/20 text-craie-300 hover:border-white/40 hover:text-craie-50'

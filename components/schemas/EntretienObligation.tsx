@@ -22,7 +22,7 @@ export function EntretienObligation({ data }: { data?: Data }) {
               key={pt.titre}
               className="flex flex-col items-center gap-3 rounded-bloc border border-flamme-600/15 bg-flamme-600/5 p-4 text-center sm:items-start sm:text-left"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-flamme-600 text-white">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600 text-white">
                 <Icon size={18} aria-hidden="true" />
               </span>
               <div>

@@ -22,7 +22,7 @@ export function PrixBloc({ ids, lieu }: { ids?: string[]; lieu?: string }) {
       className="mt-16 rounded-bloc border border-flamme-600/20 bg-white p-6 shadow-pose sm:p-8"
     >
       <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:text-left">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-600">
           <Euro size={20} aria-hidden="true" />
         </span>
         <h2 id="prix-indicatifs" className="text-2xl">

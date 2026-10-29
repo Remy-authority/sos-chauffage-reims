@@ -119,7 +119,8 @@ export const siteConfig = {
   },
 
   /* ── Réassurance / preuve ── */
-  availability: '24h/24 · 7j/7',
+  // Urgences (fuite, dégât des eaux, ballon) 24 h/24 ; le reste de 8 h à 19 h 30 (Rémy et Mr Gay, 29/10/2026).
+  availability: 'Urgences 24 h/24, autres demandes de 8 h à 19 h 30',
   responseTime: 'Intervention rapide sur Reims et son agglomération',
   usps: ['Devis avant intervention', 'Gaz, fioul et pompe à chaleur', 'Artisan local', 'Urgence 7j/7'],
   methods: [

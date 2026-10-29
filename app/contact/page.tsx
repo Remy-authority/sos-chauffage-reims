@@ -86,7 +86,7 @@ export default function ContactPage() {
                   key={label}
                   className="flex items-start gap-4 rounded-bloc border border-craie-200 bg-white p-5"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-600">
                     <Icon size={20} />
                   </span>
                   <div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                   href={`/services/${s.slug}`}
                   className="group flex h-full items-center gap-3 rounded-bloc border border-craie-200 bg-craie-50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-600">
                     <ServiceIcon icon={s.icon} className="h-5 w-5" />
                   </span>
                   <span className="flex-1 font-medium text-fonte-900 group-hover:text-flamme-700">

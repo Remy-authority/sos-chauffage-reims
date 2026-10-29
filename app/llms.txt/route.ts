@@ -70,7 +70,7 @@ export function GET() {
     '',
     '## Bon à savoir',
     "- Le prix de l'intervention est annoncé avant qu'elle commence.",
-    `- Ligne ouverte ${availability}, week-ends et jours fériés compris pour les urgences.`,
+    `- ${availability}, 7j/7, week-ends et jours fériés compris.`,
     "- Une chaudière qui se met en sécurité signale un défaut : il ne faut pas la réarmer plus d'une fois, le code d'erreur affiché est l'information la plus utile à transmettre avant l'intervention.",
     "- Un radiateur froid en haut et chaud en bas contient de l'air et se purge ; froid en bas et chaud en haut, il contient de la boue et relève d'un désembouage du circuit de chauffage.",
     "- Sur une pompe à chaleur, le givre sur l'unité extérieure et les cycles de dégivrage font partie du fonctionnement normal par temps froid et humide : ce n'est pas une panne.",

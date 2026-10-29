@@ -1,3 +1,4 @@
+import { enParagraphes } from '@/lib/text'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -63,11 +64,18 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         <div aria-hidden="true" className="trame absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:px-10">
           <div className="text-center lg:col-span-7 lg:text-left">
-            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-flamme-500/15 text-flamme-300 ring-1 ring-flamme-400/25 lg:mx-0">
+            <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-[3px] bg-flamme-500/15 text-flamme-300 ring-1 ring-flamme-400/25 lg:mx-0">
               <ServiceIcon icon={service.icon} className="h-6 w-6" />
             </span>
             <h1 className="mt-6 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{service.h1}</h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0">{service.intro}</p>
+            {enParagraphes(service.intro).map((p, i) => (
+              <p
+                key={p.slice(0, 40)}
+                className={`mx-auto ${i ? 'mt-4' : 'mt-6'} max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0`}
+              >
+                {p}
+              </p>
+            ))}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
@@ -112,14 +120,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           {related.length > 0 && (
             <AnimatedSection className="mt-16">
               <h2 className="text-center text-2xl lg:text-left">Prestations liées</h2>
-              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                {related.map((r) => (
-                  <li key={r.slug}>
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {related.map((r, i) => (
+                  <li
+                    key={r.slug}
+                    className={i === related.length - 1 && related.length % 2 ? 'sm:col-span-2 lg:col-span-1' : undefined}
+                  >
                     <Link
                       href={`/services/${r.slug}`}
-                      className="group flex items-center gap-3 rounded-bloc border border-craie-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
+                      className="group flex h-full items-center gap-3 rounded-bloc border border-craie-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
                     >
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-600">
                         <ServiceIcon icon={r.icon} className="h-5 w-5" />
                       </span>
                       <span className="font-medium text-fonte-900 group-hover:text-flamme-700">
@@ -139,7 +150,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <li key={z.slug}>
                   <Link
                     href={`/zones/${z.slug}`}
-                    className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
+                    className="inline-flex rounded-[3px] border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
                   >
                     {z.name}
                   </Link>
@@ -148,7 +159,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <li>
                 <Link
                   href="/zones"
-                  className="inline-flex rounded-full border border-flamme-600 bg-flamme-600/5 px-4 py-2 text-sm font-medium text-flamme-700 transition-colors hover:bg-flamme-600/10"
+                  className="inline-flex rounded-[3px] border border-flamme-600 bg-flamme-600/5 px-4 py-2 text-sm font-medium text-flamme-700 transition-colors hover:bg-flamme-600/10"
                 >
                   Toutes les communes
                 </Link>

@@ -56,17 +56,28 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
           aria-label={`Carte schématique : Reims au centre et ${communes.length} communes desservies autour`}
         >
           {/* Cercles de distance autour du centre de Reims */}
+          {/* Chaque cercle porte sa distance : sans elle, l'accueil (`nu`, sans note) montrait des
+              cercles muets (relecture du 30/10/2026). */}
           {[5, 10].map((km) => (
-            <circle
-              key={km}
-              cx={centre.x}
-              cy={centre.y}
-              r={km * unitesParKm}
-              fill="none"
-              className="stroke-flamme-400/50"
-              strokeWidth={1}
-              strokeDasharray="3 4"
-            />
+            <g key={km}>
+              <circle
+                cx={centre.x}
+                cy={centre.y}
+                r={km * unitesParKm}
+                fill="none"
+                className="stroke-flamme-400/50"
+                strokeWidth={1}
+                strokeDasharray="3 4"
+              />
+              <text
+                x={centre.x + km * unitesParKm * Math.SQRT1_2 + 3}
+                y={centre.y - km * unitesParKm * Math.SQRT1_2 - 3}
+                fontSize={9}
+                className="fill-flamme-700"
+              >
+                {km} km
+              </text>
+            </g>
           ))}
 
           {/* Rayons Reims → commune */}

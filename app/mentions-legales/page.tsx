@@ -86,8 +86,8 @@ export default function MentionsLegales() {
       <section>
         <h2>Propriété intellectuelle</h2>
         <p>
-          Textes, visuels et charte graphique de ce site relèvent du Code de la propriété
-          intellectuelle. Les copier, en tout ou en partie, suppose l&apos;accord écrit de
+          Le Code de la propriété intellectuelle protège l&apos;ensemble de ce site : ses textes,
+          ses visuels et sa charte graphique. Les copier, en tout ou en partie, suppose l&apos;accord écrit de
           l&apos;éditeur, obtenu avant toute réutilisation.
         </p>
       </section>

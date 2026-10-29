@@ -1,3 +1,4 @@
+import { enParagraphes } from '@/lib/text'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { CalendarClock, Phone } from 'lucide-react'
@@ -40,8 +41,12 @@ export default function TarifsPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Tarifs" title={t.h1} subtitle={t.intro} image={cover}>
-        <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-craie-50/15 bg-craie-50/5 px-4 py-2 text-sm text-craie-200">
+      <PageHeader eyebrow="Tarifs" title={t.h1} subtitle={enParagraphes(t.intro).map((p, i) => (
+          <span key={p.slice(0, 40)} className={i ? 'mt-4 block' : 'block'}>
+            {p}
+          </span>
+        ))} image={cover}>
+        <p className="mt-6 inline-flex items-center gap-2 rounded-[3px] border border-craie-50/15 bg-craie-50/5 px-4 py-2 text-sm text-craie-200">
           <CalendarClock size={16} className="text-braise-400" aria-hidden="true" />
           Mis à jour : {t.miseAJour}
         </p>

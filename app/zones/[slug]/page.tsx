@@ -1,3 +1,4 @@
+import { enParagraphes } from '@/lib/text'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -105,7 +106,14 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
               {zone.name} · {zone.postalCode}
             </p>
             <h1 className="mt-5 text-4xl leading-[1.1] text-craie-50 md:text-5xl">{zone.h1}</h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0">{zone.intro}</p>
+            {enParagraphes(zone.intro).map((p, i) => (
+              <p
+                key={p.slice(0, 40)}
+                className={`mx-auto ${i ? 'mt-4' : 'mt-6'} max-w-2xl text-lg leading-relaxed text-craie-200 lg:mx-0`}
+              >
+                {p}
+              </p>
+            ))}
             <div className="mt-8">
               <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
                 <Phone size={18} strokeWidth={2.5} />
@@ -152,7 +160,7 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                     href={`/services/${s.slug}`}
                     className="group flex items-center gap-3 rounded-bloc border border-craie-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-flamme-400/40 hover:shadow-pose"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-600">
                       <ServiceIcon icon={s.icon} className="h-5 w-5" />
                     </span>
                     <span className="font-medium text-fonte-900 group-hover:text-flamme-700">
@@ -175,12 +183,12 @@ export default function ZonePage({ params }: { params: { slug: string } }) {
                     {page ? (
                       <Link
                         href={`/zones/${page.slug}`}
-                        className="inline-flex rounded-full border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
+                        className="inline-flex rounded-[3px] border border-craie-300 bg-white px-4 py-2 text-sm text-craie-700 transition-colors hover:border-flamme-500 hover:text-flamme-700"
                       >
                         {page.name}
                       </Link>
                     ) : (
-                      <span className="inline-flex rounded-full border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-600">
+                      <span className="inline-flex rounded-[3px] border border-craie-200 bg-craie-100 px-4 py-2 text-sm text-craie-600">
                         {nom}
                       </span>
                     )}

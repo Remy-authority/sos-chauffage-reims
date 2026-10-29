@@ -117,7 +117,7 @@ export function Footer() {
               d&apos;eau chaude. Un métier, un diagnostic avant réparation, un prix annoncé avant
               l&apos;intervention.
             </p>
-            <LiveDot className="mt-8">Ligne urgence ouverte {siteConfig.availability}</LiveDot>
+            <LiveDot className="mt-8">Urgences 24 h/24, 7j/7</LiveDot>
           </div>
 
           <div className="lg:col-span-3">
