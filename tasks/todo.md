@@ -218,3 +218,12 @@ Constats CEO sur Reims vis-à-vis de cette barre :
 - [ ] Builder (si accord) : lien PAC→clim cliquable, lien clim sur Bezannes (spec 7.3),
       sous-titre « Quatre logiques » à rafraîchir, LeadForm selon décision
 - [ ] Veilles : 09 Twilio (watcher), favicon GSC, calendrier v3 (novembre)
+
+## MISE À JOUR 29/10/2026 (« vraiment dégueulasse », Rémy) : état des lieux §0.2
+Search Console : 28 j = 24 clics / 1 423 vues (28 j d'avant : 4 / 588) ; 0 clic du 25 au 28/10 alors que les vues montent. 5 demandes (07/09, 09/10, 16/10, 19/10 appel, 22/10).
+1. Vues sans clic (≥ 10, 28 j) : pilier urgence 82 (pos 74), /conseils 57, /zones/cormontreuil 57 (11,4), /contact 48, voyant-rouge 49 (9,1), entretien-location-qui-paie 46, changer-chaudiere-bien-loue 45 (6,3), fioul-fume 39 (7,9), fuite 25, gaz 23, gaz-ne-sallume-pas 23, premier-allumage 21, bezannes 16, fioul-premier-froid 16, cernay 14, ballon 10, entretien 10.
+2. Gains rapides (pos 8-30) : location chaudière reims 158 vues/90 j (24,9), location chauffage reims 55 (26), ramonage cormontreuil 29 (15,9), dépannage chauffage reims 14 (25,4), chaudière reims (30), « autour de moi » fioul (10-12), chauffagiste autour de moi (9,6), chauffagiste fuel (10,7).
+3. Requêtes de prix : quasi rien (devis dépannage chaudière fioul 1, pos 48) ; /tarifs 2 vues.
+4. Clics d'achat sans demande : radiateur-froid 3, accueil 2, witry 1, fioul 1.
+Contrôles AVANT (prod) : audit-design CODE 1 (points 11 et 12 : bloc 1 décentré, titre 4 lignes / accroche 3 à 320 px) ; navigation 0, blocs 0, visuels 0 ; check-texte ECHEC 1 700 mots / 800.
+Note AVANT : 4/10 (1 title/H1 ✅, 2 tarifs ✅, 3 pilier ✅ mais pos 74, 4 zones ❌ pastilles pas de carte, 5 vues sans clic ❌, 6 maillage ✅, 7 bloc 1 ❌ photo à 12 %, 8 accueil ❌ 1 700 mots + icônes génériques, 9 pied de page non mesuré ❌, 10 contrôles ❌).

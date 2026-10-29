@@ -26,7 +26,7 @@ export function Faq({
   return (
     <section
       id="faq"
-      className="relative bg-gradient-to-b from-craie-50 to-craie-100 py-24 lg:py-32"
+      className="relative bg-gradient-to-b from-craie-50 to-craie-100 py-12 md:py-24 lg:py-32"
       aria-labelledby="faq-title"
     >
       <script

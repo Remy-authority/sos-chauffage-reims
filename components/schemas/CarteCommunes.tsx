@@ -17,9 +17,10 @@ const KM_PAR_DEGRE_LAT = 111.2
  * les distances et les directions sont justes à l'échelle de l'agglomération.
  * Aucun fond de carte externe. Chaque commune porte un numéro, la légende en
  * HTML (lisible à 390 px) donne les noms et les liens. Sur une page commune,
- * la commune de la page est mise en valeur.
+ * la commune de la page est mise en valeur. `nu` : le dessin seul, sans cadre, note ni source
+ * (accueil, #R71 : aucun lien de source sur l'accueil).
  */
-export function CarteCommunes({ data, zoneSlug }: { data?: Data; zoneSlug?: string }) {
+export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zoneSlug?: string; nu?: boolean }) {
   const geo = getCommunesGeo()
   if (!geo?.centre || !geo.communes?.length) return null
 
@@ -46,17 +47,11 @@ export function CarteCommunes({ data, zoneSlug }: { data?: Data; zoneSlug?: stri
   const centre = pos(geo.centre.lon, geo.centre.lat)
   const barre = 5 * unitesParKm
 
-  return (
-    <SchemaFrame
-      id="carte-communes"
-      titre={data?.titre}
-      source={data?.source ?? geo.source}
-      note="Cercles pointillés : 5 et 10 km autour du centre de Reims, à vol d'oiseau."
-    >
+  const dessin = (
       <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
         <svg
           viewBox={`0 0 ${W} ${H}`}
-          className="h-auto w-full rounded-2xl bg-craie-50"
+          className="h-auto w-full rounded-[3px] bg-craie-50"
           role="img"
           aria-label={`Carte schématique : Reims au centre et ${communes.length} communes desservies autour`}
         >
@@ -181,6 +176,18 @@ export function CarteCommunes({ data, zoneSlug }: { data?: Data; zoneSlug?: stri
           })}
         </ol>
       </div>
+  )
+
+  if (nu) return dessin
+
+  return (
+    <SchemaFrame
+      id="carte-communes"
+      titre={data?.titre}
+      source={data?.source ?? geo.source}
+      note="Cercles pointillés : 5 et 10 km autour du centre de Reims, à vol d'oiseau."
+    >
+      {dessin}
     </SchemaFrame>
   )
 }

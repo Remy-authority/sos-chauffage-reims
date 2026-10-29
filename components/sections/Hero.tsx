@@ -1,193 +1,174 @@
-'use client'
-
-import { useRef } from 'react'
-import Image from 'next/image'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight, Euro, MapPin, Phone, ShieldCheck, Thermometer } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
-import { GradientBlob } from '@/components/ui/GradientBlob'
-import { LiveDot } from '@/components/ui/LiveDot'
-import { EASE } from '@/lib/motion'
+import type { CSSProperties } from 'react'
+import { getImageProps } from 'next/image'
+import { Phone } from 'lucide-react'
 import { siteConfig } from '@/config/site.config'
-
-const badges = [
-  { icon: Euro, label: 'Prix annoncé avant' },
-  { icon: ShieldCheck, label: "Diagnostic d'abord" },
-  { icon: MapPin, label: `${siteConfig.serviceArea.radiusKm} km autour de ${siteConfig.city}` },
-]
+import { LeadForm } from '@/components/ui/LeadForm'
+import ReassuranceVive from '@/components/ui/ReassuranceVive'
+import HeroChaudiere from '@/components/sections/HeroChaudiere'
+import {
+  CADRAGE_ORDI,
+  CHAUDIERE_ORDI,
+  GRILLE_ORDI,
+  PHOTO_CHAUDIERE,
+  PHOTO_CHAUDIERE_TEL,
+  QUALITE_BLOC1,
+  TAILLES_BLOC1,
+  VOILE_ORDI,
+  VOILE_TELEPHONE,
+} from '@/components/sections/chaudiere-reglages'
 
 /**
- * Colonne de droite du hero : un triage court plutôt qu'un bloc de chiffres.
- * C'est la première chose que le visiteur en panne cherche à savoir, et c'est
- * aussi ce qui distingue la composition de ce site de celle des autres sites du
- * portefeuille (où cette colonne porte un argument de prix).
+ * Hero, bloc 1 « le balayage » (mise à jour du 29/10/2026, scénario validé par Rémy, « ok go vas
+ * y ») : le dépannage d'une chaudière murale, la prestation la plus demandée ; le circuit de
+ * chauffage de la maison a son propre récit au bloc 3.
+ *
+ * ÉCRAN 1 : une seule photo, la chaudière dans sa buanderie. Ordinateur : la photo en fond plein
+ * cadre, titre et boutons CENTRÉS VERTICALEMENT à gauche, formulaire noir opaque centré
+ * verticalement à droite, la chaudière au milieu. Téléphone et tablette : la photo verticale couvre
+ * TOUT le premier écran ; sur-titre, titre, accroche et formulaire posés dessus, centrés entre
+ * l'en-tête et la barre du bas (#R70). Au défilement, HeroChaudiere fait passer une ligne jaune
+ * miel sur la photo : derrière elle le capot s'efface sur place, la caméra s'approche et les cinq
+ * étapes du dépannage s'y jouent, puis la ligne repart et rend la photo.
+ * « Réduire les animations » ou réseau lent : ce bloc tel quel, puis la chaudière ouverte et les étapes.
+ *
+ * L'en-tête du site est FIXE (HeaderClient) : une cale de sa hauteur, du même noir, est posée avant
+ * le bloc, pour que la photo commence sous l'en-tête comme sur les autres sites.
  */
-const triage = [
-  { symptom: 'Plus rien ne chauffe', lead: "L'appareil" },
-  { symptom: 'Un radiateur froid', lead: 'Le circuit' },
-  { symptom: "Plus d'eau chaude", lead: 'Le ballon' },
-]
+const RIEN = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+
+/** Photo du bloc 1 pour UN format d'écran : la source de l'autre format est vide, une seule photo téléchargée. */
+function PhotoBloc1({ format, className, style }: { format: 'telephone' | 'ordi'; className: string; style?: CSSProperties }) {
+  const tel = format === 'telephone'
+  const { props } = getImageProps({
+    src: tel ? PHOTO_CHAUDIERE_TEL.src : PHOTO_CHAUDIERE.src,
+    alt: PHOTO_CHAUDIERE.alt,
+    fill: true,
+    priority: true,
+    sizes: tel ? TAILLES_BLOC1.mobile : TAILLES_BLOC1.ordi,
+    quality: tel ? PHOTO_CHAUDIERE_TEL.qualite : QUALITE_BLOC1,
+  })
+  return (
+    <picture>
+      <source media={tel ? '(min-width: 768px)' : '(max-width: 767px)'} srcSet={RIEN} />
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <img {...props} className={className} style={{ ...props.style, ...style }} />
+    </picture>
+  )
+}
+
+/**
+ * Ordinateur, premier rendu : la photo posée en CSS exactement comme la pose de repos de
+ * HeroChaudiere (agrandie de `marge`, la chaudière vers `centreX`, jamais un bord visible), pour
+ * qu'elle ne saute pas quand la séquence prend la main. Unités du conteneur (cqw, cqh) = le panneau.
+ */
+const g = CHAUDIERE_ORDI
+const LARGEUR = `(max(100cqw, ${(g.L / g.H).toFixed(5)} * 100cqh) * ${CADRAGE_ORDI.marge})`
+const POSE_ORDI: CSSProperties = {
+  width: `calc${LARGEUR}`,
+  height: `calc(${LARGEUR} * ${(g.H / g.L).toFixed(5)})`,
+  left: `clamp(calc(100cqw - ${LARGEUR}), calc(${CADRAGE_ORDI.centreX * 100}cqw - ${(((g.x0 + g.x1) / 2) / g.L).toFixed(5)} * ${LARGEUR}), 0px)`,
+  top: `clamp(calc(100cqh - ${LARGEUR} * ${(g.H / g.L).toFixed(5)}), calc(50cqh - ${(((g.y0 + g.y1) / 2) / g.L).toFixed(5)} * ${LARGEUR}), 0px)`,
+  maxWidth: 'none',
+}
 
 export function Hero() {
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const y = useTransform(scrollYProgress, [0, 1], [0, 120])
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+  const reassurance = (classe: string, clair = false) => <ReassuranceVive className={classe} clair={clair} />
 
-  return (
-    <section
-      ref={ref}
-      id="top"
-      className="grain relative isolate flex min-h-[92vh] items-center overflow-hidden bg-fonte-950 bg-[radial-gradient(ellipse_at_top,rgb(var(--teinte-fonte-800)/0.75),transparent_62%),radial-gradient(ellipse_at_bottom_right,rgb(var(--teinte-braise-500)/0.18),transparent_55%),linear-gradient(180deg,rgb(var(--teinte-fonte-950))_0%,rgb(var(--teinte-fonte-900))_52%,rgb(var(--teinte-fonte-950))_100%)] pb-20 pt-28 lg:pt-36"
-    >
-      {/* Le dégradé de fond est posé sur la section elle-même (et non sur un calque
-          enfant) : il est SOUS la photo, ce n'est pas un voile. Posé en calque, il
-          était compté comme un voile par-dessus la photo par audit-design.mjs.
+  /* Colonne texte, partagée par la version fixe et la séquence. Titre et accroche : deux lignes au
+     plus de 320 à 1 920 px, lignes insécables, taille en largeur du bloc (cqi), jamais en vw (#R70). */
+  const texte = (
+    <div className="px-6 lg:px-0">
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-center text-center [container-type:inline-size] lg:mx-0 lg:max-w-none lg:items-start lg:text-left">
+        <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-braise-300 [text-shadow:0_1px_8px_rgb(0_0_0_/_0.5)] sm:text-xs sm:tracking-[0.18em]">
+          <span className="hidden h-px w-8 shrink-0 bg-braise-300/70 lg:block" aria-hidden="true" />
+          {siteConfig.city} et {siteConfig.serviceArea.radiusKm} km autour
+        </p>
 
-          Photo d'ambiance, très en retrait. Fondue par le bas sur mobile (le texte
-          occupe le haut), fondue par la droite à partir du desktop. Le cadre fait
-          62 % de la largeur (au-delà des 60 % qu'audit-design exige pour une photo
-          de fond) ; le masque démarre plus loin dans le cadre, si bien que la zone
-          visible reste la même qu'avec l'ancien cadre à 54 %. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-y-0 right-0 w-full opacity-[0.12] [mask-image:linear-gradient(180deg,transparent_35%,black)] lg:w-[62%] lg:opacity-20 lg:[mask-image:linear-gradient(90deg,transparent_13%,black_55%)]"
-      >
-        <Image src="/hero.jpg" alt="" fill priority sizes="(min-width: 1024px) 62vw, 100vw" className="object-cover" />
-      </div>
+        <h1
+          id="titre-hero"
+          className="mt-4 whitespace-nowrap text-[min(9.4cqi,2.5rem)] font-semibold leading-[1.08] text-white [text-shadow:0_1px_12px_rgb(0_0_0_/_0.4)] sm:text-[min(9.4cqi,2.9rem)] lg:mt-5 lg:text-[min(9.6cqi,3.3rem)] xl:text-[min(9.6cqi,3.6rem)]"
+        >
+          <span className="block">Chauffagiste d&apos;urgence</span>{' '}
+          <span className="block text-braise-300">à {siteConfig.city}</span>
+        </h1>
 
-      <div aria-hidden="true" className="trame absolute inset-0" />
+        {/* Téléphone, pendant la séquence : retirée à l'étape des coordonnées, pour que le
+            formulaire tienne dans la photo. */}
+        <p className="mt-3 text-[min(5cqi,16px)] leading-relaxed text-white/90 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5),0_0_16px_rgb(0_0_0_/_0.4)] max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden sm:text-[min(3.1cqi,1.125rem)] lg:mt-6 lg:text-[min(3.2cqi,1.2rem)]">
+          <span className="block sm:whitespace-nowrap">
+            <span className="block whitespace-nowrap sm:inline">On remonte à la cause</span>{' '}
+            <span className="block whitespace-nowrap sm:inline">avant de changer une pièce.</span>
+          </span>{' '}
+          <span className="hidden whitespace-nowrap sm:block">Gaz, fioul, pompe à chaleur, ligne ouverte 7j/7.</span>
+        </p>
 
-      <GradientBlob className="-left-40 top-4" color="profond" size={520} intensity="strong" duration={22} />
-      <GradientBlob className="-right-48 bottom-0" color="flamme" size={620} intensity="strong" duration={18} />
-      <GradientBlob className="left-1/3 top-1/4" color="braise" size={440} intensity="strong" duration={15} />
-
-      <motion.div
-        style={{ y, opacity }}
-        className="relative mx-auto grid w-full max-w-7xl items-center gap-16 px-6 lg:px-10 xl:grid-cols-12"
-      >
-        <div className="text-center lg:text-left xl:col-span-7">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: EASE }}
-          >
-            <LiveDot>Ligne ouverte 7j/7</LiveDot>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-            className="mt-7 text-[clamp(2rem,8.6vw,3.4rem)] leading-[1.05] text-craie-50 lg:text-[3.875rem]"
-          >
-            Chauffagiste d&apos;urgence
-            <br className="hidden lg:inline" /> à {siteConfig.city},{' '}
-            <br className="hidden lg:inline" />
-            <span className="titre-braise">on remonte à la cause.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
-            className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-craie-200 md:text-xl lg:mx-0"
-          >
-            Gaz, fioul, pompe à chaleur : nous lisons le défaut avant de changer la moindre
-            pièce.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: EASE }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start"
-          >
-            <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">
-              <Phone size={18} strokeWidth={2.5} />
-              {siteConfig.phoneDisplay}
-            </Button>
-            <Button href="/contact#formulaire" variant="voile" size="lg">
-              Décrire ma panne
-              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </Button>
-          </motion.div>
-
-          <motion.ul
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-4 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-3 lg:justify-start"
-          >
-            {badges.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="flex flex-col items-center gap-1.5 text-center text-sm text-craie-300 last:col-span-2 sm:flex-row sm:gap-2 sm:text-left"
-              >
-                <Icon size={16} className="shrink-0 text-flamme-300" strokeWidth={2.4} />
-                {label}
-              </li>
-            ))}
-          </motion.ul>
+        {/* Téléphone et tablette : LE formulaire du bloc 1, sous le titre, dans la photo. */}
+        <div className="mt-5 w-full max-w-md lg:hidden">
+          <LeadForm variante="compact" ecran1 />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: EASE }}
-          className="relative hidden xl:col-span-5 xl:block"
-        >
-          <div className="relative mx-auto max-w-md">
-            <div
-              aria-hidden="true"
-              className="absolute -inset-8 -z-10 rounded-[3rem] bg-gradient-to-br from-flamme-500/25 via-braise-500/10 to-transparent blur-3xl"
-            />
+        {/* Ordinateur : le numéro et « Décrire ma panne ». Téléphone : l'appel est dans la barre du bas. */}
+        <div className="mt-8 hidden items-center gap-3 lg:flex">
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="inline-flex h-[52px] items-center gap-2 whitespace-nowrap rounded-[3px] bg-braise-500 px-6 font-semibold tabular-nums tracking-wide text-white transition-colors hover:bg-braise-400"
+          >
+            <Phone size={18} strokeWidth={2.5} aria-hidden="true" />
+            {siteConfig.phoneDisplay}
+          </a>
+          <a
+            href="#devis"
+            className="inline-flex h-[52px] items-center whitespace-nowrap rounded-[3px] border border-white/30 bg-white/[0.07] px-6 font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/[0.14]"
+          >
+            Décrire ma panne
+          </a>
+        </div>
 
-            <div className="relative overflow-hidden rounded-cadre border border-flamme-400/25 bg-gradient-to-br from-fonte-800/70 to-fonte-950/85 p-8 backdrop-blur-xl">
-              <span className="inline-flex rounded-full border border-flamme-400/40 bg-flamme-500/10 px-3 py-1 text-xs uppercase tracking-wider text-flamme-300">
-                Votre symptôme
-              </span>
+        {reassurance('mt-9 hidden w-full max-w-[32rem] border-t border-white/15 pt-6 lg:grid')}
+      </div>
+    </div>
+  )
 
-              <p className="mt-7 font-display text-2xl font-medium leading-snug text-craie-50">
-                Trois pannes, trois origines.
-              </p>
+  const formulaire = (
+    <div className="w-full">
+      <LeadForm variante="compact" titre="Décrivez votre panne" />
+    </div>
+  )
 
-              <ul className="mt-7 space-y-3">
-                {triage.map((t, i) => (
-                  <li
-                    key={t.symptom}
-                    className="flex items-start gap-4 rounded-2xl bg-fonte-900/70 p-4"
-                  >
-                    <span className="mt-0.5 font-display text-sm font-medium text-braise-400">
-                      0{i + 1}
-                    </span>
-                    <span>
-                      <span className="block text-sm font-medium text-craie-50">{t.symptom}</span>
-                      <span className="mt-0.5 block text-xs text-craie-400">{t.lead}</span>
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-craie-400">
-                <ShieldCheck size={14} className="mt-0.5 shrink-0 text-flamme-300" />
-                Notez le code d&apos;erreur.
-              </p>
-            </div>
-
-            {/* Signature du métier : la chaleur qui monte le long d'un élément de
-                radiateur, l'équivalent chauffage du filet qui s'écoulait sur le
-                site débouchage. Décoratif, donc aria-hidden et sans clic. */}
-            <div
-              aria-hidden="true"
-              className="absolute -right-5 -top-7 flex h-24 w-11 items-end justify-center overflow-hidden rounded-full border border-flamme-400/30 bg-fonte-950/70 backdrop-blur"
-            >
-              <span className="absolute bottom-0 h-8 w-1.5 animate-montee-chaleur rounded-full bg-gradient-to-t from-transparent via-braise-400 to-transparent" />
-              <Thermometer size={14} className="relative mb-2 text-flamme-300" />
-            </div>
+  const versionA = (
+    <section
+      className="relative isolate overflow-hidden bg-fonte-950 lg:flex lg:min-h-[max(calc(100svh-72px),640px)] lg:items-center lg:py-14"
+      aria-labelledby="titre-hero"
+    >
+      <div className="pointer-events-none absolute inset-0 -z-10 hidden overflow-hidden [container-type:size] lg:block" aria-hidden="true">
+        <PhotoBloc1 format="ordi" className="absolute" style={POSE_ORDI} />
+        <div className={`absolute inset-0 ${VOILE_ORDI}`} />
+      </div>
+      <div className={`relative ${GRILLE_ORDI}`}>
+        {/* Téléphone et tablette : tout le premier écran, la photo dessous, le texte centré entre
+            l'en-tête et la barre du bas (61 px, absente dès 768 px). */}
+        <div className="relative isolate flex min-h-[max(calc(100svh-72px),540px)] flex-col justify-center pb-[calc(61px+1.5rem)] pt-6 md:pb-6 lg:col-start-1 lg:min-h-0 lg:p-0">
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden lg:hidden" aria-hidden="true">
+            <PhotoBloc1 format="telephone" className="object-cover md:hidden" />
+            {/* Tablette : la photo paysage, comme la séquence (la chaudière verticale y serait trop grande). */}
+            <PhotoBloc1 format="ordi" className="hidden object-cover md:block" />
+            <div className="absolute inset-0" style={{ backgroundImage: VOILE_TELEPHONE }} />
           </div>
-        </motion.div>
-      </motion.div>
+          {texte}
+        </div>
+        <div className="hidden lg:col-start-3 lg:flex lg:flex-col lg:justify-center">{formulaire}</div>
+      </div>
     </section>
+  )
+
+  return (
+    <>
+      <div aria-hidden="true" className="h-[72px] bg-fonte-950" />
+      <HeroChaudiere versionA={versionA} texte={texte} formulaire={formulaire} />
+      {/* Téléphone et tablette : la réassurance sur fond BLANC sous la photo, distincte du formulaire noir. */}
+      <div className="border-b border-craie-200 bg-white py-8 lg:hidden">
+        <div className="px-6">{reassurance('mx-auto w-full max-w-lg md:max-w-2xl md:grid-cols-4', true)}</div>
+      </div>
+    </>
   )
 }

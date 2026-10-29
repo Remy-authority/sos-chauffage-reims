@@ -83,7 +83,7 @@ function ProgressBar({ step }: { step: Step }) {
         {([1, 2, 3] as Step[]).map((s) => (
           <span
             key={s}
-            className={`h-1 flex-1 rounded-full transition-all duration-500 ${
+            className={`h-[3px] flex-1 transition-all duration-500 ${
               s < step ? 'bg-braise-500/60' : s === step ? 'bg-braise-500' : 'bg-white/15'
             }`}
           />
@@ -97,8 +97,11 @@ function ProgressBar({ step }: { step: Step }) {
 }
 
 const inputClass =
-  'w-full rounded-2xl border border-white/15 bg-white/[0.06] px-4 py-3.5 text-craie-50 placeholder:text-craie-500 transition-colors focus:border-braise-400 focus:outline-none focus:ring-2 focus:ring-braise-500/25'
+  'w-full rounded-[3px] border border-white/15 bg-white/[0.06] px-4 py-3.5 text-craie-50 placeholder:text-craie-500 transition-colors focus:border-braise-400 focus:outline-none focus:ring-2 focus:ring-braise-500/25'
 const labelClass = 'mb-1.5 block text-sm font-medium text-craie-200'
+
+/** Choix d'une situation sur le formulaire du bloc 1 au téléphone : la séquence (HeroChaudiere) saute à la fin de la scène. */
+export const EVENEMENT_SITUATION = 'leadform:situation'
 
 const stepVariants = {
   enter: { opacity: 0, x: 24 },
@@ -106,7 +109,25 @@ const stepVariants = {
   exit: { opacity: 0, x: -24 },
 }
 
-export function LeadForm() {
+/**
+ * Mise à jour du 29/10/2026 : seul l'HABILLAGE change (carte noire opaque, angles presque droits,
+ * #R53). Les règles restent celles de Rémy et Mr Gay : locataire arrêté sans envoi, urgences
+ * 24 h/24 et le reste de 8 h à 19 h 30, même champ « probleme » lu par Rank OS.
+ *  - `variante` : `complet` (bas d'accueil, contact) ou `compact` (bloc 1 de l'accueil) ;
+ *  - `titre` : titre porté par la carte, pour le bloc 1 qui n'a pas de H2 au-dessus ;
+ *  - `ecran1` : formulaire du bloc 1 au téléphone, posé sur la photo sous le titre.
+ */
+export function LeadForm({
+  variante = 'complet',
+  titre,
+  ecran1 = false,
+}: {
+  variante?: 'complet' | 'compact'
+  titre?: string
+  ecran1?: boolean
+} = {}) {
+  const compact = variante === 'compact'
+  const Q = compact ? 'p' : 'h2'
   const [step, setStep] = useState<Step>(1)
   /**
    * Étape 1 en deux temps : la situation, puis propriétaire ou locataire. Un locataire est arrêté
@@ -185,16 +206,15 @@ export function LeadForm() {
   return (
     <div
       ref={cadre}
-      className="grain relative overflow-hidden rounded-panneau border border-flamme-400/20 bg-gradient-to-br from-fonte-900 to-fonte-950 p-6 md:p-9"
+      className={`relative w-full rounded-[3px] border border-white/10 bg-fonte-950 text-left ${
+        compact ? 'p-4 sm:p-5 lg:p-6' : 'p-6 md:p-9'
+      } ${ecran1 ? 'shadow-[0_14px_32px_-10px_rgb(0_0_0_/_0.6)]' : 'shadow-[0_30px_80px_-20px_rgb(0_0_0_/_0.7)]'}`}
       role="region"
       aria-label="Formulaire de demande"
+      data-etape={occupantVisible ? '1b' : step}
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(var(--teinte-flamme-500)/0.2),transparent_58%)]"
-      />
-
       <div className="relative">
+        {titre && <p className="mb-4 font-display text-xl text-craie-50 lg:text-2xl">{titre}</p>}
         {/* Piège à robots, invisible pour les humains. */}
         <div className="hidden" aria-hidden="true">
           <input type="text" name="company" tabIndex={-1} autoComplete="off" readOnly />
@@ -212,15 +232,17 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">
+              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>
                 Qu&apos;est-ce qui ne chauffe plus ?
-              </h2>
-              <p className="mt-2 text-sm text-craie-400">
+              </Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
                 Urgences (fuite, dégât des eaux, ballon qui fuit) 24&nbsp;h/24. Autres demandes de
                 8&nbsp;h à 19&nbsp;h&nbsp;30.
               </p>
 
-              <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {/* Neuf situations en 3 x 3, sans case orpheline ; compact : trois colonnes dès le téléphone,
+                  pour que le formulaire tienne entier dans le premier écran (#R70). */}
+              <div className={`${compact ? 'mt-3 grid-cols-3 gap-1.5 sm:gap-2' : 'mt-6 grid-cols-2 gap-3 sm:grid-cols-3'} grid`}>
                 {TYPES.map(({ id, label, Icon, urgence }) => {
                   const selected = fields.probleme === id
                   return (
@@ -231,22 +253,25 @@ export function LeadForm() {
                         set('probleme', id)
                         set('occupant', '')
                         setOccupantVisible(true)
+                        if (ecran1) window.dispatchEvent(new CustomEvent<string>(EVENEMENT_SITUATION, { detail: id }))
                       }}
                       aria-pressed={selected}
-                      className={`${id === 'Autre' ? 'col-span-2 sm:col-span-1 ' : ''}flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-xs font-medium leading-tight transition-all duration-200 ${
+                      className={`${id === 'Autre' && !compact ? 'col-span-2 sm:col-span-1 ' : ''}flex flex-col items-center justify-center rounded-[3px] border text-center font-medium leading-tight transition-all duration-200 ${
+                        compact ? 'min-h-[58px] gap-1 px-1 py-1.5 text-[11.5px] sm:min-h-[62px] sm:gap-1.5 sm:p-2 sm:text-[12.5px]' : 'min-h-[96px] gap-2.5 p-3 text-xs'
+                      } ${
                         selected
                           ? 'border-braise-400 bg-braise-500/20 text-craie-50'
                           : 'border-white/10 bg-white/[0.04] text-craie-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-craie-50'
                       }`}
                     >
                       <Icon
-                        className={`h-6 w-6 ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
+                        className={`${compact ? 'h-5 w-5' : 'h-6 w-6'} ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
                         strokeWidth={1.9}
                         aria-hidden="true"
                       />
                       {label}
                       {urgence && (
-                        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-braise-300">
+                        <span className={`${compact ? 'text-[9.5px]' : 'text-[10px]'} font-semibold uppercase tracking-[0.14em] text-braise-300`}>
                           24 h/24
                         </span>
                       )}
@@ -266,12 +291,12 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Vous êtes propriétaire ou locataire ?</h2>
-              <p className="mt-2 text-sm text-craie-400">
+              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>Vous êtes propriétaire ou locataire ?</Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
                 Nous intervenons à la demande du propriétaire du logement.
               </p>
 
-              <div className="mt-6 grid grid-cols-2 gap-3">
+              <div className={`${compact ? 'mt-3 gap-2' : 'mt-6 gap-3'} grid grid-cols-2`}>
                 {[
                   { value: 'Propriétaire', label: 'Je suis propriétaire', Icon: KeyRound },
                   { value: 'Locataire', label: 'Je suis locataire', Icon: Heater },
@@ -289,14 +314,14 @@ export function LeadForm() {
                         }
                       }}
                       aria-pressed={selected}
-                      className={`flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-2xl border p-3 text-center text-sm font-medium leading-tight transition-all duration-200 ${
+                      className={`flex ${compact ? 'min-h-[72px]' : 'min-h-[96px]'} flex-col items-center justify-center gap-2.5 rounded-[3px] border p-3 text-center text-sm font-medium leading-tight transition-all duration-200 ${
                         selected
                           ? 'border-braise-400 bg-braise-500/20 text-craie-50'
                           : 'border-white/10 bg-white/[0.04] text-craie-300 hover:border-white/25 hover:bg-white/[0.08] hover:text-craie-50'
                       }`}
                     >
                       <Icon
-                        className={`h-6 w-6 ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
+                        className={`${compact ? 'h-5 w-5' : 'h-6 w-6'} ${selected ? 'text-braise-400' : 'text-flamme-300'}`}
                         strokeWidth={1.9}
                         aria-hidden="true"
                       />
@@ -307,13 +332,13 @@ export function LeadForm() {
               </div>
 
               {fields.occupant === 'Locataire' && (
-                <p role="status" className="mt-5 rounded-2xl border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
+                <p role="status" className="mt-4 rounded-[3px] border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
                   Merci de contacter directement votre propriétaire avant toute chose et de lui
                   transmettre notre site : il pourra nous faire sa demande. Rien n&apos;a été envoyé.
                 </p>
               )}
 
-              <div className="mt-7 flex items-center">
+              <div className={`${compact ? 'mt-3' : 'mt-7'} flex items-center`}>
                 <button
                   type="button"
                   onClick={() => {
@@ -338,16 +363,16 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">
+              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>
                 {urgent ? 'Où êtes-vous ?' : 'Où, et à quel point c\'est pressé ?'}
-              </h2>
-              <p className="mt-2 text-sm text-craie-400">
+              </Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
                 {urgent
                   ? 'Urgence prise 24\u00a0h/24. Pour aller plus vite, appelez-nous directement.'
                   : 'Avec ces réponses, nous savons à quel moment prévoir votre passage.'}
               </p>
 
-              <div className="mt-6 space-y-5">
+              <div className={`${compact ? 'mt-4 space-y-4' : 'mt-6 space-y-5'}`}>
                 <div>
                   <label htmlFor="ville" className={labelClass}>
                     Commune ou code postal
@@ -375,7 +400,7 @@ export function LeadForm() {
                         type="button"
                         onClick={() => set('urgence', value)}
                         aria-pressed={fields.urgence === value}
-                        className={`min-h-[44px] rounded-full border px-5 text-sm font-semibold transition-all ${
+                        className={`min-h-[44px] rounded-[3px] border px-5 text-sm font-semibold transition-all ${
                           fields.urgence === value
                             ? 'border-braise-400 bg-braise-500 text-white'
                             : 'border-white/20 text-craie-300 hover:border-white/40 hover:text-craie-50'
@@ -389,7 +414,7 @@ export function LeadForm() {
                 )}
               </div>
 
-              <div className="mt-7 flex items-center justify-between">
+              <div className={`${compact ? 'mt-4' : 'mt-7'} flex items-center justify-between`}>
                 <button
                   type="button"
                   onClick={() => {
@@ -405,7 +430,7 @@ export function LeadForm() {
                   type="button"
                   onClick={() => setStep(3)}
                   disabled={!etape2Complete}
-                  className={`inline-flex min-h-[48px] items-center gap-2 rounded-full px-7 text-sm font-semibold transition-all ${
+                  className={`inline-flex min-h-[48px] items-center gap-2 rounded-[3px] px-7 text-sm font-semibold transition-all ${
                     etape2Complete
                       ? 'bg-braise-500 text-white hover:bg-braise-400'
                       : 'cursor-not-allowed bg-white/10 text-craie-500'
@@ -427,19 +452,19 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Comment vous joindre ?</h2>
-              <p className="mt-2 text-sm text-craie-400">
+              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>Comment vous joindre ?</Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
                 Nous vous rappelons dès que possible. Pour une urgence, l&apos;appel reste le plus
                 rapide.
               </p>
               {!urgent && horsHoraires && (
-                <p role="status" className="mt-4 rounded-2xl border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
+                <p role="status" className="mt-4 rounded-[3px] border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
                   Nos techniciens ne sont pas disponibles pour le moment. Ils reprennent {horsHoraires}{' '}
                   à partir de 8&nbsp;h : votre demande sera bien enregistrée et nous vous rappelons dès 8&nbsp;h.
                 </p>
               )}
 
-              <div className="mt-6 space-y-4">
+              <div className={`${compact ? 'mt-4 space-y-3' : 'mt-6 space-y-4'}`}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="nom" className={labelClass}>
@@ -499,7 +524,7 @@ export function LeadForm() {
                   <textarea
                     id="message"
                     name="message"
-                    rows={3}
+                    rows={compact ? 2 : 3}
                     placeholder="Chaudière ou PAC, son âge, le message à l'écran, depuis combien de temps…"
                     value={fields.message}
                     onChange={(e) => set('message', e.target.value)}
@@ -539,7 +564,7 @@ export function LeadForm() {
                   type="button"
                   onClick={submit}
                   disabled={!fields.nom || !fields.telephone || status === 'sending'}
-                  className={`inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full px-8 font-semibold transition-all sm:w-auto ${
+                  className={`inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-[3px] px-8 font-semibold transition-all sm:w-auto ${
                     !fields.nom || !fields.telephone || status === 'sending'
                       ? 'cursor-not-allowed bg-white/10 text-craie-500'
                       : 'bg-braise-500 text-white hover:bg-braise-400 hover:shadow-halo-braise'

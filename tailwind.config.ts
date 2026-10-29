@@ -84,10 +84,15 @@ const config: Config = {
         'halo-flamme': '0 0 44px -12px rgb(var(--teinte-flamme-400) / 0.5)',
       },
 
+      // Angles presque droits partout (#R53, mise à jour du 29/10/2026) : jamais de gros arrondi « IA ».
       borderRadius: {
-        bloc: '1.5rem',
-        panneau: '2rem',
-        cadre: '2.5rem',
+        bloc: '4px',
+        panneau: '4px',
+        cadre: '4px',
+        lg: '4px',
+        xl: '4px',
+        '2xl': '4px',
+        '3xl': '4px',
       },
     },
   },

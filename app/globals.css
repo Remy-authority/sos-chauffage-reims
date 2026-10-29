@@ -225,3 +225,107 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Blocs vivants (components/ui/Vivant.tsx et Picto.tsx, Rémy 11/10/2026 : réassurance du bloc 1,
+   trois questions, « En bref »). « pret » : le JavaScript a pris la main, traits et cartes se
+   cachent ; « vu » : les traits se tracent l'un après l'autre, les cartes glissent en place, puis
+   chaque picto garde un geste discret. Sans JavaScript ni mouvement : tout est dessiné, immobile. */
+.vivant[data-anim] .trait {
+  stroke-dasharray: 1;
+}
+.vivant[data-anim='pret'] .trait {
+  stroke-dashoffset: 1;
+}
+.vivant[data-anim='pret'] .apparait {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.vivant[data-anim='vu'] .apparait {
+  animation: apparait-bloc 750ms cubic-bezier(0.22, 1, 0.36, 1) calc(var(--k, 0) * 140ms) both;
+}
+.vivant[data-anim='vu'] .trait {
+  --apres: calc(var(--i, 0) * 160ms + var(--j, 0) * 90ms + 150ms);
+  stroke-dashoffset: 1;
+  animation: trace-picto 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--apres) forwards;
+}
+.vivant[data-anim='vu'] .sonde {
+  animation:
+    trace-picto 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--apres) forwards,
+    sonde-picto 2.4s ease-in-out calc(var(--apres) + 1s) infinite;
+}
+/* Réécriture en boucle, ligne après ligne (le devis s'écrit, la coche se repose). */
+.vivant[data-anim='vu'] .reecrit {
+  animation: reecrit-picto 3.4s ease-in-out calc(var(--i, 0) * 160ms + var(--j, 0) * 260ms) infinite;
+}
+.vivant[data-anim='vu'] .goutte {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation:
+    trace-picto 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--apres) forwards,
+    goutte-picto 2.6s ease-in-out calc(var(--apres) + 1s) infinite;
+}
+.vivant .miel {
+  stroke: #E8A93A;
+}
+.vivant[data-anim='vu'] .flotte {
+  animation: flotte-picto 2.6s ease-in-out 1.6s infinite;
+}
+@keyframes apparait-bloc {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes trace-picto {
+  to { stroke-dashoffset: 0; }
+}
+/* Unités du dessin (24 de côté) : la sonde plonge franchement dans le sol, puis remonte. */
+@keyframes sonde-picto {
+  0%, 100% { transform: translateY(-1px); }
+  55% { transform: translateY(3.4px); }
+}
+@keyframes reecrit-picto {
+  0% { stroke-dashoffset: 1; }
+  25%, 78% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1; }
+}
+/* Le repère de la zone rebondit sur la carte. */
+@keyframes flotte-picto {
+  0%, 60%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  42% { transform: translateY(0); }
+  50% { transform: translateY(-1.6px); }
+}
+@keyframes goutte-picto {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(2px) scale(1.12); }
+}
+/* Schéma de la parcelle : l'eau sort du point de forage en ondes et file dans la tranchée. */
+@media (prefers-reduced-motion: no-preference) {
+  .onde {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: onde-forage 2.8s ease-out infinite;
+  }
+  .onde-2 {
+    animation-delay: 1.4s;
+  }
+  .coule {
+    animation: coule-tranchee 1.2s linear infinite;
+  }
+}
+@keyframes onde-forage {
+  0% { transform: scale(0.55); opacity: 0.95; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+@keyframes coule-tranchee {
+  to { stroke-dashoffset: -18; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vivant .trait,
+  .vivant .apparait,
+  .vivant .flotte {
+    animation: none !important;
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+    transform: none !important;
+  }
+}

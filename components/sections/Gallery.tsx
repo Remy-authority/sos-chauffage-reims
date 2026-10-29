@@ -52,7 +52,7 @@ const items = [
 export function Gallery() {
   return (
     <section
-      className="grain relative overflow-hidden bg-fonte-950 py-24 lg:py-32"
+      className="grain relative overflow-hidden bg-fonte-950 py-12 md:py-20 lg:py-28"
       aria-labelledby="gallery-title"
     >
       <div
@@ -70,7 +70,7 @@ export function Gallery() {
               <span className="titre-braise"> que nous traitons</span>
             </>
           }
-          subtitle={`Six cas de figure qui reviennent tout l'hiver sur l'agglomération de ${siteConfig.city}, et ce qu'on regarde en premier.`}
+          subtitle={`Six cas qui reviennent tout l'hiver à ${siteConfig.city}, et ce qu'on regarde en premier.`}
           variant="dark"
         />
 

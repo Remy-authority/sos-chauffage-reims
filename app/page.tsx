@@ -1,17 +1,14 @@
 import type { Metadata } from 'next'
 import { siteConfig } from '@/config/site.config'
-import { getServices, getZones } from '@/lib/content'
+import { getServices } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
 import { Hero } from '@/components/sections/Hero'
-import { TrustBar } from '@/components/sections/TrustBar'
-import { About } from '@/components/sections/About'
 import { Services } from '@/components/sections/Services'
 import { Symptoms } from '@/components/sections/Symptoms'
-import { Process } from '@/components/sections/Process'
-import { Stats } from '@/components/sections/Stats'
-import { WhyUs } from '@/components/sections/WhyUs'
 import { Gallery } from '@/components/sections/Gallery'
+import CircuitMaison from '@/components/sections/CircuitMaison'
 import { ServiceArea } from '@/components/sections/ServiceArea'
+import { PourquoiNous } from '@/components/sections/PourquoiNous'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { LeadForm } from '@/components/ui/LeadForm'
 import { Faq } from '@/components/ui/Faq'
@@ -30,44 +27,31 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const services = getServices()
-  const zones = getZones()
 
   return (
     <>
       {/*
-        Ordre des sections, propre à ce site. La séquence suit les questions que se
-        pose quelqu'un dont le chauffage vient de s'arrêter :
-          1. Hero         le métier, la ville, le numéro
-          2. TrustBar     les engagements de fonctionnement
-          3. Gallery      vous traitez mon cas (bloc 2, texte centré, cartes photo)
-          4. Symptoms     qu'est-ce que j'ai (schéma « arbre de panne » + cartes)
-          5. Services     quelle prestation
-          6. Process      ça se passe comment
-          7. Stats        la bande de chiffres qui referme le déroulé
-          8. ServiceArea  vous venez chez moi (les 12 communes en liens)
-          9. About        vous êtes qui
-         10. WhyUs        pourquoi vous
-         11. formulaire, 12. FAQ, 13. bandeau d'appel
-        Règle du portefeuille (18/09/2026) : les zones couvertes ne sont jamais le
-        bloc 2 de l'accueil, elles vont en bloc 7 ou 8. Ici, bloc 8.
-        Rythme des fonds (jamais trois sombres d'affilée) :
-          sombre, clair, sombre, clair, sombre (Services), clair (Process),
-          sombre (Stats, bande courte), clair (ServiceArea, About, WhyUs,
-          formulaire, FAQ), puis le bandeau d'appel rebascule sur le sombre
-          pour préparer l'entrée dans le pied de page.
+        Ordre des sections (mise à jour du 29/10/2026, plan validé par Rémy) : les questions que
+        se pose quelqu'un dont le chauffage vient de s'arrêter, en 750 mots visibles au plus (#R67).
+          1. Hero          le métier, la ville, le formulaire (scrollytelling de la chaudière)
+          2. Gallery       les situations traitées (photos)
+          3. CircuitMaison le circuit remis en chauffe (scrollytelling, schéma dessiné)
+          4. Symptoms      qu'est-ce que j'ai (volets fermés)
+          5. Services      quelle prestation (une carte, une phrase, un picto vivant)
+          6. PourquoiNous  qui êtes-vous, pourquoi vous
+          7. ServiceArea   vous venez chez moi (carte des communes, bloc 7 : #R46)
+          8. formulaire de fin d'accueil (#R71), 9. FAQ fermée, 10. bandeau d'appel
+        Fonds : photo, sombre, clair, clair foncé, sombre, clair, clair foncé, blanc, clair, sombre.
       */}
       <Hero />
-      <TrustBar />
       {siteConfig.features.gallery && <Gallery />}
+      <CircuitMaison />
       <Symptoms services={services} />
       <Services services={services} />
-      <Process />
-      <Stats />
-      <ServiceArea zones={zones} />
-      <About />
-      <WhyUs />
+      <PourquoiNous />
+      <ServiceArea />
 
-      <section id="devis" className="bg-craie-100 py-24 lg:py-32" aria-labelledby="devis-title">
+      <section id="devis" className="bg-white py-12 md:py-20 lg:py-28" aria-labelledby="devis-title">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <SectionHeader
             id="devis-title"
@@ -78,9 +62,9 @@ export default function HomePage() {
                 <span className="titre-fonte italic"> et on vous rappelle</span>
               </>
             }
-            subtitle="Le type d'appareil, le code d'erreur affiché et ce que vous avez perdu, le chauffage, l'eau chaude ou les deux : avec ça, notre estimation au téléphone est déjà juste."
+            subtitle="Trois réponses suffisent pour une estimation juste."
           />
-          <div className="mt-12">
+          <div className="mt-10">
             <LeadForm />
           </div>
         </div>
@@ -88,7 +72,7 @@ export default function HomePage() {
 
       <Faq
         items={siteConfig.homeFaq as unknown as { q: string; a: string }[]}
-        subtitle={`Urgence, prix, énergies traitées, entretien obligatoire, réparer ou remplacer : ce qu'on nous demande le plus souvent à ${siteConfig.city}.`}
+        subtitle={`Ce qu'on nous demande le plus souvent à ${siteConfig.city}.`}
       />
 
       <CtaBanner />

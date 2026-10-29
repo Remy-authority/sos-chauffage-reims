@@ -39,7 +39,7 @@ export function SectionHeader({
       )}
       <Tag
         id={id}
-        className={`text-4xl leading-[1.1] md:text-5xl lg:text-[3.5rem] ${
+        className={`text-balance text-4xl leading-[1.1] md:text-5xl lg:text-[3.5rem] ${
           dark ? 'text-craie-50' : 'text-fonte-950'
         }`}
       >
@@ -47,7 +47,7 @@ export function SectionHeader({
       </Tag>
       {subtitle && (
         <p
-          className={`mt-6 text-lg leading-relaxed md:text-xl ${
+          className={`mt-6 text-pretty text-lg leading-relaxed md:text-xl ${
             dark ? 'text-craie-200' : 'text-craie-600'
           }`}
         >

@@ -1,68 +1,34 @@
-'use client'
-
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { Minus, Plus } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
-import { EASE } from '@/lib/motion'
 import type { FaqItem } from '@/lib/content'
 
+/**
+ * FAQ en volets natifs (`<details>`), tous FERMÉS au chargement (mise à jour du 29/10/2026) :
+ * les réponses sont dans le HTML servi, lisibles par Google et les IA, et l'accueil ne montre
+ * que les questions (#R67, FAQ fermée non comptée). Sans JavaScript, chaque volet s'ouvre quand même.
+ */
 export function FaqAccordion({ items }: { items: FaqItem[] }) {
-  const [open, setOpen] = useState<number | null>(0)
-
   return (
-    <AnimatedSection className="mt-14 space-y-3">
-      {items.map((item, idx) => {
-        const isOpen = open === idx
-        return (
-          <div
-            key={item.q}
-            className={`overflow-hidden rounded-bloc border transition-all duration-300 ${
-              isOpen
-                ? 'border-braise-300 bg-white shadow-pose'
-                : 'border-craie-200 bg-white/70 hover:border-craie-300'
-            }`}
-          >
-            <h3>
-              <button
-                type="button"
-                onClick={() => setOpen(isOpen ? null : idx)}
-                aria-expanded={isOpen}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left lg:px-8 lg:py-6"
-              >
-                <span
-                  className={`font-display text-lg font-medium leading-snug transition-colors lg:text-xl ${
-                    isOpen ? 'text-fonte-950' : 'text-fonte-900'
-                  }`}
-                >
-                  {item.q}
-                </span>
-                <span
-                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                    isOpen ? 'rotate-180 bg-braise-500 text-white' : 'bg-flamme-600/10 text-flamme-700'
-                  }`}
-                  aria-hidden="true"
-                >
-                  {isOpen ? <Minus size={16} strokeWidth={2.5} /> : <Plus size={16} strokeWidth={2.5} />}
-                </span>
-              </button>
+    <AnimatedSection className="mt-12 space-y-3">
+      {items.map((item) => (
+        <details
+          key={item.q}
+          className="group rounded-bloc border border-craie-200 bg-white/80 transition-colors open:border-braise-300 open:bg-white open:shadow-pose hover:border-craie-300"
+        >
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left lg:px-8 lg:py-6 [&::-webkit-details-marker]:hidden">
+            <h3 className="font-display text-lg font-medium leading-snug text-fonte-900 group-open:text-fonte-950 lg:text-xl">
+              {item.q}
             </h3>
-
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: EASE }}
-                >
-                  <p className="px-6 pb-6 leading-relaxed text-craie-600 lg:px-8 lg:pb-8">{item.a}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        )
-      })}
+            <span
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[3px] bg-flamme-600/10 text-flamme-700 transition-transform duration-300 group-open:rotate-45 group-open:bg-braise-500 group-open:text-white"
+              aria-hidden="true"
+            >
+              <Plus size={16} strokeWidth={2.5} />
+            </span>
+          </summary>
+          <p className="px-6 pb-6 leading-relaxed text-craie-600 lg:px-8 lg:pb-8">{item.a}</p>
+        </details>
+      ))}
     </AnimatedSection>
   )
 }

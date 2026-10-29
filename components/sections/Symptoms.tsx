@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
+import { ArrowUpRight, Plus } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import { ServiceIcon } from '@/components/ui/ServiceIcon'
-import { ArbrePanne } from '@/components/schemas/ArbrePanne'
+import Picto from '@/components/ui/Picto'
+import Vivant from '@/components/ui/Vivant'
+import { CARTES } from '@/components/ui/pictos-chauffage'
 import type { Service } from '@/lib/content'
 
 /**
@@ -15,6 +15,10 @@ import type { Service } from '@/lib/content'
  * deux, ce qui sert deux objectifs à la fois : orienter l'utilisateur vers la
  * bonne page, et offrir aux moteurs génératifs des paires question/réponse courtes
  * et autonomes, très citables.
+ *
+ * Mise à jour du 29/10/2026 : huit volets FERMÉS (`<details>`), le symptôme en titre, la cause et
+ * la prestation à l'ouverture ; la cause reste dans le HTML pour Google et les IA, l'accueil ne
+ * montre que les symptômes (#R67). Le schéma « arbre de panne » reste sur les pages de prestation.
  *
  * ⚠️ Contenu volontairement prudent : on nomme la piste la plus probable, jamais
  * un diagnostic définitif ni un geste technique dangereux.
@@ -71,62 +75,52 @@ export function Symptoms({ services }: { services: Service[] }) {
   if (!rows.length) return null
 
   return (
-    <section
-      id="symptomes"
-      className="relative overflow-hidden bg-craie-100 py-24 lg:py-32"
-      aria-labelledby="symptomes-title"
-    >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgb(var(--teinte-braise-500)/0.06),transparent_55%)]"
-      />
-
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="symptomes" className="relative bg-craie-100 py-12 md:py-20 lg:py-28" aria-labelledby="symptomes-title">
+      <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionHeader
           id="symptomes-title"
           eyebrow="Du symptôme à la cause"
           title={
             <>
-              Vous décrivez ce que vous voyez,
-              <br />
-              <span className="titre-fonte italic">on vous dit d&apos;où ça vient</span>
+              Ce que vous voyez,{' '}
+              <span className="titre-fonte italic">d&apos;où ça vient</span>
             </>
           }
-          subtitle="Huit symptômes qui reviennent en boucle pendant la saison de chauffe, et la piste la plus probable derrière chacun. De quoi savoir quoi nous dire au téléphone."
+          subtitle="Ouvrez le symptôme qui ressemble au vôtre."
         />
 
-        {/* Le schéma d'abord : il aide à choisir (symptôme, origine, prestation) ;
-            les cartes détaillées suivent pour qui veut lire l'explication. */}
-        <AnimatedSection className="mx-auto mt-14 max-w-6xl">
-          <ArbrePanne />
-        </AnimatedSection>
-
-        <ul className="mt-12 grid gap-4 md:grid-cols-2">
+        <Vivant seuil={0.15} className="mt-12 grid items-start gap-3 md:grid-cols-2">
           {rows.map((row, idx) => (
-            <AnimatedSection key={row.symptom} delay={(idx % 2) * 0.08} as="li">
-              <Link
-                href={`/services/${row.slug}`}
-                className="group flex h-full flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:gap-5 sm:text-left rounded-bloc border border-craie-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-braise-400/45 hover:shadow-pose-forte"
-              >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-braise-500/10 text-braise-600 transition-colors group-hover:bg-braise-500/15">
-                  <ServiceIcon icon={row.service!.icon} className="h-5 w-5" />
+            <details
+              key={row.symptom}
+              style={{ ['--k' as string]: idx % 2 }}
+              className="apparait group rounded-bloc border border-craie-200 bg-white transition-colors open:border-braise-300 open:shadow-pose hover:border-braise-300"
+            >
+              <summary className="flex cursor-pointer list-none items-center gap-4 p-5 text-left [&::-webkit-details-marker]:hidden">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-braise-500/10 text-braise-600">
+                  <Picto traits={CARTES[row.slug]?.traits ?? []} rang={idx % 2} epaisseur={1.5} className="h-6 w-6" />
                 </span>
-                <span className="min-w-0">
-                  <span className="block font-display text-lg font-medium leading-snug text-fonte-950">
-                    {row.symptom}
-                  </span>
-                  <span className="mt-2 block text-sm leading-relaxed text-craie-600">
-                    {row.cause}
-                  </span>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 transition-all group-hover:gap-2.5">
-                    {row.service!.navTitle}
-                    <ArrowUpRight size={15} />
-                  </span>
-                </span>
-              </Link>
-            </AnimatedSection>
+                <h3 className="min-w-0 flex-1 font-display text-lg font-medium leading-snug text-fonte-950">{row.symptom}</h3>
+                <Plus
+                  size={18}
+                  strokeWidth={2.5}
+                  aria-hidden="true"
+                  className="shrink-0 text-flamme-600 transition-transform duration-300 group-open:rotate-45"
+                />
+              </summary>
+              <div className="px-5 pb-5 text-left sm:pl-20">
+                <p className="text-sm leading-relaxed text-craie-600">{row.cause}</p>
+                <Link
+                  href={`/services/${row.slug}`}
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 hover:text-flamme-700"
+                >
+                  {row.service!.navTitle}
+                  <ArrowUpRight size={15} aria-hidden="true" />
+                </Link>
+              </div>
+            </details>
           ))}
-        </ul>
+        </Vivant>
       </div>
     </section>
   )

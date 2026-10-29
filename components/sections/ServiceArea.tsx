@@ -1,115 +1,45 @@
 import Link from 'next/link'
-import { ArrowUpRight, MapPin, Phone, Timer } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import { Button } from '@/components/ui/Button'
+import { CarteCommunes } from '@/components/schemas/CarteCommunes'
 import { siteConfig } from '@/config/site.config'
-import type { Zone } from '@/lib/content'
 
 /**
- * Zone d'intervention : panneau sombre listant les communes desservies (chacune
- * cliquable vers sa page dédiée, c'est un point de maillage important), et colonne
- * de droite avec les quartiers de la ville de base et le rappel d'appel.
+ * Zone d'intervention, bloc 7 de l'accueil (#R46, #R60, mise à jour du 29/10/2026) : la carte
+ * DESSINÉE des communes autour de Reims (positions officielles, geo.api.gouv.fr), chaque commune
+ * cliquable vers sa page, la liste à côté. Plus de pastilles ni de colonnes de texte (#R67).
  */
-export function ServiceArea({ zones }: { zones: Zone[] }) {
-  const { city, serviceArea, departmentName, department } = siteConfig
+export function ServiceArea() {
+  const { city, serviceArea } = siteConfig
 
   return (
-    <section id="zone" className="relative bg-craie-50 py-24 lg:py-32" aria-labelledby="zone-title">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+    <section id="zone" className="relative bg-craie-100 py-12 md:py-20 lg:py-28" aria-labelledby="zone-title">
+      <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <SectionHeader
           id="zone-title"
           eyebrow="Zone d'intervention"
           title={
             <>
-              {city} et les communes
-              <br />
-              <span className="titre-fonte italic">de l&apos;agglomération</span>
+              {city} et{' '}
+              <span className="titre-fonte italic">{serviceArea.radiusKm} km autour</span>
             </>
           }
-          subtitle={`Nous intervenons à ${city} et dans un rayon d'environ ${serviceArea.radiusKm} km. Chaque commune ci-dessous a sa page dédiée.`}
+          subtitle="Chaque commune a sa page. La vôtre manque ? Un appel suffit."
         />
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-12">
-          <AnimatedSection className="lg:col-span-7">
-            <div className="relative overflow-hidden rounded-panneau border border-craie-200 bg-gradient-to-br from-fonte-900 to-fonte-950 p-7 sm:p-10 lg:p-12">
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-[radial-gradient(circle_at_65%_35%,rgb(var(--teinte-flamme-500)/0.22),transparent_58%)]"
-              />
-              <div aria-hidden="true" className="trame-serree absolute inset-0 opacity-70" />
-
-              <div className="relative text-center sm:text-left">
-                <p className="flex items-center justify-center gap-3 text-flamme-300 sm:justify-start">
-                  <MapPin size={22} />
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em]">
-                    {departmentName} · {department}
-                  </span>
-                </p>
-
-                <h3 className="mt-6 text-3xl text-craie-50">Communes desservies</h3>
-
-                <ul className="mt-8 flex flex-wrap justify-center gap-2.5 sm:justify-start">
-                  {zones.map((z) => (
-                    <li key={z.slug}>
-                      <Link
-                        href={`/zones/${z.slug}`}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-flamme-400/20 bg-flamme-500/5 px-4 py-2 text-sm text-craie-200 transition-colors hover:border-braise-400/50 hover:bg-braise-500/10 hover:text-craie-50"
-                      >
-                        <span className="h-1.5 w-1.5 rounded-full bg-braise-400" aria-hidden="true" />
-                        {z.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="mt-8 text-sm leading-relaxed text-craie-400">
-                  Votre commune n&apos;est pas dans la liste ? Ces fiches ne recensent pas tous les villages
-                  que nous desservons autour de Reims. Un coup de fil suffit pour savoir si votre adresse
-                  est dans notre rayon.
-                </p>
-
-                <Link
-                  href="/zones"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-braise-400 transition-colors hover:text-braise-300"
-                >
-                  Voir toutes les zones
-                  <ArrowUpRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <div className="space-y-5 lg:col-span-5">
-            <AnimatedSection delay={0.1} className="rounded-bloc border border-craie-200 bg-white p-8 text-center sm:text-left">
-              <span className="mx-auto flex h-12 w-12 items-center sm:mx-0 justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
-                <MapPin size={22} />
-              </span>
-              <h3 className="mt-5 text-xl">Tous les quartiers de {city}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-craie-600">
-                {serviceArea.districts.join(', ')}.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2} className="rounded-bloc border border-craie-200 bg-white p-8 text-center sm:text-left">
-              <span className="mx-auto flex h-12 w-12 items-center sm:mx-0 justify-center rounded-2xl bg-flamme-600/10 text-flamme-600">
-                <Timer size={22} />
-              </span>
-              <h3 className="mt-5 text-xl">Le délai, dit au téléphone</h3>
-              <p className="mt-3 text-sm leading-relaxed text-craie-600">
-                L&apos;heure de passage se fixe pendant l&apos;appel, d&apos;après les interventions déjà
-                prévues ce jour-là. Pas de promesse tenue au hasard.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg" className="w-full">
-                <Phone size={18} strokeWidth={2.5} />
-                Vérifier ma commune
-              </Button>
-            </AnimatedSection>
+        <AnimatedSection className="mt-12 rounded-bloc border border-craie-200 bg-white p-5 shadow-pose sm:p-8">
+          <CarteCommunes nu />
+          <div className="mt-6 border-t border-craie-200 pt-5 text-center lg:text-left">
+            <Link
+              href="/zones"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 hover:text-flamme-700"
+            >
+              Toutes les zones
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   )
