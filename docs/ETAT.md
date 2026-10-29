@@ -1,5 +1,9 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 29/10/2026 : urgences 24 h/24, dépannage 8 h - 19 h 30 (Rémy, avec Mr Gay de FG Service)
+- Formulaire (ba41887) : « Fuite ou dégât des eaux » et « Ballon qui fuit » en tête, marqués 24 h/24 ; propriétaire ou locataire demandé à TOUS ; hors 8 h - 19 h 30 (heure de Paris), une demande non urgente affiche « nos techniciens reprennent demain à partir de 8 h » et la demande le dit au partenaire.
+- Répondeur (cockpit 0cba6550) : 1 urgence 24 h/24, 2 entretien/radiateur/panne 8 h - 19 h 30, 3 remplacement (propriétaire seulement). Hors horaires, touche 2 ou 3 : message, rien ne sonne, demande enregistrée et SMS d'appel manqué à Mr Gay « rappelez-le demain dès 8 h ».
+
 ## 26/09/2026 : MISE À JOUR EN LIGNE (GO Rémy), note 0 -> 10/10
 - Règle suivie : ../tasks/regle-mise-a-jour-site.md. Branche `maj-25-09` fusionnée sur main (d9a67b0), production READY, curl 200 sur www avec le vrai title, 404 propre (noindex).
 - Requête d'argent mesurée (DataForSEO, 25/09) : « chauffagiste reims » 390/mois, CPC 5,83 € (CLAUDE.md §0). H1 accueil « Chauffagiste d'urgence à Reims, on remonte à la cause. » (décision Rémy).
