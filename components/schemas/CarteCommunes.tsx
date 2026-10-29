@@ -58,7 +58,10 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
           {/* Cercles de distance autour du centre de Reims */}
           {/* Chaque cercle porte sa distance : sans elle, l'accueil (`nu`, sans note) montrait des
               cercles muets (relecture du 30/10/2026). */}
-          {[5, 10].map((km) => (
+          {([
+            [5, 120],
+            [10, 10],
+          ] as const).map(([km, angle]) => (
             <g key={km}>
               <circle
                 cx={centre.x}
@@ -69,9 +72,12 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
                 strokeWidth={1}
                 strokeDasharray="3 4"
               />
+              {/* Angle choisi loin de toute pastille (mesuré sur les positions officielles), texte
+                  ramené dans le cadre si le cercle en sort. */}
               <text
-                x={centre.x + km * unitesParKm * Math.SQRT1_2 + 3}
-                y={centre.y - km * unitesParKm * Math.SQRT1_2 - 3}
+                x={Math.min(W - 6, Math.max(6, centre.x + km * unitesParKm * Math.cos((angle * Math.PI) / 180)))}
+                y={Math.min(H - 20, Math.max(12, centre.y - km * unitesParKm * Math.sin((angle * Math.PI) / 180) - 3))}
+                textAnchor="end"
                 fontSize={9}
                 className="fill-flamme-700"
               >

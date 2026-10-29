@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowUpRight, Plus } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
-import Picto from '@/components/ui/Picto'
+import Picto, { type Trait } from '@/components/ui/Picto'
 import Vivant from '@/components/ui/Vivant'
 import { CARTES } from '@/components/ui/pictos-chauffage'
 import type { Service } from '@/lib/content'
@@ -23,9 +23,16 @@ import type { Service } from '@/lib/content'
  * ⚠️ Contenu volontairement prudent : on nomme la piste la plus probable, jamais
  * un diagnostic définitif ni un geste technique dangereux.
  */
-const SYMPTOMS: { symptom: string; cause: string; slug: string }[] = [
+const SYMPTOMS: { symptom: string; cause: string; slug: string; traits?: Trait[] }[] = [
   {
     symptom: 'Plus de chauffage nulle part',
+    // Thermomètre au plus bas et flocon : le réveil de la carte « urgence » ne disait pas le froid
+    // (relecture du 30/10/2026).
+    traits: [
+      { d: 'M7 4.5a2 2 0 0 1 4 0v9.3a4 4 0 1 1-4 0z' },
+      { d: 'M9 15.5v1.8', role: 'reecrit' },
+      { d: 'M18 3.5v6M15.4 5l5.2 3M20.6 5l-5.2 3', role: 'miel' },
+    ],
     cause: "Le générateur s'est arrêté ou sa régulation ne commande plus rien. Le code affiché sur l'appareil indique la famille de défauts, avant toute intervention.",
     slug: 'urgence-depannage-chauffage-chaudiere',
   },
@@ -98,7 +105,7 @@ export function Symptoms({ services }: { services: Service[] }) {
             >
               <summary className="flex cursor-pointer list-none items-center gap-4 p-5 text-left [&::-webkit-details-marker]:hidden">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-braise-500/10 text-braise-600">
-                  <Picto traits={CARTES[row.slug]?.traits ?? []} rang={idx % 2} epaisseur={1.5} className="h-6 w-6" />
+                  <Picto traits={row.traits ?? CARTES[row.slug]?.traits ?? []} rang={idx % 2} epaisseur={1.5} className="h-6 w-6" />
                 </span>
                 <h3 className="min-w-0 flex-1 font-display text-lg font-medium leading-snug text-fonte-950">{row.symptom}</h3>
                 <Plus
