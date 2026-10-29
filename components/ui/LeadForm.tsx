@@ -36,18 +36,45 @@ interface Fields {
 /** Remplacement : à la charge du propriétaire, on lui demande s'il l'est (Rémy, 23/10/2026). */
 const REMPLACEMENT = 'Chaudière à remplacer'
 
-/** Les neuf situations qui couvrent la quasi-totalité des appels chauffage. */
-const TYPES: { id: string; label: string; Icon: LucideIcon }[] = [
-  { id: 'Chaudière à gaz en panne', label: 'Chaudière gaz', Icon: Flame },
-  { id: 'Chaudière au fioul en panne', label: 'Chaudière fioul', Icon: Fuel },
+/**
+ * Les neuf situations qui couvrent la quasi-totalité des appels chauffage.
+ * URGENCE (Rémy 29/10/2026, avec Mr Gay) : seules la fuite ou le dégât des eaux et le
+ * ballon qui fuit ou a éclaté sont des urgences, prises 24 h/24 ; tout le reste (radiateur,
+ * panne, entretien) est du dépannage aux heures d'ouverture, de 8 h à 19 h 30. Le mot
+ * « fuite » ou « éclaté » en tête de la demande la classe en urgence dans Rank OS
+ * (cockpit/lib/natures-demande.ts).
+ */
+const TYPES: { id: string; label: string; Icon: LucideIcon; urgence?: boolean }[] = [
+  { id: "Urgence, fuite d'eau ou dégât des eaux", label: 'Fuite ou dégât des eaux', Icon: Droplets, urgence: true },
+  { id: "Urgence, ballon d'eau chaude qui fuit ou a éclaté", label: 'Ballon qui fuit', Icon: Thermometer, urgence: true },
+  { id: 'Chaudière en panne', label: 'Chaudière en panne', Icon: Flame },
   { id: 'Pompe à chaleur en défaut', label: 'Pompe à chaleur', Icon: Fan },
   { id: 'Radiateur froid ou circuit à purger', label: 'Radiateur froid', Icon: Heater },
-  { id: 'Fuite sur la chaudière ou le circuit', label: 'Fuite', Icon: Droplets },
-  { id: "Plus d'eau chaude, ballon ou cumulus", label: "Plus d'eau chaude", Icon: Thermometer },
+  { id: "Plus d'eau chaude, ballon ou cumulus", label: "Plus d'eau chaude", Icon: Fuel },
   { id: 'Entretien annuel à programmer', label: 'Entretien annuel', Icon: CalendarCheck },
   { id: REMPLACEMENT, label: 'Chaudière à remplacer', Icon: RefreshCw },
   { id: 'Autre', label: 'Autre situation', Icon: CircleAlert },
 ]
+
+function estUrgence(probleme: string): boolean {
+  return Boolean(TYPES.find((t) => t.id === probleme)?.urgence)
+}
+
+/** Heures d'ouverture hors urgence, à l'heure de Paris : de 8 h à 19 h 30. */
+const OUVERTURE_MINUTES = 8 * 60
+const FERMETURE_MINUTES = 19 * 60 + 30
+
+/** `null` pendant les heures d'ouverture ; sinon le jour du rappel (« aujourd'hui » avant 8 h, « demain » après 19 h 30). */
+function rappelHorsHoraires(maintenant = new Date()): "aujourd'hui" | 'demain' | null {
+  const [h, m] = maintenant
+    .toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit', hour12: false })
+    .split(':')
+    .map(Number)
+  const minutes = h * 60 + m
+  if (minutes < OUVERTURE_MINUTES) return "aujourd'hui"
+  if (minutes >= FERMETURE_MINUTES) return 'demain'
+  return null
+}
 
 function ProgressBar({ step }: { step: Step }) {
   return (
@@ -94,6 +121,10 @@ export function LeadForm() {
     message: '',
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle')
+  /** Lu au navigateur seulement (l'heure du serveur au rendu ne vaut rien) et relu à chaque étape. */
+  const [horsHoraires, setHorsHoraires] = useState<"aujourd'hui" | 'demain' | null>(null)
+  const urgent = estUrgence(fields.probleme)
+  const etape2Complete = Boolean(fields.ville && fields.occupant && (urgent || fields.urgence))
   const cadre = useRef<HTMLDivElement>(null)
   const premierRendu = useRef(true)
 
@@ -111,6 +142,10 @@ export function LeadForm() {
     }
   }, [step, occupantVisible])
 
+  useEffect(() => {
+    setHorsHoraires(rappelHorsHoraires())
+  }, [step])
+
   function set<K extends keyof Fields>(key: K, value: Fields[K]) {
     setFields((prev) => ({ ...prev, [key]: value }))
   }
@@ -123,7 +158,16 @@ export function LeadForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...fields,
-          probleme: fields.occupant ? `${fields.probleme} · ${fields.occupant}` : fields.probleme,
+          // Tout voyage dans la demande (le partenaire lit cette ligne) : situation, propriétaire
+          // ou locataire, délai, et le rappel à 8 h quand la demande non urgente arrive de nuit.
+          probleme: [
+            fields.probleme,
+            fields.occupant,
+            urgent ? 'urgence 24 h/24' : fields.urgence,
+            !urgent && horsHoraires ? `envoyée hors horaires, rappel ${horsHoraires} à partir de 8 h` : '',
+          ]
+            .filter(Boolean)
+            .join(' · '),
           company: '',
         }),
       })
@@ -168,11 +212,12 @@ export function LeadForm() {
                 Qu&apos;est-ce qui ne chauffe plus ?
               </h2>
               <p className="mt-2 text-sm text-craie-400">
-                Si plusieurs cases correspondent, retenez celle qui décrit le mieux la panne.
+                Urgences (fuite, dégât des eaux, ballon qui fuit) 24&nbsp;h/24. Autres demandes de
+                8&nbsp;h à 19&nbsp;h&nbsp;30.
               </p>
 
               <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {TYPES.map(({ id, label, Icon }) => {
+                {TYPES.map(({ id, label, Icon, urgence }) => {
                   const selected = fields.probleme === id
                   return (
                     <button
@@ -197,6 +242,11 @@ export function LeadForm() {
                         aria-hidden="true"
                       />
                       {label}
+                      {urgence && (
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-braise-300">
+                          24 h/24
+                        </span>
+                      )}
                     </button>
                   )
                 })}
@@ -285,9 +335,13 @@ export function LeadForm() {
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">Où, et à quel point c&apos;est pressé ?</h2>
+              <h2 className="mt-6 text-2xl text-craie-50 md:text-3xl">
+                {urgent ? 'Où êtes-vous ?' : 'Où, et à quel point c\'est pressé ?'}
+              </h2>
               <p className="mt-2 text-sm text-craie-400">
-                Avec ces deux réponses, nous savons à quel moment prévoir votre passage.
+                {urgent
+                  ? 'Urgence prise 24\u00a0h/24. Pour aller plus vite, appelez-nous directement.'
+                  : 'Avec ces réponses, nous savons à quel moment prévoir votre passage.'}
               </p>
 
               <div className="mt-6 space-y-5">
@@ -307,10 +361,34 @@ export function LeadForm() {
                   />
                 </div>
 
+                {fields.probleme !== REMPLACEMENT && (
+                  <fieldset>
+                    <legend className={labelClass}>Vous êtes</legend>
+                    <div className="flex flex-wrap gap-3">
+                      {['Propriétaire', 'Locataire'].map((value) => (
+                        <button
+                          key={value}
+                          type="button"
+                          onClick={() => set('occupant', value)}
+                          aria-pressed={fields.occupant === value}
+                          className={`min-h-[44px] rounded-full border px-5 text-sm font-semibold transition-all ${
+                            fields.occupant === value
+                              ? 'border-braise-400 bg-braise-500 text-white'
+                              : 'border-white/20 text-craie-300 hover:border-white/40 hover:text-craie-50'
+                          }`}
+                        >
+                          {value}
+                        </button>
+                      ))}
+                    </div>
+                  </fieldset>
+                )}
+
+                {!urgent && (
                 <fieldset>
                   <legend className={labelClass}>Degré d&apos;urgence</legend>
                   <div className="flex flex-wrap gap-3">
-                    {["C'est urgent", 'Dans la journée', 'Cette semaine'].map((value) => (
+                    {['Au plus vite', 'Cette semaine', 'Pas pressé'].map((value) => (
                       <button
                         key={value}
                         type="button"
@@ -327,6 +405,7 @@ export function LeadForm() {
                     ))}
                   </div>
                 </fieldset>
+                )}
               </div>
 
               <div className="mt-7 flex items-center justify-between">
@@ -344,9 +423,9 @@ export function LeadForm() {
                 <button
                   type="button"
                   onClick={() => setStep(3)}
-                  disabled={!fields.ville || !fields.urgence}
+                  disabled={!etape2Complete}
                   className={`inline-flex min-h-[48px] items-center gap-2 rounded-full px-7 text-sm font-semibold transition-all ${
-                    fields.ville && fields.urgence
+                    etape2Complete
                       ? 'bg-braise-500 text-white hover:bg-braise-400'
                       : 'cursor-not-allowed bg-white/10 text-craie-500'
                   }`}
@@ -372,6 +451,12 @@ export function LeadForm() {
                 Nous vous rappelons dès que possible. Pour une urgence, l&apos;appel reste le plus
                 rapide.
               </p>
+              {!urgent && horsHoraires && (
+                <p role="status" className="mt-4 rounded-2xl border border-flamme-400/30 bg-flamme-400/10 p-4 text-sm leading-relaxed text-craie-100">
+                  Nos techniciens ne sont pas disponibles pour le moment. Ils reprennent {horsHoraires}{' '}
+                  à partir de 8&nbsp;h : votre demande sera bien enregistrée et nous vous rappelons dès 8&nbsp;h.
+                </p>
+              )}
 
               <div className="mt-6 space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
