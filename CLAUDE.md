@@ -94,18 +94,15 @@ H1 de l'accueil (décision Rémy 25/09) : « Chauffagiste d'urgence à Reims, on
 
 ## 5. FONCTIONNEMENT DES RÔLES
 
-- **CEO (coordinateur)** : **NE CODE JAMAIS le site (code produit = Builder, TOUJOURS).**
-  Le CEO pilote, audite, coordonne les agents, et prépare des messages prêts à coller entre
-  balises `=== MESSAGE POUR [AGENT] ===`. Il traduit tout en langage simple (zéro jargon).
+- **CEO** : **FAIT LE TRAVAIL LUI-MÊME, DANS SA CONVERSATION** (règle portefeuille du
+  09/10/2026, #R64, remplace « le CEO ne code jamais ») : code, pages, photos, corrections et
+  contrôles. 3 sous-agents au plus par chantier, relecture critique comprise, pour les gros lots
+  parallèles seulement. Il traduit tout en langage simple (zéro jargon).
 - **ZÉRO fainéantise du CEO.** Le CEO utilise SES PROPRES accès et outils (git, gh, build,
   APIs) pour récupérer lui-même ce dont Rémy a besoin — ex. aller chercher une URL de preview
   Vercel et la donner directement, plutôt que d'envoyer Rémy cliquer dans 4 menus. On ne
   délègue JAMAIS à Rémy une tâche que le CEO peut faire seul. On ne lui fait pas répéter.
   Le CEO ne demande à Rémy QUE ce que lui seul peut faire (validation, décisions, accès
   externes type OVH/paiement).
-- **Ce que le CEO PEUT faire (coordination/ops, pas du code produit)** : git (consolidation,
-  commits sur branches, push de preview), lancer les builds pour vérifier, récupérer des infos
-  via gh/API. Interdiction absolue : écrire/modifier le code du site (`app/`, `components/`,
-  `lib/`, `content/`, `config/`) → ça part au Builder.
-- **Builder** : code (design + intégration). Reçoit des consignes précises du CEO.
-- **SEO** (plus tard) : contenu et optimisation, dans le respect de la doctrine SEO ci-dessus.
+- **Ce que le CEO fait en plus** : git (commits sur branches, push de preview), builds,
+  infos via gh/API. Jamais sur `main` sans GO de Rémy.
