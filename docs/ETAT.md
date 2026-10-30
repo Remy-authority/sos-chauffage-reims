@@ -1,12 +1,15 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
-## 30/10/2026 : MISE À JOUR COMPLÈTE sur la branche `maj-29-10` (EN ATTENTE DU GO de Rémy)
+## 30/10/2026 : MISE À JOUR COMPLÈTE EN LIGNE (GO Rémy « oui met en ligne »), note 4 -> 8,5/10
 - Kickoff portefeuille du 29/10 (site jugé « vraiment dégueulasse »), plan validé « ok go vas y ». Note AVANT 4/10 (relecture à froid 5/10).
 - Livré (be69251, 0f273b8) : bloc 1 scrollytelling (chaudière qui se déshabille, 5 étapes), bloc 3 « le circuit remis en chauffe » (radiateurs froids, purge, boue chassée, pression, pièces qui chauffent) ; accueil réordonné : prestations en cartes photo (l'ancien bloc « situations » fusionné), symptômes, FAQ, pourquoi nous, zones en bloc 7 (carte légendée 5 km / 10 km, titre « Reims et son agglomération »), formulaire final, bandeau ; horaires justes (urgences 24 h/24, le reste 8 h - 19 h 30) ; paragraphes courts ; angles droits ; en-tête opaque ; photo gaz remplacée (chaudière entière) ; icône thermomètre froid.
 - Intouchés : logique du formulaire (propriétaire/locataire, champ « probleme »), répondeur 09.
 - Contrôles sur 0f273b8 : design « AUCUN DÉFAUT », blocs-pages OK 21 pages, navigation OK 12 contrôles, visuels OK, texte OK 687/800 mots ; vitesse mobile médiane aperçu 91 contre production 93 (-2) ; #R68 A : 0 recherche perdue (45 expressions) ; check-fin-de-site www CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut ».
-- Aucun envoi de test du formulaire (il partirait chez Franck Gay). Rien sur main sans GO.
-- Après GO : fusion sur main, curl 200, Rank OS (travaux, capture, Indexation = accueil seulement).
+- Footprint CODE 0 « OK : aucun copier-coller ni paraphrase proche détectés » et check-serie CODE 0 sur 306a934 (deux phrases reformulées, espaces insécables avant « : ; ! ? »).
+- Aucun envoi de test du formulaire (il partirait chez Franck Gay).
+- MISE EN LIGNE 30/10 : main avancée sur 306a934, production READY, curl 200 sur www avec le title « Chauffagiste Reims, dépannage chaudière d'urgence 7j/7 », robots index. check-fin-de-site sur la production : 1 défaut, /zones/bezannes sans le métier dans le title, corrigé (« Bezannes : chauffagiste des PAC et planchers chauffants »), puis série et fin de site relancées sur ce commit (journaux ../tasks/.controles/sos-chauffage-reims.fr/).
+- Rank OS : entrée travaux 30/10, capture refaite, Indexation = accueil (depuis 2026-10-30) + /services/depannage-climatisation (« Détectée, actuellement non indexée »). Les 20 autres pages non indexées sont des articles ou /zones seule : exclues par la règle.
+- Captures : https://claude.ai/artifact/AGjzTPemqpJ9eSE1Tt9UVq
 
 ## 29/10/2026 : urgences 24 h/24, dépannage 8 h - 19 h 30 (Rémy, avec Mr Gay de FG Service)
 - Formulaire (ba41887) : « Fuite ou dégât des eaux » et « Ballon qui fuit » en tête, marqués 24 h/24 ; propriétaire ou locataire demandé à TOUS ; hors 8 h - 19 h 30 (heure de Paris), une demande non urgente affiche « nos techniciens reprennent demain à partir de 8 h » et la demande le dit au partenaire.
