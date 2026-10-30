@@ -13,7 +13,7 @@
 
 ## 29/10/2026 : urgences 24 h/24, dépannage 8 h - 19 h 30 (Rémy, avec Mr Gay de FG Service)
 - Formulaire (ba41887) : « Fuite ou dégât des eaux » et « Ballon qui fuit » en tête, marqués 24 h/24 ; propriétaire ou locataire demandé à TOUS ; hors 8 h - 19 h 30 (heure de Paris), une demande non urgente affiche « nos techniciens reprennent demain à partir de 8 h » et la demande le dit au partenaire.
-- Répondeur (cockpit 0cba6550) : 1 urgence 24 h/24, 2 entretien/radiateur/panne 8 h - 19 h 30, 3 remplacement (propriétaire seulement). Hors horaires, touche 2 ou 3 : message, rien ne sonne, demande enregistrée et SMS d'appel manqué à Mr Gay « rappelez-le demain dès 8 h ».
+- Répondeur (cockpit 9dc0c842, Rémy 30/10 « trop long ») : de 8 h à 19 h 30 AUCUN menu, ça sonne direct chez Mr Gay. La nuit : « Pour une urgence, tapez 1. Pour une autre demande, tapez 2. » ; 1 ou rien tapé = sonne ; 2 = « un technicien vous rappelle demain dès 8 heures », demande enregistrée et SMS à Mr Gay. Plus de question propriétaire/locataire au téléphone (reste au formulaire), un appel de locataire est facturé.
 
 ## 26/09/2026 : MISE À JOUR EN LIGNE (GO Rémy), note 0 -> 10/10
 - Règle suivie : ../tasks/regle-mise-a-jour-site.md. Branche `maj-25-09` fusionnée sur main (d9a67b0), production READY, curl 200 sur www avec le vrai title, 404 propre (noindex).
