@@ -1,7 +1,7 @@
 name: Publier un article (autoblog)
 
-# Publie automatiquement le plus ancien article de content/drafts/ du lundi au
-# vendredi (5 par semaine depuis la mise à jour du 25/09/2026, 3 par semaine avant).
+# Publie automatiquement le plus ancien article conforme de content/drafts/ chaque jour
+# (7 par semaine depuis le 05/11/2026 ; 5 par semaine depuis le 25/09/2026, 3 avant).
 # Le push sur main déclenche le redéploiement Vercel.
 #
 # Fuseau : cron GitHub = UTC. On tire à 05:38 UTC toute l'année (~7h38 à Paris en été,
@@ -9,7 +9,7 @@ name: Publier un article (autoblog)
 
 on:
   schedule:
-    - cron: '38 5 * * 1-5' # lundi à vendredi à 05:38 UTC (5/semaine depuis le 25/09/2026 ; minute décalée le 29/08/2026 : GitHub saute les crons à l'heure pile)
+    - cron: '38 5 * * *' # 7 articles par semaine, Rémy 05/11/2026 (chaque jour à 05:38 UTC ; minute décalée le 29/08/2026 : GitHub saute les crons à l'heure pile)
   workflow_dispatch: {} # déclenchement manuel (test immédiat, sans attendre lundi)
 
 # Le GITHUB_TOKEN doit pouvoir committer/pusher sur main.
@@ -36,13 +36,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Publier le plus ancien draft
+      # Avant la publication : le contrôle des brouillons (verifier-brouillon.mjs) lit le
+      # frontmatter avec gray-matter.
+      - name: Installer les dependances
+        run: npm ci --no-audit --no-fund
+
+      - name: Publier le plus ancien draft conforme
         id: pub
         run: node scripts/publish-next-draft.mjs
-
-      - name: Installer les dependances
-        if: steps.pub.outputs.published == 'true'
-        run: npm ci --no-audit --no-fund
 
       # Genere la couverture manquante et le visuel de corps de l'article qui vient d'etre
       # publie (recette RENT & RANK/docs/RECETTE-VISUELS-ARTICLES.md). Si la generation

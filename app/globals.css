@@ -206,6 +206,16 @@
   .texte-article blockquote {
     @apply mt-6 rounded-r-2xl border-l-4 border-braise-500 bg-craie-100 px-6 py-4 font-display text-lg italic text-fonte-900;
   }
+  /* Tableaux Markdown (remark-gfm, 06/11/2026) : lisibles sur téléphone, défilement horizontal si besoin. */
+  .texte-article table {
+    @apply mt-6 block w-full overflow-x-auto border-collapse text-left text-[0.95rem];
+  }
+  .texte-article th {
+    @apply border-b-2 border-craie-300 px-3 py-2 text-[13px] font-bold uppercase tracking-[0.08em] text-craie-600;
+  }
+  .texte-article td {
+    @apply border-b border-craie-200 px-3 py-2.5 align-top text-craie-700;
+  }
   .texte-article img {
     @apply mt-7 w-full rounded-bloc border border-craie-200 shadow-pose;
   }
