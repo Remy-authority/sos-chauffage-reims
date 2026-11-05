@@ -1,5 +1,12 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 05/11/2026 : ARTICLES À 7 PAR SEMAINE (kickoff portefeuille, Rémy 05/11, #R82)
+- Données AVANT : Search Console 28 j 34 clics, 1 766 impressions, position 14,6 (articles 24 clics, position 8,7) ; 69 pages indexées sur 90 ; volumes Planificateur (chauffagiste 90 500, éco-PTZ 22 200, monoxyde 14 800, robinet thermostatique 12 100). DataForSEO non utilisé (solde 0).
+- Livré (ebfd463, ff0f75a) : 93 brouillons 101-193 (06/11/2026 au 06/02/2027, propriétaires d'abord pour FG Service), 37 anciens brouillons repris ou retirés, doublon 114/191 fusionné (191 = équilibrage des radiateurs), 2 articles de ville supprimés et redirigés vers leur prestation (2 gardés car indexés), robot à 1 article par jour (cron 38 5 * * *, npm ci), script qui refuse un brouillon hors limites (scripts/verifier-brouillon.mjs), tableaux d'articles affichés (remark-gfm, ils ne s'affichaient pas).
+- Contrôles : vérificateur CODE 0 « OK : 93 brouillon(s) conformes » ; test du refus CODE 0 (ff0f75a) ; footprint CODE 0 « OK : aucun copier-coller ni paraphrase proche détectés » (ff0f75a, après 4 phrases réécrites en 123, 127, 173, 181) ; audit-visuels CODE 0 (61 publiés OK) ; check-fin-de-site www CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut » (809d704). Relecture complète des 93, relecture à froid de 10 : 0 défaut.
+- Publication manuelle 05/11 (run 42089221894, CODE 0) : location-chaudiere-comment-ca-marche en ligne (200), couverture et image de corps vues, propres.
+- Rank OS (cockpit 9c87108a3) : 7/semaine, releveLe 2026-11-05, autoblogEndsAt 2027-02-06, travaux « Articles à 7 par semaine », tâche A7 cochée.
+
 ## 30/10/2026 : MISE À JOUR COMPLÈTE EN LIGNE (GO Rémy « oui met en ligne »), note 4 -> 8,5/10
 - Kickoff portefeuille du 29/10 (site jugé « vraiment dégueulasse »), plan validé « ok go vas y ». Note AVANT 4/10 (relecture à froid 5/10).
 - Livré (be69251, 0f273b8) : bloc 1 scrollytelling (chaudière qui se déshabille, 5 étapes), bloc 3 « le circuit remis en chauffe » (radiateurs froids, purge, boue chassée, pression, pièces qui chauffent) ; accueil réordonné : prestations en cartes photo (l'ancien bloc « situations » fusionné), symptômes, FAQ, pourquoi nous, zones en bloc 7 (carte légendée 5 km / 10 km, titre « Reims et son agglomération »), formulaire final, bandeau ; horaires justes (urgences 24 h/24, le reste 8 h - 19 h 30) ; paragraphes courts ; angles droits ; en-tête opaque ; photo gaz remplacée (chaudière entière) ; icône thermomètre froid.
