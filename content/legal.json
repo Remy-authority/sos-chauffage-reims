@@ -1,11 +1,11 @@
 {
-  "_comment": "Mentions légales. Éditeur = société propriétaire du site (DYONISOS LTD, droit UK), données réelles fournies par Rémy. L'éditeur du site n'est PAS le prestataire des interventions : les infos de l'artisan (assurance RC pro / décennale) seront ajoutées à la location. Ne jamais inventer de valeurs. Hébergeur (Vercel) pré-rempli. ⚠️ Le téléphone et l'email du site NE SONT PLUS stockés ici : ils viennent de config/site.config.ts (phoneDisplay, email) et sont injectés par les pages légales. Objectif : quand Rémy fournit le 09 définitif (ligne Twilio), une seule ligne change dans la config et toutes les pages suivent, mentions légales comprises.",
+  "_comment": "Mentions légales. Éditeur = société propriétaire du site (LEGIONIS LTD, droit UK), données réelles fournies par Rémy. L'éditeur du site n'est PAS le prestataire des interventions : les infos de l'artisan (assurance RC pro / décennale) seront ajoutées à la location. Ne jamais inventer de valeurs. Hébergeur (Vercel) pré-rempli. ⚠️ Le téléphone et l'email du site NE SONT PLUS stockés ici : ils viennent de config/site.config.ts (phoneDisplay, email) et sont injectés par les pages légales. Objectif : quand Rémy fournit le 09 définitif (ligne Twilio), une seule ligne change dans la config et toutes les pages suivent, mentions légales comprises.",
   "editeur": {
-    "raisonSociale": "DYONISOS LTD",
+    "raisonSociale": "LEGIONIS LTD",
     "formeJuridique": "Private Limited Company (société à responsabilité limitée de droit anglais)",
-    "numeroImmatriculation": "14807222",
+    "numeroImmatriculation": "17580608",
     "registre": "Companies House (Royaume-Uni)",
-    "adresse": "67 Eastover Road, High Littleton, Bristol, BS39 6HZ, Royaume-Uni",
+    "adresse": "82a James Carter Road, Mildenhall, IP28 7DE, Royaume-Uni",
     "directeurPublication": "Remy Zaoui"
   },
   "assurance": {
@@ -20,7 +20,7 @@
     "contact": "privacy@vercel.com"
   },
   "confidentialite": {
-    "responsableTraitement": "DYONISOS LTD, éditeur du site.",
+    "responsableTraitement": "LEGIONIS LTD, éditeur du site.",
     "finalite": "Traitement des demandes de contact et d'intervention envoyées via le formulaire du site.",
     "baseLegale": "Consentement de la personne concernée (art. 6.1.a RGPD).",
     "donneesCollectees": [
