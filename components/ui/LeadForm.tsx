@@ -175,6 +175,11 @@ export function LeadForm({
     setHorsHoraires(rappelHorsHoraires())
   }, [step])
 
+  // Étape atteinte, comptée par `SuiviVisite` (Rémy 13/11/2026 : savoir à quelle étape on abandonne).
+  useEffect(() => {
+    if (step > 1) window.dispatchEvent(new CustomEvent('rr-etape', { detail: step }))
+  }, [step])
+
   function set<K extends keyof Fields>(key: K, value: Fields[K]) {
     setFields((prev) => ({ ...prev, [key]: value }))
   }
@@ -210,6 +215,7 @@ export function LeadForm({
   return (
     <div
       ref={cadre}
+      data-clic-formulaire
       className={`relative w-full rounded-[3px] border border-white/10 bg-fonte-950 text-left ${
         compact ? 'p-4 sm:p-5 lg:p-6' : 'p-6 md:p-9'
       } ${ecran1 ? 'shadow-[0_14px_32px_-10px_rgb(0_0_0_/_0.6)]' : 'shadow-[0_30px_80px_-20px_rgb(0_0_0_/_0.7)]'}`}
