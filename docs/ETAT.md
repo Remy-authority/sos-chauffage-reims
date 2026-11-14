@@ -4,6 +4,7 @@
 - Mission : « ramonage cormontreuil » (76 vues, 13e place) sur /zones/cormontreuil, à faire SEULEMENT si le partenaire fait le ramonage.
 - Vérifié : FG Service (Franck Gay, en collaboration, essai jusqu'au 28/11) ne fait pas de ramonage : fiche Rank OS sans le mot, et aucune mention de ramonage, poêle, conduit ni fumisterie sur les 17 pages de fg-service.net (lues au curl le 15/11).
 - Décision : rien changé sur la page (titre, texte, liens), rien ajouté à l'indexation, pas d'entrée travaux. Une demande de ramonage envoyée à FG Service serait une demande qu'il ne peut pas traiter.
+- Suite (GO Rémy « ok vas y ») : une phrase ajoutée après l'introduction des 2 articles ramonage (ramonage-chaudiere-obligatoire-gaz-fioul, certificat-ramonage-assurance) : « nous ne ramonons pas », lien vers /services/entretien-chaudiere-annuel. Rien retiré, titres inchangés (451db5d). footprint-rapide CODE 0 « OK : aucun copier-coller ni paraphrase proche détectés » ; en ligne vérifié au curl (200, phrases et liens présents) ; check-fin-de-site www CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut ». Pas d'indexation forcée : retouche pour les demandes, pas pour le classement.
 
 ## 05/11/2026 : ARTICLES À 7 PAR SEMAINE (kickoff portefeuille, Rémy 05/11, #R82)
 - Données AVANT : Search Console 28 j 34 clics, 1 766 impressions, position 14,6 (articles 24 clics, position 8,7) ; 69 pages indexées sur 90 ; volumes Planificateur (chauffagiste 90 500, éco-PTZ 22 200, monoxyde 14 800, robinet thermostatique 12 100). DataForSEO non utilisé (solde 0).
