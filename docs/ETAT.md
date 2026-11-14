@@ -1,5 +1,10 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 15/11/2026 : PAGES PROCHES DE LA PAGE 1, /zones/cormontreuil NON TRAITÉE (kickoff portefeuille 14-15/11)
+- Mission : « ramonage cormontreuil » (76 vues, 13e place) sur /zones/cormontreuil, à faire SEULEMENT si le partenaire fait le ramonage.
+- Vérifié : FG Service (Franck Gay, en collaboration, essai jusqu'au 28/11) ne fait pas de ramonage : fiche Rank OS sans le mot, et aucune mention de ramonage, poêle, conduit ni fumisterie sur les 17 pages de fg-service.net (lues au curl le 15/11).
+- Décision : rien changé sur la page (titre, texte, liens), rien ajouté à l'indexation, pas d'entrée travaux. Une demande de ramonage envoyée à FG Service serait une demande qu'il ne peut pas traiter.
+
 ## 05/11/2026 : ARTICLES À 7 PAR SEMAINE (kickoff portefeuille, Rémy 05/11, #R82)
 - Données AVANT : Search Console 28 j 34 clics, 1 766 impressions, position 14,6 (articles 24 clics, position 8,7) ; 69 pages indexées sur 90 ; volumes Planificateur (chauffagiste 90 500, éco-PTZ 22 200, monoxyde 14 800, robinet thermostatique 12 100). DataForSEO non utilisé (solde 0).
 - Livré (ebfd463, ff0f75a) : 93 brouillons 101-193 (06/11/2026 au 06/02/2027, propriétaires d'abord pour FG Service), 37 anciens brouillons repris ou retirés, doublon 114/191 fusionné (191 = équilibrage des radiateurs), 2 articles de ville supprimés et redirigés vers leur prestation (2 gardés car indexés), robot à 1 article par jour (cron 38 5 * * *, npm ci), script qui refuse un brouillon hors limites (scripts/verifier-brouillon.mjs), tableaux d'articles affichés (remark-gfm, ils ne s'affichaient pas).
