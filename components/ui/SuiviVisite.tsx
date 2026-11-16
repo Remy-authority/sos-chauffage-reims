@@ -41,6 +41,25 @@ import { usePathname } from 'next/navigation'
  * (d'une page à l'autre) pour être lues à la main. Navigateur piloté par un
  * robot (`navigator.webdriver`) hors test : rien ne part non plus.
  * Fichier identique sur tous les sites du portefeuille.
+ *
+ * FORMULAIRE ABANDONNÉ (Rémy 16/11/2026, `tasks/regle-formulaire.md` §11) : un MAIL à
+ * Rémy SEUL (route Rank OS `/api/alertes/abandon`), jamais au partenaire, jamais de SMS,
+ * jamais compté comme une demande, RIEN d'affiché au visiteur.
+ *  - Téléphone complet tapé (10 chiffres, 9 sur un site .be) et pas d'envoi 60 s après
+ *    le dernier geste dans le formulaire, ou départ de la page avant : « Contact à rappeler »
+ *    avec tout ce qui est rempli (choix des étapes, champs, page, origine).
+ *  - Au moins un choix cliqué (bouton `aria-pressed`, `role=radio` ou `role=option` du
+ *    formulaire), sans téléphone, puis départ : « Formulaire abandonné », étape X sur Y
+ *    (lue dans le texte « Étape X/Y » du formulaire, sinon `rr-etape`).
+ *  - Envoi réussi (/api/contact) après un de ces mails : un mail court « Finalement envoyé ».
+ * Un mail par visiteur, par cas et par jour (`localStorage` `rr-abandon`), aucun après un
+ * envoi du jour. Lecture générique : champs `input`/`textarea`/`select` nommés du formulaire
+ * (titre = son `<label>`), piège `company` et `aria-hidden` ignorés, commune = bouton cliqué
+ * dans un `role=group` dont l'`aria-label` dit « commune ». Écartés : robots, localhost,
+ * aperçus Vercel sauf un test dont un champ commence par « TEST » ; côté Rank OS, numéros de
+ * Rémy et des partenaires, Thaïlande. Visite de test : rien ne part, les envois se lisent
+ * dans `window.__abandons` et `sessionStorage['abandon-test']`, attente réglable par
+ * `sessionStorage['abandon-delai']` (millisecondes).
  */
 
 const ADRESSE = 'https://cockpit-psi-three.vercel.app/api/alertes/visite'
@@ -134,6 +153,162 @@ function origine(): string {
   }
 }
 
+// ── Formulaire abandonné (Rémy 16/11/2026) ─────────────────────────────────
+const ADRESSE_ABANDON = 'https://cockpit-psi-three.vercel.app/api/alertes/abandon'
+const CLE_ABANDON = 'rr-abandon'
+const CLE_ABANDON_TEST = 'abandon-test'
+const ATTENTE = 60_000
+const CHOIX = '[aria-pressed], [role=radio], [role=option]'
+
+type ChampLu = { k: string; l: string; v: string; t: boolean }
+const abandon = {
+  choix: [] as { e: number; t: string }[],
+  champs: new Map<string, ChampLu>(),
+  commune: '',
+  etape: 1,
+  total: 0,
+  page: '',
+  envoye: false,
+  minuteur: 0,
+  /** Secours si `localStorage` est illisible. */
+  partis: new Set<string>(),
+}
+
+/** La boîte du formulaire : l'ancêtre le plus haut qui porte `data-clic-formulaire` (ou un <form>). */
+function racine(el: Element): Element | null {
+  let r: Element | null = null
+  for (let x: Element | null = el; x; x = x.parentElement) if (x.matches(FORMULAIRE)) r = x
+  return r
+}
+
+/** « Étape 2/3 » ou « Étape 2 sur 3 » écrit dans le formulaire. */
+function etapeLue(root: Element): { n: number; total: number } | null {
+  const m = /[ÉE]tape\s*(\d)\s*(?:\/|sur)\s*(\d)/i.exec(root.textContent ?? '')
+  return m ? { n: Number(m[1]), total: Number(m[2]) } : null
+}
+
+function propre(s: string | null | undefined, max: number): string {
+  return (s ?? '').replace(/\s+/g, ' ').trim().slice(0, max)
+}
+
+function lireChamps(root: Element) {
+  root.querySelectorAll('input, textarea, select').forEach((n) => {
+    const c = n as HTMLInputElement
+    if (['hidden', 'submit', 'button', 'checkbox', 'radio', 'file', 'password'].includes(c.type)) return
+    if (c.name === 'company' || c.tabIndex === -1 || c.closest('[aria-hidden="true"]')) return
+    const k = c.name || c.id
+    if (!k) return
+    let l = ''
+    try {
+      if (c.id) l = root.querySelector(`label[for="${CSS.escape(c.id)}"]`)?.textContent ?? ''
+    } catch {}
+    l = propre((l || c.closest('label')?.textContent || c.getAttribute('aria-label') || c.placeholder || k).replace(/\(facultatif\)|[*:]/gi, ''), 60)
+    const t = c.type === 'tel' || /t[ée]l|phone|portable|mobile/i.test(k)
+    abandon.champs.set(k, { k, l, v: propre(c.value, 400), t })
+  })
+}
+
+/** Le téléphone tapé en entier, sinon `null`. */
+function telComplet(): string | null {
+  const min = /\.be$/.test(location.hostname) ? 9 : 10
+  for (const c of Array.from(abandon.champs.values())) {
+    if (c.t && c.v.replace(/\D/g, '').length >= min) return c.v
+  }
+  return null
+}
+
+function partisDuJour(): Set<string> {
+  const s = new Set(abandon.partis)
+  try {
+    const m = JSON.parse(localStorage.getItem(CLE_ABANDON) ?? 'null') as { j?: unknown; m?: unknown } | null
+    if (m && m.j === jourParis() && Array.isArray(m.m)) m.m.forEach((x) => typeof x === 'string' && s.add(x))
+  } catch {}
+  return s
+}
+
+function noterParti(cas: string) {
+  abandon.partis.add(cas)
+  if (enTest()) return
+  try {
+    localStorage.setItem(CLE_ABANDON, JSON.stringify({ j: jourParis(), m: Array.from(partisDuJour()) }))
+  } catch {}
+}
+
+function delai(): number {
+  if (enTest()) {
+    try {
+      const n = Number(sessionStorage.getItem('abandon-delai'))
+      if (n > 0) return n
+    } catch {}
+  }
+  return ATTENTE
+}
+
+function partirAbandon(cas: 'tel' | 'debut' | 'fin') {
+  window.clearTimeout(abandon.minuteur)
+  const deja = partisDuJour()
+  if (deja.has(cas)) return
+  if (cas !== 'fin' && (abandon.envoye || deja.has('envoi'))) return
+  const champs = Array.from(abandon.champs.values())
+  const h = location.hostname
+  const test = h.endsWith('.vercel.app') && champs.some((c) => /^test\b/i.test(c.v))
+  const corps = {
+    cas,
+    choix: abandon.choix,
+    champs,
+    commune: abandon.commune,
+    etape: abandon.etape,
+    total: abandon.total || undefined,
+    page: abandon.page || location.pathname,
+    origine: origine(),
+    test,
+  }
+  noterParti(cas)
+  if (enTest()) {
+    const w = window as unknown as { __abandons?: unknown[] }
+    ;(w.__abandons ??= []).push(corps)
+    try {
+      const avant = JSON.parse(sessionStorage.getItem(CLE_ABANDON_TEST) ?? '[]') as unknown[]
+      sessionStorage.setItem(CLE_ABANDON_TEST, JSON.stringify([...avant, corps]))
+    } catch {}
+    return
+  }
+  if (navigator.webdriver) return
+  if (h === 'localhost' || /^[\d.:]+$/.test(h) || (h.endsWith('.vercel.app') && !test)) return
+  const texte = JSON.stringify(corps)
+  try {
+    if (navigator.sendBeacon?.(ADRESSE_ABANDON, texte)) return
+  } catch {}
+  fetch(ADRESSE_ABANDON, { method: 'POST', body: texte, keepalive: true, mode: 'no-cors' }).catch(() => {})
+}
+
+/** Un geste dans le formulaire : après le rendu, relire l'étape et les champs, relancer les 60 s si le téléphone est complet. */
+function suivreFormulaire(root: Element) {
+  abandon.page = location.pathname
+  window.setTimeout(() => {
+    if (root.isConnected) {
+      const lue = etapeLue(root)
+      if (lue) {
+        abandon.etape = lue.n
+        abandon.total = lue.total
+      }
+      lireChamps(root)
+    }
+    if (abandon.envoye) return
+    window.clearTimeout(abandon.minuteur)
+    if (telComplet()) abandon.minuteur = window.setTimeout(() => partirAbandon('tel'), delai())
+  }, 60)
+}
+
+/** Demande partie (/api/contact) : plus aucun mail d'abandon ; « Finalement envoyé » si un mail est déjà parti. */
+function abandonEnvoye() {
+  abandon.envoye = true
+  window.clearTimeout(abandon.minuteur)
+  const deja = partisDuJour()
+  noterParti('envoi')
+  if (deja.has('tel') || deja.has('debut')) partirAbandon('fin')
+}
+
 function typePage(chemin: string): string {
   if (chemin === '/') return 'accueil'
   const premier = chemin.split('/')[1]
@@ -176,9 +351,63 @@ export default function SuiviVisite() {
       try {
         const a = args[0]
         const url = typeof a === 'string' ? a : a instanceof URL ? a.href : a.url
-        if (reponse.ok && /\/api\/contact\b/.test(url)) surEnvoi?.()
+        if (reponse.ok && /\/api\/contact\b/.test(url)) {
+          surEnvoi?.()
+          abandonEnvoye()
+        }
       } catch {}
       return reponse
+    }
+  }, [])
+
+  // Formulaire abandonné : suivi pour tout l'onglet (une navigation interne n'est pas un départ).
+  useEffect(() => {
+    const auClic = (ev: Event) => {
+      const el = ev.target instanceof Element ? ev.target : null
+      const root = el && racine(el)
+      if (!el || !root) return
+      const bouton = el.closest(CHOIX)
+      if (bouton && root.contains(bouton)) {
+        const t = propre(bouton.textContent, 80)
+        const e = etapeLue(root)?.n ?? abandon.etape
+        if (t) abandon.choix = [...abandon.choix.filter((c) => c.e < e), { e, t }]
+      }
+      const groupe = el.closest('[role=group]')
+      const btn = el.closest('button')
+      if (groupe && btn && /commune/i.test(groupe.getAttribute('aria-label') ?? '')) abandon.commune = propre(btn.textContent, 80)
+      suivreFormulaire(root)
+    }
+    const aLaSaisie = (ev: Event) => {
+      const el = ev.target instanceof Element ? ev.target : null
+      if (!el?.matches('input, textarea, select')) return
+      const root = racine(el)
+      if (root) suivreFormulaire(root)
+    }
+    const aLEtape = (ev: Event) => {
+      const n = (ev as CustomEvent<number>).detail
+      if (typeof n === 'number' && n >= 1 && n <= 9) abandon.etape = n
+    }
+    const auDepart = () => {
+      if (abandon.envoye) return
+      if (telComplet()) partirAbandon('tel')
+      else if (abandon.choix.length > 0) partirAbandon('debut')
+    }
+    const auMasquage = () => {
+      if (document.visibilityState === 'hidden') auDepart()
+    }
+    document.addEventListener('click', auClic, true)
+    document.addEventListener('input', aLaSaisie, true)
+    document.addEventListener('change', aLaSaisie, true)
+    document.addEventListener('visibilitychange', auMasquage)
+    window.addEventListener('pagehide', auDepart)
+    window.addEventListener('rr-etape', aLEtape)
+    return () => {
+      document.removeEventListener('click', auClic, true)
+      document.removeEventListener('input', aLaSaisie, true)
+      document.removeEventListener('change', aLaSaisie, true)
+      document.removeEventListener('visibilitychange', auMasquage)
+      window.removeEventListener('pagehide', auDepart)
+      window.removeEventListener('rr-etape', aLEtape)
     }
   }, [])
 
