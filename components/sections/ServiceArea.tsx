@@ -139,7 +139,7 @@ export function ServiceArea() {
 
           {/* Communes alignées à gauche, en deux colonnes réglées par des filets (Rémy 22/11/2026 :
               « centrées, c'est mal aligné » ; la description retirée : « trop de texte »). */}
-          <div className="w-full self-center border-t border-craie-200 pt-6 text-left lg:border-t-0 lg:pt-0">
+          <div className="w-full self-start border-t border-craie-200 pt-6 text-left lg:border-t-0 lg:pt-0">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-flamme-700">
               Les communes voisines de {city}
             </p>
