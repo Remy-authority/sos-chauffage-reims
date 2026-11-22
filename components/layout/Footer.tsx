@@ -70,7 +70,9 @@ export function Footer() {
       <div className="px-6 pb-32 pt-12 lg:hidden">
         <div className="text-center">
           <div className="flex justify-center">
-            <Logo tone="light" />
+            <Link href="/" aria-label={`${siteConfig.businessName}, accueil`}>
+              <Logo tone="light" />
+            </Link>
           </div>
           <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-craie-300">
             Dépannage et entretien de chauffage à {siteConfig.city} et dans l&apos;agglomération :
@@ -123,7 +125,9 @@ export function Footer() {
       <div className="mx-auto hidden max-w-7xl px-6 py-20 lg:block lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo tone="light" />
+            <Link href="/" aria-label={`${siteConfig.businessName}, accueil`} className="inline-block">
+              <Logo tone="light" />
+            </Link>
             <p className="mt-6 max-w-md leading-relaxed text-craie-300">
               Dépannage et entretien de chauffage à {siteConfig.city} et dans les communes de
               l&apos;agglomération. Chaudière à gaz ou au fioul, pompe à chaleur, radiateurs, ballon
