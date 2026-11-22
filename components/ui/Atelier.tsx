@@ -42,6 +42,28 @@ export function NoteGoogle({ className = '' }: { className?: string }) {
   )
 }
 
+/** Cinq étoiles, remplies à proportion de la note (4,6 = quatre étoiles et six dixièmes). */
+function Etoiles({ note }: { note: number }) {
+  const etoile = 'M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z'
+  const rangee = (fill: string) => (
+    <span className="flex gap-[0.08em]">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <svg key={i} viewBox="0 0 20 20" className="h-[1em] w-[1em] shrink-0" aria-hidden="true" focusable="false">
+          <path d={etoile} fill={fill} />
+        </svg>
+      ))}
+    </span>
+  )
+  return (
+    <span className="relative inline-flex" aria-hidden="true">
+      {rangee('#D9D4CC')}
+      <span className="absolute inset-y-0 left-0 overflow-hidden" style={{ width: `${(note / 5) * 100}%` }}>
+        {rangee('#FBBC05')}
+      </span>
+    </span>
+  )
+}
+
 /** « rue Joseph Cugnot, Tinqueux » */
 export function texteAdresse(): string | null {
   return atelier ? `${atelier.rue}, ${atelier.ville}` : null
@@ -67,15 +89,23 @@ export function RepereAtelier({ className = '' }: { className?: string }) {
 /**
  * Bloc 1 : la note Google seule, sous la description (Rémy 22/11/2026 : l'adresse de l'atelier ne
  * va JAMAIS au bloc 1 ; elle vit sur la carte des zones, la page contact et le pied de page).
+ * Mise en avant dans un encadré blanc aux angles arrondis (Rémy 22/11/2026 : « pas assez mis en
+ * avant, au même titre qu'une description »). Le texte lu reste « 5,0/5 sur Google · 20 avis ».
  * Taille en largeur du bloc (cqi), comme le titre et la description (#R70).
  */
 export function NoteBloc1({ className = '' }: { className?: string }) {
-  if (!texteNote()) return null
+  const texte = texteNote()
+  if (!texte || !atelier || atelier.note === null || atelier.avis === null) return null
+  const note = atelier.note.toFixed(1).replace('.', ',')
   return (
-    <p
-      className={`flex justify-center text-[min(4cqi,14px)] leading-snug text-white/90 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.6)] lg:justify-start lg:text-[min(2.6cqi,0.9375rem)] ${className}`}
-    >
-      <NoteGoogle />
+    <p className={`flex justify-center lg:justify-start ${className}`}>
+      <span className="inline-flex items-center gap-[0.55em] whitespace-nowrap rounded-xl bg-white px-[0.95em] py-[0.55em] text-[min(4.2cqi,15px)] leading-none text-fonte-950 shadow-[0_6px_20px_-6px_rgb(0_0_0_/_0.45)] lg:text-[min(2.7cqi,1rem)]">
+        <span className="sr-only">{texte}</span>
+        <LogoGoogle className="h-[1.15em] w-[1.15em] shrink-0" />
+        <span aria-hidden="true" className="font-bold tabular-nums">{note}</span>
+        <Etoiles note={atelier.note} />
+        <span aria-hidden="true" className="text-fonte-600">{atelier.avis} avis</span>
+      </span>
     </p>
   )
 }

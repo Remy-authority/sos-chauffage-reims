@@ -101,8 +101,9 @@ export function Hero() {
             formulaire tienne dans la photo. */}
         <p className="mt-3 text-[min(5cqi,16px)] leading-relaxed text-white/90 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5),0_0_16px_rgb(0_0_0_/_0.4)] max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden sm:text-[min(3.1cqi,1.125rem)] lg:mt-6 lg:text-[min(3.2cqi,1.2rem)]">
           <span className="block sm:whitespace-nowrap">
-            <span className="block whitespace-nowrap sm:inline">On remonte à la cause</span>{' '}
-            <span className="block whitespace-nowrap sm:inline">avant de changer une pièce.</span>
+            {/* Rémy 22/11/2026 : « On remonte à la cause » refusé ; ce que le client veut savoir. */}
+            <span className="block whitespace-nowrap sm:inline">Dépannage chaudière 24&nbsp;h/24,</span>{' '}
+            <span className="block whitespace-nowrap sm:inline">prix annoncé avant de commencer.</span>
           </span>
         </p>
 

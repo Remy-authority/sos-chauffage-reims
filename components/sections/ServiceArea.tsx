@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import Vivant from '@/components/ui/Vivant'
-import CarteAgrandir from '@/components/ui/CarteAgrandir'
 import { atelier, texteAdresse } from '@/components/ui/Atelier'
 import { siteConfig } from '@/config/site.config'
 import { CARTE, NOMS, PAGES } from './carte-reims-data'
@@ -45,8 +44,7 @@ export function ServiceArea() {
           className="carte-secteur mx-auto mt-10 grid items-start gap-8 rounded-bloc border border-craie-200 bg-white p-4 shadow-pose sm:p-8 md:mt-12 lg:grid-cols-[1.45fr_1fr] lg:gap-12"
         >
           <figure className="m-0">
-            <CarteAgrandir cx={cx / w} cy={cy / h}>
-              <div
+            <div
                 className="relative aspect-square"
                 style={{ ['--cx' as string]: `${(cx / w) * 100}%`, ['--cy' as string]: `${(cy / h) * 100}%` }}
               >
@@ -125,7 +123,6 @@ export function ServiceArea() {
                   </g>
                 </svg>
               </div>
-            </CarteAgrandir>
             <figcaption className="mt-3 flex flex-col items-center gap-1.5 text-balance text-center text-[13px] text-craie-600 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-5">
               <span className="inline-flex items-center gap-2">
                 <span className="inline-block h-3 w-3 rounded-[2px] border border-flamme-700/40 bg-[#C4DFB9]" aria-hidden="true" />
@@ -140,19 +137,20 @@ export function ServiceArea() {
             </figcaption>
           </figure>
 
-          <div className="flex flex-col justify-center self-stretch text-center lg:text-left">
-            <p className="mx-auto max-w-md text-balance text-[15px] leading-relaxed text-craie-600 lg:mx-0 lg:text-base">
-              Nous venons chez vous dans toutes les communes à moins de {CARTE.km}&nbsp;km de {city}, de la
-              Montagne de Reims aux portes&nbsp;de&nbsp;l&apos;Aisne.
-            </p>
-            <p className="mx-auto mt-3 max-w-md text-[15px] font-semibold text-fonte-950 lg:mx-0 lg:text-base">
+          {/* Communes alignées à gauche, en deux colonnes réglées par des filets (Rémy 22/11/2026 :
+              « centrées, c'est mal aligné » ; la description retirée : « trop de texte »). */}
+          <div className="w-full self-center border-t border-craie-200 pt-6 text-left lg:border-t-0 lg:pt-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-flamme-700">
               Les communes voisines de {city}
             </p>
-            <ul className="mx-auto mt-4 grid w-full max-w-md grid-cols-2 gap-x-4 gap-y-1 text-center text-[15px] lg:mx-0 lg:text-left">
+            <ul className="mt-3 grid grid-cols-2 gap-x-5 border-t border-craie-200 lg:gap-x-8">
               {liste.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/zones/${c.slug}`} className="group flex items-center justify-center gap-2 rounded-[2px] py-1.5 font-medium lg:justify-start text-fonte-900 hover:text-flamme-600">
-                    <span className="hidden h-2.5 w-2.5 shrink-0 rounded-[2px] bg-[#9CCB8C] group-hover:bg-flamme-600 lg:block" aria-hidden="true" />
+                <li key={c.slug} className="border-b border-craie-200">
+                  <Link
+                    href={`/zones/${c.slug}`}
+                    className="group flex items-start gap-2.5 py-3 text-[14px] font-medium leading-snug text-fonte-900 transition-colors hover:text-flamme-600 sm:text-[15px]"
+                  >
+                    <span className="mt-[0.3em] h-2.5 w-2.5 shrink-0 rounded-[2px] bg-[#9CCB8C] transition-colors group-hover:bg-flamme-600" aria-hidden="true" />
                     {c.nom}
                   </Link>
                 </li>
@@ -160,7 +158,7 @@ export function ServiceArea() {
             </ul>
             <Link
               href="/zones"
-              className="mx-auto mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 hover:text-flamme-700 lg:mx-0"
+              className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-flamme-600 hover:text-flamme-700"
             >
               Toutes les zones
               <ArrowUpRight size={15} aria-hidden="true" />

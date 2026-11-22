@@ -38,8 +38,8 @@ function Volet({ titre, liens }: { titre: string; liens: { href: string; label: 
 
 /**
  * Pied de page. Deux mises en page :
- *  - téléphone (sous 1024 px) : COURT (Rémy, 23/09/2026). Identité centrée en une
- *    phrase, listes Prestations, Zones et Informations en volets dépliants, contact
+ *  - téléphone (sous 1024 px) : COURT (Rémy, 23/09/2026). Identité centrée, sans
+ *    description (Rémy 22/11/2026 : retirée), listes Prestations, Zones et Informations en volets dépliants, contact
  *    et mentions compacts, marge basse pour que la barre d'appel collante ne masque
  *    pas le dernier lien ;
  *  - ordinateur : la mise en page d'origine, inchangée, plus le lien Tarifs.
@@ -74,11 +74,6 @@ export function Footer() {
               <Logo tone="light" />
             </Link>
           </div>
-          <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-craie-300">
-            Dépannage et entretien de chauffage à {siteConfig.city} et dans l&apos;agglomération :
-            chaudière gaz ou fioul, pompe à chaleur, radiateurs, ballon d&apos;eau chaude. Un
-            diagnostic avant réparation, un prix annoncé avant l&apos;intervention.
-          </p>
           <LiveDot className="mt-5 justify-center">Urgences 24 h/24, 7j/7</LiveDot>
         </div>
 
@@ -128,13 +123,7 @@ export function Footer() {
             <Link href="/" aria-label={`${siteConfig.businessName}, accueil`} className="inline-block">
               <Logo tone="light" />
             </Link>
-            <p className="mt-6 max-w-md leading-relaxed text-craie-300">
-              Dépannage et entretien de chauffage à {siteConfig.city} et dans les communes de
-              l&apos;agglomération. Chaudière à gaz ou au fioul, pompe à chaleur, radiateurs, ballon
-              d&apos;eau chaude. Un métier, un diagnostic avant réparation, un prix annoncé avant
-              l&apos;intervention.
-            </p>
-            <LiveDot className="mt-8">Urgences 24 h/24, 7j/7</LiveDot>
+            <LiveDot className="mt-6">Urgences 24 h/24, 7j/7</LiveDot>
           </div>
 
           <div className="lg:col-span-3">

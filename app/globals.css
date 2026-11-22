@@ -377,12 +377,6 @@
   from { transform: scale(1); opacity: 0.9; }
   to { transform: scale(4.5); opacity: 0; }
 }
-.carte-secteur [data-grande] .carte-cadre {
-  aspect-ratio: 1;
-  overflow: auto;
-  overscroll-behavior: contain;
-}
-.carte-secteur [data-grande] .carte-plan { width: 250%; }
 @media (prefers-reduced-motion: reduce) {
   .carte-secteur .carte-vert, .carte-secteur .carte-rayon { transition: none; }
   .carte-secteur .carte-onde { animation: none; opacity: 0; }

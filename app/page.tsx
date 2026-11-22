@@ -69,7 +69,6 @@ export default function HomePage() {
                 <span className="titre-fonte italic"> et on vous rappelle</span>
               </>
             }
-            subtitle="Quatre réponses suffisent pour une estimation juste."
           />
           <div className="mt-10">
             <LeadForm />
