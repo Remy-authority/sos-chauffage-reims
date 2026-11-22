@@ -187,7 +187,7 @@ export function Footer() {
               </li>
               {atelier && (
                 <li className="flex items-start gap-3">
-                  <RepereAtelier className="mt-0.5 h-[16px] w-[14px] shrink-0 text-braise-400" />
+                  <RepereAtelier className="mt-0.5 h-4 w-4 shrink-0 text-braise-400" />
                   <span className="text-craie-300">
                     {atelier.libelle}
                     <br />
