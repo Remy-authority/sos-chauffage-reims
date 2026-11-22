@@ -1,5 +1,14 @@
 # ETAT.md — Journal de bord SOS Chauffage Reims
 
+## 22/11/2026 : ATELIER ET NOTE GOOGLE EN LIGNE (GO Rémy « Ok GO »), main b9d17aa
+- Atelier « rue Joseph Cugnot, Tinqueux » (sans numéro ni nom) : carte des zones (point lumineux), contact, pied de page. Tout lit `siteConfig.atelier`.
+- Note « 5,0/5 sur Google · 20 avis » en encadré blanc au bloc 1 ; seuils 4,5 et 15 avis contrôlés dans `components/ui/Atelier.tsx` ; aucun lien, aucune date, aucune donnée structurée d'avis.
+- Accroche du bloc 1 : « Dépannage chaudière 24 h/24, prix annoncé avant de commencer. » Carte 40 km sans gris, communes en deux colonnes alignées à gauche. Retirés : descriptions sous les titres, « Agrandir la carte », phrase au-dessus du formulaire, description du pied de page (#L774). Formulaire non touché.
+- Article MaPrimeRénov' : description sans « réseau de » (défaut voix d'annuaire de check-fin-de-site).
+- Contrôles : audit-design CODE 0 et check-texte CODE 0 (c59f272) ; check-fin-de-site CODE 0 « OK : contrôle SEO et GEO complet, aucun défaut » (b9d17aa). Vitesse mobile aperçu 92 contre production 93.
+- Erreur : b9d17aa poussé sur main avant le verdict anti-copie (le mode rapide ne voit pas une description d'article, code 2) ; passe complète lancée ensuite.
+- Rank OS : travaux du 22/11, notes, accueil dans Indexation (reindexer).
+
 ## 15/11/2026 : PAGES PROCHES DE LA PAGE 1, /zones/cormontreuil NON TRAITÉE (kickoff portefeuille 14-15/11)
 - Mission : « ramonage cormontreuil » (76 vues, 13e place) sur /zones/cormontreuil, à faire SEULEMENT si le partenaire fait le ramonage.
 - Vérifié : FG Service (Franck Gay, en collaboration, essai jusqu'au 28/11) ne fait pas de ramonage : fiche Rank OS sans le mot, et aucune mention de ramonage, poêle, conduit ni fumisterie sur les 17 pages de fg-service.net (lues au curl le 15/11).
