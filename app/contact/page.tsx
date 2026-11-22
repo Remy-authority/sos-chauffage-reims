@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ComponentType } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '@/config/site.config'
@@ -11,6 +12,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { Button } from '@/components/ui/Button'
 import { LeadForm } from '@/components/ui/LeadForm'
 import { CtaBanner } from '@/components/ui/CtaBanner'
+import { atelier, texteAdresse, texteNote, RepereAtelier } from '@/components/ui/Atelier'
 
 export const metadata: Metadata = buildMetadata({
   title: `Contact chauffagiste ${siteConfig.city}, urgence chaudière 7j/7`,
@@ -18,7 +20,9 @@ export const metadata: Metadata = buildMetadata({
   path: '/contact',
 })
 
-const infos = [
+const RepereIcone = (_: { size?: number | string }) => <RepereAtelier className="h-5 w-[17px] shrink-0" />
+
+const infos: { icon: ComponentType<{ size?: number | string }>; label: string; value: string; href?: string; detail?: string | null }[] = [
   { icon: Phone, label: 'Téléphone', value: siteConfig.phoneDisplay, href: `tel:${siteConfig.phone}` },
   { icon: Mail, label: 'Email', value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { icon: Clock, label: 'Disponibilité', value: siteConfig.availability },
@@ -27,6 +31,10 @@ const infos = [
     label: 'Zone',
     value: `${siteConfig.city} et environ ${siteConfig.serviceArea.radiusKm} km autour`,
   },
+  // Atelier de l'entreprise et note Google (Rémy 22/11/2026) : réglage `atelier`, vide = rien.
+  ...(atelier
+    ? [{ icon: RepereIcone, label: atelier.libelle, value: texteAdresse() ?? '', detail: texteNote() }]
+    : []),
 ]
 
 /**
@@ -81,7 +89,7 @@ export default function ContactPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1} className="mt-8 space-y-3">
-              {infos.map(({ icon: Icon, label, value, href }) => (
+              {infos.map(({ icon: Icon, label, value, href, detail }) => (
                 <div
                   key={label}
                   className="flex items-start gap-4 rounded-bloc border border-craie-200 bg-white p-5"
@@ -103,6 +111,7 @@ export default function ContactPage() {
                     ) : (
                       <p className="mt-1 font-medium text-fonte-950">{value}</p>
                     )}
+                    {detail && <p className="mt-1 text-sm text-craie-600">{detail}</p>}
                   </div>
                 </div>
               ))}

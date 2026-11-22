@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getCommunesGeo, type SchemasData } from '@/lib/content'
 import { SchemaFrame } from './SchemaFrame'
+import { atelier } from '@/components/ui/Atelier'
 
 type Data = NonNullable<SchemasData['carte-communes']>
 
@@ -46,6 +47,9 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
   const communes = [...geo.communes].sort((a, b) => a.nom.localeCompare(b.nom, 'fr'))
   const centre = pos(geo.centre.lon, geo.centre.lat)
   const barre = 5 * unitesParKm
+  // Atelier de l'entreprise (Rémy 22/11/2026) : position réelle de la rue, étiquette à gauche,
+  // dans le vide de la carte (mesuré : aucune pastille entre x 20 et 106 à cette hauteur).
+  const at = atelier ? pos(atelier.lon, atelier.lat) : null
 
   const dessin = (
       <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_14rem]">
@@ -53,7 +57,9 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
           viewBox={`0 0 ${W} ${H}`}
           className="h-auto w-full rounded-[3px] bg-craie-50"
           role="img"
-          aria-label={`Carte schématique : Reims au centre et ${communes.length} communes desservies autour`}
+          aria-label={`Carte schématique : Reims au centre et ${communes.length} communes desservies autour${
+            atelier ? `, ${atelier.libelle.toLowerCase()} ${atelier.rue} à ${atelier.ville}` : ''
+          }`}
         >
           {/* Cercles de distance autour du centre de Reims */}
           {/* Chaque cercle porte sa distance : sans elle, l'accueil (`nu`, sans note) montrait des
@@ -102,6 +108,15 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
               />
             )
           })}
+
+          {/* Point lumineux de l'atelier, SOUS les pastilles : il ne cache jamais un numéro. */}
+          {at && (
+            <g aria-hidden="true">
+              <circle cx={at.x} cy={at.y} r={9} className="atelier-halo fill-braise-400" />
+              <circle cx={at.x} cy={at.y} r={5.5} className="fill-braise-400/30" />
+              <circle cx={at.x} cy={at.y} r={3.2} className="fill-braise-500" stroke="white" strokeWidth={1.2} />
+            </g>
+          )}
 
           {/* Reims */}
           <circle cx={centre.x} cy={centre.y} r={9} className="fill-fonte-900" />
@@ -155,6 +170,19 @@ export function CarteCommunes({ data, zoneSlug, nu = false }: { data?: Data; zon
               </a>
             )
           })}
+
+          {/* Étiquette de l'atelier, au-dessus de tout, dans la zone vide à gauche du point. */}
+          {at && atelier && (
+            <g aria-hidden="true">
+              <line x1={at.x - 12} y1={at.y} x2={at.x - 5} y2={at.y} className="stroke-braise-500" strokeWidth={1} />
+              <text x={at.x - 14} y={at.y - 2} textAnchor="end" fontSize={9.5} fontWeight={700} className="fill-braise-600">
+                {atelier.libelle}
+              </text>
+              <text x={at.x - 14} y={at.y + 9} textAnchor="end" fontSize={9} className="fill-fonte-800">
+                {atelier.rue}
+              </text>
+            </g>
+          )}
 
           {/* Barre d'échelle 5 km */}
           <g transform={`translate(${W - PAD - barre}, ${H - 10})`}>

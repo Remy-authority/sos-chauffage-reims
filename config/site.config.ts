@@ -31,6 +31,36 @@
  */
 const SERVICE_RADIUS_KM = 30
 
+/**
+ * Atelier de l'entreprise qui fait le travail (Rémy, 22/11/2026) : la RUE, jamais le numéro,
+ * jamais le nom de l'entreprise. Source : son site et sa fiche Google, relus le 22/11/2026.
+ * - `lat`/`lon` : centre de la rue (adresse.data.gouv.fr, sans numéro), pour le point de la carte.
+ * - `note`/`avis` : note Google, affichée SEULEMENT si le partenaire paie, note ≥ 4,5 ET ≥ 15 avis ;
+ *   sinon `null`. Relue à chaque mise à jour du site (`releveLe`).
+ * Le partenaire part : `ATELIER = null`, le jour même (#R75). Plus rien ne s'affiche nulle part.
+ * Jamais dans les données structurées (ni address, ni aggregateRating).
+ */
+type Atelier = {
+  libelle: string
+  rue: string
+  ville: string
+  lat: number
+  lon: number
+  note: number | null
+  avis: number | null
+  releveLe: string
+}
+const ATELIER: Atelier | null = {
+  libelle: 'Notre atelier',
+  rue: 'rue Joseph Cugnot',
+  ville: 'Tinqueux',
+  lat: 49.240449,
+  lon: 3.985933,
+  note: 5.0,
+  avis: 20,
+  releveLe: '2026-11-22',
+}
+
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
@@ -131,6 +161,9 @@ export const siteConfig = {
   ],
 
   /* ── Zone d'intervention (schema areaServed + bloc zones) ── */
+  /* ── Atelier de l'entreprise (bloc 1, carte des zones, contact, pied de page) ── */
+  atelier: ATELIER,
+
   serviceArea: {
     base: 'Reims',
     radiusKm: SERVICE_RADIUS_KM,

@@ -4,6 +4,7 @@ import { Logo } from '@/components/ui/Logo'
 import { LiveDot } from '@/components/ui/LiveDot'
 import { siteConfig } from '@/config/site.config'
 import { getServices, getZones } from '@/lib/content'
+import { atelier, texteAdresse, RepereAtelier } from '@/components/ui/Atelier'
 
 /** Liens légaux, communs aux deux mises en page. */
 const LEGAL = [
@@ -90,6 +91,14 @@ export function Footer() {
             <Mail size={15} className="shrink-0 text-braise-400" aria-hidden="true" />
             {siteConfig.email}
           </a>
+          {atelier && (
+            <p className="inline-flex items-center gap-2 text-center text-craie-300">
+              <RepereAtelier className="h-[15px] w-[13px] shrink-0 text-braise-400" />
+              <span>
+                {atelier.libelle} · {texteAdresse()}
+              </span>
+            </p>
+          )}
         </div>
 
         <div className="mt-8 text-center text-xs text-craie-400">
@@ -176,6 +185,16 @@ export function Footer() {
                   {siteConfig.email}
                 </a>
               </li>
+              {atelier && (
+                <li className="flex items-start gap-3">
+                  <RepereAtelier className="mt-0.5 h-[16px] w-[14px] shrink-0 text-braise-400" />
+                  <span className="text-craie-300">
+                    {atelier.libelle}
+                    <br />
+                    {texteAdresse()}
+                  </span>
+                </li>
+              )}
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-braise-400" />
                 <span className="text-craie-300">

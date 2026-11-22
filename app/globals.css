@@ -339,3 +339,20 @@
     transform: none !important;
   }
 }
+
+/* Carte des zones : point lumineux de l'atelier (Rémy 22/11/2026). Halo doux qui pulse ;
+   « réduire les animations » : halo figé, visible. */
+.atelier-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0.45;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .atelier-halo {
+    animation: atelier-pulse 2.4s ease-out infinite;
+  }
+}
+@keyframes atelier-pulse {
+  0% { transform: scale(0.6); opacity: 0.75; }
+  100% { transform: scale(1.6); opacity: 0; }
+}

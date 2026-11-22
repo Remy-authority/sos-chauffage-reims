@@ -4,6 +4,7 @@ import { Phone } from 'lucide-react'
 import { siteConfig } from '@/config/site.config'
 import { LeadForm } from '@/components/ui/LeadForm'
 import ReassuranceVive from '@/components/ui/ReassuranceVive'
+import { AtelierBloc1 } from '@/components/ui/Atelier'
 import HeroChaudiere from '@/components/sections/HeroChaudiere'
 import {
   CADRAGE_ORDI,
@@ -101,6 +102,10 @@ export function Hero() {
           </span>{' '}
           <span className="hidden whitespace-nowrap sm:block">Gaz, fioul, pompe à chaleur, ligne ouverte 7j/7.</span>
         </p>
+
+        {/* Atelier de l'entreprise (Rémy 22/11/2026) : sous la description, jamais dedans ; retiré
+            avec elle à l'étape des coordonnées, pour que le formulaire tienne dans la photo. */}
+        <AtelierBloc1 className="mt-3 max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden lg:mt-4" />
 
         {/* Téléphone et tablette : LE formulaire du bloc 1, sous le titre, dans la photo. */}
         <div className="mt-5 w-full max-w-md lg:hidden">
