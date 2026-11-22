@@ -1,11 +1,11 @@
 /**
- * Secteur servi : toutes les communes dont le centre est à 40 km de Reims ou moins, plus celles
+ * Secteur servi : toutes les communes qui touchent le cercle de 40 km autour de Reims, plus celles
  * qui ont leur page, sans aucun trou gris (#R60, Rémy 22/11/2026). Contours : public/carte/secteur-*.svg.
  * Source : geo.api.gouv.fr (contours IGN Admin Express, départements 51, 02, 08),
  * projection équirectangulaire centrée sur Reims, carte ronde de 46 km de rayon, simplifiée.
  * Généré par scripts/carte-reims.py : ne pas éditer à la main.
  */
-export const CARTE = { w: 1000, h: 1000, cx: 500, cy: 500, rayon: 435, cadre: 500, km: 40, servies: 455, reims: { x: 518, y: 505 }, atelier: { x: 464, y: 521 } }
+export const CARTE = { w: 1000, h: 1000, cx: 500, cy: 500, rayon: 435, cadre: 500, km: 40, servies: 501, reims: { x: 518, y: 505 }, atelier: { x: 464, y: 521 } }
 
 type Etiquette = { x: number; y: number; taille: number; lignes: string[] }
 
@@ -27,12 +27,13 @@ export const PAGES: { slug: string; nom: string; km: number; x: number; y: numbe
 
 /** Noms des autres communes servies (les plus peuplées, tant qu'il y a la place). */
 export const NOMS: { nom: string; etiquette: Etiquette }[] = [
+  { nom: "Châlons-en-Champagne", etiquette: { x: 772, y: 851, taille: 14, lignes: ["Châlons-en-", "Champagne"] } },
   { nom: "Épernay", etiquette: { x: 442, y: 763, taille: 14, lignes: ["Épernay"] } },
   { nom: "Rethel", etiquette: { x: 774, y: 158, taille: 14, lignes: ["Rethel"] } },
   { nom: "Fismes", etiquette: { x: 223, y: 440, taille: 14, lignes: ["Fismes"] } },
   { nom: "Aÿ-Champagne", etiquette: { x: 487, y: 737, taille: 14, lignes: ["Aÿ-", "Champagne"] } },
   { nom: "Mourmelon-le-Grand", etiquette: { x: 776, y: 651, taille: 14, lignes: ["Mourmelon-", "le-Grand"] } },
-  { nom: "Fagnières", etiquette: { x: 722, y: 872, taille: 14, lignes: ["Fagnières"] } },
+  { nom: "Fagnières", etiquette: { x: 722, y: 878, taille: 14, lignes: ["Fagnières"] } },
   { nom: "Suippes", etiquette: { x: 887, y: 659, taille: 14, lignes: ["Suippes"] } },
   { nom: "Blancs-Coteaux", etiquette: { x: 464, y: 903, taille: 14, lignes: ["Blancs-", "Coteaux"] } },
   { nom: "Dormans", etiquette: { x: 193, y: 733, taille: 14, lignes: ["Dormans"] } },
@@ -42,6 +43,7 @@ export const NOMS: { nom: string; etiquette: Etiquette }[] = [
   { nom: "Bazancourt", etiquette: { x: 611, y: 364, taille: 14, lignes: ["Bazancourt"] } },
   { nom: "Braine", etiquette: { x: 111, y: 391, taille: 14, lignes: ["Braine"] } },
   { nom: "Sissonne", etiquette: { x: 399, y: 126, taille: 14, lignes: ["Sissonne"] } },
+  { nom: "Vailly-sur-Aisne", etiquette: { x: 98, y: 314, taille: 14, lignes: ["Vailly-", "sur-Aisne"] } },
   { nom: "Gueux", etiquette: { x: 404, y: 505, taille: 14, lignes: ["Gueux"] } },
   { nom: "Sault-lès-Rethel", etiquette: { x: 763, y: 232, taille: 14, lignes: ["Sault-lès-", "Rethel"] } },
   { nom: "Jonchery-sur-Vesle", etiquette: { x: 319, y: 464, taille: 14, lignes: ["Jonchery-", "sur-Vesle"] } },

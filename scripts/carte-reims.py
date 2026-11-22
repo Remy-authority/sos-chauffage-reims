@@ -6,7 +6,8 @@ Carte du secteur servi : toutes les communes à 40 km de Reims ou moins (#R60, R
 Usage : python3 scripts/carte-reims.py   (écrit components/sections/carte-reims-data.ts)
 Source : geo.api.gouv.fr, contours IGN Admin Express, départements 51, 02 et 08.
 Règles :
-  - servie = centre de la commune à 40 km ou moins de l'hôtel de ville de Reims ;
+  - servie = toute commune qui touche le cercle de 40 km autour de l'hôtel de ville de Reims
+    (jamais de gris dans le cercle, #R60) ;
   - plus les communes qui ont leur page (content/zones), servies quoi qu'il arrive ;
   - plus toute commune non servie entourée de communes servies (aucun trou gris) ;
   - fond = communes voisines qui entrent dans la carte ronde de 46 km de rayon ;
@@ -18,7 +19,7 @@ servies), que le composant révèle en cercle depuis Reims. Le code de la page n
 les communes qui ont leur page (cliquables) et les noms : la page reste légère.
 Dépendances : shapely, Pillow (largeur des noms mesurée avec Arial, plus large qu'Asap : marge sûre).
 """
-import glob, json, math, random, urllib.request
+import glob, json, math, random, re, urllib.request
 from pathlib import Path
 from PIL import ImageFont
 from shapely.geometry import Point, Polygon, shape
@@ -27,7 +28,14 @@ from shapely.prepared import prep
 
 RACINE = Path(__file__).resolve().parent.parent
 REIMS = (4.0317, 49.2578)  # hôtel de ville
-RAYON_KM = 40
+# Rayon et atelier lus dans config/site.config.ts (une seule source, relecture du 22/11/2026).
+_CFG = (RACINE / "config/site.config.ts").read_text()
+RAYON_KM = int(re.search(r"const SERVICE_RADIUS_KM = (\d+)", _CFG).group(1))
+_m = re.search(r"const ATELIER\b[^=]*=\s*(null|\{[^}]*\})", _CFG)
+ATELIER = None if _m.group(1) == "null" else (
+    float(re.search(r"\blon:\s*([0-9.]+)", _m.group(1)).group(1)),
+    float(re.search(r"\blat:\s*([0-9.]+)", _m.group(1)).group(1)),
+)
 CADRE_KM = 46  # rayon de la carte ronde (le composant la rogne en cercle)
 DEPARTEMENTS = ["51", "02", "08"]
 POP_MIN = 900  # en dessous, une commune servie n'a pas son nom (elle reste en vert)
@@ -75,8 +83,14 @@ for c in communes:
 manquantes = set(zones.values()) - set(page.values())
 assert not manquantes, f"pages sans commune : {manquantes}"
 
-servie = {c["code"]: dist(c) <= RAYON_KM or c["code"] in page for c in communes}
 geom = {c["code"]: shape(c["contour"]).buffer(0) for c in communes}
+
+
+def touche_le_cercle(c):
+    return any(Polygon([km(x, y) for x, y in r]).buffer(0).distance(Point(0, 0)) < RAYON_KM for r in anneaux(c))
+
+
+servie = {c["code"]: c["code"] in page or touche_le_cercle(c) for c in communes}
 for c in communes:
     if not servie[c["code"]] and dist(c) <= RAYON_KM + 4:
         g = geom[c["code"]]
@@ -166,12 +180,9 @@ bx, by = proj(*reims["centre"]["coordinates"])
 w_b = POLICES[True].getlength("Reims") / 100 * POLICE_CENTRE / 2 + 6
 RESERVE = [(bx - w_b, by - 30 - POLICE_CENTRE * 0.62, bx + w_b, by - 30 + POLICE_CENTRE * 0.62), (bx - 16, by - 16, bx + 16, by + 16)]
 # Le point lumineux de l'atelier (Rémy 22/11/2026), lu dans config/site.config.ts : aucun nom dessus.
-import re
-_cfg = (RACINE / "config/site.config.ts").read_text()
-_at = _cfg[_cfg.index("ATELIER"):]
-ATELIER = (float(re.search(r"\blon:\s*([0-9.]+)", _at).group(1)), float(re.search(r"\blat:\s*([0-9.]+)", _at).group(1)))
-ax_, ay_ = proj(*ATELIER)
-RESERVE.append((ax_ - 18, ay_ - 18, ax_ + 18, ay_ + 18))
+if ATELIER:
+    ax_, ay_ = proj(*ATELIER)
+    RESERVE.append((ax_ - 18, ay_ - 18, ax_ + 18, ay_ + 18))
 a = -math.pi / 4
 r40x, r40y = cx0 + RAYON_KM * ECHELLE * math.cos(a), cy0 + RAYON_KM * ECHELLE * math.sin(a)
 w40 = POLICES[True].getlength("40 km") / 100 * 28 / 2 + 8
@@ -253,13 +264,13 @@ ko_gris = image("secteur-gris.svg", "".join(chemin(c, 3.0) for c in fond) + serv
 ko_vert = image("secteur-vert.svg", servies_d, "#C4DFB9")
 L = [
     "/**",
-    f" * Secteur servi : toutes les communes dont le centre est à {RAYON_KM} km de Reims ou moins, plus celles",
+    f" * Secteur servi : toutes les communes qui touchent le cercle de {RAYON_KM} km autour de Reims, plus celles",
     " * qui ont leur page, sans aucun trou gris (#R60, Rémy 22/11/2026). Contours : public/carte/secteur-*.svg.",
     f" * Source : geo.api.gouv.fr (contours IGN Admin Express, départements {', '.join(DEPARTEMENTS)}),",
     f" * projection équirectangulaire centrée sur Reims, carte ronde de {CADRE_KM} km de rayon, simplifiée.",
     " * Généré par scripts/carte-reims.py : ne pas éditer à la main.",
     " */",
-    f"export const CARTE = {{ w: {W}, h: {H}, cx: {round(cx0)}, cy: {round(cy0)}, rayon: {round(RAYON_KM * ECHELLE)}, cadre: {round(CADRE_KM * ECHELLE)}, km: {RAYON_KM}, servies: {nb_servies}, reims: {{ x: {round(bx)}, y: {round(by)} }}, atelier: {{ x: {round(ax_)}, y: {round(ay_)} }} }}",
+    f"export const CARTE = {{ w: {W}, h: {H}, cx: {round(cx0)}, cy: {round(cy0)}, rayon: {round(RAYON_KM * ECHELLE)}, cadre: {round(CADRE_KM * ECHELLE)}, km: {RAYON_KM}, servies: {nb_servies}, reims: {{ x: {round(bx)}, y: {round(by)} }}, atelier: {f'{{ x: {round(ax_)}, y: {round(ay_)} }}' if ATELIER else 'null'} }}",
     "",
     "type Etiquette = { x: number; y: number; taille: number; lignes: string[] }",
     "",

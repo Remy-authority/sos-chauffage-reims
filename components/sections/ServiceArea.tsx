@@ -54,7 +54,7 @@ export function ServiceArea() {
                 <img src="/carte/secteur-gris.svg" alt="" width={w} height={h} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/carte/secteur-vert.svg" alt="" width={w} height={h} loading="lazy" decoding="async" className="carte-vert absolute inset-0 h-full w-full" />
-                <svg viewBox={`0 0 ${w} ${h}`} className="absolute inset-0 h-full w-full" role="img" aria-labelledby="carte-legende">
+                <svg viewBox={`0 0 ${w} ${h}`} className="absolute inset-0 h-full w-full" role="group" aria-labelledby="carte-legende">
                   <title id="carte-legende">
                     {`Carte de ${city} et des ${CARTE.servies} communes où nous intervenons, en vert, dans un rayon de ${CARTE.km} km`}
                   </title>
@@ -116,7 +116,7 @@ export function ServiceArea() {
                       {city}
                     </text>
                     {/* L'atelier : un point lumineux braise, sans nom (la légende le dit). */}
-                    {atelier && (
+                    {atelier && at && (
                       <>
                         <circle cx={at.x} cy={at.y} r="15" className="atelier-halo fill-braise-400" stroke="none" />
                         <circle cx={at.x} cy={at.y} r="7.5" className="fill-braise-500" stroke="#fff" strokeWidth="3" />
