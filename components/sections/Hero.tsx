@@ -96,11 +96,13 @@ export function Hero() {
         {/* Téléphone, pendant la séquence : retirée à l'étape des coordonnées, pour que le
             formulaire tienne dans la photo. */}
         <p className="mt-3 text-[min(5cqi,16px)] leading-relaxed text-white/90 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5),0_0_16px_rgb(0_0_0_/_0.4)] max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden sm:text-[min(3.1cqi,1.125rem)] lg:mt-6 lg:text-[min(3.2cqi,1.2rem)]">
+          {/* 22/11/2026 : la 2e ligne ordinateur (« Gaz, fioul, pompe à chaleur, ligne ouverte
+              7j/7. », déjà dite par la réassurance) laisse sa place à la ligne de l'atelier, pour
+              rester sous 320 caractères hors titre (audit-design point 4). */}
           <span className="block sm:whitespace-nowrap">
             <span className="block whitespace-nowrap sm:inline">On remonte à la cause</span>{' '}
             <span className="block whitespace-nowrap sm:inline">avant de changer une pièce.</span>
-          </span>{' '}
-          <span className="hidden whitespace-nowrap sm:block">Gaz, fioul, pompe à chaleur, ligne ouverte 7j/7.</span>
+          </span>
         </p>
 
         {/* Atelier de l'entreprise (Rémy 22/11/2026) : sous la description, jamais dedans ; retiré
