@@ -126,7 +126,7 @@ export function ServiceArea() {
                 </svg>
               </div>
             </CarteAgrandir>
-            <figcaption className="mt-3 flex flex-col items-center gap-1.5 text-[13px] text-craie-600 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-5">
+            <figcaption className="mt-3 flex flex-col items-center gap-1.5 text-balance text-center text-[13px] text-craie-600 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-5">
               <span className="inline-flex items-center gap-2">
                 <span className="inline-block h-3 w-3 rounded-[2px] border border-flamme-700/40 bg-[#C4DFB9]" aria-hidden="true" />
                 En vert, les communes où nous venons
@@ -141,12 +141,12 @@ export function ServiceArea() {
           </figure>
 
           <div className="flex flex-col justify-center self-stretch text-center lg:text-left">
-            <p className="mx-auto max-w-md text-[15px] leading-relaxed text-craie-600 lg:mx-0 lg:text-base">
+            <p className="mx-auto max-w-md text-balance text-[15px] leading-relaxed text-craie-600 lg:mx-0 lg:text-base">
               Nous venons chez vous dans toutes les communes à moins de {CARTE.km}&nbsp;km de {city}, de la
-              Montagne de Reims aux portes de l&apos;Aisne.
+              Montagne de Reims aux portes&nbsp;de&nbsp;l&apos;Aisne.
             </p>
             <p className="mx-auto mt-3 max-w-md text-[15px] font-semibold text-fonte-950 lg:mx-0 lg:text-base">
-              Les communes voisines de {city} :
+              Les communes voisines de {city}
             </p>
             <ul className="mx-auto mt-4 grid w-full max-w-md grid-cols-2 gap-x-4 gap-y-1 text-center text-[15px] lg:mx-0 lg:text-left">
               {liste.map((c) => (

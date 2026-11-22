@@ -81,8 +81,8 @@ export function PourquoiNous() {
                 epaisseur={1.5}
                 className="h-11 w-11 text-braise-600"
               />
-              <h3 className="text-xl leading-snug text-fonte-950">{titre}</h3>
-              <p className="text-sm leading-relaxed text-craie-600">{phrase}</p>
+              <h3 className="text-balance text-xl leading-snug text-fonte-950">{titre}</h3>
+              <p className="text-balance text-sm leading-relaxed text-craie-600">{phrase}</p>
             </li>
           ))}
         </Vivant>

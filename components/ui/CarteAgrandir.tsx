@@ -35,7 +35,7 @@ export default function CarteAgrandir({ cx, cy, children }: { cx: number; cy: nu
           <path d="m20 20-4-4M8 11h6" />
           {!grande && <path d="M11 8v6" />}
         </svg>
-        {grande ? 'Réduire la carte' : 'Agrandir la carte pour lire les noms'}
+        {grande ? 'Réduire la carte' : 'Agrandir la carte'}
       </button>
     </div>
   )
