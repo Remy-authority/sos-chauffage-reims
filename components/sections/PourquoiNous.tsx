@@ -1,14 +1,12 @@
-import Image from 'next/image'
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import Picto, { type Trait } from '@/components/ui/Picto'
 import Vivant from '@/components/ui/Vivant'
 
 /**
  * « Pourquoi nous » (mise à jour du 29/10/2026) : remplace les anciens blocs « Qui sommes-nous » et
- * « Quatre engagements », qui disaient deux fois la même chose en 300 mots (#R67). Une chaufferie
- * ENTIÈRE à gauche (jamais une personne fictive, aucun chiffre inventé), quatre engagements à
- * droite, chacun avec un picto DESSINÉ qui se trace à l'apparition puis garde un geste (#R71).
+ * « Quatre engagements », qui disaient deux fois la même chose en 300 mots (#R67). Quatre
+ * engagements (photo retirée le 22/11/2026 à la demande de Rémy), chacun avec un picto DESSINÉ
+ * qui se trace à l'apparition puis garde un geste (#R71).
  */
 const ENGAGEMENTS: { titre: string; phrase: string; traits: Trait[]; flotte?: boolean }[] = [
   {
@@ -67,43 +65,27 @@ export function PourquoiNous() {
           }
         />
 
-        <div className="mt-14 grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-          <AnimatedSection className="lg:col-span-6">
-            <figure className="relative aspect-[16/10] w-full overflow-hidden rounded-panneau border border-craie-200 shadow-pose">
-              <Image
-                src="/services/depannage-chaudiere-fioul.jpg"
-                alt="Chaufferie complète : chaudière au fioul et son brûleur, vase d'expansion rouge, circuit en cuivre et ballon d'eau chaude"
-                fill
-                sizes="(min-width: 1280px) 600px, (min-width: 1024px) 48vw, 92vw"
-                className="object-cover"
+        {/* Rémy 22/11/2026 : la photo de chaufferie retirée ; les quatre engagements seuls, en cartes
+            de même hauteur, chacun avec son picto dessiné qui se trace puis garde un geste. */}
+        <Vivant as="ul" seuil={0.3} className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4 lg:gap-6">
+          {ENGAGEMENTS.map(({ titre, phrase, traits, flotte }, i) => (
+            <li
+              key={titre}
+              className="apparait flex h-full flex-col items-center gap-3 rounded-panneau border border-craie-200 bg-white px-6 py-7 text-center shadow-pose lg:items-start lg:text-left"
+              style={{ ['--k' as string]: i }}
+            >
+              <Picto
+                traits={traits}
+                rang={i}
+                geste={flotte ? 'flotte' : undefined}
+                epaisseur={1.5}
+                className="h-11 w-11 text-braise-600"
               />
-              <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-fonte-950/95 via-fonte-950/60 to-transparent sm:h-28 sm:from-fonte-950/80 sm:via-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-4 text-center font-display text-base sm:p-5 sm:text-lg font-medium italic leading-snug text-craie-50 lg:text-left">
-                Comprendre pourquoi l&apos;appareil s&apos;est arrêté, avant de toucher à une pièce.
-              </figcaption>
-            </figure>
-          </AnimatedSection>
-
-          <Vivant as="ul" seuil={0.3} className="grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:col-span-6">
-            {ENGAGEMENTS.map(({ titre, phrase, traits, flotte }, i) => (
-              <li
-                key={titre}
-                className="apparait flex flex-col items-center gap-3 text-center sm:items-start sm:text-left"
-                style={{ ['--k' as string]: i }}
-              >
-                <Picto
-                  traits={traits}
-                  rang={i}
-                  geste={flotte ? 'flotte' : undefined}
-                  epaisseur={1.5}
-                  className="h-10 w-10 text-braise-600"
-                />
-                <h3 className="text-xl leading-snug text-fonte-950">{titre}</h3>
-                <p className="text-sm leading-relaxed text-craie-600">{phrase}</p>
-              </li>
-            ))}
-          </Vivant>
-        </div>
+              <h3 className="text-xl leading-snug text-fonte-950">{titre}</h3>
+              <p className="text-sm leading-relaxed text-craie-600">{phrase}</p>
+            </li>
+          ))}
+        </Vivant>
       </div>
     </section>
   )

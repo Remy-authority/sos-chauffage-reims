@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config/site.config'
 import Picto, { type Trait } from './Picto'
 import Vivant from './Vivant'
 
@@ -41,7 +42,7 @@ const REASSURANCE: { traits: Trait[]; flotte?: boolean; lignes: [string, string]
       { d: 'M12 7.6a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2z' },
     ],
     flotte: true,
-    lignes: ['Reims et', '30 km autour'],
+    lignes: [`${siteConfig.city} et`, `${siteConfig.serviceArea.radiusKm} km autour`],
   },
 ]
 

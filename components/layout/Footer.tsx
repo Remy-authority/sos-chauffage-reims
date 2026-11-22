@@ -14,15 +14,16 @@ const LEGAL = [
   { href: '/cgu', label: 'CGU' },
 ]
 
-/** Volet dépliant du pied de page mobile. Les liens restent dans le HTML, replié ou non. */
+/** Volet dépliant du pied de page mobile, titre et liens CENTRÉS (Rémy 22/11/2026), la flèche
+ *  posée à droite hors du flux pour ne pas décentrer le titre. Les liens restent dans le HTML. */
 function Volet({ titre, liens }: { titre: string; liens: { href: string; label: string }[] }) {
   return (
     <details className="group border-b border-fonte-800">
-      <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-xs font-semibold uppercase tracking-[0.18em] text-braise-400 [&::-webkit-details-marker]:hidden">
+      <summary className="relative flex cursor-pointer list-none items-center justify-center py-4 text-xs font-semibold uppercase tracking-[0.18em] text-braise-400 [&::-webkit-details-marker]:hidden">
         {titre}
-        <ChevronDown size={16} aria-hidden="true" className="transition-transform duration-300 group-open:rotate-180" />
+        <ChevronDown size={16} aria-hidden="true" className="absolute right-0 top-1/2 -translate-y-1/2 transition-transform duration-300 group-open:rotate-180" />
       </summary>
-      <ul className="grid grid-cols-2 gap-x-4 gap-y-3 pb-5">
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-3 pb-5 text-center">
         {liens.map((l) => (
           <li key={l.href}>
             <Link href={l.href} className="text-sm text-craie-300 transition-colors hover:text-braise-300">
@@ -72,8 +73,11 @@ export function Footer() {
             <Logo tone="light" />
           </div>
           <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-craie-300">
-            Dépannage et entretien de chauffage à {siteConfig.city} et dans l&apos;agglomération.
+            Dépannage et entretien de chauffage à {siteConfig.city} et dans l&apos;agglomération :
+            chaudière gaz ou fioul, pompe à chaleur, radiateurs, ballon d&apos;eau chaude. Un
+            diagnostic avant réparation, un prix annoncé avant l&apos;intervention.
           </p>
+          <LiveDot className="mt-5 justify-center">Urgences 24 h/24, 7j/7</LiveDot>
         </div>
 
         <div className="mt-8 border-t border-fonte-800">

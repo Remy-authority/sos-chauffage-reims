@@ -356,3 +356,34 @@
   0% { transform: scale(0.6); opacity: 0.75; }
   100% { transform: scale(1.6); opacity: 0; }
 }
+
+/* Carte du secteur de l'accueil (#R60, Rémy 22/11/2026, modèle du site de toiture de Beauvais) :
+   le vert s'étend depuis Reims quand la carte entre à l'écran (Vivant pose data-anim « pret » puis
+   « vu ») ; le rayon de 40 km apparaît ensuite ; le repère de Reims envoie une onde. Sans JavaScript
+   ou avec « réduire les animations », Vivant ne pose rien : tout reste visible et immobile. */
+.carte-secteur .carte-vert {
+  clip-path: circle(75% at var(--cx) var(--cy));
+  transition: clip-path 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+.carte-secteur[data-anim='pret'] .carte-vert { clip-path: circle(0% at var(--cx) var(--cy)); transition: none; }
+.carte-secteur .carte-rayon { opacity: 0.8; transition: opacity 0.6s ease-out 1.6s; }
+.carte-secteur[data-anim='pret'] .carte-rayon { opacity: 0; transition: none; }
+.carte-secteur .carte-onde {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: carte-onde 2.6s ease-out infinite;
+}
+@keyframes carte-onde {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(4.5); opacity: 0; }
+}
+.carte-secteur [data-grande] .carte-cadre {
+  aspect-ratio: 1;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.carte-secteur [data-grande] .carte-plan { width: 250%; }
+@media (prefers-reduced-motion: reduce) {
+  .carte-secteur .carte-vert, .carte-secteur .carte-rayon { transition: none; }
+  .carte-secteur .carte-onde { animation: none; opacity: 0; }
+}

@@ -23,8 +23,11 @@ export default function MerciPage() {
         </span>
         <h1 className="mt-8 text-4xl text-craie-50 md:text-5xl">Demande reçue</h1>
         <p className="mt-5 leading-relaxed text-craie-300">
-          Nous vous rappelons dès que possible. Si la situation s&apos;aggrave d&apos;ici là, ne
-          patientez pas : appelez directement. {siteConfig.availability}.
+          Nous vous rappelons dès que possible. Les urgences (fuite, dégât des eaux, ballon qui fuit)
+          sont prises 24&nbsp;h/24, les autres demandes de 8&nbsp;h à 19&nbsp;h&nbsp;30.
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-craie-400">
+          Si la situation s&apos;aggrave d&apos;ici là, appelez directement.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4">
           <Button href={`tel:${siteConfig.phone}`} variant="braise" size="lg">

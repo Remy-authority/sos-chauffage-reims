@@ -12,7 +12,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { Button } from '@/components/ui/Button'
 import { LeadForm } from '@/components/ui/LeadForm'
 import { CtaBanner } from '@/components/ui/CtaBanner'
-import { atelier, texteAdresse, texteNote, RepereAtelier } from '@/components/ui/Atelier'
+import { atelier, texteAdresse, texteNote, NoteGoogle, RepereAtelier } from '@/components/ui/Atelier'
 
 export const metadata: Metadata = buildMetadata({
   title: `Contact chauffagiste ${siteConfig.city}, urgence chaudière 7j/7`,
@@ -69,8 +69,8 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={
           <>
-            Dites-nous ce qui
-            <span className="titre-braise"> ne chauffe plus</span>
+            <span className="block">Dites-nous ce qui</span>{' '}
+            <span className="titre-braise block">ne chauffe plus</span>
           </>
         }
         subtitle="Une panne qui ne peut pas attendre se règle au téléphone. Pour le reste, le formulaire suffit."
@@ -104,14 +104,18 @@ export default function ContactPage() {
                     {href ? (
                       <a
                         href={href}
-                        className="mt-1 block break-all font-medium text-fonte-950 transition-colors hover:text-flamme-600"
+                        className="mt-1 block whitespace-nowrap text-[14px] font-medium text-fonte-950 min-[400px]:text-base transition-colors hover:text-flamme-600"
                       >
                         {value}
                       </a>
                     ) : (
-                      <p className="mt-1 font-medium text-fonte-950">{value}</p>
+                      <p className="mt-1 text-[14px] font-medium text-fonte-950 min-[400px]:text-base">{value}</p>
                     )}
-                    {detail && <p className="mt-1 text-sm text-craie-600">{detail}</p>}
+                    {detail && (
+                      <p className="mt-1 text-sm text-craie-600">
+                        <NoteGoogle />
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}

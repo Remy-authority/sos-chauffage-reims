@@ -37,16 +37,19 @@ export default function HomePage() {
           2. Services      quelle prestation (carte photo, une phrase, un picto vivant)
           3. CircuitMaison le circuit remis en chauffe (scrollytelling, schéma dessiné)
           4. Symptoms      qu'est-ce que j'ai (volets fermés)
-          5. FAQ fermée    ce qu'on nous demande
-          6. PourquoiNous  qui êtes-vous, pourquoi vous
-          7. ServiceArea   vous venez chez moi (carte des communes, bloc 7 : #R46)
-          8. formulaire de fin d'accueil (#R71), 9. bandeau d'appel
-        Fonds : photo, sombre, clair, clair foncé, clair vers clair foncé, clair, clair foncé, blanc, sombre.
+          5. bandeau d'appel, au milieu de la page (Rémy 22/11/2026)
+          6. FAQ fermée    ce qu'on nous demande
+          7. PourquoiNous  qui êtes-vous, pourquoi vous
+          8. ServiceArea   vous venez chez moi (carte des communes, bloc 8 : #R46)
+          9. formulaire de fin d'accueil (#R71), DERNIER bloc avant le pied de page
+        Fonds : photo, sombre, clair, clair foncé, clair foncé vers clair, clair vers clair foncé, clair, clair foncé, blanc.
       */}
       <Hero />
       <Services services={services} />
       <CircuitMaison />
       <Symptoms services={services} />
+      {/* Bandeau d'appel au milieu de la page (Rémy 22/11/2026), le formulaire en dernier. */}
+      <CtaBanner milieu />
       <Faq
         items={siteConfig.homeFaq as unknown as { q: string; a: string }[]}
         subtitle={`Ce qu'on nous demande le plus souvent à ${siteConfig.city}.`}
@@ -73,8 +76,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <CtaBanner />
     </>
   )
 }

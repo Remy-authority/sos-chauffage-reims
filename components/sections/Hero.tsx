@@ -4,7 +4,7 @@ import { Phone } from 'lucide-react'
 import { siteConfig } from '@/config/site.config'
 import { LeadForm } from '@/components/ui/LeadForm'
 import ReassuranceVive from '@/components/ui/ReassuranceVive'
-import { AtelierBloc1 } from '@/components/ui/Atelier'
+import { NoteBloc1 } from '@/components/ui/Atelier'
 import HeroChaudiere from '@/components/sections/HeroChaudiere'
 import {
   CADRAGE_ORDI,
@@ -85,29 +85,30 @@ export function Hero() {
           {siteConfig.city} et {siteConfig.serviceArea.radiusKm} km autour
         </p>
 
+        {/* Deux lignes de longueur proche (Rémy 22/11/2026 : « Chauffagiste d'urgence » faisait trois
+            fois « à Reims ») : « Chauffagiste » puis « d'urgence à Reims », mêmes mots qu'avant. */}
         <h1
           id="titre-hero"
-          className="mt-4 whitespace-nowrap text-[min(9.4cqi,2.5rem)] font-semibold leading-[1.08] text-white [text-shadow:0_1px_12px_rgb(0_0_0_/_0.4)] sm:text-[min(9.4cqi,2.9rem)] lg:mt-5 lg:text-[min(9.6cqi,3.3rem)] xl:text-[min(9.6cqi,3.6rem)]"
+          className="mt-4 whitespace-nowrap text-[min(11cqi,2.75rem)] font-semibold leading-[1.06] text-white [text-shadow:0_1px_12px_rgb(0_0_0_/_0.4)] lg:mt-5 lg:text-[min(11.5cqi,3.9rem)]"
         >
-          <span className="block">Chauffagiste d&apos;urgence</span>{' '}
-          <span className="block text-braise-300">à {siteConfig.city}</span>
+          <span className="block">Chauffagiste</span>{' '}
+          <span className="block">
+            d&apos;urgence <span className="text-braise-300">à&nbsp;{siteConfig.city}</span>
+          </span>
         </h1>
 
         {/* Téléphone, pendant la séquence : retirée à l'étape des coordonnées, pour que le
             formulaire tienne dans la photo. */}
         <p className="mt-3 text-[min(5cqi,16px)] leading-relaxed text-white/90 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.5),0_0_16px_rgb(0_0_0_/_0.4)] max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden sm:text-[min(3.1cqi,1.125rem)] lg:mt-6 lg:text-[min(3.2cqi,1.2rem)]">
-          {/* 22/11/2026 : la 2e ligne ordinateur (« Gaz, fioul, pompe à chaleur, ligne ouverte
-              7j/7. », déjà dite par la réassurance) laisse sa place à la ligne de l'atelier, pour
-              rester sous 320 caractères hors titre (audit-design point 4). */}
           <span className="block sm:whitespace-nowrap">
             <span className="block whitespace-nowrap sm:inline">On remonte à la cause</span>{' '}
             <span className="block whitespace-nowrap sm:inline">avant de changer une pièce.</span>
           </span>
         </p>
 
-        {/* Atelier de l'entreprise (Rémy 22/11/2026) : sous la description, jamais dedans ; retiré
-            avec elle à l'étape des coordonnées, pour que le formulaire tienne dans la photo. */}
-        <AtelierBloc1 className="mt-3 max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden lg:mt-4" />
+        {/* Note Google seule (Rémy 22/11/2026 : l'adresse de l'atelier jamais au bloc 1) ; retirée
+            avec la description à l'étape des coordonnées, pour que le formulaire tienne dans la photo. */}
+        <NoteBloc1 className="mt-3 max-lg:[.hch-ecran1:has([data-etape='3'])_&]:hidden lg:mt-4" />
 
         {/* Téléphone et tablette : LE formulaire du bloc 1, sous le titre, dans la photo. */}
         <div className="mt-5 w-full max-w-md lg:hidden">
@@ -138,7 +139,7 @@ export function Hero() {
 
   const formulaire = (
     <div className="w-full">
-      <LeadForm variante="compact" titre="Décrivez votre panne" />
+      <LeadForm variante="compact" />
     </div>
   )
 

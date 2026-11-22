@@ -47,11 +47,11 @@ export function Logo({
 }) {
   const light = tone === 'light'
   return (
-    <span className={`flex items-center gap-3 ${className}`}>
-      <LogoMark className="h-11 w-11 shrink-0" />
+    /* Le nom seul, sans pictogramme (Rémy 21/11/2026, #L757 : « logo = nom seul, jamais d'icône »). */
+    <span className={`flex items-center ${className}`}>
       <span className="flex flex-col leading-none">
         <span
-          className={`font-display text-[1.0625rem] font-medium tracking-tight ${
+          className={`font-display text-[1.25rem] font-medium tracking-tight ${
             light ? 'text-craie-50' : 'text-fonte-950'
           }`}
         >

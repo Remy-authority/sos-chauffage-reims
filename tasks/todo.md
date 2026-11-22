@@ -1,3 +1,20 @@
+# 22/11/2026 : REFONTE TÉLÉPHONE DE L'ACCUEIL (retours de Rémy sur l'aperçu atelier-22-11)
+Branche `atelier-22-11`, jamais main. Rien codé avant le GO de Rémy sur ce plan.
+Note AVANT (grille §8 de regle-mise-a-jour-site) : 1 ✅ 2 ✅ 3 ✅ 4 ❌ (carte hors 40 km) 5 ❌ (non vérifié) 6 ✅ 7 ❌ (bloc 1 refusé) 8 ❌ (photo pourquoi-nous, formulaire pas en dernier) 9 ❌ (volets non centrés, logo à icône) 10 ❌ = 4/10
+- [ ] 1. Bloc 1 : titre équilibré « Chauffagiste » / « d'urgence à Reims » (mêmes mots, requête d'argent gardée)
+- [ ] 2. Bloc 1 : adresse de l'atelier retirée ; ne reste que la note, avec le vrai « G » Google en 4 couleurs
+- [ ] 3. Formulaire : « Quelle est votre urgence ? », centré au téléphone, sans phrase d'horaires dedans
+- [ ] 4. Formulaire : les horaires (urgences 24 h/24, le reste de 8 h à 19 h 30) dits sur l'écran de fin, après l'envoi
+- [ ] 5. « Pourquoi nous » : photo retirée, 4 engagements à icônes animées seulement (#L744)
+- [ ] 6. Zones : carte 40 km, toutes les communes en vert et nommées, atelier en point lumineux (modèle carte-beauvaisis.py, #R60)
+- [ ] 7. Bande d'appel remontée après « Ce que vous voyez » (vers 55 %), nouveau titre clair
+- [ ] 8. Formulaire de fin = dernier bloc avant le pied de page
+- [ ] 9. Pied de page téléphone : titres des volets et liens centrés, flèche hors du flux
+- [ ] 10. Logo = le nom seul, sans icône, en-tête et pied de page (#L757)
+- [ ] 11. Repasser prestations, circuit, symptômes, FAQ à 390 contre #L746 et corriger ce qui cloche
+- [ ] Contrôles : audit-design, check-texte, check-lignes, anti-copie rapide, relecture Opus neuve, captures 390/485/820/1440
+- [ ] Livraison d'un coup, avant/après, note APRÈS ; puis GO, mise en ligne, fin de site, Rank OS
+
 # tasks/todo.md — SOS Chauffage Reims
 
 ## MISE À JOUR du 29-30/10/2026 (kickoff portefeuille, GO Rémy « ok go vas y »), branche `maj-29-10`, EN LIGNE le 30/10

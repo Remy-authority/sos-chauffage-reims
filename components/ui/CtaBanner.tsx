@@ -4,20 +4,23 @@ import { Button } from '@/components/ui/Button'
 import { siteConfig } from '@/config/site.config'
 
 /**
- * Bandeau d'appel à l'action, présent en fin de chaque page. Transition de fond
- * du crème vers le pétrole : c'est lui qui prépare l'entrée dans le footer sombre.
+ * Bandeau d'appel à l'action, en fin des pages intérieures : transition de fond du crème vers le
+ * sombre, qui prépare l'entrée dans le pied de page. Sur l'accueil, il est au MILIEU (Rémy
+ * 22/11/2026) : `milieu` garde un fond clair des deux côtés.
  */
 export function CtaBanner({
   title,
   subtitle,
+  milieu = false,
 }: {
   title?: string
   subtitle?: string
+  milieu?: boolean
 }) {
   return (
     <section
       id="appel"
-      className="relative overflow-hidden bg-gradient-to-b from-craie-100 to-fonte-950 py-12 md:py-24 lg:py-32"
+      className={`relative overflow-hidden bg-gradient-to-b py-12 md:py-24 lg:py-32 ${milieu ? 'from-craie-100 to-craie-50' : 'from-craie-100 to-fonte-950'}`}
     >
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <AnimatedSection className="relative overflow-hidden rounded-cadre border border-flamme-400/25 bg-gradient-to-br from-fonte-900 via-fonte-800 to-fonte-950 px-6 py-10 text-center sm:p-10 lg:p-16">
@@ -31,9 +34,9 @@ export function CtaBanner({
             <h2 className="text-[clamp(2rem,5vw,3.75rem)] leading-[1.06] text-craie-50">
               {title ?? (
                 <>
-                  Plus de chauffage chez vous ?
+                  Votre chauffage est en panne&nbsp;?
                   <br />
-                  <span className="titre-braise">Appelez, on décroche.</span>
+                  <span className="titre-braise">Appelez-nous.</span>
                 </>
               )}
             </h2>
@@ -53,10 +56,10 @@ export function CtaBanner({
               </Button>
             </div>
 
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:mt-10 sm:gap-x-8 text-sm text-craie-400">
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:mt-10 sm:gap-x-8 text-sm text-craie-400">
               {/* Horaires sur leur propre ligne au téléphone : jamais « • Prix annoncé avant » seul en bout de ligne. */}
-              <li className="flex basis-full items-center justify-center gap-2 md:basis-auto">
-                <Clock size={14} className="text-braise-400" />
+              <li className="basis-full text-center md:basis-auto">
+                <Clock size={14} className="mr-2 inline-block -translate-y-px align-middle text-braise-400" aria-hidden="true" />
                 {siteConfig.availability}
               </li>
               <li className="flex items-center gap-2">

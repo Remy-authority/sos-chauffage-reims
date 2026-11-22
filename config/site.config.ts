@@ -22,14 +22,14 @@
  */
 
 /**
- * Rayon d'intervention, en kilomètres. TRANCHÉ PAR RÉMY le 27/07/2026 : 30 km
- * (et non les 15 km proposés par le plan SEO). Ce n'est donc PAS une valeur DEMO.
+ * Rayon d'intervention, en kilomètres. TRANCHÉ PAR RÉMY : 30 km le 27/07/2026, porté à 40 km le
+ * 22/11/2026 avec la vraie carte des communes (#R60, plan validé « ok vas y »). Pas une valeur DEMO.
  * ⚠️ Ne jamais réécrire cette valeur en dur dans un texte : toujours l'injecter
  * depuis `siteConfig.serviceArea.radiusKm`. C'est exactement le sens de la leçon
  * Metz du 27/07/2026 (un rayon écrit à la fois en texte, en nombre nu et dans un
  * compteur animé finit par n'être corrigé qu'à moitié).
  */
-const SERVICE_RADIUS_KM = 30
+const SERVICE_RADIUS_KM = 40
 
 /**
  * Atelier de l'entreprise qui fait le travail (Rémy, 22/11/2026) : la RUE, jamais le numéro,

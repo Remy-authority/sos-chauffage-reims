@@ -242,13 +242,11 @@ export function LeadForm({
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>
-                Qu&apos;est-ce qui ne chauffe plus ?
+              <Q className={`${compact ? 'mt-4 text-xl lg:text-2xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-center text-craie-50 lg:text-left`}>
+                Quelle est votre urgence&nbsp;?
               </Q>
-              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
-                Urgences (fuite, dégât des eaux, ballon qui fuit) 24&nbsp;h/24. Autres demandes de
-                8&nbsp;h à 19&nbsp;h&nbsp;30.
-              </p>
+              {/* Rémy 22/11/2026 : aucune phrase sous la question ; les horaires (urgences 24 h/24,
+                  le reste de 8 h à 19 h 30) sont dits sur la page de remerciement, après l'envoi. */}
 
               {/* Neuf situations en 3 x 3, sans case orpheline ; compact : trois colonnes dès le téléphone,
                   pour que le formulaire tienne entier dans le premier écran (#R70). */}
@@ -301,8 +299,8 @@ export function LeadForm({
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>Vous êtes propriétaire ou locataire ?</Q>
-              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
+              <Q className={`${compact ? 'mt-4 text-xl lg:text-2xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-center text-craie-50 lg:text-left`}>Vous êtes propriétaire ou locataire ?</Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-center text-craie-400 lg:text-left`}>
                 Seul le propriétaire du logement peut commander l&apos;intervention.
               </p>
 
@@ -373,10 +371,10 @@ export function LeadForm({
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>
+              <Q className={`${compact ? 'mt-4 text-xl lg:text-2xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-center text-craie-50 lg:text-left`}>
                 {urgent ? 'Où êtes-vous ?' : 'Où, et à quel point c\'est pressé ?'}
               </Q>
-              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-center text-craie-400 lg:text-left`}>
                 {urgent
                   ? 'Urgence prise 24\u00a0h/24. Pour aller plus vite, appelez-nous directement.'
                   : 'Avec ces réponses, nous savons à quel moment prévoir votre passage.'}
@@ -464,8 +462,8 @@ export function LeadForm({
               exit="exit"
               transition={{ duration: 0.3, ease: EASE }}
             >
-              <Q className={`${compact ? 'mt-4 text-lg lg:text-xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-craie-50`}>Comment vous joindre ?</Q>
-              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-craie-400`}>
+              <Q className={`${compact ? 'mt-4 text-xl lg:text-2xl' : 'mt-6 text-2xl md:text-3xl'} font-display text-center text-craie-50 lg:text-left`}>Comment vous joindre ?</Q>
+              <p className={`${compact ? 'mt-1 text-[13px] leading-snug' : 'mt-2 text-sm'} text-center text-craie-400 lg:text-left`}>
                 Nous vous rappelons dès que possible. Pour une urgence, l&apos;appel reste le plus
                 rapide.
               </p>
